@@ -4,29 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form2</title>
+    <style>
+        body{
+            background-color: #1877F2;
+            margin-left:200px;
+            margin-top: 100px;
+        }
+        .header{
+            height: 200px;
+            width: 700px;
+            background-color: #1877F2;
+            color: white;
+            border-color: white;
+        }
+        fieldset{
+            border-color: white;
+        }
+        label{
+            width: 150px;
+            display: inline-block;
+        }
+    </style>
 </head>
-<body>
+<body> <div class="header">
     <div class="container">
         <form action="">
             <fieldset>
-                <legend>Registration Deatails</legend>
-                <label for="">University</label>
-                <input type="text"> <br>
-                <label for="">Institute</label>
-                <input type="text"> <br>
-                <label for="">Branch</label>
+                <legend>Registration Details</legend> <br>
+                <label for="">University:</label>
+                <input type="text"> <br> <br>
+                <label for="">Institute:</label>
+                <input type="text"> <br> <br>
+                <label for="">Branch:</label>
                 <select name="" id="select1">
                     <option value="">--select--</option>
-                    <option value="">Computer Science</option>
-                    <option value="">Mechnical</option>
-                    <option value="">Civil</option>
-                    <option value="">Nursing</option>
-                </select>
-
+                    <option value="">chittor</option>
+                    <option value="">Gudiyatham</option>
+                    <option value="">Vellore</option>
+                    <option value="">chennai</option>
+                    <option value="">Bangalore</option>
+                </select> <br> <br>
+                <label for="">Degree:</label>
+                <select name="" id="select2">
+                    <option value="">--select--</option>
+                    <option value="">Bsc Cs</option>
+                    <option value="">Bca</option>
+                    <option value="">Bsc che</option>
+                    <option value="">Msc cs</option>
+                    <option value="">MCom</option>
+                    <input type="radio">Pursuing
+                    <input type="radio">Completed <br> <br>
+                    <label for="">Average CPI:</label>
+                    <input type="number" >Upto
+                    <input type="number">The semester <br> <br>
+                    <label for="">Experience:</label>
+                    <input type="text"> Years <br> <br>
+                    <label for="">Your Website Or Blog:</label>
+                    <input type="text" placeholder="http://www.vmr.infotech.com">  <br>
+                    
+                </select> 
             </fieldset>
-
         </form>
 
     </div>
+</div>
 </body>
 </html>
