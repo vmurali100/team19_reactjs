@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./personalform.css">
+    <style>
+        form{
+            background-color: rgb(207, 240, 86);
+            text-align: center;
+            margin-left: 400px;
+            margin-right: 500px;
+        }
+        
+        h1{
+            color: red;
+            
+        }
+        /* dot (.) for displaying multiple elements with the help of class */
+        .education{
+            color: red;
+        }
+        .Address{
+            color: red;
+            font-style: normal;
+            
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+    <h1 style="text-align: center;">Personal Details</h1>
+    <label for="">First Name:</label>
+        <input type="text" name="First Name" id=""><br><br>
+        <label for="">Last Name:</label>
+        <input type="text"><br><br>
+        <label for="">E-mail id:</label>
+        <input  type="text"><br><br>
+        <label for="">Gender:</label>
+        <input type="radio" name="Gender">Male
+        <input type="radio" name="Gender">Female <br><br>
+        <h2 class="education">Educational Qualification</h2>
+        <label for="">Degree</label>
+        <select>
+            <option value="">--Select Group--</option>
+            <option value="">B.com</option>
+            <option value="">BSC</option>
+            <option value="">BCA</option>
+            <option value="">BBA</option>
+            <option value="">BHM</option>
+        </select><br><br>
+        <label for="">Engineering</label>
+        <select>
+            <option value="">Select group</option>
+            <option value="">Mechanical Engineering</option>
+            <option value="">Civil Engineering</option>
+            <option value="">Electronic engineering</option>
+            <option value="">Biomedical engineering</option>
+        </select><br><br>
+        <label for="">Hobbies</label>
+        <input type="checkbox" name="" id="">Playing Chess
+        <input type="checkbox" name="" id="">Reading Books <br><br>
+        <h3 class="Address">Address</h3>
+        <textarea name="" id="" cols="30" rows="5"></textarea><br><br>
+        <!-- <label for="">Address</label><br><br> -->
+        <label for="">Attach resume:</label>
+        <input type="file" name="" id=""><br><br>
+        <button type="">Submit→</button>
+        
+        
+        
+        </form>
+    </body>
+</html>

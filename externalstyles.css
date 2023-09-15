@@ -1,0 +1,15 @@
+h4{
+    font-size: 40px;
+    text-align: center;
+}
+h5{
+    background-color: forestgreen;
+    text-decoration: solid;
+}
+h6{
+    text-transform: uppercase;
+    font-stretch: expanded;
+}
+img{
+    width: 300px;
+}

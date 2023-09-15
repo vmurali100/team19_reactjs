@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+          display: flex;
+               
+        }
+        .items{
+          width: 100px;
+          height: 100px;
+          background-color: pink;
+          margin: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-size: 50px;
+  
+        }
+      </style>
+</head>
+<body>
+    <div class="flex-container">
+        <!-- we should give flex-bascis in px form -->
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items" style="flex-basis: 500px;">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+    </div>
+</body>
+</html>
