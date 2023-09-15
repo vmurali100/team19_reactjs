@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #flex-container{
+            height: 600px;
+            background-color: lightgreen;
+            display: flex;
+            justify-content: center;
+        }
+        .welcome{
+            width: 150px;
+            height: 150px;
+          background-color:crimson;
+          margin: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 30px;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div id="flex-container">
+        <div class="welcome">1</div>
+        <div class="welcome">2</div>
+        <div class="welcome" style="flex-shrink: 0;">3</div>
+        <div class="welcome">4</div>
+        <div class="welcome">5</div>
+        <div class="welcome">6</div>
+        <div class="welcome" style="flex-shrink: 3;">7</div>
+        <div class="welcome">8</div>
+        <div class="welcome">9</div>
+        <div class="welcome">10</div>
+        
+
+    </div>
+</body>
+</html>

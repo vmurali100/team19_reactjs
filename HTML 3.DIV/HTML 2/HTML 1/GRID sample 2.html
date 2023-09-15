@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #grid_container{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            background-color: lightgreen;
+            padding: 10px;
+            /* column-gap: 30px;
+            row-gap: 30px;
+            */
+            gap: 10px;
+        }
+        .box{
+            text-align: center;
+            background-color: lightcoral;
+            border: 3px solid black;
+            padding: 20px;
+            font-size: 30px;
+
+        }
+        .box1{
+            grid-column-start: 1;
+           grid-column-end: 4;
+        }
+        .box3{
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+        .box4{
+            grid-row-start: 3;
+            grid-row-end: 6;
+        }
+        /* .box10{
+            grid-row-start: 3;
+            grid-row-end: 5;
+        } */
+
+
+    </style>
+</head>
+<body>
+    <div id="grid_container">
+        <div class="box box1">1</div>
+        <div class="box">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box box10">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+        <div class="box">13</div>
+        <div class="box">14</div>
+        <div class="box">15</div>
+        <div class="box">16</div>
+        <div class="box">17</div>
+        <div class="box">18</div>
+        <div class="box">19</div>
+        <div class="box">20</div>
+    </div>
+</body>
+</html>
