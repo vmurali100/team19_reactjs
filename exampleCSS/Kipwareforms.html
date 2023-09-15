@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KipwareQTE</title>
+    <style>
+        #brown{
+            background-color: rgb(218, 192, 153);
+            text-align: center;
+            margin-left: 450px;
+            margin-right: 450px;
+            margin-bottom: 20px;
+        }
+        #orange{
+            text-align: center;
+            background-color: orange;
+            margin-left: 450px;
+            margin-right: 450px;  
+        }
+        #red{
+            color: red;
+        }
+        #choco{
+            background-color:bisque ;
+            margin-left: 90px;
+            margin-right: 90px;
+        }
+        #close{
+            margin-left: 600px;
+            margin-right: 600px;
+        }
+        input[type="text"] 
+        {
+             float: right;
+             margin-right: 40px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="choco"><br>
+    <div id="brown"><br>
+        <form>
+        <label>Customer Name:</label>
+        <input type="text" placeholder="Customer USA"><br><br>
+        <label>Part Name:</label>
+        <input type="text" placeholder="Nozzle"><br><br>
+        <label>Part Print Number:</label>
+        <input type="text" placeholder="PN-1234"><br><br>
+        <label>Revision:</label>
+        <input type="text" placeholder="E"><br><br>
+        <label>Part Number:</label>
+        <input type="text" placeholder="PN-1234"><br><br>
+        <label>Date of Estimate:</label>
+        <input type="text" placeholder="3/16/2020"><br><br><br>
+        <label>Estimator Name:</label>
+        <input type="text"><br><br>
+        <label>Buyer Name:</label>
+        <input type="text"><br><br>
+    </div>
+    <div id="orange"><br>
+        <label>Estimate Base Quantity:</label>
+        <input type="number" placeholder="100"><br><br>
+        <label>Scrap Percentage:</label>
+        <input type="number" placeholder="3">%<br><br>
+        <label>Costs Associated with Scrap:</label><br><br>
+        <div id="red">
+        <input type="checkbox">Material
+        <input type="checkbox">Tooling
+        <input type="checkbox">Labor
+        <input type="checkbox">Non-Machining
+        </div><br>
+        </div><br>
+        <div id="close">
+            <button>Clear Form</button>
+            <button>Close</button>
+        </div><br>  
+    </form>
+    </div><br><br>
+</body>
+</html>
