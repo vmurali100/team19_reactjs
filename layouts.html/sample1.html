@@ -78,6 +78,68 @@
             color: #C0BAB6;
             background-color: #232323;
         }
+
+        .box1 {
+            color: #979797;
+            background-color: #FFFFFF;
+            overflow: auto;
+        }
+
+        #container section {
+            display: block;
+            width: 100%;
+            margin: 0 0 30px 0;
+            padding: 0;
+        }
+
+        #header,
+        #container,
+        #footer,
+        #copyright {
+            display: block;
+            width: 960px;
+            margin: 0 auto;
+            padding: 30px 0;
+        }
+
+        .one_third,
+        .two_third,
+        .third_third {
+            display: block;
+            float: left;
+            margin: 0 30px 0 0;
+            width: 300px;
+        }
+
+        .lastbox {
+            margin: 0;
+        }
+
+        #container #homepage #services article figure img {
+            margin: 0 0 15px 0;
+            padding: 4px;
+            border: 1px solid #D6D6D6;
+        }
+
+        #container #homepage #services article figure h2 {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        #container .more {
+            text-align: right;
+        }
+
+        .box1 a {
+            color: #FF9900;
+            background-color: #FFFFFF;
+        }
+
+        #container #homepage {
+            display: block;
+            width: 100%;
+            line-height: 1.8cm;
+        }
     </style>
 </head>
 
@@ -111,6 +173,59 @@
             </nav>
         </header>
     </div>
+
+    <div class="wrapper box1">
+        <div id="container" class="clear">
+            <section id="slider">
+                <a href="">
+                    <img src="./images/demo/960x360.gif" alt="">
+                </a>
+                <div id="homepage">
+                    <section id="services">
+                        <article class="one_third">
+                            <figure>
+                                <img src="./images/demo/290x180.gif" alt="">
+                                <figcaption>
+                                    <h2>Welcome to HTML</h2>
+                                    <P>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.
+                                    </P>
+                                    <footer class="more">
+                                        <a href="">Read more..</a>
+                                    </footer>
+                                </figcaption>
+                            </figure>
+                        </article>
+                        <article class="one_third">
+                            <figure>
+                                <img src="./images/demo/290x180.gif" alt="">
+                                <figcaption>
+                                    <h2>Welcome to HTML</h2>
+                                    <P>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.
+                                    </P>
+                                    <footer class="more">
+                                        <a href="">Read more..</a>
+                                    </footer>
+                                </figcaption>
+                            </figure>
+                        </article>
+                        <article class="one_third lastbox">
+                            <figure>
+                                <img src="./images/demo/290x180.gif" alt="">
+                                <figcaption>
+                                    <h2>Welcome to HTML</h2>
+                                    <P>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.
+                                    </P>
+                                    <footer class="more">
+                                        <a href="">Read more..</a>
+                                    </footer>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </section>
+                </div>
+            </section>
+        </div>
 </body>
+</div>
 
 </html>
