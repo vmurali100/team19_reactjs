@@ -20,14 +20,6 @@
             background-color: #232323;
         }
 
-        p {
-            display: block;
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-        }
-
         #container #homepage {
             display: block;
             width: 100%;
@@ -48,11 +40,21 @@
             line-height: normal;
         }
 
-        .wrapper {
-            width: 100%;
+
+        p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
         }
 
-        .row1 {
+        .wrapper {
+            width: 100%;
+            display: block;
+        }
+
+        .box1 {
             color: #c0bab6;
             background-color: #333333;
         }
@@ -60,8 +62,8 @@
         #header {
             width: 960px;
             margin: 0 auto;
-            padding: 20px 0;
             overflow: auto;
+            padding: 20px 0;
         }
 
         #header #hgroup {
@@ -80,8 +82,8 @@
             font-size: 36px;
         }
 
-        .row1,
-        .row1 a {
+        .box1,
+        .box1 a {
             color: #C0BAB6;
             background-color: #333333;
             text-decoration: none;
@@ -93,7 +95,6 @@
         }
 
         #header nav {
-
             float: right;
             margin: 10px 0 0 0;
             padding: 20px 0;
@@ -103,6 +104,7 @@
 
         #header nav ul {
             padding: 0 20px;
+
         }
 
         #header nav li {
@@ -116,10 +118,11 @@
             background-color: #232323;
         }
 
-        .row2 {
+        .box2 {
             color: #979797;
             background-color: #FFFFFF;
             overflow: auto;
+
         }
 
         #container section {
@@ -127,8 +130,6 @@
             width: 100%;
             margin: 0 0 30px 0;
             padding: 0;
-            overflow: auto;
-
         }
 
         #header,
@@ -143,7 +144,7 @@
 
         .one_third,
         .two_third,
-        .three_third {
+        .third_third {
             display: block;
             float: left;
             margin: 0 30px 0 0;
@@ -165,7 +166,7 @@
             text-align: right;
         }
 
-        .row2 a {
+        .box2 a {
             color: #FF9900;
             background-color: #FFFFFF;
         }
@@ -173,12 +174,12 @@
         #container #homepage {
             display: block;
             width: 100%;
-            line-height: 1.8em;
+            line-height: 1.8cm;
         }
 
         #container #homepage #intro article figure img {
             float: right;
-            margin: 0 0 10px 0;
+            margin: 0 0 1px 0;
             padding: 4px;
             border: 1px solid #D6D6D6;
         }
@@ -188,7 +189,7 @@
             width: 460px;
         }
 
-        .row3 {
+        .box3 {
             color: #989898;
             background-color: #333333;
         }
@@ -230,7 +231,7 @@
             border-bottom: 1px solid #555555;
         }
 
-        .row3 a {
+        .box3 a {
             color: #FF9900;
             background-color: #333333;
         }
@@ -254,8 +255,8 @@
             padding: 0;
         }
 
-        .row4,
-        .row4 a {
+        .box4,
+        .box4 a {
             color: #919191;
             background-color: #232323;
         }
@@ -271,40 +272,40 @@
 </head>
 
 <body>
-    <div class="wrapper row1">
-        <header id="header" class="clear">
+    <div class="wrapper box1">
+        <header id="header">
             <div id="hgroup">
                 <h1>
-                    <a href="#">Basic 88</a>
+                    <a href="">Basci 88</a>
                 </h1>
-                <h2>Basic HTML Template</h2>
+                <h2>Basci HtMl Template</h2>
             </div>
             <nav>
                 <ul>
                     <li>
-                        <a href="#">Text Link</a>
+                        <a href="#">Home</a>
                     </li>
                     <li>
-                        <a href="#">Text Link</a>
+                        <a href="#">Tabs</a>
                     </li>
                     <li>
-                        <a href="#">Text Link</a>
+                        <a href="#">Projects</a>
                     </li>
                     <li>
-                        <a href="#">Text Link</a>
+                        <a href="#">Videos</a>
                     </li>
                     <li>
-                        <a href="#">Text Link</a>
+                        <a href="#">Help</a>
                     </li>
                 </ul>
             </nav>
         </header>
     </div>
-    <div class="wrapper row2">
+    <div class="wrapper box2">
         <div id="container" class="clear">
             <section id="slider">
                 <a href="">
-                    <img src="./images//demo//960x360.gif" alt="">
+                    <img src="./images/demo/960x360.gif" alt="">
                 </a>
             </section>
             <div id="homepage">
@@ -313,10 +314,10 @@
                         <figure>
                             <img src="./images/demo/290x180.gif" alt="">
                             <figcaption>
-                                <h2>Hello from Heading</h2>
+                                <h2>Welcome to my html page</h2>
                                 <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
                                 <footer class="more">
-                                    <a href="">Read More ..</a>
+                                    <a href="">Read more...</a>
                                 </footer>
                             </figcaption>
                         </figure>
@@ -325,10 +326,10 @@
                         <figure>
                             <img src="./images/demo/290x180.gif" alt="">
                             <figcaption>
-                                <h2>Hello from Heading</h2>
+                                <h2>Welcome to my html page</h2>
                                 <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
                                 <footer class="more">
-                                    <a href="">Read More ..</a>
+                                    <a href="">Read more...</a>
                                 </footer>
                             </figcaption>
                         </figure>
@@ -337,28 +338,28 @@
                         <figure>
                             <img src="./images/demo/290x180.gif" alt="">
                             <figcaption>
-                                <h2>Hello from Heading</h2>
+                                <h2>Welcome to my html page</h2>
                                 <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
                                 <footer class="more">
-                                    <a href="">Read More ..</a>
+                                    <a href="">Read more...</a>
                                 </footer>
                             </figcaption>
                         </figure>
                     </article>
-
                 </section>
+
                 <section id="intro">
                     <article>
                         <figure>
                             <img src="./images/demo/450x250.gif" alt="">
                             <figcaption>
-                                <h2>Sample from Intro </h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil placeat dolore et
-                                    dicta accusantium rem perferendis ipsum doloribus </p>
-                                <p> iure repellendus reprehenderit tempore quod. ducimus voluptates molestiae quis
-                                    consequatur porro explicabo,</p>
+                                <h2>Sample Intro</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil placeat dolore
+                                    et dictaccusantium rem perferendis ipsum doloribus</p>
+                                <p>iure repellendus reprehenderit tempore quod. ducimus voluptates molestiae
+                                    quis consequaturporro explicabo.</p>
                                 <footer class="more">
-                                    <a href="">Read More ..</a>
+                                    <a href="">Read more...</a>
                                 </footer>
                             </figcaption>
                         </figure>
@@ -367,7 +368,7 @@
             </div>
         </div>
     </div>
-    <div class="wrapper row3">
+    <div class="wrapper3 box3">
         <div id="footer" class="clear">
             <section class="one_quarter">
                 <h2 class="title">Sample Heading</h2>
@@ -385,7 +386,9 @@
                         <li>
                             <a href="#">Lorem ipsum dolor sit</a>
                         </li>
+
                         <li class="last"><a href="#">Sed a nulla urna</a></li>
+
                     </ul>
                 </nav>
             </section>
@@ -405,7 +408,9 @@
                         <li>
                             <a href="#">Lorem ipsum dolor sit</a>
                         </li>
+
                         <li class="last"><a href="#">Sed a nulla urna</a></li>
+
                     </ul>
                 </nav>
             </section>
@@ -425,7 +430,9 @@
                         <li>
                             <a href="#">Lorem ipsum dolor sit</a>
                         </li>
+
                         <li class="last"><a href="#">Sed a nulla urna</a></li>
+
                     </ul>
                 </nav>
             </section>
@@ -445,22 +452,20 @@
                         <li>
                             <a href="#">Lorem ipsum dolor sit</a>
                         </li>
+
                         <li class="last"><a href="#">Sed a nulla urna</a></li>
                     </ul>
                 </nav>
             </section>
         </div>
     </div>
-    <div class="wrapper row4">
+    <div class="wrapper box4">
         <footer id="copyright" class="clear">
             <p class="fl_left">Copyright © 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
             <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/"
-                    title="Free Website Templates">OS Templates</a></p>
+                    title="Free Website Templates">os-templates</a></p>
         </footer>
     </div>
-</body>
-
-</html>
 </body>
 
 </html>
