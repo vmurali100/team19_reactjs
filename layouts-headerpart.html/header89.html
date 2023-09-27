@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            width: 100%;
+            /* border: 2px solid purple; */
+            background-color: aquamarine;
+        }
+
+        #header {
+            padding: 20px;
+            background-color: bisque;
+            width: 960px;
+            margin: 0 auto;
+            overflow: auto;
+        }
+
+        #hgroup {
+            width: 300px;
+            float: left;
+        }
+
+        nav {
+            float: right;
+            margin-top: 10px;
+            background-color: pink;
+            padding: 20px 0;
+        }
+
+        li {
+            list-style: none;
+            float: left;
+            /* we can use either float property or display: inline; it gives same result */
+            margin-right: 25px;
+            text-transform: uppercase;
+        }
+
+        h1 a {
+            text-decoration: none;
+            color: black;
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 13px;
+        }
+
+        li a {
+            text-decoration: none;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper box1">
+        <header id="header" class="clear">
+            <div id="hgroup">
+                <h1>
+                    <a href="#">Basic 89</a>
+                </h1>
+                <h2>Free HTML5 Website Templates</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Text Link</a>
+                    </li>
+                    <li>
+                        <a href="#">Text Link</a>
+                    </li>
+                    <li>
+                        <a href="#">Text Link</a>
+                    </li>
+                    <li>
+                        <a href="#">Text Link</a>
+                    </li>
+                    <li>
+                        <a href="#">Text Link</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            width: 100%;
+            background-color: lightgreen;
+            border: 1px solid black;
+        }
+
+        #header {
+            width: 960px;
+            padding: 20px 0;
+            background-color: orange;
+            margin: 0 auto;
+            overflow: auto;
+        }
+
+        #head {
+            width: 300px;
+            float: left;
+            margin: 0 0 20px 0;
+
+        }
+
+        nav {
+            background-color: burlywood;
+            padding: 20px 0;
+            margin-top: 10px;
+            clear: both;
+        }
+
+        li {
+            list-style: none;
+            text-transform: uppercase;
+            margin-right: 25px;
+            float: left;
+        }
+
+        li a,
+        h1 a {
+            text-decoration: none;
+
+        }
+
+        #header form {
+            float: right;
+            width: 290px;
+            margin: 20px 0;
+            color: chocolate;
+            background-color: blanchedalmond;
+            border: 1px solid black;
+        }
+
+        li a,
+        h2 {
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper row1">
+        <header id="header" class="clear">
+            <div id="head">
+                <h1><a href="#">Basci 90</a></h1>
+                <h2>Free HTML5 Website Templates</h2>
+            </div>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Search:</legend>
+                    <input type="text" value="Search Our Website&hellip;"
+                        onFocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;">
+                    <input type="submit" id="sf_submit" value="submit">
+                </fieldset>
+            </form>
+            <nav>
+                <li><a href="#">Text link</a></li>
+                <li><a href="#">Text link</a></li>
+                <li><a href="#">Text link</a></li>
+                <li><a href="#">Text link</a></li>
+                <li class="last"><a href="#">Text link</a></li>
+            </nav>
+        </header>
+    </div>
+</body>
+
+</html>
