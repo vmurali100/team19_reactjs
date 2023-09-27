@@ -6,3 +6,105 @@ body {
     color: #919191;
     background-color: #232323;
 }
+/* wrapper row1 */
+div.wrapper {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.row1, .row1 a {
+    color: #C0BAB6;
+    background-color: #333333;
+}
+#header {
+    padding: 20px 0;
+}
+#header, #container, #footer, #copyright {
+    display: block;
+    width: 960px;
+    margin: 0 auto;
+}
+html .clear {
+    height: 1%;
+}
+.clear {
+    /* display: block; */
+    clear: both;
+}
+#header #hgroup {
+    float: left;
+    margin: 0 0 20px 0;
+}
+#header #hgroup h1 {
+    font-size: 36px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#header #hgroup h1, #header #hgroup h2 {
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+}
+.row1, .row1 a {
+    color: #C0BAB6;
+    background-color: #333333;
+}
+a {
+    outline: none;
+    text-decoration: none;
+}
+#header #hgroup h2 {
+    font-size: 13px;
+}
+/* Nav Bar */
+#header nav {
+    display: block;
+    float: right;
+    margin: 10px 0 0 0;
+    padding: 20px 0;
+    color: #C0BAB6;
+    background-color: #232323;
+}
+#header nav ul {
+    padding: 0 20px;
+}ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+#header nav li {
+    display: inline;
+    margin-right: 25px;
+    text-transform: uppercase;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+#header nav li a{
+    color: #C0BAB6;
+    background-color: #232323;
+}
+#header nav li a:hover{
+    color: yellow;
+}
+#header nav li a:active{
+    color: red;
+}
+
+#header nav li.last {
+    margin-right: 0;
+}
+.clear:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+}
