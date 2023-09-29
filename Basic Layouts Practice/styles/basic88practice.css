@@ -2,3 +2,40 @@
     margin: 0;
     padding: 0;
 }
+.wrapper{
+    width: 100%;
+    border: 4px solid red;
+
+}
+#header{
+    background-color:teal;
+    color: white;
+    padding: 20px;
+    width: 960px;
+    margin: 0 auto;
+    overflow: auto;
+}
+#hgroup{
+    width: 300px;
+    float: left;
+    font-size: 15px;
+    
+}
+nav{
+    float: right;
+    margin-top: 10px;
+    background-color: lightyellow;
+    padding: 10px;
+    color: red;
+    
+}
+li{
+    display: inline;
+    padding: 0 20px;
+    float: left;
+    list-style-type: none;
+    margin-right: 8px;
+}
+li a{
+    text-transform: uppercase;
+}
