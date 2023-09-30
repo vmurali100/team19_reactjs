@@ -1,402 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      /* body {
-    margin: 0;
-    padding: 0;
-    font-size: 13px;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    color: #919191;
-    background-color: #232323;
-} */
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
-#container #homepage {
-    display: block;
-    width: 100%;
-    line-height: 1.8em;
-}
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding: 0;
-    font-size: 32px;
-    font-weight: normal;
-    font-style: italic;
-    line-height: normal;
-}
-      .wrapper {
-        width: 100%;
-      }
-      .row1 {
-        color: #c0bab6;
-        background-color: #333333;
-      }
-      #header {
-        width: 960px;
-        margin: 0 auto;
-        padding: 20px 0;
-        overflow: auto;
-      }
-      #header #hgroup {
-        float: left;
-        margin: 0 0 20px 0;
-      }
-      #header #hgroup h1,
-      #header #hgroup h2 {
-        font-weight: normal;
-        font-style: normal;
-        text-transform: none;
-      }
-      #header #hgroup h1{
-        font-size: 36px;
-      }
-      .row1, .row1 a {
-    color: #C0BAB6;
-    background-color: #333333;
-    text-decoration: none;
-    outline: none;
-}
-#header #hgroup h2 {
-    font-size: 13px;
-}
-#header nav {
-    
-    float: right;
-    margin: 10px 0 0 0;
-    padding: 20px 0;
-    color: #C0BAB6;
-    background-color: #232323;
-}
-#header nav ul {
-    padding: 0 20px;
-}
-#header nav li {
-    display: inline;
-    margin-right: 25px;
-    text-transform: uppercase;
-}
-#header nav li a {
-    color: #C0BAB6;
-    background-color: #232323;
-}
-.row2 {
-    color: #979797;
-    background-color: #FFFFFF;
-    overflow: auto;
-}
-#container section {
-    display: block;
-    width: 100%;
-    margin: 0 0 30px 0;
-    padding: 0;
-    overflow: auto;
-
-}
-#header, #container, #footer, #copyright {
-    display: block;
-    width: 960px;
-    margin: 0 auto;
-    padding: 30px 0;
-}
-.one_third, .two_third, .three_third {
-    display: block;
-    float: left;
-    margin: 0 30px 0 0;
-    width: 300px;
-}
-
-#container #homepage #services article figure img {
-    margin: 0 0 15px 0;
-    padding: 4px;
-    border: 1px solid #D6D6D6;
-}
-#container #homepage #services article figure h2 {
-    font-size: 14px;
-    font-weight: bold;
-}
-#container .more {
-    text-align: right;
-}
-.row2 a {
-    color: #FF9900;
-    background-color: #FFFFFF;
-}
-#container #homepage {
-    display: block;
-    width: 100%;
-    line-height: 1.8em;
-}
-#container #homepage #intro article figure img {
-    float: right;
-    margin: 0 0 10px 0;
-    padding: 4px;
-    border: 1px solid #D6D6D6;
-}
-#container #homepage #intro article figure figcaption {
-    float: left;
-    width: 460px;
-}
-.row3 {
-    color: #989898;
-    background-color: #333333;
-}
-.one_quarter {
-    display: block;
-    float: left;
-    margin: 0 20px 0 0;
-    width: 225px;
-}
-.lastbox{
-  margin: 0;
-}
-#footer{
-  overflow: auto;
-}
-#footer section h2.title {
-    margin: 0 0 25px 0;
-    padding: 0;
-    color: #FFFFFF;
-    background-color: #333333;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-#footer section nav li {
-    margin: 0 0 5px 0;
-    padding: 0 0 5px 0;
-    border-bottom: 1px solid #555555;
-}
-.row3 a {
-    color: #FF9900;
-    background-color: #333333;
-}
-a {
-    outline: none;
-    text-decoration: none;
-}
-#copyright {
-    padding: 20px 0;
-}
-#copyright p {
-    margin: 0;
-    padding: 0;
-}
-#copyright p {
-    margin: 0;
-    padding: 0;
-}
-.row4, .row4 a {
-    color: #919191;
-    background-color: #232323;
-}
-.fl_left {
-    float: left;
-}
-.fl_right {
-    float: right;
-}
-    </style>
-  </head>
-  <body>
-    <div class="wrapper row1">
-      <header id="header" class="clear">
-        <div id="hgroup">
-          <h1>
-            <a href="#">Basic 88</a>
-          </h1>
-          <h2>Basic HTML Template</h2>
-        </div>
-        <nav>
-          <ul>
-            <li>
-              <a href="#">Text Link</a>
-            </li>
-            <li>
-              <a href="#">Text Link</a>
-            </li>
-            <li>
-              <a href="#">Text Link</a>
-            </li>
-            <li>
-              <a href="#">Text Link</a>
-            </li>
-            <li>
-              <a href="#">Text Link</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </div>
-    <div class="wrapper row2">
-      <div id="container" class="clear">
-        <section id="slider">
-          <a href="">
-            <img src="./images//demo//960x360.gif" alt="">
-          </a>
-        </section>
-        <div id="homepage">
-          <section id="services">
-            <article class="one_third">
-              <figure>
-                <img src="./images/demo/290x180.gif" alt="">
-                <figcaption>
-                  <h2>Hello from Heading</h2>
-                  <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
-                  <footer class="more">
-                    <a href="">Read More ..</a>
-                  </footer>
-                </figcaption>
-              </figure>
-            </article>
-            <article class="one_third">
-              <figure >
-                <img src="./images/demo/290x180.gif" alt="">
-                <figcaption>
-                  <h2>Hello from Heading</h2>
-                  <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
-                  <footer class="more">
-                    <a href="">Read More ..</a>
-                  </footer>
-                </figcaption>
-              </figure>
-            </article>
-            <article class="one_third lastbox">
-              <figure>
-                <img src="./images/demo/290x180.gif" alt="">
-                <figcaption>
-                  <h2>Hello from Heading</h2>
-                  <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
-                  <footer class="more">
-                    <a href="">Read More ..</a>
-                  </footer>
-                </figcaption>
-              </figure>
-            </article>
+        *{
+            margin: 0;
+        }
+        #wrapper{
+            width: 100%;
+            border: 2px solid black;
+            background-color:#676767;
+        }
+        #header{
+            width: 960px;
+            padding: 20px 0;
+            margin: 0 auto;
+            background-color:#676767;
+            overflow: auto;
+            text-transform: uppercase;
             
-          </section>
-          <section id="intro">
-            <article>
-              <figure>
-                <img src="./images/demo/450x250.gif" alt="">
-                <figcaption>
-                  <h2>Sample from Intro </h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil placeat dolore et dicta accusantium rem perferendis ipsum doloribus </p>
-                  <p> iure repellendus reprehenderit tempore quod. ducimus voluptates molestiae quis consequatur porro explicabo,</p>
-                  <footer class="more">
-                    <a href="">Read More ..</a>
-                  </footer>
-                </figcaption>
-              </figure>
-            </article>
-          </section>
+        }
+       #header nav {
+        float: right;
+        color: #C0BABA;
+        background-color: #232323;
+        
+       } 
+       #header nav ul{
+        list-style-type: none;
+        margin: 20px;
+        
+       }
+       #header nav ul li{
+        display: inline;
+        margin-right: 20px;
+       }
+       #hgroup{
+        float: left;
+       }
+       #header h3{
+        font-size: 15px;
+       }
+       #header nav li a{
+               color: #C0BAB6; 
+               background-color: #232323;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="hgroup">
+                <h2>Basic 89</h2>
+                <h3>free HTML5 website template</h3>
+
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Text link</a>
+                    </li>
+                    <li>
+                        <a href="#">Text link</a>
+                    </li>
+                    <li>
+                        <a href="#">Text link</a>
+                    </li>
+                    <li>
+                        <a href="#">Text link</a>
+                    </li>
+                    <li>
+                        <a href="#">Text link</a>
+                    </li>
+                </ul>
+
+            </nav>
+
         </div>
-      </div>
+
     </div>
-    <div class="wrapper row3">
-      <div id="footer" class="clear">
-        <section class="one_quarter">
-          <h2 class="title">Sample Heading</h2>
-          <nav>
-            <ul>
-              <li>
-                <a href="#">Lorem ipsum dolor sit</a>
-              </li>
-              <li>
-                <a href="#">Lorem ipsum dolor sit</a>
-              </li>
-              <li>
-                <a href="#">Lorem ipsum dolor sit</a>
-              </li>
-              <li>
-                <a href="#">Lorem ipsum dolor sit</a>
-              </li>
-              <li class="last"><a href="#">Sed a nulla urna</a></li>
-            </ul>
-          </nav>
-        </section>
-        <section class="one_quarter">
-          <h2 class="title">Sample Heading</h2>
-          <nav>
-            <ul>
-              <li>
-                <a href="#">Lorem ipsum dolor sit</a>
-              </li>
-              <li>
-                <a href="#">Lorem ipsum dolor sit</a>
-              </li>
-              <li>
-                <a href="#">Lorem ipsum dolor sit</a>
-              </li>
-              <li>
-                <a href="#">Lorem ipsum dolor sit</a>
-              </li>
-              <li class="last"><a href="#">Sed a nulla urna</a></li>
-            </ul>
-          </nav>
-        </section>
-        <section class="one_quarter">
-          <h2 class="title">Sample Heading</h2>
-          <nav>
-            <ul>
-              <li>
-                <a href="#">Lorem ipsum dolor sit</a>
-              </li>
-              <li>
-                <a href="#">Lorem ipsum dolor sit</a>
-              </li>
-              <li>
-                <a href="#">Lorem ipsum dolor sit</a>
-              </li>
-              <li>
-                <a href="#">Lorem ipsum dolor sit</a>
-              </li>
-              <li class="last"><a href="#">Sed a nulla urna</a></li>
-            </ul>
-          </nav>
-        </section>
-        <section class="one_quarter lastbox">
-          <h2 class="title">Sample Heading</h2>
-          <nav>
-            <ul>
-              <li>
-                <a href="#">Lorem ipsum dolor sit</a>
-              </li>
-              <li>
-                <a href="#">Lorem ipsum dolor sit</a>
-              </li>
-              <li>
-                <a href="#">Lorem ipsum dolor sit</a>
-              </li>
-              <li>
-                <a href="#">Lorem ipsum dolor sit</a>
-              </li>
-              <li class="last"><a href="#">Sed a nulla urna</a></li>
-            </ul>
-          </nav>
-        </section>
-      </div>
-    </div>
-    <div class="wrapper row4">
-      <footer id="copyright" class="clear">
-        <p class="fl_left">Copyright © 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
-        <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
-      </footer>
-    </div>
-  </body>
+</body>
 </html>

@@ -8,57 +8,61 @@
         *{
             margin: 0;
             padding: 0;
+            
         }
         #wrapper{
             width: 100%;
             border: 2px solid red;
-            background-color:#979797;
+            background-color: #373737;
         }
         #header{
             width: 960px;
-            background-color: #979797;
-            overflow: auto;
+            background-color: #373737;
             margin: 0 auto;
-            padding: 30px 0;
-        }
-        #header nav{
-            float: right;
-            text-transform: uppercase;
-            background-color: #232323;
-        
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-            
-        }
-        #hgroup {
-            float: left;
-        }
-        nav ul {
+            padding: 20px;
+            overflow: auto;
+             }
+
+        #header nav ul {
             list-style-type: none;
             padding: 10px;
-            
+            margin: 4px;
+            }
+        #header li{
+            display: inline;
+            margin-right: 20px;
+            float: right;
         }
-        a {
-            color: #C0BABA;
+        #header nav ul li a {
+                color: aliceblue;
         }
+        #hgroup h1,h2{
+            color: white;
+        }
+         #hgroup {
+        float: left; 
+        overflow: hidden; 
         
-        
+         }
+         #container{
+            width: 960px;
+            border: 3px solid red;
+            margin: 0 auto;
+         }
+         img{
+            width: 960px;
+            height: 400px;
+         }
+    
 
-
-        
     </style>
 </head>
 <body>
     <div id="wrapper">
         <div id="header">
             <div id="hgroup">
-                <h2>Basic 88</h2>
-                <h3>Basic html template</h3>
-                
-            
-
+                <h1>Basic 88</h1>
+                <h2>Basic html template</h2>
             </div>
             <nav>
                 <ul>
@@ -81,11 +85,13 @@
             </nav>
 
         </div>
-        
+    </div> <br>
+        <div id="container">
+            <img src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510_640.jpg" alt="">
 
-    </div>
+        </div>
+
+
     
-
-    </div>
 </body>
 </html>
