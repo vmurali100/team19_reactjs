@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    /* color: white; */
+    /* background-color:teal; */
+}
+div.wrapper {
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+#header{
+    display: block;
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+    background-color: tan;
+}
+
+#header #hgroup {
+    float: left;
+    margin: 0 0 20px 0;
+}
+#header #hgroup h1 {
+    font-size: 36px;
+    font-weight: normal;
+    text-transform: none;
+}
+#hgroup a{
+    outline: none;
+    text-decoration: none;
+
+}
+#header #hgroup h2 {
+    font-size: 13px;
+}
+#header nav {
+    /* display: block; */
+    float: right;
+    margin: 10px 0 0 0;
+    padding: 20px 0;
+    color: #C0BAB6;
+    background-color: #d51b1b;
+}
+#header nav ul {
+    padding: 0 20px;
+}
+#header nav li {
+    display: inline;
+    margin-right: 25px;
+    text-transform: uppercase;
+}
+#header nav li a {
+    color: #C0BAB6;
+    background-color: #d51b1b;
+    text-decoration: none;
+}
+#header nav li.last {
+    margin-right: 0;
+}
+.row1 .clear {
+    /* display: block; */
+    overflow: auto;
+}
+/* ----------------------------wrapper row1----------------- */
+#container {
+    padding: 30px 0;
+    display: block;
+    width: 960px;
+    margin: 0 auto;
+    /* background-color: #cc6623;    */
+    overflow: auto;
+}
+.clear {
+    display: block;
+    clear: both;
+}
+#container #slider {
+    margin-bottom: 50px;
+}
+.row2 a {
+    color: #FF9900;
+
+}
+img {
+    margin: 0;
+    padding: 0;
+    border: none;
+    line-height: normal;
+    vertical-align: middle;
+}
+/* -------------services area------------ */
+#container #homepage {
+    display: block;
+    width: 100%;
+
+}
+#container #homepage #services {
+    padding: 0 0 30px 0;
+    /* background-color:aliceblue; */
+    overflow: hidden;
+
+    /* border-bottom: 1px solid #DEDEDE; */
+}
+#services .one_quarter{
+    width: 225px;
+    float: left;
+    margin: 0 20px 0 0;
+    color: darkolivegreen;
+}
+#container #homepage #services figure {
+    display: inline;
+    float: left;
+}
+#container #homepage #services strong {
+    float: left;
+    margin: 8px 0 0 10px;
+    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#container #homepage #services p{
+    margin: 0;
+    padding: 5PX 0 0 0;
+    clear: both;
+}
+#services .lastquarter{
+    margin-right: 0;
+}
+.one_quarter .more a{
+    color: orange;
+    float: right;
+    margin-top: 10px;
+
+}
+p{
+    margin-top:10px;
+}
+/* threeimage */
+#threeimg{
+    margin-top: 30px;
+}
+#threeimg  #imge .clear li{
+    display: inline;
+    margin:0 33px 0 0;
+    
+}
+#threeimg  #imge .clear .lastone_third{
+    margin-right: 0;
+}
+#threeimg  img{
+    border: 3px solid lightgray;
+}
+#threeimg figcaption{
+    float: right;
+    margin-top: 10px;
+    color: #FF9900;
+
+}
+
