@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         body{
-            width: 100%;
-
-            background-color: aqua;
+            background-color: green;
         }
-        @media screen and ( main-width 500px) {
+        h1{
+            color: tomato;
+        }
+        @media screen and (min-width:300px){
             body{
-                background-color: yellow;
-                
+                background-color: greenyellow;
             }
-            
-            
+            h1{
+                color: white;
+            }
+            img{
+                border: 2px solid black;
+                width: 100%;
+            }
+            h4{
+                position: absolute;
+                top:35px;
+                right: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>WELCOME WORLD</h1>
-    <img src="https://cdn.pixabay.com/photo/2012/04/12/23/48/car-30990_640.png" alt="">
-    <img src="https://cdni.autocarindia.com/utils/imageresizer.ashx?n=https://cms.haymarketindia.net/model/uploads/modelimages/BMW-2-Series-Gran-Coupe-271220221147.jpg" alt="">
+    <h1>Car 1</h1>
+    <img src="https://cdn.pixabay.com/photo/2012/04/12/23/48/car-30990_640.png" alt=""><h4>this is Lambhogini</h4>
+    <h1>Car 2</h1>
+    <img src="https://cdn.pnghd.pics/data/241/free-images-of-cars-52.png" alt="">
     
 </body>
 </html>
