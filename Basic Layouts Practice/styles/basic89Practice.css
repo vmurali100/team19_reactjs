@@ -148,6 +148,8 @@ p{
 /* threeimage */
 #threeimg{
     margin-top: 30px;
+    overflow: auto;
+    /* border-bottom: 3px solid red; */
 }
 #threeimg  #imge .clear li{
     display: inline;
@@ -160,10 +162,8 @@ p{
 #threeimg  img{
     border: 3px solid lightgray;
 }
-#threeimg figcaption{
+#threeimg figcaption {
     float: right;
-    margin-top: 10px;
-    color: #FF9900;
-
+    margin: 25px;
+    color: orange;
 }
-
