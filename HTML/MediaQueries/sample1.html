@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: yellow;
+      }
+      img{
+        width: 100%;
+      }
+      li{
+        list-style: none;
+      }
+      @media screen and (min-width: 480px) {
+        body {
+          background-color: lightgreen;
+        }
+        h2{
+            color: red;
+        }
+    
+        li{
+            width: 300px;
+            float: left;
+            list-style: disc;
+        }
+      }
+
+      @media screen and (min-width:768px) {
+        body{
+            background: lightgrey;
+        }
+        li{
+            list-style: square;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Welcome to Media Queries ...</h2>
+
+    <ul>
+        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbCDZZfnTfo6P6OVAR4PEbLGDBPs3hkIocmS18c9Y6MA&s" alt=""></li>
+        <li><img src="https://qph.cf2.quoracdn.net/main-qimg-d97b3ebb792671b16803f260b3a20475-lq" alt=""></li>
+    </ul>
+  </body>
+</html>
