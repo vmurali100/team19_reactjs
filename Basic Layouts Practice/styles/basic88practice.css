@@ -185,36 +185,6 @@ article{
 .clears{
     overflow: auto;
 }
-@media screen and (max-width:425px) {
-    .wrapper.row1{
-        background-color: rgb(206, 46, 46);
-        width: 100%;
-        font-size: 13px;
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-    header#header {
-        width: 360px;
-        margin: 0px auto;
-        overflow: auto;
-        text-align: center;
-    }
-    div#hgroup {
-        /* float: left; */
-        width: 300px;
-        margin: 0 0 20px 0;
-    }
-
-    #header nav ul{
-        display:block;
-        text-align: center;
-    }
-    #header nav{
-        
-        
-    }
-
-    
-}
 
 
 
