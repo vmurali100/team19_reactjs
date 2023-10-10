@@ -16,24 +16,30 @@
     font-size: 13px;
     font-family: Georgia, "Times New Roman", Times, serif;
     color: black;
-    background-color:lightgreen;
+    /* background-color:lightgreen; */
  }
+
  div.wrapper {
     display: block;
     width: 100%;
     margin: 0;
     padding: 0;
     text-align: left;
-    /* background-color: thistle; */
+    /* background-color: teal; */
     /* overflow: auto; */
     
 }
+.row1{
+    background-color: tomato;
+    width: 100%;
+ }
 #header {
     padding: 20px 0;
-    background-color: coral;
     overflow: auto;
     width: 960px;
     margin: 0 auto;
+    /* background-color: red; */
+
 }
 #header  a{
     text-decoration: none;
@@ -138,7 +144,7 @@
     text-decoration: none;
 }
 section#intro {
-    background-color: deeppink;
+    background-color: grey;
     overflow: auto;
 }
 #intro img {
@@ -168,7 +174,7 @@ section#intro {
    color: black;
 }
 #footer{
-    background-color: chocolate;
+    background-color: lightblue;
     width: 960px;
     margin: 0 auto;
     overflow: auto;
@@ -188,16 +194,25 @@ section#intro {
 }
 #footer .one_quarter ul li a{
     padding-bottom: 10px;
+    
 }
 #footer .one_quarter ul{
     padding-top: 10px;
 }
+.row4{
+    background-color:tomato;
+}
 #copyright{
-    background-color: aqua;
+   
     width: 960px;
     margin: 0 auto;
     overflow: auto;
     padding: 20px 0;
+    color: white;
+}
+#copyright a{
+    color: white;
+    font-size: 15px;
 }
 #copyright .fl_left{
     float: left;
@@ -212,15 +227,15 @@ section#intro {
 }
 
 /* // media queries // */
-body{
-    background-color: yellow;
-    
-}
+
 
 @media screen and (max-width:425px){
    
     body{
-        background-color:blue;
+        background-color:lightgreen;
+        width: 100%;
+    }
+    div.wrapper{
         width: 100%;
     }
     #header{
@@ -236,28 +251,68 @@ body{
     }
     #header nav{
         float: none;
-        text-align: center;
+        /* text-align: center; */
+        /* background-color: aqua; */
+        padding: 0;
     }
-    #header nav ul li{
-        display: block;
+    #homepage {
+    overflow: auto;
+    width: 100%;
+}
+    #homepage #services .one_third {
+    width:300px;
+    text-align: center;
     }
+    #footer .one_quarter {
+    float: left;
+    width: 100%;
+    /* margin-right: 40px; */
+    text-align: center;
+}
+    #homepage #services .one_third img {
+    
+    border: 5px solid lightcyan;
+}
+figcaption {
+    width: 100%;
+    text-align: center;
+}
+    #container{
+        width: 100%;
+    }
+   
+    #homepage #services {
+    background-color: sandybrown;
+    /* border: 1px solid red; */
+    overflow: auto;
+    width: 100%;
+}
+section#intro {
+    background-color: grey;
+    overflow: auto;
+    width: 100%;
+}
+    
     #header nav li.last {
-        margin-right: 128px;
+        margin-right: 152px;
 
     
     }
     #header nav ul li {
         background-color: teal;
-        margin: 0 auto;
-        padding: 10px;
-        width:150px;
+        width:100%;
         margin-top: 10px;
+        /* margin: 0 auto; */
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 20px;
 
     }
    #header nav ul{
-    background-color: #C0BAB6;
-    align-items: center;
-    width: 425px;
+    
+    padding: 0;
+    width: 100%;
 
    }
    #header {
@@ -265,14 +320,38 @@ body{
    }
    #slider img{
     width:100%;
-    border: 2px solid red;
-   }
-   #container section{
-    width: 100%;
+    /* border: 2px solid red; */
    }
    #intro{
     width: 100%;
    }
+   #footer{
+    width: 100%;
+   }
+ 
+
+
+#copyright{
+    width: 100%;
+}
+figure {
+    width: 100%;
+}
+figcaption {
+    width: 100%;
+}
+
+
+#copyright .fl_left {
+    float: none;
+}
+#copyright .fl_right {
+    float: none;
+}
+#copyright {
+    width: 100%;
+    text-align: center;
+}
 
 
 
