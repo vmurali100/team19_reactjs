@@ -506,3 +506,39 @@ select {
   margin: 0;
   padding: 0;
 }
+@media screen and (max-width:425px){
+  #header, #container,#slider img{
+    width: 100%;
+  }
+  #mainContent,#container #homepage #latest article figure ul,#header{
+    display: block;
+  }
+  #container #content,#footer{
+    width: 100%;
+  }
+  #header #hgroup {
+  width: 100%;
+  text-align: center;
+}
+#navbar{
+  width: 100%;
+}
+#navbar ul li {
+  display: block;
+  text-align: center;
+  margin: 0;
+}
+#header nav li.last {
+  margin: 0;
+}
+#container #homepage #services{
+  display: block;
+}
+.one_quarter {
+  width: 90%;
+  margin: 0 auto;
+}
+.one_third{
+  margin: 0 auto;
+}
+}
