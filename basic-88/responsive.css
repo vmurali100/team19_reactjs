@@ -1,0 +1,61 @@
+@media screen and (max-width: 425px) {
+    #header #hgroup {
+      float: none;
+      text-align: center;
+    }
+    #header,
+    #container,
+    #footer,
+    #copyright {
+      display: block;
+      width: 100%;
+    }
+    #container #slider img {
+      width: 100%;
+    }
+    #container #homepage #intro article figure figcaption {
+      width: 100%;
+    }
+    #header nav {
+      float: none;
+    }
+    #header nav ul li {
+      display: block;
+      text-align: center;
+    }
+    #header nav li.last {
+      margin-right: 25px;
+    }
+    .one_third {
+      width: 100%;
+      text-align: center;
+    }
+    #container .more {
+      text-align: right;
+      margin-right: 25px;
+    }
+    #intro p {
+      margin: 10px;
+    }
+    #intro h2 {
+      text-align: center;
+    }
+    #footer .one_quarter {
+      width: 100%;
+      text-align: center;
+    }
+    #footer .one_quarter li,
+    .last {
+      width: 150px;
+      margin: 0 auto !important;
+    }
+    .fl_left {
+      float: none;
+    }
+    .fl_right {
+      float: none;
+    }
+  }
+  #copyright {
+    text-align: center;
+  }
