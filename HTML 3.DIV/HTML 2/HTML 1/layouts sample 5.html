@@ -1,60 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             margin: 0;
         }
-        #wrapper{
+
+        #wrapper {
             width: 100%;
-            border: 2px solid black;
-            background-color:#676767;
+            background-color: #676767;
         }
-        #header{
+
+        div#wrapper\ row1 {
+            background: black;
+        }
+
+        #header {
             width: 960px;
-            padding: 20px 0;
+            background-color: #676767;
             margin: 0 auto;
-            background-color:#676767;
+            padding: 20px;
             overflow: auto;
-            text-transform: uppercase;
-            
         }
-       #header nav {
-        float: right;
-        color: #C0BABA;
-        background-color: #232323;
-        
-       } 
-       #header nav ul{
-        list-style-type: none;
-        margin: 20px;
-        
-       }
-       #header nav ul li{
-        display: inline;
-        margin-right: 20px;
-       }
-       #hgroup{
-        float: left;
-       }
-       #header h3{
-        font-size: 15px;
-       }
-       #header nav li a{
-               color: #C0BAB6; 
-               background-color: #232323;
+
+        #header #hgroup h1,
+        h3 {
+            color: red;
+        }
+
+        #header nav ul {
+            list-style-type: none;
+
+        }
+
+        #header nav ul li {
+            display: inline;
+            margin-right: 20px;
+            margin-top: 10px;
+
+
+        }
+
+        form {
+            float: right;
+            margin-top: -43px;
+        }
+
+        input[type="\ text"] {
+            background-color: red;
+            font-size: 16px;
+        }
+
+        button {
+            font-size: 15px;
+            background-color: orange;
+        }
+
+        #header nav {
+            margin-top: 20px;
+        }
+
+        .wrapper {
+            display: block;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+
+        }
+
+        #container {
+            width: 960px;
+            margin: 0 auto;
+            padding: 30px 0;
+
+        }
+
+        #container #slider {
+            width: 100%;
+        }
+
+        #container #section {
+            display: block;
+            margin-bottom: 30px;
+            padding: 0;
+        }
+
+        #container #slider figure {
+            display: block;
+            margin: 0;
+            padding: 0;
+            float: right;
+        }
+
+        #container #slider figure img {
+            float: right;
+            width: 630px;
+            height: 300px;
+        }
+
+        .more {
+            float: right;
+        }
+
+        #wrapper #row2 {
+            display: block;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+
+        #container {
+            padding: 30px;
+            display: block;
+            width: 960px;
+            margin: 0 auto;
+            clear: both;
+
+        }
+
+        #container #slider {
+            width: 100%;
+            overflow: auto;
+
+        }
+
+        #container #section {
+            display: block;
+            margin-bottom: 30px;
+            padding: 0;
+            clear: both;
+        }
+
+        #container #slider figure img {
+            float: right;
+            width: 630px;
+            height: 300px;
+        }
+
+        #container #slider figure figcaption {
+            width: 290px;
+            height: 260px;
+            padding: 20px;
+            color: #989898;
+            background-color: #464646;
+            line-height: 1.6em;
+        }
+
+        li a,
+        h2 {
+            font-size: 15px;
+        }
+
+        #container .readmore {
+            text-align: right;
+        }
+
+        #container #intro {
+            width: 100%;
+            margin-bottom: 60px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #D6D6D6;
+        }
+
+        #container #intro section {
+            width: 100%;
+        }
+
+        #container section {
+            display: block;
+            margin-bottom: 30px;
+            padding: 0;
+        }
+
+        .two_quarter {
+            width: 470px;
+        }
+
+        #container #intro section article h2 {
+            margin-bottom: 15px;
+        }
+
+        p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .lastbox {
+            margin-right: 0;
+        }
+
+        address,
+        article,
+        aside,
+        figcaption,
+        figure,
+        footer,
+        header,
+        nav,
+        section {
+            display: block;
+            margin: 0;
+            padding: 0;
+            float: left;
+        }
+
+        #container #intro section article figure ul {
+            display: block;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #container #intro section article figure ul li {
+            display: inline-block;
+            float: left;
+            margin: 0 25px 0 0;
+        }
+
+        .row2 a {
+            color: #FF9900;
+            background-color: #FFFFFF;
+        }
+
+        #container #intro section article figure ul li img {
+            width: 130px;
+            height: 130px;
+            margin: 0;
+            padding: 4px;
+            border: 1px solid #D6D6D6;
+        }
+
+        #container #intro section article figure ul li.last {
+            margin: 0;
+        }
+
+        #container #intro section article figure figcaption {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            clear: both;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        #container #intro section article figure figcaption {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            clear: both;
+            text-transform: uppercase;
+            font-weight: bold;
+
+        }
+
+        a {
+            color: orange;
         }
     </style>
 </head>
+
 <body>
-    <div id="wrapper">
+    <div id="wrapper row1">
         <div id="header">
             <div id="hgroup">
-                <h2>Basic 89</h2>
-                <h3>free HTML5 website template</h3>
+                <h1>Basic 90</h1>
+                <h3>free HTML website template</h3>
 
             </div>
             <nav>
@@ -75,11 +296,74 @@
                         <a href="#">Text link</a>
                     </li>
                 </ul>
-
             </nav>
+
+
+            <form>
+                <label for=""></label>
+                <input type=" text" placeholder="search our website">
+                <button>SUBMIT</button>
+            </form>
+        </div>
+    </div>
+    <div id="wrapper row2">
+        <div id="container">
+            <section id="slider">
+                <figure>
+                    <img src="./images copy 2/demo/630x300.gif" alt="">
+                </figure>
+                <figcaption>
+                    <h2>hello world</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur
+                        adipisicing elit. Nesciunt sapiente ipsa
+                        veritatis! Obcaecati veritatis culpa quidem,
+                        !</p>
+                    <p class="readmore"> </p>
+                </figcaption>
+
+
+            </section>
+            <div id="intro">
+                <section class="clear">
+                    <article class="two_quarter">
+                        <h2>lorum ipusum dolor</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit. Mollitia doloremque quod voluptates
+                            minima ipsa expedita eos qui labore inventore distinctio eum quasi rem nihil quo atque at,
+                            maxime eaque nulla.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Culpa delectus voluptatibus, soluta, odio odit ducimus corporis
+                            .</p>
+
+                    </article>
+                    <article class="two_quarter lastbox">
+                        <figure>
+                            <ul class="clear">
+                                <li>
+                                    <a href="#"><img src="./images copy 2/demo/130x130.gif" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="./images copy 2/demo/130x130.gif" alt=""></a>
+                                </li>
+                                <li class="last">
+                                    <a href="#"><img src="./images copy 2/demo/130x130.gif" alt=""></a>
+                                </li>
+
+                            </ul>
+                        </figure>
+                        <figcaption>
+                            <a href="#">view our image gallary here >></a>
+                        </figcaption>
+
+                    </article>
+
+                </section>
+
+            </div>
+
 
         </div>
 
+
     </div>
 </body>
-</html>

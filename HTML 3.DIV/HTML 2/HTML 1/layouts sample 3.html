@@ -1,71 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        .wrapper{
+
+        .wrapper {
             width: 100%;
         }
-        .row1{
+
+        .row1 {
             color: #c0bab6;
-            background-color: #333333;
+            background-color: lightcoral;
         }
-        #header{
-           width: 960px; 
-           margin: 0 auto;
-           padding: 20px 0;
-          overflow: auto; 
+
+        #header {
+            width: 960px;
+            margin: 0 auto;
+            padding: 20px 0;
+            overflow: auto;
         }
-        #header #hgroup{
+
+        #header #hgroup {
             float: left;
             margin: 0 0 20px 0;
         }
+
         #header #hgroup h1,
-        #header #hgroup h2{
+        #header #hgroup h2 {
             font-weight: normal;
             font-style: normal;
-            text-transform:none;
+            text-transform: none;
         }
-        #header hgroup h1{
+
+        #header hgroup h1 {
             font-size: 36px;
         }
-        .row1, .row1 a{
+
+        .row1,
+        .row1 a {
             color: #C0BAB6;
             background-color: #333333;
             text-decoration: none;
             outline: none;
         }
-        #header hgroup h2{
+
+        #header hgroup h2 {
             font-size: 13px;
         }
-        #header nav{
-        float: right;
+
+        #header nav {
+            float: right;
             margin: 10px 0 0 0;
             padding: 20px 0;
             color: #C0BAB6;
-            background-color: #232323;
+            background-color: black;
         }
-        #header nav ul{
+
+        #header nav ul {
             padding: 0 20px;
 
         }
-        #header nav li{
+
+        #header nav li {
             display: inline;
             margin-right: 25px;
             text-transform: uppercase;
         }
-        #header nav li a{
-               color: #C0BAB6; 
-               background-color: #232323;
+
+        #header nav li a {
+            color: #C0BAB6;
+            background-color: #232323;
         }
+
+        #container {
+            width: 960px;
+            margin: 0 auto;
+            margin-top: 20px;
+            padding: 3px;
+        
+
+        }
+
+        #container img {
+            border: 1px solid black;
+            padding: 3px;
+            margin-top: 20px;
+        }
+
+        #container .type {
+            float: right;
+            width: 500px;
+        }
+
+        .one_third {
+            width: 320px;
+            margin-right: 30px;
+            float: left;
+         }
+         .one_third img{
+            padding: 3px;
+         }
+
+        
+
+      
+        
+          
     </style>
 </head>
+
 <body>
     <div class="wrapper row1">
         <header id="header" class="clear">
@@ -99,7 +150,62 @@
 
     </div>
     <div id="container">
+        <div class="clear">
+            <section>
+                <img src="./images copy/demo/960x360.gif" alt="">
+            </section>
 
-    </div>
-</body>
+
+            <section id="row2">
+                <article class="one_third">
+                    <img src="./images copy/demo/290x180.gif" alt="">
+
+                    <h1>hello from heading</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit. Consequatur cumque
+                        iure, tempora ad sapiente aspernatur
+                        obcaecati minus animi nihil dolorum
+                        consecteturbeatae vitae aliquam nemo
+                        distinctio numquam quis molestiae!</p>
+                    <footer class="more">
+                        <a href="#">Read more >></a>
+
+                    </footer>
+                </article>
+                <article class="one_third">
+                    <img src="./images copy/demo/290x180.gif" alt="">
+
+                    <h1>hello from heading</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit. Consequatur cumque
+                        iure, tempora ad sapiente aspernatur
+                        obcaecati minus animi nihil dolorum
+                        consecteturbeatae vitae aliquam nemo
+                        distinctio numquam quis molestiae!</p>
+                    <footer class="more">
+                        <a href="#">Read more >></a>
+
+                    </footer>
+                </article>
+                <article class="one_third lastbox">
+                    <img src="./images copy/demo/290x180.gif" alt="">
+
+                    <h1>hello from heading</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit. Consequatur cumque
+                        iure, tempora ad sapiente aspernatur
+                        obcaecati minus animi nihil dolorum
+                        consecteturbeatae vitae aliquam nemo
+                        distinctio numquam quis molestiae!</p>
+                    <footer class="more">
+                        <a href="#">Read more >></a>
+
+                    </footer>
+                </article>
+
+            </section>
+            </div>
+            </div>
+    </body>
+
 </html>
