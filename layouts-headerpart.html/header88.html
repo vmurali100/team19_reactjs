@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+     
         * {
             margin: 0;
             padding: 0;
@@ -21,7 +22,7 @@
             display: block;
             margin: 0 auto;
             width: 960px;
-            background-color: pink;
+            background-color: lightslategray;
             padding: 20px;
             overflow: auto;
         }
@@ -31,23 +32,25 @@
             float: left;
         }
 
-        nav {
+        #header nav {
             float: right;
             padding: 20px 0;
             background-color: antiquewhite;
             margin-top: 10px;
         }
 
-        li {
+        #header nav li {
             list-style: none;
             margin-right: 25px;
             display: inline;
             text-transform: uppercase;
+            margin: 0 10px;
         }
 
-        li a {
+        #header nav li a {
             text-decoration: none;
             font-size: 15px;
+            color: black;
         }
 
         h1 a {
@@ -59,11 +62,189 @@
         h2 {
             font-size: 15px;
         }
+
+        section {
+            width: 960px;
+            margin: 30px auto;
+        }
+
+        .one_third {
+            width: 300px;
+            margin-right: 30px;
+            float: left;
+        }
+
+        .one_third img,
+        #content img {
+            padding: 3px;
+            border: 1px solid grey;
+        }
+
+        .last {
+            margin: 0;
+        }
+
+        .one_third h2 {
+            margin: 10px 0;
+        }
+
+        .one_third p {
+            margin: 10px 0;
+
+        }
+
+        .Readmore a {
+            float: right;
+            margin: 10px 10px 0 0;
+            color: orange;
+            text-decoration: none;
+        }
+
+        #body h2 {
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        #body {
+            overflow: auto;
+        }
+
+        #content img {
+            float: right;
+            width: 400px;
+        }
+
+        #content1 h2 {
+            width: 490px;
+            margin-top: 10px;
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        #content1 p {
+            margin: 5px 0;
+            overflow: auto;
+        }
+
+        #footer {
+            padding: 30px 0;
+            margin: 0 auto;
+            width: 960px;
+            color: #919191;
+            background-color: #232323;
+            overflow: auto;
+        }
+
+
+        .one_quarter {
+            width: 225px;
+            margin: 0 auto;
+            float: left;
+        }
+
+        .one_quarter nav li {
+            list-style: none;
+
+        }
+
+        .one_quarter nav li a {
+            margin: 5px 0 5px 0;
+            padding: 10px 0 0 10px;
+            border-bottom: 1px solid #555555;
+            color: orange;
+            text-decoration: none;
+        }
+
+        .title {
+            padding: 5px 0;
+            font-size: 10pxpx;
+            font-style: italic;
+        }
+
+        .row3 {
+            background-color: #232323;
+        }
+
+        .footerwrapper {
+            background-color: #232323;
+        }
+
+        .row4 footer {
+            width: 960px;
+            margin: 0 auto;
+            overflow: auto;
+            padding: 20px 0;
+        }
+
+        .fl_left {
+            float: left;
+            color: white;
+        }
+
+        .fl_right {
+            float: right;
+        }
+
+        span {
+            color: orange;
+        }
+        @media screen and (max-width: 425px) {
+        #header #head {
+          float: none;
+          text-align: center;
+        }
+        #header #container #footer #copyright{
+            display: block;
+            width: 100%;
+        }
+        .wrapper2 #container img{
+            width: 100%;
+        }
+         #body .one_third {
+             width: 100%;
+        } 
+        #header nav {
+            
+        }
+        #header nav{
+            float: none;
+        }
+        #header nav ul li{
+            display: block;
+            text-align: center;
+        }
+        #header nav li .last{
+            margin-right: 25px;
+
+        }
+        #container img{
+            width: 100%;
+        }
+        section{
+            width: 100%;
+        }
+        .row3 #footer{
+            width: 100%;
+        }
+        .one_quarter{
+            float: left;
+            width: 100%;
+            text-align: center;
+        }
+        .fl_left{
+            float: none;
+            text-align: center;
+        }
+        .fl_right{
+            float: none;
+            text-align: center;
+        }
+    }
     </style>
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper row1">
         <header id="header" class="clear">
             <div id="head">
                 <h1>
@@ -88,11 +269,168 @@
                     <li>
                         <a href="#">Help</a>
                     </li>
-
                 </ul>
             </nav>
         </header>
     </div>
+    <div class="wrapper2 row2">
+        <section id="container">
+            <img src="./images/demo/960x360.gif" alt="">
+        </section>
+
+        <section id="body">
+            <article class="one_third">
+                <img src="./images/demo/290x180.gif" alt="">
+                <h2>Hello world</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adip fugiat unde quasi quidem fugit quas ipsa reiciendis omnis
+                    placeat. Quae, aspernatur?</p>
+                <p class="Readmore">
+                    <a href="#">Read More..</a>
+                </p>
+            </article>
+            <article class="one_third">
+                <img src="./images/demo/290x180.gif" alt="">
+                <h2>Hello world</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adip fugiat unde quasi quidem fugit quas ipsa reiciendis omnis
+                    placeat. Quae, aspernatur?</p>
+
+                <p class="Readmore">
+                    <a href="#">Read More..</a>
+                </p>
+            </article>
+            <article class="one_third last">
+                <img src="./images/demo/290x180.gif" alt="">
+                <h2>Hello world</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adip fugiat unde quasi quidem fugit quas ipsa reiciendis omnis
+                    placeat. Quae, aspernatur?</p>
+
+                <p class="Readmore">
+                    <a href="#">Read More..</a>
+                </p>
+            </article>
+        </section>
+    </div>
+    <section id="content">
+        <img src="./images/demo/450x250.gif" alt="">
+    </section>
+    <section id="content1">
+        <h2>Hello World</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.,<span> Minus ea</span> velit quam excepturi, nobis
+            deserunt
+            voluptatibus totam dolorem atque <span>inventore</span>, ab ipsum illum. Illo deserunt sunt fugit ullam sed
+            ratione.</p>
+        <p>Lorem ipsum dolor sit amet <span>consectetur</span> adipisicing elit. Nulla, aperiam quia architecto quisquam
+            officiis non
+            blanditiis.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem est deleniti recusandae accusamus pariatur
+            delectus quod voluptate suscipit
+            tenetur <span>reprehenderit</span>. Minima velit beatae facilis <span>laboriosam</span> vitae incidunt
+            molestiae est nam?</p>
+        <p class="Readmore">
+            <a href="#">Read More..</a>
+        </p>
+    </section>
+    <div class="wrapper3 row3">
+        <div id="footer">
+            <section class="one_quarter">
+                <h1 class="title">Welcome to Html</h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit</a>
+                        </li>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit</a>
+                        </li>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit</a>
+                        </li>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit</a>
+                        </li>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="one_quarter">
+                <h1 class="title">Welcome to Html</h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit</a>
+                        </li>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit</a>
+                        </li>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit</a>
+                        </li>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit</a>
+                        </li>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="one_quarter">
+                <h1 class="title">Welcome to Html</h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit</a>
+                        </li>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit</a>
+                        </li>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit</a>
+                        </li>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit</a>
+                        </li>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="one_quarter">
+                <h1 class="title">Welcome to Html</h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit</a>
+                        </li>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit</a>
+                        </li>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit</a>
+                        </li>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit</a>
+                        </li>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </div>
+    <div class="footerwrapper row4">
+        <footer id="copyright">
+            <p class="fl_left">Copyright © 2018 - All Rights Reserved - </p>
+            <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/"
+                    title="Free Website Templates">OS Templates</a></p>
+
+        </footer>
+    </div>
+
 </body>
 
 </html>
