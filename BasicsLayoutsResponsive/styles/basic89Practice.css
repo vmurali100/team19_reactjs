@@ -252,6 +252,8 @@ p{
     display: block;
     width: 960px;
     margin: 0 auto;
+    background-color: chartreuse;
+    
     
 }
 #footer p {
@@ -266,9 +268,108 @@ p{
 }
 .row3{
     background-color: #666666;
+
 }
 #footer a{
     color: orange;
+    text-decoration: none;
+}
+/* media queries */
+
+@media screen and (max-width:425px){
+   div.wrapper{
+    width: 100%;
+   }
+   #header{
+    width: 100%;
+   }
+   #header #hgroup{
+    float: none;
+    text-align: center;
+   }
+   #header nav{
+    float: none;
+    text-align: center;
+   }
+   #header nav ul{
+    width: 200px;
+    margin: 0 auto;    
+   }
+   #header ul li{
+    display: block;
+    background-color: teal;
+    margin: 10px 0;
+    padding: 5px 0;
+
+   }
+   #header nav {
+    background-color:lightcoral
+   }
+   #header nav li a{
+    background-color:teal;
+    
+   }
+   #header nav li.last {
+    margin-right:0;
+}
+.row2{
+    width: 100%;
+}
+#container,#threeimg{
+    width: 100%; 
+}
+ img{
+    width: 100%;
+}
+#container #content{
+    width: 100%;
+    float: none;
+}
+#container #homepage #services {
+    text-align: center;
+    width: 100%;
+
+}
+#container #homepage{
+    width: 100%;
+}
+#container #slider{
+    width: 100%;
+
+}
+#container #content #posts ul li article figure figcaption{
+    width: 100%;
+}
+#services .one_quarter{
+    width:100%;
+}
+#footer{
+    width: 100%;
+    text-align: center;
+}
+.fl_left {
+    float: none;
+}
+.fl_right{
+    float: none;
+}
+#container #right_column {
+    float: none;
+    width: 100%;
+}
+#threeimg  #imge .clear li {
+    display:block;
+    margin: 0;
+    width: 100;
+}
+#container #right_column h2.title {
+   text-align: center;
+}
+#threeimg figcaption {
+    float: none;
+    margin:0;
+    color: orange;
+    text-align: center;
 }
 
-
+}
