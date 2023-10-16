@@ -29,7 +29,7 @@
 
         #header #hgroup h1,
         h3 {
-            color: red;
+            color: aliceblue;
         }
 
         #header nav ul {
@@ -62,6 +62,8 @@
 
         #header nav {
             margin-top: 20px;
+            background: yellowgreen;
+            padding: 5px;
         }
 
         .wrapper {
@@ -267,6 +269,171 @@
         a {
             color: orange;
         }
+
+        #container #homepage {
+            display: block;
+            width: 100%;
+            line-height: 1.6em;
+            text-align: left;
+        }
+
+        #container .last {
+            margin: 0;
+        }
+
+        .one_quarter {
+            width: 225px;
+            float: left;
+            /* margin: 0 20px 0 0; */
+
+        }
+
+        #container #homepage section {
+            margin-bottom: 0;
+        }
+
+        #container #homepage section h2.title {
+            margin: 0 0 25px 0;
+            padding: 0 0 8px 0;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        #container #homepage section article header h2 {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        #container #homepage section article address,
+        #container #homepage section article time {
+            font-size: 10px;
+            font-style: normal;
+        }
+
+        .row2 a {
+            color: #FF9900;
+            background-color: #FFFFFF;
+        }
+
+        a {
+            outline: none;
+            text-decoration: none;
+        }
+
+        #homepage {
+            width: 960px;
+            margin: 0 auto;
+            overflow: auto;
+        }
+
+        #container .last {
+            margin: 0;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .one_quarter {
+            width: 225px;
+            float: left;
+            margin: 0 20px 0 0;
+        }
+
+        #container #homepage section h2.title {
+            margin: 0 0 25px 0;
+            padding: 0 0 8px 0;
+
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        #homepage section article header h2 {
+            font-size: 13px;
+            font-weight: bold;
+            padding-bottom: 5px;
+        }
+
+        #homepage section article p {
+            padding: 5px 0;
+            font-size: 14px;
+        }
+
+        #homepage section article address,
+        #container #homepage section article time {
+            font-size: 10px;
+            font-style: normal;
+        }
+
+        h2.title {
+            padding: 20px 0;
+            font-style: italic;
+            text-transform: uppercase;
+            font-size: 15px;
+
+
+        }
+
+        .two_quarter {
+            width: 470px;
+
+        }
+
+        section.two_quarter.lastbox {
+            width: 450px;
+        }
+
+        img.imgl {
+            float: left;
+            margin-right: 22px;
+            border: 4px solid lightgrey;
+        }
+
+        footer.more {
+            margin: 15px 0;
+        }
+
+        .lastbox .more {
+            text-align: right;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .one_quarter nav ul li {
+            border-bottom: 1px dotted black;
+            line-height: 1.5em;
+        }
+
+        section.two_quarter.lastbox img {
+            float: left;
+            border: 1px solid black;
+            padding: 3px;
+            margin-right: 20px;
+        }
+
+        .one_quarter {
+            width: 225px;
+            float: left;
+            margin: 0;
+        }
+
+        .fl_left {
+            float: left;
+            margin-left: 500px;
+        }
+
+        .fl_right {
+            float: right;
+            
+        }
+       
+
+       
     </style>
 </head>
 
@@ -280,21 +447,12 @@
             </div>
             <nav>
                 <ul>
-                    <li>
-                        <a href="#">Text link</a>
-                    </li>
-                    <li>
-                        <a href="#">Text link</a>
-                    </li>
-                    <li>
-                        <a href="#">Text link</a>
-                    </li>
-                    <li>
-                        <a href="#">Text link</a>
-                    </li>
-                    <li>
-                        <a href="#">Text link</a>
-                    </li>
+                    <li>Text link</li>
+                    <li>Text link</li>
+                    <li>Text link</li>
+                    <li>Text link</li>
+                    <li>Text link</li>
+
                 </ul>
             </nav>
 
@@ -311,16 +469,15 @@
             <section id="slider">
                 <figure>
                     <img src="./images copy 2/demo/630x300.gif" alt="">
+                    <figcaption>
+                        <h2>hello world</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur
+                            adipisicing elit. Nesciunt sapiente ipsa
+                            veritatis! Obcaecati veritatis culpa quidem,
+                            !</p>
+                        <p class="readmore"> </p>
+                    </figcaption>
                 </figure>
-                <figcaption>
-                    <h2>hello world</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur
-                        adipisicing elit. Nesciunt sapiente ipsa
-                        veritatis! Obcaecati veritatis culpa quidem,
-                        !</p>
-                    <p class="readmore"> </p>
-                </figcaption>
-
 
             </section>
             <div id="intro">
@@ -359,11 +516,69 @@
 
                 </section>
 
+
+
             </div>
+            <div id="homepage" class="last clear">
+                <section class="one_quarter">
+                    <h2 class="title">From The Blog</h2>
+                    <article>
+                        <header>
+                            <h2>Post Title</h2>
+                            <address>
+                                <a href="#">Admin</a>
+                            </address>
+                            <time datetime="2000-04-06">Friday, 6<sup>th</sup> April 2000</time>
+                        </header>
+                        <p>Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat
+                            imperdiet.</p>
+                        <footer class="more"><a href="#">Read More</a></footer>
+                    </article>
+                </section>
+                <section class="one_quarter">
+                    <h2 class="title">Quick Links</h2>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Lorem ipsum dolor sit</a></li>
+                            <li><a href="#">Amet consectetur</a></li>
+                            <li><a href="#">Praesent vel sem id</a></li>
+                            <li><a href="#">Curabitur hendrerit est</a></li>
+                            <li class="last"><a href="#">Sed a nulla urna</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="two_quarter lastbox">
+                    <h2 class="title">About US</h2>
+                    <img src=" ./images copy 2/demo/130x130.gif" alt="">
+                    <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus
+                        ipsum ante quis turpis. Nulla . fringilla. Suspendisse potenti. Nunc feugiat mi a
+                        tellus consequat imperdiet.eu magna.</p>
+                    <footer class="more"><a href="#">Read More>></a></footer>
+                </section>
+            </div>
+
+
 
 
         </div>
 
 
     </div>
+
+
+    </div>
+    <div class="wrapper row4">
+        <footer id="copyright" class="clear">
+            <p class="fl_left">Copyrisght © 2018 - All Rights Reserved <a href="#">Domain name</a></p>
+            <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/"
+                    title="Free Website Templates">OS Templates</a></p>
+    
+    
+    
+        </footer>
+    
+    </div>
+    
 </body>
+
+</html>
