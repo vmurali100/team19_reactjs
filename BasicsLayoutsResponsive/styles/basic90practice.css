@@ -5,18 +5,21 @@
 body{
     font-family: Georgia, "Times New Roman", Times, serif;
     color: #919191;
-    background-color: #FF9900;
+    /* background-color: #FF9900; */
+    
 
 }
 div.wrapper {
     display: block;
     width: 100%;
     text-align: left;
-    background:linear-gradient(to right,black, purple)
+    /* background:linear-gradient(to right,black, purple); */
+    overflow: hidden;
 }
 .row1{
     color: #C0BAB6;
-
+    background-color: #FF9900;
+    /* background: linear-gradient( to right,purple, black); */
 }
 #header {
     padding: 20px 0;
@@ -290,14 +293,18 @@ nav ul {
 #footer a{
     color: wheat;
     text-decoration: none;
-
-
 }
 .fl_left{
     float: left;
 }
 .fl_right{
     float: right;
+}
+@media screen and (max-width:425px) {
+ .row1{
+    background-color: greenyellow;
+ }
+    
 }
 
 
