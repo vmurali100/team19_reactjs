@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            width: 100%;
+            border: 3px solid red;
+            background-color:black;
+        }
+
+        #header {
+            display: block;
+            margin: 0 auto;
+            width: 960px;
+            background-color:black;
+            padding: 20px;
+            overflow: auto;
+            color: aliceblue;
+        }
+
+        #hgroup {
+            width: 300px;
+            float: left;
+        }
+
+        #header nav {
+            float: right;
+            padding: 20px 0;
+            background-color:black;
+            margin-top: 10px;
+            color: #DEDEDE;
+        }
+
+        #header nav li {
+            list-style: none;
+            margin-right: 25px;
+            display: inline;
+            text-transform: uppercase;
+            margin: 0 10px;
+        }
+
+        #header nav li a {
+            text-decoration: none;
+            font-size: 15px;
+            color: black;
+        }
+
+        h1 a {
+            text-decoration: none;
+            color: black;
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 18px;
+            color: darkmagenta;
+            font-style: italic;
+        }
+
+        .wrapper2 {
+            display: block;
+            text-align: left;
+        }
+
+        #container {
+            padding: 30px 0;
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        #container #slider {
+            margin-bottom: 50px;
+        }
+
+        #container section {
+            display: block;
+            width: 100%;
+            margin: 0 0 30px 0;
+            padding: 0;
+        }
+
+        #container #homepage {
+            display: block;
+            width: 100%;
+            float: left;
+        }
+
+        #container #homepage #content {
+            padding: 0 0 30px 0;
+            border-bottom: 1px solid #DEDEDE;
+        }
+
+        #container section {
+            width: 100%;
+            display: block;
+            margin: 0 0 30px 0;
+            float: left;
+
+        }
+
+        .one_quarter {
+            width: 225px;
+            display: block;
+            float: left;
+            margin: 0 20px 0 0;
+        }
+
+        #container #homepage #content figure {
+            float: left;
+        }
+
+        #container #homepage #content h1 {
+            margin: 8px 0 0 10px;
+            padding: 10px 0 0 30px;
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: darkgreen;
+        }
+
+        #container #homepage #content p {
+            width: 200px;
+            margin: 0;
+            padding: 5px 0 0 0;
+            clear: both;
+            font-style: italic;
+            font-size: 16px;
+
+        }
+
+        .Readmore a {
+            float: right;
+            text-decoration: none;
+            color: red;
+        }
+
+        #container #homepage #latest {
+            padding: 0 0 30px 0;
+            border-bottom: 1px solid #DEDEDE;
+        }
+
+        #container #homepage #latest article figure ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .one_third {
+            width: 300px;
+            float: left;
+            display: block;
+            margin: 0 30px 0 0;
+        }
+
+        .lastbox {
+            margin: 0;
+        }
+
+        #container #homepage #latest article figure figcaption {
+            display: block;
+            width: 100%;
+            text-align: right;
+        }
+
+        #container #homepage #latest article figure ul li img {
+            padding: 4px;
+            border: 1px solid #D6D6D6;
+        }
+
+        #container #homepage #latest article figure figcaption a {
+            color: orange;
+            text-decoration: none;
+        }
+
+        #content1 {
+            clear: both;
+        }
+
+        #content1 #posts {
+            margin: 0 auto;
+            width: 960px;
+            clear: both;
+        }
+
+        #content1 #posts article figure img {
+            float: left;
+            clear: both;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #D6D6D6;
+        }
+
+        #content1 #posts article figcaption {
+            width: 450px;
+            float: right;
+            margin-right: 300px;
+        }
+
+        #content1 #posts li {
+            list-style: none;
+        }
+
+        #right_column {
+            float: right;
+            width: 250px;
+            margin-top: -300px;
+            margin-right: 400px;
+        }
+
+        #right_column h2.title {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #DEDEDE;
+            font-size: 20px;
+        }
+
+        #right_column nav {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        #right_column nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: disc;
+        }
+
+        #right_column nav li {
+            margin: 0 0 3px 0;
+            padding: 0;
+        }
+
+        #right_column nav a {
+            display: block;
+            margin: 0;
+            padding: 5px 10px 5px 20px;
+            color: #666666;
+            background: url("../images/orange_file.gif") no-repeat 10px center #FFFFFF;
+            text-decoration: none;
+            border-bottom: 1px dotted #666666;
+        }
+
+        #right_column nav li.last {
+            margin-bottom: 0;
+        }
+
+        #container #right_column nav li {
+            margin: 0 0 3px 0;
+            padding: 0;
+        }
+
+        .wrapper3 {
+            clear: both;
+            display: block;
+            overflow: auto;
+            width: 960px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .row3 {
+            background-color: lightblue;
+            color: chocolate;
+
+        }
+
+        .fl_left {
+            float: left;
+            color: black;
+            margin-left: 300px;
+
+        }
+
+        .fl_right {
+            float: right;
+            margin-right: 500px;
+        }
+
+         @media screen and (max-width :425px) {
+            #header #hgroup {
+                width: 100%;
+                float: none;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 60px;
+            }
+
+            h2 {
+                font-size: 30px;
+                color: white;
+            }
+
+            #header nav ul li a {
+                font-size: 30px;
+            }
+
+            #container #homepage #content h1 {
+
+                font-size: 40px;
+            }
+
+            #container #homepage #content p {
+                font-size: 35px;
+            }
+
+            #content1 #posts article figure img {
+
+                width: 200px;
+
+            }
+
+            p {
+                font-size: 40px;
+            }
+
+            #right_column nav {
+                font-size: 40px;
+                color: darkblue;
+            }
+            #right_column nav a{
+                color: darkmagenta;
+            }
+
+            #container #slider img {
+                width: 100%;
+                padding: 15px;
+            }
+
+            #container #homepage {
+                float: none;
+            }
+
+            #header nav {
+                float: none;
+            }
+
+            #header nav ul li {
+                display: block;
+                text-align: center;
+            }
+
+            .one_quarter {
+                width: 100%;
+                margin: 0 20px 0 0;
+            }
+
+            #container #homepage #content p {
+                margin: 0 auto;
+                padding: 5px 0 0 0;
+            }
+
+            #container #homepage #content h1 {
+                text-align: center;
+            }
+
+            #container #homepage #content figure {
+                float: none;
+            }
+
+            .one_quarter img {
+                margin: 0 0 0 400px;
+            }
+
+            .one_third {
+                width: 100%;
+                text-align: center;
+
+            }
+
+            #content1 #posts article figure img {
+                float: none;
+                clear: both;
+                padding: 5px;
+                margin-bottom: 10px;
+                border: 1px solid #D6D6D6;
+                margin: 0 0 0 400px;
+            }
+
+            #content1 #posts article figcaption {
+                width: 100%;
+                float: none;
+                text-align: center;
+            }
+
+            #container #posts figcaption p {
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            #right_column {
+                width: 100%;
+                margin: 20px 0 0 300px;
+                float: none;
+            }
+
+            .row3 {
+                background-color: #666666;
+                color: white;
+
+            }
+
+            .fl_left {
+                float: none;
+                color: black;
+                margin: auto;
+            }
+
+            .fl_right {
+                float: none;
+                margin: 0 0 0 250px;
+                
+            }
+        } 
+    </style>
+</head>
+
+<body>
+    <div class="wrapper row1">
+        <header id="header" class="clear">
+            <div id="hgroup">
+                <h1>Basic 89</h1>
+                <h2>Free HTML Templates</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="">text link</a></li>
+                    <li><a href="">text link</a></li>
+                    <li><a href="">text link</a></li>
+                    <li><a href="">text link</a></li>
+                    <li><a href="">text link</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="wrapper2 row2">
+        <div id="container" class="clear">
+            <section id="slider">
+                <img src="./images copy/demo/960x360.gif" alt="">
+            </section>
+            <div id="homepage">
+                <section id="content">
+                    <article class="one_quarter">
+                        <figure>
+                            <img src="./images copy/demo/32x32.gif" alt="">
+                        </figure>
+                        <h1>welcome to india</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ealis minus
+                            minima,
+                            incidunt iste sapiente fugit repellendus maxime, dolorum ex..</p>
+                        <p class="Readmore">
+                            <a href="">Read More..</a>
+                        </p>
+                    </article>
+                    <article class="one_quarter">
+                        <figure>
+                            <img src="./images copy/demo/32x32.gif" alt="">
+                        </figure>
+                        <h1>welcome to india</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eacilis minus
+                            minima,
+                            incidunt iste sapiente fugit repellendus maxime, dolorum ex. </p>
+                        <p class="Readmore">
+                            <a href="">Read More..</a>
+                        </p>
+                    </article>
+                    <article class="one_quarter">
+                        <figure>
+                            <img src="./images copy/demo/32x32.gif" alt="">
+                        </figure>
+                        <h1>welcome to india</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea s minus
+                            minima,
+                            incidunt iste sapiente fugit repellendus maxime, dolorum ex..</p>
+                        <p class="Readmore">
+                            <a href="">Read More..</a>
+                        </p>
+                    </article>
+                    <article class="one_quarter lastbox">
+                        <figure>
+                            <img src="./images copy/demo/32x32.gif" alt="">
+                        </figure>
+                        <h1>welcome to india</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eafacilis minus
+                            minima,
+                            incidunt iste sapiente fugit repellendus maxime, dolorum </p>
+                        <p class="Readmore">
+                            <a href="">Read More..</a>
+                        </p>
+                    </article>
+                </section>
+
+                <section id="latest">
+                    <article>
+                        <figure>
+                            <ul>
+                                <li class="one_third">
+                                    <img src="./images copy/demo/290x180.gif" alt="">
+                                </li>
+                            </ul>
+                        </figure>
+                    </article>
+                    <article>
+                        <figure>
+                            <ul>
+                                <li class="one_third">
+                                    <img src="./images copy/demo/290x180.gif" alt="">
+                                </li>
+                            </ul>
+                        </figure>
+                    </article>
+                    <article>
+                        <figure>
+                            <ul>
+                                <li class="one_third lastbox">
+                                    <img src="./images copy/demo/290x180.gif" alt="">
+                                </li>
+                            </ul>
+                        </figure>
+                    </article>
+                </section>
+            </div>
+        </div>
+
+        <div id="content1">
+            <section id="posts">
+                <ul>
+                    <li>
+                        <article>
+                            <figure>
+                                <img src="./images copy/demo/180x150.gif" alt="">
+                                <figcaption>
+                                    <h2>welcome to ondia</h2>
+                                    <p>Lorem ipsum dolor sit. Quibusdam officia eius
+                                        molestias rem quasi ut temporibus harum, quia laboriosam animi
+                                        est impedit esse iureveniam soluta vitae.</p>
+                                    <p class="Readmore">
+                                        <a href="">Read More..</a>
+                                    </p>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <figure>
+                                <img src="./images copy/demo/180x150.gif" alt="">
+                                <figcaption>
+                                    <h2>welcome to india</h2>
+                                    <p>Lorem ipsum dolor sit amet co. Quibusdam officia eius
+                                        molestias rem quasi ut temporibus harum, quia laboriosam animi
+                                        est impedit esse iureveniam soluta vitae.</p>
+                                    <p class="Readmore">
+                                        <a href="">Read More..</a>
+                                    </p>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <aside id="right_column">
+            <h2 class="title">Categories</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">I like biriyani</a></li>
+                    <li><a href="#">I am going to hyderabad</a></li>
+                    <li><a href="#">Hello world</a></li>
+                    <li><a href="#">Web developement</a></li>
+                    <li><a href="#">Website Layouts in html</a></li>
+                    <li><a href="#">Free HTML Templates</a></li>
+                    <li><a href="#">my favarate place is maldives</a></li>
+                    <li><a href="#">Free PNG Templates</a></li>
+                    <li class="last"><a href="#">Free Website develope </a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+    <div class="wrapper3 row3">
+        <footer id="footer" class="clear">
+            <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+            <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/"
+                    title="Free Website Templates">OS Templates</a></p>
+        </footer>
+    </div>
+</body>
+</html>
