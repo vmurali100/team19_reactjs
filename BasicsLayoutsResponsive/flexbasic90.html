@@ -6,6 +6,23 @@
     <title>Basic 90</title>
     <link rel="stylesheet" href="styles/basic90practice.css">
     <style>
+
+  .hgroups {
+    display: flex;
+    justify-content: space-between;
+}
+#header #hgroup {
+    float: none;
+    margin: 0 0 20px 0;
+}
+#header form {
+    display: block;
+    width: 290px;
+    float: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
     #slider figure {
         display: flex;
     }
@@ -35,14 +52,16 @@ div#homepage {
 <body>
     <div class="wrapper row1">
         <header id="header" class="clear">
+           <div class="hgroups">
             <div id="hgroup">
-                <h1><a href="#">Basic 90</a></h1>
-                <h2>Free HTML5 Website Template</h2>
-            </div>
-            <form action="#" method="post">               
-                    <input type="text" placeholder="Search">
-                    <input type="submit" value="submit" id="sf_submit">           
-            </form>
+              <h1><a href="#">Basic 90</a></h1>
+              <h2>Free HTML5 Website Template</h2>
+          </div>
+          <form action="#" method="post">               
+                  <input type="text" placeholder="Search">
+                  <input type="submit" value="submit" id="sf_submit">           
+          </form>
+          </div>
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
