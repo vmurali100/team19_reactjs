@@ -1,0 +1,33 @@
+@media screen and (max-width: 425px) {
+  #header #hgroup , #header form {
+    float: none;
+    text-align: center;
+  }
+  #header, #container, #footer{
+    width: 100%;
+  }
+  #header form {
+    width: 290px;
+    margin: 20px auto;
+}
+.two_quarter{
+    width: 100%;
+}
+}
+
+@media screen and (min-width:426px) and (max-width:768px) {
+    #header #hgroup , #header form {
+        float: none;
+        text-align: center;
+      }
+    body{
+        background: red;
+    }
+    #container #slider figure figcaption{
+        width: 100%;
+    }
+    #container #slider figure img{
+        width: auto;
+        float: none;
+    }
+}
