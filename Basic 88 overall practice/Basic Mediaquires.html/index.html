@@ -4,103 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PAVAN 88</title>
-    <link rel="stylesheet" href="styles/basic88practice.css">
 </head>
     <style>
-        /* ---------------Media quires starts-------------- */
-    body{
-        background-color: yellow;
-    }
-    @media screen and (max-width:425px) {
-        body{
-            background-color: rgba(177, 177, 233, 0.24);
-            width: 100%;
-        }
-      header#header.clear,div#hgroup{
-        width: 100%;
-        text-align: center;
-        background-color: orangered;
-      }
-      #header #hgroup{
-        float: none;
-        width: 100%;
-     }
-     #header #hgroup h1 a{
-        color: gold;
-        font-size: 40px;
-     }
-    #header #hgroup h2{
-        color: plum;
-        font-size: 17px;
-        padding-top: 5px;
-        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-     }
-     #powernav{
-        width: 100%;
-        background-color: orchid;
-        text-align: center;
-     }
-     #powernav nav{
-        padding: 10px;
-     }
-     nav li{
-        padding: 3px;
-     }
-     nav ul li a{
-        color:darkred;
-        cursor: pointer;
-     }
-     div.container.clear{
-        width: 100%;
-      }
-      #slider img{
-        width: 100%;
-      }
-    #homepage #services .one_third{
-    width: 300px;
-    float: none;
-    margin:0 auto;
-  }
-   #intro img{
-    width: 100%;
-   }
- div.footer{
-    width: 100%;
- }
-   section.one_quarter{
-    width: 100%;
- } 
- h2{
-    text-align: center;
-    width: 100%;
- }
- p.para{
-    width: 100%;
-    text-align: center;
- }
- 
- .footer .one_quarter h4{
-    text-align: center;
-    color: aqua;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
- }
- nav{
-    text-align: center;
- }
- #copyright{
-    width: 100%;
- }
- #copyright .fl_left,.fl_right{
-    float: none;
-    width: 100%;
-}
-
-    }
-
-
-
-
-  /* ------------------Media quires ends------------- */
    *{
     margin: 0;
     padding: 0;
@@ -325,6 +230,280 @@ nav ul{
 .clear{
     overflow: auto;
 }
+
+/* ------------------------------Mediaquires500px----------------------------- */
+    
+    @media screen and (max-width:500px) {
+        body{
+            background-color: pink;
+            width: 100%;
+        }
+/* ----------------header------------- */
+
+      header#header.clear,div#hgroup{
+        width: 100%;
+        text-align: center;
+        background-color: orangered;
+      }
+      #header #hgroup{
+        float: none;
+        width: 100%;
+     }
+     #header #hgroup h1 a{
+        color: yellow;
+        font-size: 40px;
+     }
+    #header #hgroup h2{
+        color: lawngreen;
+        font-size: 17px;
+        padding-top: 5px;
+        margin-top: 5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-decoration: underline;
+        text-decoration-color: aqua;
+       
+     }
+
+/* -----------powenav---------------- */
+
+     #powernav{
+        width: 100%;
+        background-color: orchid;
+        text-align: center;
+        margin-top: 30px;
+     }
+     #powernav nav{
+        padding: 10px;
+     }
+     nav li{
+        padding: 6px;
+     }
+     nav ul li a{
+        color: blue;
+        cursor: pointer;
+        text-decoration: underline;
+        text-decoration-color: whitesmoke;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: larger;
+        
+     }
+
+/* -----------960x360 img----------- */
+
+     div.container.clear{
+        width: 100%;
+      }
+      #slider img{
+        border: 1px solid rebeccapurple;
+        width: 100%;
+        padding: 2px;
+        box-sizing: border-box;
+      }
+
+/* --------------onethirdimages----- */
+
+    #homepage #services .one_third{
+    width: 300px;
+    float: none;
+    margin:0 auto;
+  }
+  .one_third img{
+    border: 1px solid hotpink;
+    padding: 4px;
+  }
+ #services .one_third h2{
+    color:red; 
+ }
+ #services .one_third .para{
+    color: green;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+ }
+ #services .one_third .more a{
+    color: lightcoral;
+ }
+/* ----------450x250pic------------- */
+
+   #intro img{
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid red ;
+   }
+   h2{
+    text-align: center;
+    width: 100%;
+    color: orangered;
+ }
+ p.para{
+    width: 100%;
+    text-align: center; 
+ }
+ #intro p{
+    color: darkmagenta; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+ }
+ #intro a{
+    color: limegreen;
+ }
+ /* ----------footer--------------- */
+
+ div.footer{
+    width: 100%;
+ }
+   section.one_quarter{
+    text-align: center;
+ } 
+ .one_quarter nav ul li{
+    text-align: center; 
+    width:100%;
+ }
+ .footer .one_quarter h4{
+    text-align: center;
+    color: aqua;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+
+ /* --------copyright-------------- */
+
+ #copyright{
+    width: 100%;
+    text-align: center;
+ }
+ p.fl_left{
+    padding-bottom: 10px;
+ }
+ #copyright .fl_left,.fl_right{
+    float: none;
+    width: 100%;
+}
+
+    }
+
+  /* ------------------Media quires ends upto 500px------------------------------------------ */
+
+  /* --------------------Media quires starts 501--------------------------------------------- */
+
+  @media screen and  (min-width:501px) and (max-width:768px){
+  *{
+    margin: 0;
+    padding: 0;
+    }
+    body{
+        background-color: lavender;
+    }
+    /*------------------------Header--------------------- */
+    header#header.clear,div#hgroup{
+        width: 100%;
+        text-align: center;
+        background-color: lawngreen;
+      }
+      #header #hgroup{
+        float: none;
+        width: 100%;
+     }
+     #header #hgroup h1 a{
+        color: rgb(18, 121, 206);
+        font-size: 40px;
+     }
+    #header #hgroup h2{
+        color: black;
+        font-size: 17px;
+        padding-top: 5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-decoration: underline;
+        text-decoration-color: purple;
+     }
+
+/* -----------powenav----------------- */
+
+     #powernav{
+      background-color: aqua;
+      width: 100%;
+      height: 100px;
+      margin-top: 30px;
+      text-align: center;
+     }
+     #powernav nav{
+        padding-top: 30px;
+    }
+     nav li{
+        padding: 7px;
+        display: inline-block;
+     }
+     nav ul li a{
+        color: purple;
+        cursor: pointer;
+        text-decoration: underline;
+        text-decoration-color: red;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     }
+
+/* -----------conatinerimg------------ */
+
+     div.container.clear{
+        width: 100%;
+      }
+      #slider img{
+        border: 1px solid red;
+        width: 100%;
+        padding: 2px;
+        box-sizing: border-box;
+      }
+ /* -----------onethirdimages--------- */
+
+      
+  /* ----------introduction--------- */
+
+   #intro img{
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid red ;
+   }
+   h2{
+    width: 100%;
+ }
+   p.para{
+    width: 100%;
+ }
+
+ /* ----------footer---------------- */
+
+ div.footer{
+    width: 100%;
+ }
+   section.one_quarter{
+    text-align: center;
+    width: 100%;
+    
+ } 
+ .one_quarter nav ul li{
+    text-align: center; 
+    width:100%;
+ }
+ .footer .one_quarter h4{
+    text-align: center;
+    color: aqua;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+
+ /* --------copyright---------- */
+
+ #copyright{
+    width: 100%;
+    text-align: center;
+ }
+ p.fl_left{
+    padding-bottom: 10px;
+ }
+ #copyright .fl_left,.fl_right{
+    float: none;
+    width: 100%;
+}
+
+    }
+
     </style>
 <body>
     <!-- header -->
