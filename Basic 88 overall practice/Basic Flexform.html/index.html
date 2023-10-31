@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAVAN 88</title>
+    <title>PAVAN 88 flex</title>
     <link rel="stylesheet" href="styles/basic88practice.css">
 </head>
     <style>
@@ -120,10 +120,15 @@ section#slider {
 }
 /* ------------------introduction------------------ */
 
+ #insert{
+    display: flex;
+    justify-content: left;
+}
 #intro img{
     border: 1px solid #D6D6D6;
     padding: 4px;
     float: right;
+
 }
 #intro{
     margin-top: 30px;
@@ -260,7 +265,6 @@ nav ul{
     <div class="wrapper row2">
         <div class="container clear">
             <!-- slider -->
-            
             <section id="slider">
                 <a href="#">
                     <img src="images/demo/960x360.gif" alt="images">
@@ -301,13 +305,18 @@ nav ul{
                 <section id="intro" class="lastclear">
                     <div id="mainpower">
                         <article>
-                            <img src="images/demo/450x250.gif" alt="" width="450" height="250">
-                            <h2>Indonectetus facilis leo nibh</h2>
-                            <p class="para">This is a W3C compliant free website template from <a href="https://www.os-templates.com/" title="free website templates">OS Templates</a>OS Templates. For full terms of use of this template please read our <a href="https://www.os-templates.com/template-terms">website template licence.</a></p>
+                            <div id="insert">
+                                <img src="images/demo/450x250.gif" alt="" width="450" height="250">
+                            </div>   
+                            <div id="graph">
+                                <h2>Indonectetus facilis leo nibh</h2>
+                                <p class="para">This is a W3C compliant free website template from <a href="https://www.os-templates.com/" title="free website templates">OS Templates</a>OS Templates. For full terms of use of this template please read our <a href="https://www.os-templates.com/template-terms">website template licence.</a></p>
                             <p class="para">
                                 You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more HTML5 templates visit <a href="https://www.os-templates.com">free website templates.</a>
                             </p>
                             <footer class="more"><a href="#">ReadMore>></a></footer>
+                            </div>
+                            
                         </article>
                     </div>
                 </section>
