@@ -19,8 +19,9 @@ var person ={
     address:"Dalavaipalli",
     mandal:"yadamari",
     number:"9014870388",
-    street:"chittoor",
+    street:"jodi",
     pincode:"512200",
+    distric:"chittoor",
 }
 
 document.write(person.fname+"<br/>");
@@ -31,3 +32,4 @@ document.write(person.mandal+"<br/>");
 document.write(person.number+"<br/>");
 document.write(person.street+"<br/>");
 document.write(person.pincode+"<br/>");
+document.write(person.distric+"<br/>");
