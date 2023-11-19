@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Objects</title>
+</head>
+<body>
+    <script>
+        var kingkholi={
+            Name:"Virat Kholi",
+            age:35,
+            Height:"175cm",
+            IsMarried:true,
+            Batting:"Right-Hand Batsman",
+            JerseyNo:17,
+            myfunction:function(){},
+            centuries:{
+                totalcenturies:70,
+            },
+            
+        }
+        console.log(kingkholi);
+        kingkholi.Role="top-order batsman"; // adding a property with help of (.)
+        console.log(kingkholi)
+        kingkholi["Wife"]="Anuska Sharma" // we can add the property to an object with help '[]' array braces.
+        console.log(kingkholi)
+        delete kingkholi.Wife
+        console.log(kingkholi)
+       
+
+
+
+
+    </script>
+    
+</body>
+</html>
