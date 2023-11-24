@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="2ndform.css">
+</head>
+<style>
+    #heading{
+    background-color: rgb(221, 147, 10);
+    padding-left: 10px;
+    width: 450px;
+}
+div{
+    color: yellow;
+    padding: 7px;
+    background-color: rgb(36, 33, 33);
+    width: 30%;
+   justify-content: center;
+   padding-left: 20px;
+   border-collapse: separate;
+   padding-right: none;
+   margin-left: 450px;
+   height: 38px;
+   padding-left: 60px;
+   display: inline-block;
+   
+}
+h4{
+    margin-top: 10px;
+    text-decoration: none;
+}
+  label{ 
+    
+    display: inline block;
+}
+ input{
+       
+}
+
+#lastone input{
+    margin-left: 180px;
+}
+#lastdiv{
+    background-color: orange;  
+}
+#submit{
+    background-color: rgb(56, 202, 56);
+    border: none;
+    font-size: 20px; 
+    color: white;
+    float: right;
+    margin-right: 7px; 
+    margin-top: 4px;
+    padding: 5px;
+    border-radius: 7px;
+    cursor: pointer;    
+}
+#cancel{
+    background-color: red;
+    border: none;
+    font-size: 20px;
+    color: white;
+    float: right;
+    margin-top: 4px;
+    padding: 5px;
+    margin-right: 3px;
+    border-radius: 7px; 
+    cursor: pointer;
+ 
+}
+</style>
+<body>
+    <div id="heading">
+        <h4>sign up</h4>
+    </div>
+    <div>
+        <label for="FirstName " float:left>First Name:</label>
+        <input type="text" id="FirstName" placeholder="Enter First Name">
+    </div>
+    <div>
+        <label for="LastName" >Last Name:</label>
+        <input type="text" id="LastName" placeholder="Enter Last Name">
+    </div>
+    <div>
+        <label for="Dateofbirth">Date Of Birth:</label>
+        <select name="Date" id="date">
+            <option value="Date">Date</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+        </select>
+        <select name="month" id="month">
+            <option value="Month">Month</option>
+            <option value="jan">january</option>
+            <option value="feb">feb</option>
+            <option value="mar">mar</option>
+            <option value="apr">apr</option>
+            <option value="may">may</option>
+            <option value="jun">jun</option>
+            <option value="jul">jul</option>
+            <option value="aug">aug</option>
+            <option value="sep">sep</option>
+            <option value="oct">oct</option>
+            <option value="nov">nov</option>
+            <option value="dec ">dec</option>
+        </select>
+        <select name="year" id="year">
+            <option value="Year">Year</option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+        </select>
+    </div>
+    <div>
+        <label for="Gender">Gender:</label>
+        <input type="radio" id="Male" name="gender">
+        <label for="Male">Male</label>
+        <input type="radio" id="Female" name="gender">
+        <label for="Female">Female</label>
+    </div>
+    <div>
+        <label for="country">Country:</label>
+         <select name="Country" id="Country">
+            <option value="Country">Country</option>
+            <option value="India">India</option>
+            <option value="America">America</option>
+            <option value="Japan">Japan</option>
+            <option value="China">China</option>
+            <option value="Germany">Germany</option>
+         </select>
+    </div>
+    <div>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" placeholder="Enter E-mail">
+    </div>
+    <div>
+        <label for="Phone">Phone:</label>
+        <input type="number" id="Phone" placeholder="Enter Phone">
+    </div>
+    <div>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="....">
+    </div>
+    <div>
+
+        <label for="cpassword"> Confirm Password:</label>
+        <input type="password" id="cpassword">
+
+    </div>
+    <div id="lastone">
+        <input type="checkbox" id="t&c">
+        <label for="t&c">I Agree to the Terms of use</label>
+    </div>
+    
+<div id="lastdiv">
+    <button id="cancel">Cancel</button>
+        <button id="submit">Submit</button>
+            </div>
+</body>
+
+</html>
