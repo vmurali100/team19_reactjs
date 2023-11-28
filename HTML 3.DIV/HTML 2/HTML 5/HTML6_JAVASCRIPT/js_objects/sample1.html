@@ -7,33 +7,62 @@
 </head>
 <body>
     <script>
-        var myfriend={
-            fname:"B.pavitra",
-            lname:"pavitra",
-            height:6.5,
-            weight:40,
-            hair:"longhair",
-            shemothername:"pramila",
-            address:function (){},
+        // --------sample1-----
+        // var myfriend={
+        //     fname:"B.pavitra",
+        //     lname:"pavitra",
+        //     height:6.5,
+        //     weight:40,
+        //     hair:"longhair",
+        //     shemothername:"pramila",
+        //     address:function (){},
+        //     root:{
+        //         mandal:"yadamari",
+        //         district:"chittoor",
+        //         street:"jodi",
+
+
+        //     }
+        // };
+
+
+        // myfriend.dancer = "pavi";   
+        // myfriend["pavi_father"]="ravi";   
+        // myfriend.salary=10000;
+        // // delete myfriend.address;
+        // console.log(myfriend);
+
+
+        // document.write(myfriend.shemothername+"<br>");
+        // document.write(myfriend.hair);
+
+
+
+        // -------sample2--------
+        var person={
+            fname:"G.lokesh",
+            lname:"lokesh",
+            height:"7.0",
+            weight:"50",
+            address:function(){},
             root:{
                 mandal:"yadamari",
                 district:"chittoor",
-                street:"jodi",
-
-
+                street:"checkpost",
             }
+            
         };
 
-
-        myfriend.dancer = "pavi";   
-        myfriend["pavi_father"]="ravi";   
-        myfriend.salary=10000;
-        // delete myfriend.address;
-        console.log(myfriend);
+        person.dancer="lokesh";
+        person["lokesh_father"]="gopal";
+        person.income=40000;
+        delete person.weight;
 
 
-        document.write(myfriend.shemothername+"<br>");
-        document.write(myfriend.hair);
+        console.log(person);
+        document.write( person.lname+"<br>");
+        document.write(person.weight);
+
 
     </script>
 </body>
