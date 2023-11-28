@@ -98,7 +98,7 @@
         }
 
         // object 4
-        
+
         let laptop={
             brand:"HP",
             Color:"Grey",
@@ -113,10 +113,78 @@
         laptop['warranty']="1year";
         delete laptop.warranty
         laptop.Ram="16gb";
-
-
-
         console.log(laptop)
+
+        // object5
+
+        let book={
+            name:'Think and Grow Rich',
+            Author:'Napolean Hill',
+            PublishedYear:1937,
+            TotalPages:327,
+            isopen:false,
+            open:function(){
+                book.isopen=true;
+                console.log("Woof..!")
+            }
+        }  
+            book.open();
+            console.log(book);
+
+
+            book.price="99Rs";
+            book['Volume']=1;
+            // delete book.Volume
+
+
+
+            console.log(book)
+
+            // object 6
+
+            let movie={
+                title:"Bahubali",
+                director:"Rajamouli",
+                Release:"10th july 2015",
+                budget:"180crore",
+                country:"India",
+                play:function(){
+                    console.log("Movie is plYING Suceessfully!")
+                }
+                
+            }
+            console.log(movie);
+            movie.Actor="Prabhas";
+            movie['Actress']='Anushka Shetty';
+            movie.play()
+
+            //object 7
+
+            let restaurant={
+                Industry:"Restaurant",
+                name:"SFC",
+                founder:"Arthur Withers",
+                products:['Fried chicken','chicken Sandwiches','lolipop','frenchfries'],
+                website:"www.southernfriedchicken.com",
+                open:function(){
+                    console.log("Welcome to our New Restaurant")
+                }
+            }
+
+            // open();
+            // console.log(restaurant)
+            console.log(restaurant.open);
+
+
+
+
+
+
+            
+
+
+
+
 
 
 
