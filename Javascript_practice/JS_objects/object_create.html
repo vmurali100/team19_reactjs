@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var car = {
+            model : 'BMW',
+            color: 'red'
+        };
+        var electricCar = Object.create(car);
+        console.log(electricCar.model);
+        console.log(electricCar.color);
+
+
+
+        var mobile = {
+            model: 'oppoReno2f',
+            color : 'white'
+        };
+        var mobile = Object.create(mobile);
+        console.log(mobile.model);
+
+
+
+
+        var laptop = {
+            model: 'hp15s',
+            color: 'sliver',
+            ram : '8GB'
+        };
+        var laptop = Object.create(laptop);
+        console.log(laptop.ram);
+        console.log(laptop.color)
+
+    </script>
+</body>
+</html>

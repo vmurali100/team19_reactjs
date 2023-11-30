@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Employee(company, name, age){
+            this.company = company;
+            this.name = name;
+            this.age = age;
+            this.address = "Chittor";
+            this.course = "Frontend Developer";
+        };
+         
+        let emp = new Employee('TCS', 'Ram', '22');
+        console.log(emp);
+
+
+
+        function Student(name, age, contact){
+            this.name = name;
+            this.age = age;
+            this.contact = contact;
+        };
+        let std = new Student("seetha", 25, 9182947929)
+        console.log(std);
+        console.log(std.contact);
+
+
+
+        function Mobile(model, color){
+            this.model = "vivo z1 pro";
+            this.color = "black";
+        };
+        let mble = new Mobile();
+        console.log(mble);
+    </script>
+</body>
+</html>
