@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // --------sample1-----
+        var myfriend={
+            fname:"B.pavitra",
+            lname:"pavitra",
+            height:6.5,
+            weight:40,
+            hair:"longhair",
+            shemothername:"pramila",
+            address:function (){},
+            root:{
+                mandal:"yadamari",
+                district:"chittoor",
+                street:"jodi",
+
+
+            }
+        };
+
+
+        myfriend.dancer = "pavi";   
+        myfriend["pavi_father"]="ravi";   
+        myfriend.salary=10000;
+        // delete myfriend.address;
+        console.log(myfriend);
+
+
+        document.write(myfriend.shemothername+"<br>");
+        document.write(myfriend.hair);
+
+
+
+        // -------sample2--------
+        var person={
+            fname:"G.lokesh",
+            lname:"lokesh",
+            height:"7.0",
+            weight:"50",
+            address:function(){},
+            root:{
+                mandal:"yadamari",
+                district:"chittoor",
+                street:"checkpost",
+            }
+            
+        };
+
+        person.dancer="lokesh";
+        person["lokesh_father"]="gopal";
+        person.income=40000;
+        delete person.weight;
+
+
+        console.log(person);
+        document.write( person.lname+"<br>");
+        document.write(person.weight);
+
+
+
+        // --------sample3-------
+        var person={
+            fname:" m swapna",
+            lname:"swapna",
+            height:5.6,
+            weight:45,
+            address:function(){},
+            root:{
+                mandal:"yadamari",
+                district:"chittoor"
+            }
+
+
+        };
+        person.dancer="bhuvaneswari"
+        person["swapna_brother"]="naveenkumar";
+        person.income=20000;
+        delete person.lname
+        
+        console.log(person);
+
+    </script>
+</body>
+</html>

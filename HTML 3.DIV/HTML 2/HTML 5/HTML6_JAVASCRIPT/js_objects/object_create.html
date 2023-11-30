@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // -----type1-----
+        // -------creat objects----
+        var person={
+            fname:"swapna",
+            lname:"swapna"
+        }
+        var per =Object.create(person)
+
+        
+        console.log(per.fname);
+        console.log(per.lname);
+
+
+        // ------type2------
+        var mobile={
+            rate:20000,
+            color:"black",
+            size:3.4,
+        }
+        var mobile =Object.create(mobile)
+        console.log(mobile.rate);
+        console.log(mobile.color);
+
+        // ----type3-----
+        var dress={
+            shopname:"apurva",
+            height:5.6,
+            size:"xxl",
+            model:"frok"
+        }
+        var dress=Object.create(dress)
+        console.log(dress.height);
+        console.log(dress.model);
+        console.log(dress.size)
+
+
+        // ----type4-----
+        var movie={
+            moviename:"bahubali",
+            moviehero:"prabhas",
+            moviehiroin:"tamanna and anushka",
+
+        }
+        var movie=Object.create(movie)
+        console.log(movie.moviehero);
+
+
+        
+
+    </script>
+</body>
+</html>

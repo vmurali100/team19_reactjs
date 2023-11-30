@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+// -----------construction---------
+// -----type1--
+    function student (studentname,contact){
+        this.studentname= studentname;
+        this.contact=contact;
+        this.institutename="vmr infotech";
+        this.instituteaddress="chittoor";
+        this.course="ui development"
+
+    }
+
+    var  std1=new student("swapna",1234567);
+    console.log(std1)
+
+
+    // -----type2----
+    function employee(employeename,contact,address){
+        this.employeename=employeename;
+        this.contact=contact;
+        this.address=address;
+        this.salary=20000;
+        this.companyname="techmahendra";
+        this.companyplace="chennai";
+        
+
+    }
+
+    var emp =new employee("naveenkumar",9876543,"hyderabad");
+    console.log(emp)
+
+
+    // -----type3------
+    function person(personname,age){
+        this.personname=personname;
+        this.age=age;
+        this.address="dalavaipalli";
+        this.mandal="yadamari";
+        this.distric="chittoor";
+    }
+    var per=new person("poornima",21);
+    console.log(per)
+
+
+    // ------type4------
+    function student(studentname,age,number){
+        this.studentname=studentname;
+        this.age=age;
+        this.number=number;
+        this.state="Andrapradesh";
+        this.distric="chittoor";
+        this.village="dalavaipalli";
+    }
+
+    var stu=new student("vaishanvi",22,799374870388);
+    console.log(stu)
+
+    // -------type5-----
+    
+
+</script>
+</body>
+</html>
