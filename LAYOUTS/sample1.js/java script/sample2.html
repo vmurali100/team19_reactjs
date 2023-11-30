@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function patient(patientName,tokenNumber){
+            this.patientName = patientName;
+            this.tokenNumber = tokenNumber;
+            this.hospital = "CMC";
+            this.address = "Chittoor";
+            this.speciality = "Multispeciality";
+        }
+        var pat1 = new patient("himadeep",5);
+        console.log(pat1)
+        var pat2 = new patient("Dileep", 60);
+
+        console.log(pat2)
+    </script>
+</body>
+</html>
