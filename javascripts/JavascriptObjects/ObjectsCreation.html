@@ -170,8 +170,88 @@
         }
         console.log(volley.name)
 
+        //30-11-2023
+        //OBJECTS CREATING WITH  ES6 CLASS SYNTAX
 
+        // Example 1:
+
+        class Car{
+            constructor(Price,Brand){
+                this.Price=Price;
+                this.Brand=brand;
+                this.Engine="Diesel";
+                this.location="Bangalore";
+                this.tyres="4";
+            }
+        }
+        var c1=new Object(1200000,"XUV");
+        console.log(c1);
         
+        // Example2
+
+        class Movie{
+            constructor(MovieName,Language,RunningTime,Budget){
+                this.MovieName=MovieName;
+                this.Language=Language;
+                this.RunningTime=RunningTime;
+                this.Budget=Budget;
+                this.Director="Ajay Bhupathi";
+                this.Producer="Ashok Reddy";
+            }
+        }
+        let m1=new Movie("RX-100","Telugu","1.30mins","2crore")
+        console.log(m1);
+
+        // Example 3
+
+        class Bike{
+            constructor(Brand,BikeName,Model,color,mileage,location,){
+                this.Brand=Brand;
+                this.BikeName=BikeName;
+                this.color=color;
+                this.mileage=mileage
+                this.Price="2,50000";
+                this.location="Bangalore";
+            }
+        }
+        let b1=new Bike("RE","Classic-350",2023,"Black","45km/hr","bangalore")
+        console.log(b1)
+
+
+        // Example4
+
+        class Laptops{
+            constructor(Brands,Price,Model,color){
+                this.Brands=Brands;
+                this.Price=Price;
+            
+                this.color=color;
+                this.location="chennai";
+                this.Ram="8GB"
+                this.Processor="RYZEN 5000 Series";
+            }
+
+        }
+        let l1=new Laptops("hp",54000,"Pavilion","greywhite");
+        console.log(l1);
+
+
+        // EXAMPLE 6
+
+        class Mobile{
+            constructor(brand,color,ram,rom,Battery){
+                this.brand=brand;
+                this.color=color;
+                this.ram=ram;
+                this.rom=rom;
+                this,Battery=Battery;
+                this.location="Bangalore";
+            }
+        }
+        var M1=new Mobile("OPPO Reno10","Aliceblue","8gb","256gb","5500mah") ;
+        console.log(M1);
+        
+
 
 
         
