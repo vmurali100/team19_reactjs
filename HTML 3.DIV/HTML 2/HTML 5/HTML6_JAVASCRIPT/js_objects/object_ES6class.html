@@ -21,19 +21,43 @@
 
 
         //  ------type2------
+        // class person{
+        //     constructor(fname,lname,age,education){
+        //         this.fname=fname;
+        //         this.lname=lname;
+        //         this.age=age;
+        //         this.education=education;
+        //     }
+        // }
+        // var obj =new person("m.naveen","naveen",23,'gratuvate completed');
+        // console.log(obj.fname)
+        // console.log(obj.lname)
+        // console.log(obj.age)
+        // console.log(obj.education)
+
+        // ------type3-----
         class person{
-            constructor(fname,lname,age,education){
+            constructor(fname,lname,age){
                 this.fname=fname;
                 this.lname=lname;
                 this.age=age;
-                this.education=education;
+                this.address="chittoor";
+                this.course="frent end developement";
+                this.institutename="vme institute";
+                this.street="mittoor road";
             }
         }
-        var obj =new person("m.naveen","naveen",23,'gratuvate completed');
-        console.log(obj.fname)
-        console.log(obj.lname)
-        console.log(obj.age)
-        console.log(obj.education)
+
+        var student1=new person("m.swapna","swapna",21);
+        var student2=new person("m.naveen kumar","naveen",24);
+        var student3=new person("G.lokesh","lokesh",22);
+        var student4=new person("b.pavithra","pavithra",23);
+
+
+        console.log(student1)
+        console.log(student2)
+        console.log(student3)
+        console.log(student4)
 
     </script>
 </body>
