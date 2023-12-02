@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class House{
+            Constructor(Housename,houseno){
+                this.Housename=Housename;
+                this.houseno=houseno;
+            }
+
+        }
+        class Housedetails extends House{
+            constructor(Housename,houseno,houseadress,state){
+                super(Housename,houseno)
+                this.houseadress=houseadress;
+                this.state=state;
+            }
+            var hou1 = new Housedetails("vinayaka",2-20,"pillarikuppam","AP");
+            console.log(hou1)
+        }
+    </script>
+</body>
+</html>
