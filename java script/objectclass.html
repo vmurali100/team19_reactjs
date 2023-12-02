@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class patient {
+            Constructor(patientname, tokenno ){
+            this.patientname = patientname;
+            this.tokenno = tokenno;
+            }
+        }
+        class Patientdetails extends patient{
+            Constructor(patientname,tokenno,contact,email,amount){
+                // super(patientname, tokenno )
+                this.contact = contact;
+                this.email = email;
+                this.amount = amount;
+            }
+
+        }
+        var pat1 = new Patientdetails("dileep",70,6309081178,"mdileep944@gmail.com",500); 
+        console.log(pat1)
+    </script>
+</body>
+</html>
