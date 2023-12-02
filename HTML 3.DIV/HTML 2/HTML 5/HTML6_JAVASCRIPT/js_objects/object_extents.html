@@ -6,6 +6,141 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        // ------type1-----
+        // class student{
+        //     constructor(fname,lname){
+        //         this.fname=fname;
+        //         this.lname=lname;
+        //     }
+        // }
+
+        // class studentdetails extends student{
+        //     constructor(fname,lname,email,age,mob){
+        //         super(fname,lname);
+        //         this.email=email;
+        //         this.age=age;
+        //         this.mob=mob;
+        //     }
+        // }
+
+        // var std1 = new studentdetails("m.swapna","swapna","smswapna@gmail.com",21,987654);
+        // var std2 = new studentdetails("m.naveenkumar","naveen","naveen@gmail.com",24,456789);
+
+        // console.log(std1)
+        // console.log(std2)
+
+
+
+
+        // ----type2----
+        class student{
+            constructor(fname,lname,age){
+                this.fname=fname;
+                this.lname=lname;
+                this.age=age;
+            
+            }
+
+        }
+        class studentdetails extends student{
+            constructor(fname,lname,age,email){
+            super(fname,lname,age);
+            this.email=email;
+            }
+
+        }
+        
+
+        var std1 = new studentdetails("m.naveen","naveen",21,"naveen@gmail.com");
+        var std2 = new studentdetails("m.swapna","swapna",24,"smswapna@gmail.com");
+        
+        console.log(std1)
+        console.log(std2)
+
+
+
+        // ----type3-----
+        class employe{
+            constructor(fname,lname,salary,email){
+                this.fname=fname;
+                this.lname=lname;
+                this.salary=salary;
+                this.email=email;
+            }
+        }
+        class employedetails extends employe{
+            constructor(fname,lname,salary,email,address){
+                super(fname,lname,salary,email);
+                this.address=address;
+            }
+        }
+
+        var emp1 = new employedetails("m.bhuvaneswari","bhuvaneswari",10000,"buvaneswari@gmail.com","chittoor");
+        var emp2 = new employedetails("G.lokesh","lokesh",20000,"lokesh@gmail.com","bangolore");
+
+        console.log(emp1)
+        console.log(emp2)
+
+
+        // ----type4-----
+        class company{
+            constructor(fname,lname,salary){
+                this.fname=fname;
+                this.lname=lname;
+                this.salary=salary;
+            }
+        }
+        class copmanydeatails extends company{
+            constructor(fname,lname,salary,email,address){
+                super(fname,lname,salary,email,address);
+                this.email=email;
+                this.address=address;
+            }
+        }
+
+        var staf1 = new copmanydeatails("m.poornima","poornima",100000,"poornima@gmail.com","banglore");
+        var staf2 = new copmanydeatails("m.sowmya","sowmya",20000,"sowmya@gmail.com","chittoor");
+        var staf3 = new copmanydeatails("G.lokeshreddy","lokesh",30000,"lokeshreddy@gmail.com","chennai");
+
+        console.log(staf1)
+        console.log(staf2)
+        console.log(staf3)
+
+
+        // ---type5----
+
+        class bus{
+            constructor(busname,color,root){
+                this.busname=busname;
+                this.color=color;
+                this.root=root;
+            }
+        }
+
+        class busdetails extends bus{
+            constructor(busname,color,root,height,weight,seets){
+                super(busname,color,root,height,weight,seets);
+                this.height=height;
+                this.weight=weight;
+                this.seets=seets;
+
+                
+            }
+        }
+
+        var bus1 = new busdetails("dalavaipalli","blue","checkpost");
+        var bus2 = new busdetails("barathi","red","checkpost");
+        var bus3 = new busdetails("banglore","green","haivay road");
+
+        console.log(bus1)
+        console.log(bus2)
+        console.log(bus3)
+
+
+        
+
+
+    </script>
 </body>
 </html>
