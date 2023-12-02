@@ -113,7 +113,6 @@
         Laptop.price = "54000";
         Laptop.Working = function () {
             return " Laptop is working Fine.....! "
-
         }
 
 
@@ -123,7 +122,7 @@
         // CREATING AN OBJECT WITH THE HELP OF OBJECT.CREATE() METHOD
 
         var personPrototype = {
-            name:"prototype",
+            name: "prototype",
             sayHello: function () {
                 console.log("Hello!");
             }
@@ -140,21 +139,21 @@
 
         // USING CLASS SYNTAX  IN ECMA SCRIPT 
 
-        class Employee{
-            constructor(name,id,Role){
-                this.name=name;
-                this.id=id;
-                this.Role=Role;    
+        class Employee {
+            constructor(name, id, Role) {
+                this.name = name;
+                this.id = id;
+                this.Role = Role;
             }
-            work=()=>{
-                return this.name+ " is Working on " +this.Role
+            work = () => {
+                return this.name + " is Working on " + this.Role
             }
 
 
         }
-        let E1= new Employee("Santhosh",1,"FrontEnd-Developer");       
-        let E2= new Employee("Amar","BackEnd-Developer");
-        let E3= new Employee("aswini","Full-stack-Developer");
+        let E1 = new Employee("Santhosh", 1, "FrontEnd-Developer");
+        let E2 = new Employee("Amar", "BackEnd-Developer");
+        let E3 = new Employee("aswini", "Full-stack-Developer");
         console.log(E1);
         console.log(E2);
         console.log(E3);
@@ -162,10 +161,10 @@
 
         // SINGLETON PATTERN
 
-        let volley=new function(){
-            this.name="sandy";
-            this.age=23;
-            this.game="Volley Ball";
+        let volley = new function () {
+            this.name = "sandy";
+            this.age = 23;
+            this.game = "Volley Ball";
 
         }
         console.log(volley.name)
@@ -175,86 +174,146 @@
 
         // Example 1:
 
-        class Car{
-            constructor(Price,Brand){
-                this.Price=Price;
-                this.Brand=brand;
-                this.Engine="Diesel";
-                this.location="Bangalore";
-                this.tyres="4";
+        class Car {
+            constructor(Price, Brand) {
+                this.Price = Price;
+                this.Brand = brand;
+                this.Engine = "Diesel";
+                this.location = "Bangalore";
+                this.tyres = "4";
             }
         }
-        var c1=new Object(1200000,"XUV");
+        var c1 = new Object(1200000, "XUV");
         console.log(c1);
-        
+
+
         // Example2
 
-        class Movie{
-            constructor(MovieName,Language,RunningTime,Budget){
-                this.MovieName=MovieName;
-                this.Language=Language;
-                this.RunningTime=RunningTime;
-                this.Budget=Budget;
-                this.Director="Ajay Bhupathi";
-                this.Producer="Ashok Reddy";
+        class Movie {
+            constructor(MovieName, Language, RunningTime, Budget) {
+                this.MovieName = MovieName;
+                this.Language = Language;
+                this.RunningTime = RunningTime;
+                this.Budget = Budget;
+                this.Director = "Ajay Bhupathi";
+                this.Producer = "Ashok Reddy";
             }
         }
-        let m1=new Movie("RX-100","Telugu","1.30mins","2crore")
+        let m1 = new Movie("RX-100", "Telugu", "1.30mins", "2crore")
         console.log(m1);
 
         // Example 3
 
-        class Bike{
-            constructor(Brand,BikeName,Model,color,mileage,location,){
-                this.Brand=Brand;
-                this.BikeName=BikeName;
-                this.color=color;
-                this.mileage=mileage
-                this.Price="2,50000";
-                this.location="Bangalore";
+        class Bike {
+            constructor(Brand, BikeName, Model, color, mileage, location,) {
+                this.Brand = Brand;
+                this.BikeName = BikeName;
+                this.color = color;
+                this.mileage = mileage
+                this.Price = "2,50000";
+                this.location = "Bangalore";
             }
         }
-        let b1=new Bike("RE","Classic-350",2023,"Black","45km/hr","bangalore")
+        let b1 = new Bike("RE", "Classic-350", 2023, "Black", "45km/hr", "bangalore")
         console.log(b1)
 
 
         // Example4
 
-        class Laptops{
-            constructor(Brands,Price,Model,color){
-                this.Brands=Brands;
-                this.Price=Price;
-            
-                this.color=color;
-                this.location="chennai";
-                this.Ram="8GB"
-                this.Processor="RYZEN 5000 Series";
+        class Laptops {
+            constructor(Brands, Price, Model, color) {
+                this.Brands = Brands;
+                this.Price = Price;
+
+                this.color = color;
+                this.location = "chennai";
+                this.Ram = "8GB"
+                this.Processor = "RYZEN 5000 Series";
             }
 
         }
-        let l1=new Laptops("hp",54000,"Pavilion","greywhite");
+        let l1 = new Laptops("hp", 54000, "Pavilion", "greywhite");
         console.log(l1);
 
 
         // EXAMPLE 6
 
-        class Mobile{
-            constructor(brand,color,ram,rom,Battery){
-                this.brand=brand;
-                this.color=color;
-                this.ram=ram;
-                this.rom=rom;
-                this,Battery=Battery;
-                this.location="Bangalore";
+        class Mobile {
+            constructor(brand, color, ram, rom, Battery) {
+                this.brand = brand;
+                this.color = color;
+                this.ram = ram;
+                this.rom = rom;
+                this, Battery = Battery;
+                this.location = "Bangalore";
             }
         }
-        var M1=new Mobile("OPPO Reno10","Aliceblue","8gb","256gb","5500mah") ;
+        var M1 = new Mobile("OPPO Reno10", "Aliceblue", "8gb", "256gb", "5500mah");
         console.log(M1);
-        
+
+
+        //EXTENDING EXAMPLES
+
+        class Animals {
+            constructor(Height, Weight) {
+                this.Height = Height;
+                this.Weight = Weight;
+            }
+        }
+        class dog extends Animals {
+            constructor(Height,Weight,name, breed, gender,) {
+                super(Height,Weight);
+                this.name = name;
+                this.breed = breed;
+                this.gender = gender;
+            
+            }
+        }
+        // var A1 = new Animals("1.7inches", "250kgm");
+        var d1 = new dog(2,80,"Labrador Retriever","lab", "male");
+        console.log(d1);
+
+        class electronics{
+            constructor(Brand,Cost,Warranty){
+                this.Brand=Brand;
+                this.Cost=Cost;
+                this.Warranty=Warranty;
+
+            }
+        }
+        class IronBox extends electronics{
+            constructor(Brand,Cost,Warranty,Name,Model){
+                super(Brand,Cost,Warranty)
+                this.Name=Name;
+                this.Model=Model;
+            }
+        }
+        var e1=new IronBox("Pigeon",2000,"1Year","ELETRICBROX","E1TFR");
+        console.log(e1);
+
+
+        class Computers{
+            constructor(RAM,ROM,Company){
+                this.RAM=RAM;
+                this.ROM=ROM;
+                this.Company=Company;
+            }
+        }
+        class Mobile{
+            constructor(){
+                
+            }
+        }
 
 
 
-        
+
+
+
+
+
+
+
 
 
 
