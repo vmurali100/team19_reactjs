@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
     <script>
-        console.log("Hello");
-        class Mobile {
+         class Mobile {
             constructor(name, model) {
                 this.name = name;
                 this.model = model;
@@ -36,7 +32,6 @@
         console.log(mb1);
         console.log(mb2);
         console.log(mb3);
-
 
 
         class Student {
@@ -88,60 +83,6 @@
         console.log(lp2);
         console.log(lp3);
 
-
-        class Car {
-            constructor(name, model){
-                this.name = name;
-                this.model =model;
-            }
-        }
-
-        class CarDetails extends Car{
-            constructor(name,model,color ,price,brand){
-                super(name,model);
-                this.color = color;
-                this.brand = brand;
-                this.price = price;
-            }
-        }
-
-        var car1 = new CarDetails('BMW','6787','red', 873452093);
-        var car2 = new CarDetails('Suzuki', '7658', 'black', 98250980);
-
-        console.log(car1);
-        console.log(car2);
-        
-        class Vehicle {
-            constructor(name){
-                this.name = name;
-            }
-        }
-
-        class Bus extends Vehicle{
-            constructor(name,NoOfwheels,typeOfTransport){
-                super(name);
-                this.NoOfWheels = NoOfwheels;
-                this.typeOfTransport = typeOfTransport;
-            }
-        }
-        var bus1 = new Bus ('bus', 4, 'roadways');
-
-        class Truck extends Bus {
-            
-            constructor(weels){
-                super(name);
-                this.weels=weels;  
-            }
-            
-        }
-       
-        var t1=new Truck('truck', 10);
-        console.log(t1)
-
-        
-
-
-        // var b1=new Bus('bus',4,"Roadways") ;
-        // console.log(b1);
-</script>
+    </script>
 </body>
+</html>
