@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ------type1----
+        let car = {
+          brand: "Toyota",
+          model: "Camry",
+          year: 2022,
+          color: "Silver",
+  
+          // Method to display information about the car
+          displayInfo: function () {
+            console.log(
+              `This is a ${this.year} ${this.brand} ${this.model} in ${this.color} color.`
+            );
+          },
+        };
+        car.displayInfo();
+  
+        // var displayInfo = car.displayInfo
+        var { displayInfo } = car;
+        displayInfo()
+
+
+
+
+
+        // -----type2-----
+        let car1 ={
+            brand:"Toyata",
+            model:"camry",
+            year:2022,
+            color:"silver",
+
+            displayInfo: function() {
+                console.log(
+                    `this is a ${this.year} ${this.brand} ${this.model} in ${this.color} color.`
+                    
+                );
+
+            },
+        };
+        car.displayInfo();
+        
+        // var displayInfo=car.displayInfo
+        var { displayInfo } = car;
+        displayInfo()
+
+
+
+        // ------type3------
+        let laptop={
+            name:"hp laptop",
+            color:"silver",
+            year:2023,
+            ram:"8Gbram",
+            displayInfo:function(){
+                console.log(
+                    `this is a ${this.name} ${this.color} ${this.year} ${this.ram} ram .`
+                );
+            },
+        };
+        laptop.displayInfo();
+
+        // var displayInfo=laptop.displayInfo
+        var { displayInfo } = laptop;
+        displayInfo()
+
+
+
+        // -------type4------
+        let person={
+            fname:"m.swapna",
+            lname:"swapna",
+            age:21,
+            dateofbirth:"june 26",
+            displayInfo:function(){
+                console.log(
+                    `This is a ${this.fname} ${this.lname} ${this.age} ${this.dateofbirth}.`
+                );
+            },
+
+        };
+        person.displayInfo();
+
+        // var displayInfo=person.displayinfo
+        var {displayInfo} = person;
+        displayInfo()
+
+
+
+        // ----type5-----
+        var brotherdetails={
+            fname:"m.naveen",
+            lname:"kumar",
+            age:24,
+            education:"null",
+            height:6.0,
+            displayInfo:function(){
+                console.log(
+                    `this is a ${this.fname} ${this.lname} ${this.age} ${this.education} ${this.height}.`
+                );
+            },
+        };
+        brotherdetails.displayInfo();
+        // var displayinfo=brotherdetails.displayInfo
+
+        var {displayInfo}=brotherdetails;
+        displayInfo()
+
+
+ 
+
+      </script>
+
+
+</body>
+</html>
