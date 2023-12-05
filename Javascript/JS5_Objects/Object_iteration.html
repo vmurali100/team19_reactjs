@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let myObject = {
+        name: "John Doe",
+        age: 25,
+        gender: "male",
+        city: "New York",
+        country: "USA",
+        occupation: "Software Engineer",
+        hobbies: ["reading", "coding", "traveling"],
+        isStudent: false,
+        hasPets: true,
+        favoriteColor: "blue",
+        birthdate: "1998-04-15",
+        education: {
+          degree: "Bachelor's",
+          major: "Computer Science",
+          university: "MIT",
+        },
+        languages: ["JavaScript", "Python", "Java"],
+        isMarried: false,
+        height: 175,
+      };
+
+      for(a in myObject){
+        // console.log(a)
+        // console.log(myObject[a])
+        document.write(a + " - "+myObject[a]+"<br/>")
+      }
+
+    //   console.log(myObject);
+    </script>
+  </body>
+</html>
