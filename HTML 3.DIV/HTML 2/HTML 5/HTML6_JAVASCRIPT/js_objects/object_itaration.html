@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // -----type1------
+        let myObject = {
+          name: "John Doe",
+          age: 25,
+          gender: "male",
+          city: "New York",
+          occupation: "Software Engineer",
+          isStudent: false,
+          hasPets: true,
+          favoriteColor: "blue",
+          education: {
+            degree: "Bachelor's",
+            major: "Computer Science",
+            university: "MIT",
+          },
+          languages: ["JavaScript", "Python", "Java"],
+          height: 175,
+        };
+        for(a in myObject){
+        // console.log(a)
+        // console.log(myObject[a])
+        document.write(a + " - "+myObject[a]+"<br/>")
+      }
+
+      console.log(myObject);
+
+
+
+
+
+    //   ------type2-----
+    var myfriend={
+            fname:"B.pavitra",
+            lname:"pavitra",
+            height:6.5,
+            weight:40,
+            hair:"longhair",
+            shemothername:"pramila",
+            address:function (){},
+            root:{
+                mandal:"yadamari",
+                district:"chittoor",
+                street:"jodi",
+
+
+            }
+        };
+
+        for(a in myfriend){
+            document.write(a+ "-" +myfriend[a]+"</br>")
+            console.log(a)
+            // console.log(myfriend[a])
+        }
+        console.log(myfriend)
+
+
+
+
+        // ----type3-----
+        var person={
+            fname:"G.lokesh",
+            lname:"lokesh",
+            height:"7.0",
+            weight:"50",
+            address:function(){},
+            root:{
+                mandal:"yadamari",
+                district:"chittoor",
+                street:"checkpost",
+            }
+            
+        };
+        for(a in person){
+            console.log(a)
+            // console.log(person[a])
+            document.write(a+ "-" +person[a]+"</br>")
+        }
+
+        console.log(person)
+
+
+
+
+        // -------type4-----
+        var person11={
+            fname:" m swapna",
+            lname:"swapna",
+            height:5.6,
+            weight:45,
+            address:function(){},
+            root:{
+                mandal:"yadamari",
+                district:"chittoor"
+            }
+
+
+        };
+
+        for(a in person11){
+            console.log(a)
+            console.log(person11[a])
+            document.write(a+ "-" +person11[a]+"<br/>")
+        }
+        console.log(person11)
+
+
+
+        // ------type5----
+        var laptop={
+            name:"hp laptop",
+            height:3.5,
+            weight:20,
+            ram:"8gbram",
+            quality:"good",
+            rate:49000,
+            address :function(){},
+            root:{
+                street:"kongareddypalli",
+                district:"chittoor"
+            }
+        };
+        for(a in laptop){
+            console.log(a)
+            console.log(laptop[a])
+            document.write(a+ "-" +laptop[a]+"<br/>")
+        }
+        console.log(laptop)
+
+
+
+        // ------type6-----
+        var book={
+            bookname:"ramayanam",
+            color:"lightblue",
+            height:3.5,
+            quantity:"good",
+            shopname:"barathi",
+            address: function(){},
+            root:{
+                root:"msr down",
+                place:"pcr down"
+            }
+        };
+        for(a in book){
+            console.log(a)
+            console.log(book[a])
+            document.write(a+ "-" +book[a]+"<br/>")
+        }
+        console.log(book)
+
+
+
+        // ----type7----
+        var education={
+            clgname:"vijayam science and arts degree clg",
+            course:"b.com bsc bhm",
+            qualification:"good",
+            branches:3,
+            teachers:"good teachers",
+            feez:20000,
+            address:function(){},
+            root:{
+                district:"chittoor",
+                root:"pcr bridge down"
+
+            }
+
+
+        };
+        for(a in education){
+            console.log(a)
+            console.log(education[a])
+            document.write(a+"-" +education[a]+"<br/>")
+        }
+        console.log(education) 
+
+        // ------type8-------
+
+
+        var chatrapathi={
+        hero: "prabhas",
+        heroine: "shreya",
+        genre: "Drama",
+        imdb_rank: 7.5,
+        director: "rajamouli",
+        movieInfo: function () {},
+        releasedate: {
+          year: 2005,
+          month: "september",
+          date: 30,
+        }
+      };
+
+      for(a in chatrapathi){
+        console.log(a)
+        console.log(chatrapathi[a])
+        document.write(a + "-" +chatrapathi[a]+"<br/>")
+      }
+      console.log(chatrapathi)
+        
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
