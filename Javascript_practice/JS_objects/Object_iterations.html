@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            firstName: 'George',
+            lastName: 'david',
+            age: 30,
+            isStudent: false,
+            greet: function () {
+                console.log(`Hello, my name is ${this.firstName} ${this.lastName}.`);
+            }
+        };
+        for (i in person) {
+            console.log(i);
+            console.log(person[i]);
+            document.write(i + " : " + person[i] + "<br/><br/>")
+        }
+
+
+
+
+        const car = {
+            make: 'Toyota',
+            model: 'Camry',
+            year: 2022,
+            color: 'Blue',
+            isAutomatic: true,
+            features: ['Air conditioning', 'Power windows', 'Bluetooth connectivity'],
+            start: function () {
+                console.log('The car is started.');
+            },
+            stop: function () {
+                console.log('The car is stopped.');
+            }
+        };
+
+
+        for (i in car) {
+            console.log(i);
+            console.log(car[i]);
+            document.write(i + " :" + car[i] + "<br/><br/>");
+
+        }
+
+
+        const book = {
+            title: 'The Great Gatsby',
+            author: 'F. Scott Fitzgerald',
+            publicationYear: 1925,
+            genre: 'Fiction',
+            isBestseller: true,
+            ratings: {
+                critic: 9.2,
+                user: 8.7
+            },
+            printDetails: function () {
+                console.log(`Title: ${this.title}`);
+                console.log(`Author: ${this.author}`);
+                console.log(`Publication Year: ${this.publicationYear}`);
+                console.log(`Genre: ${this.genre}`);
+                console.log(`Is Bestseller? ${this.isBestseller ? 'Yes' : 'No'}`);
+                console.log(`Critic Rating: ${this.ratings.critic}`);
+                console.log(`User Rating: ${this.ratings.user}`);
+            }
+        };
+
+
+        for (i in book) {
+            console.log(i);
+            console.log(book[i]);
+            document.write(i + " :" + book[i] + "<br/><br/>");
+
+        }
+
+
+
+        const smartphone = {
+            brand: 'Samsung',
+            model: 'Galaxy S21',
+            screenSize: 6.2,
+            operatingSystem: 'Android',
+            storageCapacity: 128,
+            color: 'Phantom Gray',
+            isWaterResistant: true,
+
+            powerOn: function () {
+                console.log('The smartphone is powering on.');
+            },
+            powerOff: function () {
+                console.log('The smartphone is powering off.');
+            }
+        };
+
+        for (i in smartphone) {
+            console.log(i);
+            console.log(smartphone[i]);
+            document.write(i + " :" + smartphone[i] + "<br/><br/>");
+
+        }
+
+
+        const coffeeMaker = {
+            brand: 'Keurig',
+            model: 'K-Elite',
+            color: 'Black',
+            capacity: 48, // in ounces
+            isProgrammable: true,
+
+            waterTank: {
+                capacity: 60, // in ounces
+                remainingWater: 40 // in ounces
+            },
+
+            clean: function () {
+                console.log('Cleaning the coffee maker.');
+            }
+        };
+
+        for (i in coffeeMaker) {
+            console.log(i);
+            console.log(coffeeMaker[i]);
+            document.write(i + " :" + coffeeMaker[i] + "<br/><br/>");
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
