@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //Example:1
+        //     let myObject = {
+        //     name: "John Doe"  ,
+        //     age: 25,
+        //     gender: "male",
+        //     city: "New York",
+        //     country: "USA",
+        //     occupation: "Software Engineer",
+        //     hobbies: ["reading", "coding", "traveling"],
+        //     isStudent: false,
+        //     hasPets: true,
+        //     favoriteColor: "blue",
+        //     birthdate: "1998-04-15",
+        //     education: {
+        //       degree: "Bachelor's",
+        //       major: "Computer Science",
+        //       university: "MIT",
+        //     },
+        //     languages:["JavaScript", "Python", "Java"],
+        //     isMarried: false,
+        //     height: 175,
+        //   };
+        //   for(a in myObject){
+        //     // console.log(a)
+        //     console.log(myObject[a])
+        //     document.write(a + " - "+myObject[a]+"<br/>");
+        //   }
+        //   console.log(myObject);
+
+        //Example:2
+
+        // var car = {
+        //     Brand: "BMW",
+        //     price: "5300000",
+        //     Model: 'BMW XM series 2',
+        //     specifications: ['Comfortable', '4seats', 'kmpl', 'i4', '2series'],
+        //     color: "whiteGrey",
+        //     sensor: true,
+        //     wheels: 4,
+        //     cardetails: {
+        //         comfortable: true,
+        //         Ac: "Available",
+        //     }
+
+        // }
+
+        // for (a in car) {
+        //     // console.log(a)
+        //     // console.log(car[a])
+        //     console.log(a+":"+ car[a]);
+        //     // document.write(a+"<br/>")
+        //     // document.write(car[a])
+        //     document.write(a+":"+car[a]+"<br/>")
+        // }
+
+        //Example:3
+
+        // var FullstackDeveloper={
+        //     name:"Sandy",
+        //     age:"23",
+        //     Languages:['Telugu,tamil,English','Caanada'],
+        //     Technologies:function(){
+        //         return "Java";
+        //     },
+        //     Institue:"VMR techInfo",
+        //     Company:"GM online",
+        //     Address:"CHITTOR"
+        // }
+        // FullstackDeveloper.Technologies();
+        // console.log( FullstackDeveloper.Technologies())
+        // console.log(FullstackDeveloper)
+        // FullstackDeveloper.Languages.push("hindi");
+
+        // var Hospital={
+        //     HospitalName:"Saveetha",
+        //     TotalPatients:1200,
+        //     TotalNurses:400,
+        //     Facility:true,
+        //     LaunchFree:true,
+        //     location:"Bangalore",
+        // }
+        // console.log(Hospital)
+        // for(a in Hospital){
+        //     console.log(a)
+        //     console.log( a+":"+Hospital[a])
+        // }
+
+        // var Patient={
+        //     name:'Gnana',
+        //     Age:23,
+        //     DOB:"19-11-2000",
+        //     Problem:function(injury){
+                
+        //         return "Shoulder dislocation"
+        //     },
+        //     bloodLevel:"Normal",
+        //     Sugar:'Normal',
+        // }
+        
+        // for(a in Patient){
+        //     // console.log(a);
+        //     console.log(a+":"+Patient[a]);
+        //     document.write(a+":"+Patient[a]+"<br/>")
+        // }
+        // document.write(Patient.Problem("Shoulder"));
+        
+
+        // USING FORIN LOOP WITH LITERAL WAY
+        // var User={
+        //     name:"sandy",
+        //     age:23,
+        //     Address:'Gudiyatham',
+        //     Gender:'Male',
+        //     IsMarried:false
+        // }
+        // for(u in User){
+        //     document.write(u+":"+User[u]+"<br/>")
+        // }
+
+        // USING CONSTRUCTOR FUNCTION WITH FOR IN LOOP
+
+        function Student(Name, RollNo){
+            this.Name=Name;
+            this.RollNo=RollNo;
+            this.Address="Mittor";
+            this.college="VIjayam";
+        }
+        let stu1=new Student(`sandy`,`31519u180`);
+        console.log(stu1);
+
+        for(S in stu1){
+            document.write(S+":")
+        }
+
+        
+
+       
+
+
+
+
+
+    </script>
+</body>
+
+</html>
