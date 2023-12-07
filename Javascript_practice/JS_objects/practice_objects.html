@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // literal way
+         var mirchi = {
+        hero: "prabhas",
+        heroine: "Anushka",
+        genre: "Drama/comedy/Action",
+        imdb_rank: 7.5,
+        director: "Koratala siva",
+        movieInfo: function () {},
+        releasedate: {
+          year: 2013,
+          month: "February",
+          date: 8,
+        },
+      };
+     mirchi.comedian = "brahmanandam";
+      mirchi["hero_father"] = "satyaraj";
+      mirchi.imdb_rank = 7.6;
+      delete mirchi.movieInfo;
+      console.log(mirchi);
+
+      for(i in mirchi){
+            console.log(i);
+            console.log(mirchi[i]);
+            
+      }
+
+
+
+    //  By using function constructor
+      function Mirchi(hero, heroine, genre){
+            this.hero = hero;
+            this.heroine = heroine;
+            this.genre = genre;
+            this.imdb_rank = 7.5;
+            this.director = "Koratala siva";
+        };
+         
+        let mrchi = new Mirchi('prabhas', 'Anushka', 'Drama/comedy/Action');
+        console.log(mrchi);
+
+        
+ 
+        // by using Class constructor
+  
+        class mirchi1{
+            constructor(hero, heroine) {
+                this.hero = hero;
+                this.heroine = heroine;
+
+            }
+        }
+
+        class MirchiGenre extends mirchi1 {
+            constructor(hero, heroine, genre, imdbrank) {
+                super(hero, heroine);
+                this.genre = genre;
+                this.imdbrank = imdbrank;
+                
+            }
+        }
+
+        var mr1 = new MirchiGenre('prabhas','anushka','Drama/comedy/Action', 7.5);
+       
+       
+
+        
+
+
+
+
+
+    </script>
+</body>
+</html>
