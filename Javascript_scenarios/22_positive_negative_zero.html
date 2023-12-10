@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function check(number){
+            if(number > 0){
+                return "Positive Number"
+            }
+            else if(number < 0){
+                 return "Negative Number"
+            }
+            else if (number == 0){
+                return "Zero"
+            }
+            else{
+                return "It is not a Number!!! It may be a Some special Character"
+            }
+        }
+
+        var no = prompt("Enter a number");
+        var myCheck = check(no);
+        console.log(myCheck);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+         // deleting an element at beginning
+        var shapes = ["circle", "square", "Triangle", "Polygon","Hexagon","Pentagon"];
+        shapes.shift();
+        console.log(shapes);
+
+
+        // deleting an element at middle
+        var shapes1 = ["circle", "square", "Triangle", "Polygon","Hexagon","Pentagon"];
+        shapes1.splice(3,2);
+        console.log(shapes1);
+
+
+        // deleting an element at end
+        var shapes2 = ["circle", "square", "Triangle", "Polygon","Hexagon","Pentagon"];
+        shapes2.pop();
+        console.log(shapes2);
+    </script>
+</body>
+</html>

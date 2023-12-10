@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Range(number,min, max){
+           if(number >= min && number <= max){
+                return "In-Range"
+           }
+           else{
+                return "Out-Of-Range"
+           }
+        }
+        var no = prompt("Enter the no. that you want to check the range b/w 10 and 100");
+        var Inbound = 10
+        var OutBound = 100
+
+        var checkRange = Range(no, Inbound, OutBound);
+        console.log(checkRange);
+    </script>
+</body>
+</html>

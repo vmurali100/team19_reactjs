@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Method :1
+        let n = prompt("Enter a number");
+        if(n %2 == 0){
+            console.log(`${n}  is a Even Number`);
+        }
+        else{
+            console.log(`${n}  is a odd number`);
+        }
+
+
+
+        // Method :2
+        function EvenOdd(n){
+            if(n %2 == 0){
+                 return "Even number"
+            }
+            else{
+                 return "odd number"
+            }
+        }
+        var number = prompt("enter a number");
+        FindEvenOdd = EvenOdd(number);
+        console.log(FindEvenOdd);
+    </script>
+</body>
+</html>

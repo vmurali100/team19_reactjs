@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var Mobile = {
+            name : "Oppo",
+            ram : '8GB',
+            model: "Reno 2f",
+            Price : 22000
+        };
+
+       var property = "ram"
+
+       if(property in Mobile){
+        console.log(`${property} exists in the Object`)
+       }
+       else{
+        console.log(`${property} does not exist in the Object`)
+       }
+    </script>
+</body>
+</html>

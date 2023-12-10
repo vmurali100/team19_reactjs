@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numbers = [5,6,9,10,24,25,30,89];
+        var EvenNumbers=  numbers.filter((value)=>{
+            return value % 2 === 0
+               
+         });
+        console.log(EvenNumbers);
+       
+
+        var numArr = [5,6,9,10,24,25,30,89,87,77,90];
+        var OddNumbers = numArr.filter((val)=>{
+            return val % 2 === 1
+        });
+        console.log(OddNumbers);
+    </script>
+</body>
+</html>
