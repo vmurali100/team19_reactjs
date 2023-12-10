@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // (Ues-no-28)---Write code that filters an array based on a specific condition.----
+        var names = [
+            "anu",
+            "sai",
+            "abhi",
+            "harsha",
+            "sowmya",
+            "navvi",
+            "ram"
+        ]
+
+        var myname = names.filter((one) => {
+            return one.length === 3;
+        });
+
+
+        document.write("3 Char Name ---", myname);
+    </script>
+</body>
+</html>
