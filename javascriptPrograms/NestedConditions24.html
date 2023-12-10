@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Requirement No:24 =>Write code that uses nested conditions to check multiple conditions and print different messages based on the outcome.
+
+        const age=prompt("Enter Your Age");
+        const isstudent=true;
+        const hasbuspass=true;
+        if(age>=18){
+            console.log("ur eligible to apply for bus pass");
+            if(isstudent){
+                console.log("you are a student we r providing a bus ");
+                if(hasbuspass){
+                console.log("Bus Pass Recvieved");
+                }else{
+            console.log("ur eligible to apply for bus pass");
+                }
+            }else{
+                console.log("you are  not a student we r not  providing a bus ");
+
+            }
+        }else{
+            console.log("ur not a student!!........");
+        }
+
+
+
+    </script>
+</body>
+</html>
