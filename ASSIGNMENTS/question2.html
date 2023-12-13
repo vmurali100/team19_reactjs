@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="">first number :</label>
+        <input type="number" name="" id="myname" /> <br>
+        <label for="">second number :</label>
+        <input type="number" name="" id="yourname" /> <br>
+        <button onclick="addme()" type="button">Display total</button>
+    </form>
+    <div id="total"></div>
+    <script>
+        function addme() {
+            var number1 = Number (document.getElementById("myname").value);
+            console.log(typeof number1)
+            var number2 = Number (document.getElementById("yourname").value);
+            console.log(typeof number2)
+            var total = number1 + number2
+            document.getElementById("total").innerHTML = "The Total is: " + total;
+        }
+
+    </script>
+</body>
+</html>
