@@ -10,20 +10,32 @@
          // (Ques-no-2)------write a function that takes a number and a factor and retruns the product---
 
 
-        function calculate(number,factor) {
-            var product = number *factor;
-            return product
-        } var result = calculate(10, 20);
-        console.log(result)
+        // function calculate(number,factor) {
+        //     var product = number *factor;
+        //     return product
+        // } var result = calculate(10, 20);
+        // console.log(result)
 
 
 
-        function calculate( number,factor){
-            var product = number*factor;
-            return product
+        
 
-        }var result =calculate(10,20);
-        console.log(result)
+
+
+        var number = prompt("Please enter a number");
+        var product = 1
+        for (var i = 1; i <= number; i++) {
+            if (number % i == 0) {
+                // console.log(i);
+                product *= i;
+            }
+        }
+        console.log(product);
+
+
+
+
+        
 
     </script>
 </body>
