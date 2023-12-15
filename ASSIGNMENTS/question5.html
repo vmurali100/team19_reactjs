@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Firstnumber:</label>
+    <input type="text" id="number1">
+    <label for="">secondnumber:</label>
+    <input type="text" id="number2">
+    <button onclick="adduser()" type="button">dispalyresult</button>
+    <div id="container"></div>
+    <script>
+        function adduser(){
+            var dileep=Number(document.getElementById("number1").value)
+            var ETR=Number(document.getElementById("number2").value)
+
+            if(dileep>ETR){
+                document.getElementById("container").innerHTML= dileep+"grater than"+ETR
+            }
+            else if(dileep<ETR){
+                document.getElementById("container").innerHTML= ETR+"grater than"+dileep
+            }
+        }
+    </script>
+</body>
+</html>
