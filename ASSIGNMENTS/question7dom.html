@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form action="">
+    <label for="">keyvalue1:</label>
+    <input type="text" id="key1"><br>
+    <label for="">keyvalue2</label>
+    <input type="text" id="key2"><br>
+    <label for="">keyvalue3</label>
+    <input type="text" id="key3"><br>
+    <button onclick="threekeyvalues()" type="button">Printingvalues</button>
+    <div id="container"></div>
+  </form>
+  <script>
+    function threekeyvalues(){
+        var myobject={
+            key1:document.getElementById("key1").value,
+            key2:document.getElementById("key2").value,
+            key3:document.getElementById("key3").value,
+        }
+        var result=document.getElementById("container").innerHTML="printing the values<br/>"+myobject.key1+"<br/>"+myobject.key2+"<br/>"+myobject.key3+"<br/>"
+    }
+  </script>
+</body>
+</html>

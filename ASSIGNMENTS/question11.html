@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Enter First Element</label>
+        <input type="number" id="first"><br>
+        <label>Enter Second Element</label>
+        <input type="number" id="second"><br>
+        <label>Enter Third Element</label>
+        <input type="number" id="thired"><br>
+        <label>Enter Fourth Element</label>
+        <input type="number" id="fourth"><br>
+        <label>Enter Fifth Element</label>
+        <input type="number" id="Fifth"><br>
+        <label for="">enter six Element</label>
+        <input type="number" name="" id="sixth"><br/>
+        <button onclick="Arraynumbers()" type="button">Creating An Array</button>
+        <div id="display">
+    
+        </div>
+    </form>
+    <script>
+        function Arraynumbers() {
+            var myArray = [
+                num1 = document.getElementById("first").value,
+                num2 = document.getElementById("second").value,
+                num3 = document.getElementById("thired").value,
+                num4 = document.getElementById("fourth").value,
+                num5 = document.getElementById("Fifth").value,
+                num6 = document.getElementById("sixth").value
+            ]
+            var result = [];
+            document.getElementById("display").innerHTML = "Array is:  <br>[" + result + "]";
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

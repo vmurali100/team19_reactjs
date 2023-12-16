@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="">enterproportyname</label>
+        <input type="text" id="propname"><br>
+        <button onclick="checkpropperty()" type="button"> check property</button>
+        <div id="result"></div>
+    </form>
+    <script>
+        var person={
+            name:"dileep",
+            fathername:"chandra",
+            email:"dieep944@gmail.com"
+        }
+        function checkpropperty(){
+            var propname=document.getElementById("propname").value;
+            if(person.hasOwnProperty(propname)){
+                document.getElementById("result").innerHTML=propname+" true"
+            }
+            else(
+                document.getElementById("result").innerHTML=propname+" false"
+            )
+            
+        }
+    </script>
+</body>
+</html>

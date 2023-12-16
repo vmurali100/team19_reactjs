@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for=""> dileep </label>
+    <input type="text" name="" id="entervalu">
+
+    <button onclick="increment()" type="button">bigvalue</button>
+    <button onclick="decrement()" type="button">smallvalue</button>
+<div id="container"></div>
+
+<script>
+    function increment(){
+        var num = Number(document.getElementById("entervalu").value);
+        var increment = num + 1;
+        document.getElementById("container").innerHTML = num + "   Increments by 1  =  " + increment;
+       }
+
+    function decrement(){
+        var num = Number(document.getElementById("entervalu").value);
+        var decrement = num - 1;
+        document.getElementById("container").innerHTML = num + "   Decrements by 1 =   " + decrement;
+         } 
+</script>
+   
+</body>
+</html>
