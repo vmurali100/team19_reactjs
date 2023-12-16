@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">0thElement:</label>
+    <input type="text" id="0thElement"><br>
+    <label for="">FirstElement:</label>
+    <input type="text" id="FirstElement"><br>
+    <label for="">SecondElement:</label>
+    <input type="text" id="SecondElement"> <br>
+    <label for="">ThirdElement:</label>
+    <input type="text" id="ThirdElement"> <br>
+    <label for="">FourthElement:</label>
+    <input type="text" id="FourthElement"> <br>
+    <label for="">FifthElement:</label>
+    <input type="text" id="FifthElement"><br>
+    <label for="">SixthElement:</label>
+    <input type="text" id="SixthElement"> <br>
+    <label for="">seventhElement:</label>
+    <input type="text" id="seventhElement"> <br>
+    <label for="">eightthElement:</label>
+    <input type="text" id="eightthElement"> <br>
+    <label for="">ninethElement:</label>
+    <input type="text" id="ninethElement"><br>
+    <label for="">tenthElement:</label>
+    <input type="text" id="tenthElement"> <br>
+    <button onclick="while10to1()">display</button>
+    
+    <div id="display"></div>
+
+    <script>
+
+        function while10to1() {
+            var arr=[
+
+            Number(document.getElementById("0thElement").value),
+            Number(document.getElementById("FirstElement").value),
+            Number(document.getElementById("SecondElement").value),
+            Number(document.getElementById("ThirdElement").value),
+            Number(document.getElementById("FourthElement").value),
+            Number(document.getElementById("FifthElement").value),
+            Number(document.getElementById("SixthElement").value),
+            Number(document.getElementById("seventhElement").value),
+            Number(document.getElementById("eightthElement").value),
+            Number(document.getElementById("ninethElement").value),
+            Number(document.getElementById("tenthElement").value)
+        ]
+            var i=10;
+            var result=[]
+            while(i>0){
+                result.push(arr[i])
+                i--;
+            }
+            document.getElementById("display").innerHTML=result
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">FirstNumber:</label>
+    <input type="number" id="Fnumber"> <br>
+    <label for="">SecondNumber</label>
+    <input type="number" id="Snumber"> <br>
+    <button type="button" onclick="SumOfTwoNos()">Display</button>
+    <h1 id="display"></h1>
+    <script>
+        function SumOfTwoNos() {
+            var number1 =Number(document.getElementById("Fnumber").value)
+            // console.log(number1);
+            var number2 = Number(document.getElementById("Snumber").value)
+            // console.log(number2);
+            var Total=number1+number2;
+            document.getElementById("display").innerHTML="The Sum of Two Numbers is "+Total
+        }
+        
+    </script>
+
+</body>
+
+</html>

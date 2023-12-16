@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Number</label>
+    <input type="number" id="number">
+    <button onclick="increment()" type="button">IncrementBy1</button>
+    <button onclick=" Decrement()" type="button">DecrementBy1</button>
+    <div id="result"></div>
+    <script>
+        function increment(){
+        var a=Number(document.getElementById("number").value)
+         var increment =a+1;
+         document.getElementById("result").innerHTML=a+" increments By 1 = "+increment
+
+        }
+        function Decrement(){
+            var a=Number(document.getElementById("number").value)
+            var Decrement=a-1;
+            document.getElementById("result").innerHTML=a+" Decrement By 1 = "+Decrement
+        }
+
+
+
+    </script>
+</body>
+</html>

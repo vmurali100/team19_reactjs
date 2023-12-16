@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">FirstElement:</label>
+    <input type="text" id="FirstElement"><br>
+    <label for="">SecondElement:</label>
+    <input type="text" id="SecondElement"> <br>
+    <label for="">ThirdElement:</label>
+    <input type="text" id="ThirdElement"> <br>
+    <label for="">FourthElement:</label>
+    <input type="text" id="FourthElement"> <br>
+    <button onclick="IteratingArray()">Display</button>
+    <div id="display"></div>
+
+    <script>
+        function IteratingArray() {
+            var Arrays = [];
+            Array = [
+                document.getElementById("FirstElement").value,
+                document.getElementById("SecondElement").value,
+                document.getElementById("ThirdElement").value,
+                document.getElementById("FourthElement").value
+            ]
+            for(i=0;i<Array.length;i++){
+                Arrays.push(Array[i])
+                document.getElementById("display").innerHTML="Creating Array [ "+Array+" ]"
+            }
+        }
+    </script>
+</body>
+
+</html>

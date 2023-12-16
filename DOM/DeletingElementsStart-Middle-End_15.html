@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">FirstElement</label>
+    <input type="text" id="FirstElement"> <br>
+    <label for="">SecondElement</label>
+    <input type="text" id="SecondElement"> <br>
+    <label for="">ThirdElement</label>
+    <input type="text" id="ThirdElement"> <br>
+    <label for="">FourthElement</label>
+    <input type="text" id="FourthElement"> <br>
+    <button onclick="creatingArray()">clicMeToCreateArray</button>
+    <button onclick="deletingstartElement()">delete at Start</button>
+    <button onclick="deletingmiddleelementarray()">delete at middle</button>
+    <button onclick="deletinglastelementarray()">delete at end</button>
+    <div id="dispalyarray"></div>
+    <div id="deletedElement"></div>
+    <div id="return1"></div>
+    <div id="clicktomiddleelement"></div>
+    <div id="returnlength"></div>
+    <div id="clicktoaddlastelement"></div>
+    <div id="returnslength"></div>
+    
+
+
+    
+
+
+    
+    <script>
+        function creatingArray(){
+            var newArray=[
+            document.getElementById("FirstElement").value,
+            document.getElementById("SecondElement").value,
+            document.getElementById("ThirdElement").value,
+            document.getElementById("FourthElement").value,
+        ]
+        var result=[]
+        for(i=0;i<=newArray.length;i++){
+            result=result+newArray[i]
+            document.getElementById("dispalyarray").innerHTML="Created Array  ["+newArray+"]"
+        }
+        }
+
+        function deletingstartElement(){
+            var newArray=[
+            document.getElementById("FirstElement").value,
+            document.getElementById("SecondElement").value,
+            document.getElementById("ThirdElement").value,
+            document.getElementById("FourthElement").value,
+        ]
+        var deletedElement=newArray.shift()
+        document.getElementById("deletedElement").innerHTML="Modified Array is  ["+newArray+ "]"
+        document.getElementById("return1").innerHTML="shift method returns length : "+deletedElement
+        }
+
+
+        function deletingmiddleelementarray(){
+        var newArray=[
+            document.getElementById("FirstElement").value,
+            document.getElementById("SecondElement").value,
+            document.getElementById("ThirdElement").value,
+            document.getElementById("FourthElement").value,
+        ]
+        var modifyArray=newArray.splice(2,1)
+        document.getElementById("clicktomiddleelement").innerHTML="Modified Array ["+newArray+"]"
+        document.getElementById("returnlength").innerHTML="Splice Method returns delete elements :"+ modifyArray
+       }
+
+       function deletinglastelementarray(){
+        var newArray=[
+            document.getElementById("FirstElement").value,
+            document.getElementById("SecondElement").value,
+            document.getElementById("ThirdElement").value,
+            document.getElementById("FourthElement").value,
+        ]
+        var lastElement=newArray.pop()
+        document.getElementById("clicktoaddlastelement").innerHTML="Modified Array ["+newArray+"]"
+        document.getElementById("returnslength").innerHTML="push Method returns delete elements :"+ lastElement
+       }
+
+    </script>
+
+</body>
+</html>

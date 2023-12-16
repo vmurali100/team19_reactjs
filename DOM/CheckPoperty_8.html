@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Name:</label>
+    <input type="text" id="Name"> <br>
+    <label for="">Age:</label>
+    <input type="text" id="Age"> <br>
+    <label for="">Email:</label>
+    <input type="text" id="Email"> <br>
+    <button onclick="createObject()">CreatingObject</button>
+    <button onclick="checkAnProperty()" type="button">CheckingProperty</button>
+    <div id="container"></div>
+    <script>
+        var students={};
+        function createObject() {
+            var students = {
+                Name: document.getElementById("Name").value,
+                Age: document.getElementById("Age").value,
+                Email: document.getElementById("Email").value
+            }
+            var result = document.getElementById("container").innerHTML = "Creating an object "+"<br/>"+students.Name+"<br/>"+students.Age+"<br/>"+students.Email+"<br/>"
+        }
+        function checkAnProperty(){
+            // var a ="ramu";
+            // if(a in person){
+            if(students.hasOwnProperty('gender')){
+                console.log("gender Exist in Object !!")
+            }else{
+                console.log("gender doesnt Exist in Object !!")
+            }
+
+        }
+    </script>
+    
+</body>
+</html>

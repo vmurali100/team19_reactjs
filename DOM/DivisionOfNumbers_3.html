@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">number1</label>
+    <input type="number" id="number1"> <br>
+    <label for="">number2</label>
+    <input type="number" id="number2"> <br>
+    <button onclick="returnsRemainder()" type="button">Result</button>
+    <div id="displayRemainder"></div>
+    <script>
+         function returnsRemainder(){
+             var number1=document.getElementById("number1").value
+             var number2=document.getElementById("number2").value
+             var ResultRemainder=number1%number2;
+             document.getElementById("displayRemainder").innerHTML="The Remainder is "+ ResultRemainder
+         }
+    </script>
+
+</body>
+</html>

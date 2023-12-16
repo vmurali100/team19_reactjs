@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="">FirstElement:</label>
+    <input type="text" id="FirstElement"><br>
+    <label for="">SecondElement:</label>
+    <input type="text" id="SecondElement"> <br>
+    <label for="">ThirdElement:</label>
+    <input type="text" id="ThirdElement"> <br>
+    <label for="">FourthElement:</label>
+    <input type="text" id="FourthElement"> <br>
+    <label for="">FifthElement:</label>
+    <input type="text" id="FifthElement"><br>
+   
+    <button onclick="ForeachMethod()">Display</button>
+    <div id="display"></div>
+
+    <script>
+        function ForeachMethod(){
+            var Array=[
+                document.getElementById("FirstElement").value,
+                document.getElementById("SecondElement").value,
+                document.getElementById("ThirdElement").value,
+                document.getElementById("FourthElement").value,
+                document.getElementById("FifthElement").value,
+            ]
+            var result=[];
+            Array.forEach(item=> {
+                result.push(item)
+                console.log(item)
+            });
+            document.getElementById("display").innerHTML="Resulted  Array ["+result+"]"
+
+        }
+
+    </script>
+</body>
+</html>
