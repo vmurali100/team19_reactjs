@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">FirstElement:</label>
+    <input type="text" id="FirstElement"><br>
+    <label for="">SecondElement:</label>
+    <input type="text" id="SecondElement"> <br>
+    <label for="">ThirdElement:</label>
+    <input type="text" id="ThirdElement"> <br>
+    <label for="">FourthElement:</label>
+    <input type="text" id="FourthElement"> <br>
+
+
+    <button onclick="creatingarray()">creatingarray</button>
+    <button onclick="addingfirstelementarray()">adds The element at Start</button>
+    <button onclick="addingmiddleelementarray()">adds The element at middle</button>
+    <button onclick="addinglastelementarray()">adds The element at end</button>
+
+    <div id="clicktocreateelement"></div> 
+    <div id="clicktoadd1stelement"></div>
+    <div id="length"></div>
+    <div id="clicktomiddleelement"></div>
+    <div id="returnlength"></div>
+    <div id="clicktoaddlastelement"></div>
+    <div id="returnslength"></div>
+
+
+
+    <script>
+       function creatingarray(){z
+        var newArray=[
+            document.getElementById("FirstElement").value,
+            document.getElementById("SecondElement").value,
+            document.getElementById("ThirdElement").value,
+            document.getElementById("FourthElement").value,
+        ]
+        var result=[]
+        for(var i=0;i<newArray.length;i++){
+            result=result+newArray[i];
+            document.getElementById("clicktocreateelement").innerHTML="created Array is ["+newArray+"]"
+        }
+       }
+
+       function addingfirstelementarray(){
+        var addArray=[
+            document.getElementById("FirstElement").value,
+            document.getElementById("SecondElement").value,
+            document.getElementById("ThirdElement").value,
+            document.getElementById("FourthElement").value,
+        ]
+        var addedelement=addArray.unshift("sandy")
+        document.getElementById("clicktoadd1stelement").innerHTML="Added New Array [ " + addArray + " ]"
+        document.getElementById("length").innerHTML="The length of the array is :"+ addedelement
+
+       }
+
+       function addingmiddleelementarray(){
+        var newArray=[
+            document.getElementById("FirstElement").value,
+            document.getElementById("SecondElement").value,
+            document.getElementById("ThirdElement").value,
+            document.getElementById("FourthElement").value,
+        ]
+        var modifyArray=newArray.splice(2,0,"Prabhas")
+        document.getElementById("clicktomiddleelement").innerHTML="Modified Array ["+newArray+"]"
+        document.getElementById("returnlength").innerHTML="Splice Method returns delete elements :"+ modifyArray
+       }
+
+       function addinglastelementarray(){
+        var newArray=[
+            document.getElementById("FirstElement").value,
+            document.getElementById("SecondElement").value,
+            document.getElementById("ThirdElement").value,
+            document.getElementById("FourthElement").value,
+        ]
+        var lastElement=newArray.push("Prabhas")
+        document.getElementById("clicktoaddlastelement").innerHTML="Modified Array ["+newArray+"]"
+        document.getElementById("returnslength").innerHTML="push Method returns delete elements :"+ lastElement
+       }
+
+    </script>
+    
+</body>
+
+</html>

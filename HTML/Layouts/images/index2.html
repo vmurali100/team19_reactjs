@@ -6,72 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      body{
-        color: #919191;
-        font-family: Georgia, "Times New Roman", Times, serif;
-      }
-      .wrapper {
-        width: 100%;
-      }
-      .row1 {
-        background: lightgray;
-      }
-      .wrapper {
-        width: 960px;
-        margin: 0 auto;
-      }
-      #header {
-        padding: 20px 0;
-       
-        overflow: auto;
-      }
-      #hgroup {
-        width: 300px;
-        float: left;
-      }
-      #header nav {
+        *{
+            margin: 0;
+        }
+        .wrapper{
+            width: 100%;
+        }
+        .row1{
+            background: lightgray;
+        }
+        #header{
+            padding:20px 0;
+            width: 960px;
+            margin: 0 auto;
+            overflow: auto;
+            
+        }
+        #hgroup{
+            width: 300px;
+            float: left;
+        }
+        nav {
         float: right;
         margin-top: 10px;
         background: lightsalmon;
         padding: 20px 0;
-        margin-right: 20px;
-      }
-      #header nav li {
-        list-style: none;
-        /* float: left; */
-        display: inline;
-        margin-right: 25px;
-      }
-      #header nav li a {
-        text-transform: uppercase;
-      }
-      section {
-        width: 960px;
-        margin: 30px auto;
-        overflow: auto;
-      }
-      h2 {
-        font-size: 16px;
-      }
-      .one_third {
-        width: 300px;
-        float: left;
-        margin-right: 30px;
-      }
-     
-      .one_third img,
-      #content img {
-        padding: 3px;
-        border: 1px solid grey;
-      }
-      .one_third h2 {
-        margin: 10px 0;
-    font-size: 14px;
-    font-weight: bold;
+        /* margin-right: 20px; */
+        }
+        li{
+            list-style: none;
+            /* float: left; */
+            display: inline;
+            margin-right: 25px;
+        }
+        li a {
+            text-transform: uppercase;
+        }
+        section{
+            width: 960px;
+            margin: 30px auto;
+        }
+        h2{
+            font-size: 16px;
+        }
+        .one_third{
+            width: 300px;
+            float: left;
+            margin-right: 30px;
+        }
+        .last{
+            margin: 0;
+        }
+        .one_third img{
+            padding: 3px;
+            border: 1px solid grey;
+        }
+        .one_third h2{
+            margin: 10px 0;
+        }
+        .one_third p{
+            margin: 10px 0;
+        }
+        .readMore{
+            margin: 10px 0;
+            float: right;
+        }
+      .one_third a{
+        color: orange;
+       }
+    </style>
+</head>
+<body>
+    <div class="wrapper row1">
+        <header id="header">
+            <div id="hgroup">
+                <h1>Basic 89</h1>
+                <h2>I am Just Tag Line</h2>
+            </div>
 
       }
       .one_third p {
@@ -181,63 +192,32 @@
         <img src="./demo/960x360.gif" alt="" />
       </section>
 
-      <section id="main">
-        <article class="one_third">
-          <img src="./demo/290x180.gif" alt="" />
-          <h2>Welcome to Content Area</h2>
-          <p>
-            Velit, rem cupiditate maxime id enim fuga dolores pariatur corporis
-            nostrum hic sequi accusantium recusandae dicta animi? Et eius
-            commodi quos quas.
-          </p>
-          <p class="readMore">
-            <a href="">Read More ..</a>
-          </p>
-        </article>
-        <article class="one_third">
-          <img src="./demo/290x180.gif" alt="" />
-          <h2>Welcome to Content Area</h2>
-          <p>
-            Velit, rem cupiditate maxime id enim fuga dolores pariatur corporis
-            nostrum hic sequi accusantium recusandae dicta animi? Et eius
-            commodi quos quas.
-          </p>
-          <p class="readMore">
-            <a href="">Read More ..</a>
-          </p>
-        </article>
-        <article class="one_third last">
-          <img src="./demo/290x180.gif" alt="" />
-          <h2>Welcome to Content Area</h2>
-          <p>
-            Velit, rem cupiditate maxime id enim fuga dolores pariatur corporis
-            nostrum hic sequi accusantium recusandae dicta animi? Et eius
-            commodi quos quas.
-          </p>
-
-          <p class="readMore">
-            <a href="">Read More ..</a>
-          </p>
-        </article>
-      </section>
-
-      <section id="content">
-        <img src="./demo/450x250.gif" alt="" />
-        <h2>Indonectetus facilis leo nibh</h2>
-        <p>
-          Tenetur velit minima quis veniam neque cumque saepe sunt nulla quasi
-          <span>reprehenderit ut!</span>
-        </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-          odio recusandae dolor voluptatibus optio incidunt alias culpa
-          mollitia! Ducimus debitis <span>magnam mollitia eveniet</span> totam id iste
-          praesentium ullam corrupti qui?
-        </p>
-        <p class="readMore">
-          <a href="">Read More ..</a>
-        </p>
-      </section>
+        <section id="main">
+            <article class="one_third">
+                <img src="./demo/290x180.gif" alt="">
+                <h2>Welcome to Content Area</h2>
+                <p> Velit, rem cupiditate maxime id enim fuga dolores pariatur corporis nostrum hic sequi accusantium recusandae dicta animi? Et eius commodi quos quas.</p>
+                <p class="readMore">
+                    <a href="#">Read More ..</a>
+                </p>
+            </article>
+            <article class="one_third">
+                <img src="./demo/290x180.gif" alt="">
+                <h2>Welcome to Content Area</h2>
+                <p> Velit, rem cupiditate maxime id enim fuga dolores pariatur corporis nostrum hic sequi accusantium recusandae dicta animi? Et eius commodi quos quas.</p>
+                <p class="readMore">
+                    <a href="#">Read More ..</a>
+                </p>
+            </article>
+            <article class="one_third last">
+                <img src="./demo/290x180.gif" alt="">
+                <h2>Welcome to Content Area</h2>
+                <p> Velit, rem cupiditate maxime id enim fuga dolores pariatur corporis nostrum hic sequi accusantium recusandae dicta animi? Et eius commodi quos quas.</p>
+                <p class="readMore">
+                    <a href="#">Read More ..</a>
+                </p>
+            </article>
+        </section>
     </div>
     <div class="wraaper row3">
         <div id="footer">

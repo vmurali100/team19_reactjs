@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">FirstElement:</label>
+    <input type="number" id="FirstElement"><br>
+    <label for="">SecondElement:</label>
+    <input type="number" id="SecondElement"> <br>
+    <label for="">ThirdElement:</label>
+    <input type="number" id="ThirdElement"> <br>
+    <label for="">FourthElement:</label>
+    <input type="number" id="FourthElement"> <br>
+
+    <label for="">Enter Element To Find:</label>
+    <input type="number" id="FindingElement"> <br>
+
+
+    <button onclick="creatingArr()">creatingarray</button>
+    <button onclick="searchingIndexArr()">SearchingIndex</button>
+
+    <div id="display"></div>
+
+    <script>
+        var newArr = [];
+        function creatingArr() {
+            newArr = [
+                document.getElementById("FirstElement").value,
+                document.getElementById("SecondElement").value,
+                document.getElementById("ThirdElement").value,
+                document.getElementById("FourthElement").value,
+            ]
+            var result = []
+            for (i = 0; i <= newArr.length; i++) {
+                result.push(newArr[i]);
+                document.getElementById("display").innerHTML = "Created Array [" + newArr + "]"
+            }
+        }
+
+
+        function searchingIndexArr() {
+
+            var findnumber = Number(document.getElementById("FindingElement").value)
+            var checkIndex=-1;
+            for (i = 0; i < newArr.length; i++) {
+                if (newArr[i] == findnumber) {
+                    checkIndex = i
+                }
+            }
+            console.log(checkIndex)
+
+            return checkIndex ? checkIndex : "-1"  
+
+        }
+
+    </script>
+
+</body>
+
+</html>

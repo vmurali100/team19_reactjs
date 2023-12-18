@@ -1,0 +1,438 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    /* color: white; */
+    /* background-color:teal; */
+}
+div.wrapper {
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+#header{
+    display: block;
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+    background-color: tan;
+}
+
+#header #hgroup {
+    float: left;
+    margin: 0 0 20px 0;
+}
+#header #hgroup h1 {
+    font-size: 36px;
+    font-weight: normal;
+    text-transform: none;
+}
+#hgroup a{
+    outline: none;
+    text-decoration: none;
+
+}
+#header #hgroup h2 {
+    font-size: 13px;
+}
+#header nav {
+    /* display: block; */
+    float: right;
+    margin: 10px 0 0 0;
+    padding: 20px 0;
+    color: #C0BAB6;
+    background-color: #d51b1b;
+}
+#header nav ul {
+    padding: 0 20px;
+}
+#header nav li {
+    display: inline;
+    margin-right: 25px;
+    text-transform: uppercase;
+}
+#header nav li a {
+    color: #C0BAB6;
+    background-color: #d51b1b;
+    text-decoration: none;
+}
+#header nav li.last {
+    margin-right: 0;
+}
+.row1 .clear {
+    /* display: block; */
+    overflow: auto;
+}
+/* ----------------------------wrapper row1----------------- */
+#container {
+    padding: 30px 0;
+    display: block;
+    width: 960px;
+    margin: 0 auto;
+    /* background-color: #cc6623;    */
+    overflow: auto;
+}
+.clear {
+    display: block;
+    clear: both;
+}
+#container #slider {
+    margin-bottom: 50px;
+}
+.row2 a {
+    color: #FF9900;
+
+}
+img {
+    margin: 0;
+    padding: 0;
+    border: none;
+    line-height: normal;
+    vertical-align: middle;
+}
+/* -------------services area------------ */
+#container #homepage {
+    display: block;
+    width: 100%;
+
+}
+#container #homepage #services {
+    padding: 0 0 30px 0;
+    /* background-color:aliceblue; */
+    overflow: hidden;
+
+    /* border-bottom: 1px solid #DEDEDE; */
+}
+#services .one_quarter{
+    width: 225px;
+    float: left;
+    margin: 0 20px 0 0;
+    color: darkolivegreen;
+}
+#container #homepage #services figure {
+    display: inline;
+    float: left;
+}
+#container #homepage #services strong {
+    float: left;
+    margin: 8px 0 0 10px;
+    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#container #homepage #services p{
+    margin: 0;
+    padding: 5PX 0 0 0;
+    clear: both;
+}
+#services .lastquarter{
+    margin-right: 0;
+}
+.one_quarter .more a{
+    color: orange;
+    float: right;
+    margin-top: 10px;
+
+}
+p{
+    margin-top:10px;
+}
+/* threeimage */
+#threeimg{
+    margin-top: 30px;
+    overflow: auto;
+    /* border-bottom: 3px solid red; */
+}
+#threeimg  #imge .clear li{
+    display: inline;
+    margin:0 33px 0 0;
+    
+}
+#threeimg  #imge .clear .lastone_third{
+    margin-right: 0;
+}
+#threeimg  img{
+    border: 3px solid lightgray;
+}
+#threeimg figcaption {
+    float: right;
+    margin: 25px;
+    color: orange;
+}
+/* -------------------content---------------- */
+#container #content {
+    float: left;
+    width: 630px;
+    line-height: 1.6em;
+}
+#container #content #posts ul li {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+#container #content #posts ul li article figure figcaption {
+    display: block;
+    float: right;
+    width: 410px;
+}
+#container #content #posts ul li.last {
+    margin-bottom: 0;
+}
+#container #content #posts ul li article figure{
+    padding-top: 20px;
+}
+#container #content #posts ul li article figure h2 {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    padding: 10px 0px;
+    text-transform: uppercase;
+}
+#container .more {
+    text-align: right;
+}
+#container .more a{
+    text-decoration: none;
+}
+#container #right_column {
+    float: right;
+    width: 280px;
+}
+#container #right_column h2.title {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #aa3737;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: normal;
+}
+#container #right_column nav {
+    display: block;
+    width: 100%;
+}
+#container #right_column nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#container #right_column nav li {
+    margin: 0 0 3px 0;
+    padding: 0;
+}
+#container #right_column nav a {
+    display: block;
+    margin: 0;
+    padding: 5px 10px 5px 20px;
+    color: #666666;
+    background: url("../images/orange_file.gif") no-repeat 10px center #FFFFFF;
+    text-decoration: none;
+    border-bottom: 1px dotted #666666;
+}
+#container #right_column nav a:hover{
+    color: orange;
+}
+#container #right_column{
+    padding-top: 20px;
+}
+
+#container #right_column nav li.last {
+    margin-bottom: 0;
+}
+/* ------------------------footer---------------------- */
+#footer {
+    padding: 20px 0;
+    display: block;
+    width: 960px;
+    margin: 0 auto;
+    background-color: chartreuse;
+    
+    
+}
+#footer p {
+    margin: 0;
+    padding: 0;
+}
+.fl_left {
+    float: left;
+}
+.fl_right {
+    float: right;
+}
+.row3{
+    background-color: #666666;
+
+}
+#footer a{
+    color: orange;
+    text-decoration: none;
+}
+/* media queries */
+
+@media screen and (max-width:426px){
+   div.wrapper{
+    width: 100%;
+   }
+   #header{
+    width: 100%;
+   }
+   #header #hgroup{
+    float: none;
+    text-align: center;
+   }
+   #header nav{
+    float: none;
+    text-align: center;
+   }
+   #header nav ul{
+    width: 200px;
+    margin: 0 auto;    
+   }
+   #header ul li{
+    display: block;
+    background-color: teal;
+    margin: 10px 0;
+    padding: 5px 0;
+
+   }
+   #header nav {
+    background-color:lightcoral
+   }
+   #header nav li a{
+    background-color:teal;
+    
+   }
+   #header nav li.last {
+    margin-right:0;
+}
+.row2{
+    width: 100%;
+}
+#container,#threeimg{
+    width: 100%; 
+}
+ img{
+    width: 100%;
+}
+#container #content{
+    width: 100%;
+    float: none;
+}
+#container #homepage #services {
+    text-align: center;
+    width: 100%;
+
+}
+#container #homepage{
+    width: 100%;
+}
+#container #slider{
+    width: 100%;
+
+}
+#container #content #posts ul li article figure figcaption{
+    width: 100%;
+}
+#services .one_quarter{
+    width:100%;
+}
+#footer{
+    width: 100%;
+    text-align: center;
+}
+.fl_left {
+    float: none;
+}
+.fl_right{
+    float: none;
+}
+#container #right_column {
+    float: none;
+    width: 100%;
+}
+#threeimg  #imge .clear li {
+    display:block;
+    margin: 0;
+    width: 100;
+}
+#container #right_column h2.title {
+   text-align: center;
+}
+#threeimg figcaption {
+    float: none;
+    margin:0;
+    color: orange;
+    text-align: center;
+}
+#container #right_column nav ul {
+    padding: 0;
+    margin-right: 0px;
+    list-style: none;
+    text-align: center;
+}
+#threeimg  img {
+    border: 3px solid lightgray;
+    box-sizing: border-box;
+}
+
+}
+@media screen and (min-width:425px) and (max-width:768px){
+    div.wrapper, #header, #container,img,#homepage,#content,.clear{
+        width: 100%;
+    }
+  
+    #services .one_quarter {
+        width: 50%;
+        float: left;
+        margin:0;
+        color: darkolivegreen;
+    }
+    #container #content #posts ul li article figure figcaption {
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    #container #right_column {
+        padding-top: 20px;
+        width: 100%;
+        text-align: center;
+    }
+    #footer {
+        padding: 20px 0;
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        background-color: chartreuse;
+    }
+    #threeimg  #imge .clear li {
+        display: inline;
+        margin: 0 ;
+    }
+    #container #content {
+        /* float: left; */
+        width: 100%;
+        line-height: 1.6em;
+    }
+    /* #footer {
+        padding: 20px 0;
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        background-color: chartreuse;
+        text-align: center;
+    }
+    .fl_left {
+        float: none;
+    }
+    .fl_right {
+        float:none;
+    } */
+}

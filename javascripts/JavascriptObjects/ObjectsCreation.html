@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // How many ways we can Create An Object?
+        //  We Can Create Object 6 ways there are lot of ways to create this 6 ways are commonly used in javascript?
+
+        // 1.OBJECT LITERALS
+
+        const car = {
+            brand: "AUDI",
+            Model: "Audi03tsn",
+            color: "black",
+            price: "5000000",
+            start: function () {
+                console.log("Car started");
+            }
+        }
+        console.log(car)
+        console.log(car.start())
+
+        var person = {
+            firstName: "Santhosh",
+            LastName: "Virat",
+            Working: function () {
+                return this.firstName + " " + person.LastName + " " + "Welcome To your Dream Company";
+            }
+        }
+        console.log(person)
+        console.log(person.Working());
+
+        const Animal = {
+            species: "Tiger",
+            color: "orange & Black",
+            name: "Tiger",
+            sound: "roar",
+            height: "1,2 mtrs",
+            weight: "250kgs",
+            gender: 'Female',
+            canSWim: true,
+            communicate: function () {
+                console.log("The " + this.name + "makes a" + this.sound)
+            },
+            eat: function () {
+                console.log("the" + this.name + "eating a meal")
+
+            }
+
+
+
+
+        }
+
+
+
+        // 2.CONSTRUCTOR FUNCTION
+
+        function student(studentId, StudentName, StudentAge) {
+            this.studentId = studentId;
+            this.StudentName = StudentName;
+            this.StudentAge = StudentAge;
+            this.college = "Vmr infotech";
+            this.collegeAddress = "Mittor"
+        }
+
+
+        let student1 = new student(1, "sandy", 23);
+        console.log(student1);
+
+
+        // Example 2
+
+        function VolleyBall(BallBrand, Ballprice, Ballcolors) {
+            this.BallBrand = BallBrand;
+            this.Ballprice = Ballprice;
+            this.Ballcolors = Ballcolors;
+            this.name = "Volley Ball";
+            this.weight = "260-280 grams";
+        }
+        var Volley = new VolleyBall("Cosco", 10000, "white & orange")
+        console.log(Volley);
+
+
+        // Creating an object with help of "new keyword"
+
+
+        var Athlete = new Object();
+        Athlete.name = "Neeraj Chopra";
+        Athlete.Location = "Tokyo Olympics ";
+        Athlete.Category = "Open";
+        Athlete.age = "18";
+        Athlete.Athletes = function () {
+            console.log(this.name + " won " + this.Location);
+        };
+        console.log(Athlete)
+        // console.log(Athlete.Athletes());
+
+
+        // example2
+
+        var Laptop = new Object();
+        Laptop.brand = "Hp";
+        Laptop.color = "white";
+        Laptop.size = "14inch";
+        Laptop.isitworking = true;
+        Laptop.price = "54000";
+        Laptop.Working = function () {
+            return " Laptop is working Fine.....! "
+        }
+
+
+        console.log(Laptop)
+        console.log(Laptop.Working());
+
+        // CREATING AN OBJECT WITH THE HELP OF OBJECT.CREATE() METHOD
+
+        var personPrototype = {
+            name: "prototype",
+            sayHello: function () {
+                console.log("Hello!");
+            }
+        };
+
+        var person = Object.create(personPrototype);
+        person.firstName = "John";
+        person.lastName = "Doe";
+        person.age = 30;
+        console.log(person.personPrototype)
+        // console.log(person)
+        console.log(person.sayHello())
+
+
+        // USING CLASS SYNTAX  IN ECMA SCRIPT 
+        //===================================
+
+        class Employee {
+            constructor(name, id, Role) {
+                this.name = name;
+                this.id = id;   
+                this.Role = Role;
+            }
+            work = () => {
+                return this.name + " is Working on " + this.Role
+            }
+
+
+        }
+        let E1 = new Employee("Santhosh", 1, "FrontEnd-Developer");
+        let E2 = new Employee("Amar", "BackEnd-Developer");
+        let E3 = new Employee("aswini", "Full-stack-Developer");
+        console.log(E1);
+        console.log(E2);
+        console.log(E3);
+        console.log(E1.work())
+
+        // SINGLETON PATTERN
+
+        let volley = new function () {
+            this.name = "sandy";
+            this.age = 23;
+            this.game = "Volley Ball";
+
+        }
+        console.log(volley.name)
+
+        //30-11-2023
+        //OBJECTS CREATING WITH  ES6 CLASS SYNTAX
+
+        // Example 1:
+
+        class Car {
+            constructor(Price, Brand) {
+                this.Price = Price;
+                this.Brand = brand;
+                this.Engine = "Diesel";
+                this.location = "Bangalore";
+                this.tyres = "4";
+            }
+        }
+        var c1 = new Object(1200000, "XUV");
+        console.log(c1);
+
+
+        // Example2
+
+        class Movie {
+            constructor(MovieName, Language, RunningTime, Budget) {
+                this.MovieName = MovieName;
+                this.Language = Language;
+                this.RunningTime = RunningTime;
+                this.Budget = Budget;
+                this.Director = "Ajay Bhupathi";
+                this.Producer = "Ashok Reddy";
+            }
+        }
+        let m1 = new Movie("RX-100", "Telugu", "1.30mins", "2crore")
+        console.log(m1);
+
+        // Example 3
+
+        class Bike {
+            constructor(Brand, BikeName, Model, color, mileage, location,) {
+                this.Brand = Brand;
+                this.BikeName = BikeName;
+                this.color = color;
+                this.mileage = mileage
+                this.Price = "2,50000";
+                this.location = "Bangalore";
+            }
+        }
+        let b1 = new Bike("RE", "Classic-350", 2023, "Black", "45km/hr", "bangalore")
+        console.log(b1)
+
+
+        // Example4
+
+        class Laptops {
+            constructor(Brands, Price, Model, color) {
+                this.Brands = Brands;
+                this.Price = Price;
+
+                this.color = color;
+                this.location = "chennai";
+                this.Ram = "8GB"
+                this.Processor = "RYZEN 5000 Series";
+            }
+
+        }
+        let l1 = new Laptops("hp", 54000, "Pavilion", "greywhite");
+        console.log(l1);
+
+
+        // EXAMPLE 6
+
+        class Mobile {
+            constructor(brand, color, ram, rom, Battery) {
+                this.brand = brand;
+                this.color = color;
+                this.ram = ram;
+                this.rom = rom;
+                this, Battery = Battery;
+                this.location = "Bangalore";
+            }
+        }
+        var M1 = new Mobile("OPPO Reno10", "Aliceblue", "8gb", "256gb", "5500mah");
+        console.log(M1);
+
+
+        //EXTENDING EXAMPLES
+
+        class Animals {
+            constructor(Height, Weight) {
+                this.Height = Height;
+                this.Weight = Weight;
+            }
+        }
+        class dog extends Animals {
+            constructor(Height,Weight,name, breed, gender,) {
+                super(Height,Weight);
+                this.name = name;
+                this.breed = breed;
+                this.gender = gender;
+            
+            }
+        }
+        // var A1 = new Animals("1.7inches", "250kgm");
+        var d1 = new dog(2,80,"Labrador Retriever","lab", "male");
+        console.log(d1);
+
+        class electronics{
+            constructor(Brand,Cost,Warranty){
+                this.Brand=Brand;
+                this.Cost=Cost;
+                this.Warranty=Warranty;
+
+            }
+        }
+        class IronBox extends electronics{
+            constructor(Brand,Cost,Warranty,Name,Model){
+                super(Brand,Cost,Warranty)
+                this.Name=Name;
+                this.Model=Model;
+            }
+        }
+        var e1=new IronBox("Pigeon",2000,"1Year","ELETRICBROX","E1TFR");
+        console.log(e1);
+
+
+        class Computers{
+            constructor(RAM,ROM,Company){
+                this.RAM=RAM;
+                this.ROM=ROM;
+                this.Company=Company;
+            }
+        }
+        class Mobile{
+            constructor(){
+                
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

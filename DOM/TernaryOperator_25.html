@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter Your Age:</label>
+    <input type="number" id="name"> <br>
+    <button onclick="TernaryOperator()">Display</button>
+    <div id="output"></div>
+    
+    <script>
+
+        function TernaryOperator(){
+        var age=document.getElementById("name").value
+        var res=age>=18 ?"Your Eligible to vote":age>=25&&age<=30?"Get job...!":"Marry Soon"
+        document.getElementById("output").innerHTML=res
+        }
+
+    </script>
+</body>
+</html>

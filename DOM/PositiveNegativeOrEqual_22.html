@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Enter Number:</label>
+    <input type="number" id="First Number">
+    <button onclick="PositiveNegativeEqual()">display</button>
+    <div id="container"></div>
+    <script>
+        function PositiveNegativeEqual() {
+            num1 = document.getElementById("First Number").value
+            if (num1 > 0) {
+                document.getElementById("container").innerHTML = "Entered Number is Positive " + num1
+            }
+            else if (num1 < 0) {
+                document.getElementById("container").innerHTML = "Entered Number is Negative " + num1
+
+            }
+            else {
+                document.getElementById("container").innerHTML = "Entered Number is equal " + num1
+
+            }
+        }
+    </script>
+</body>
+
+</html>

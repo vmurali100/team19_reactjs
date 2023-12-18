@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label for="">Enter InRange:</label>
+    <input type="number" id="InRange"><br>
+    <label for="">Enter OutRange:</label>
+    <input type="number" id="OutRange"><br>
+    <label for="">Enter Number to Find Range:</label>
+    <input type="number" id="number"><br>
+    <button onclick="FindingRange()">display</button>
+    <div id="container"></div>
+
+    <script>
+        function FindingRange() {
+            inrange = Number(document.getElementById("InRange").value)
+            outrange = Number(document.getElementById("OutRange").value)
+            number = Number(document.getElementById("number").value)
+
+            if(number>=inrange && number<=outrange){
+                document.getElementById("container").innerHTML= number +" Number is InRange "
+            }
+            else{
+                document.getElementById("container").innerHTML= number +" Number is OutRange "
+
+
+   
+            }
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
