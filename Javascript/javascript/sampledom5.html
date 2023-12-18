@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enternumber1:</label>
+    <input type="number" id="presentvalue">
+    <button onclick="increment()" type="button">Increment</button> <hr>
+    <label for="">Enternumber2:</label>
+    <input type="number" id="Dcrnumber">
+    <button onclick="decrement()" type="button">Decrement</button>
+    <div id="Displayresult"></div>
+    <script>
+          var element=document.getElementById("Displayresult");
+          function increment(){
+
+            var presentvalue=Number(document.getElementById("presentvalue").value);
+            document.getElementById("presentvalue").value = presentvalue+1
+          }
+          function decrement(){
+            var presentvalue=Number(document.getElementById("Dcrnumber").value);
+            document.getElementById("Dcrnumber").value=presentvalue-1
+          }
+    </script>
+</body>
+</html>

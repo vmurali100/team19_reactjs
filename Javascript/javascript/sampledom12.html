@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter First Number:</label>
+    <input type="number" id="1stelement"> <br>
+    <label for="">Enter Second Number:</label>
+    <input type="number" id="2ndelement"> <br>
+    <label for="">Enter Third Number:</label>
+    <input type="number" id="3rdelement"> <br>
+    <label for="">Enter Fourth Number:</label>
+    <input type="number" id="4thelement"> <br>
+    <label for="">Enter Fifth Number:</label>
+    <input type="number" id="5thelement"><br>
+
+    <button onclick="CreatingArray()" type="button">New Array</button>
+    <button onclick="modifyingArray()" type="button">Modified Array</button>
+    <div id="modifyArr"></div>
+    <div id="displayArr"></div>
+
+    <script>
+        function CreatingArray(){
+            var Arr=[];
+            var Arr=[
+            document.getElementById("1stelement").value,
+            document.getElementById("2ndelement").value,
+            document.getElementById("3rdelement").value,
+            document.getElementById("4thelement").value,
+            document.getElementById("5thelement").value,
+        ]
+        var result=[];
+        for( var i=0;i<Arr.length;i++){
+            result.push(Arr[i])
+        }
+        document.getElementById("displayArr").innerHTML="The  New Array is  ["+result+"]"
+        }
+
+        function modifyingArray(){
+            var Arr=[]
+            var myArr=[
+            document.getElementById("1stelement").value,
+            document.getElementById("2ndelement").value,
+            document.getElementById("3rdelement").value,
+            document.getElementById("4thelement").value,
+            document.getElementById("5thelement").value,
+        ]
+        var modify=myArr.splice(2,2,"sandy","amar") ;
+        console.log(myArr);
+
+        document.getElementById("modifyArr").innerHTML="Deleted Array Elements : "+modify
+        document.getElementById("displayArr").innerHTML="New  Array Elements: "+myArr
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>

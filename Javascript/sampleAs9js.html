@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Iterating over all properties in a Object
+        var myobject={
+            name:"pavan",
+            age:21,
+            city:"chittoor"
+        }
+        for(var place in myobject ){
+          if (myobject.hasOwnProperty(place)){
+            console.log(place + ":" +myobject[place]) 
+          }
+        }
+    </script>
+</body>
+</html>

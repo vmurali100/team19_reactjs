@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enternumber1:</label>
+    <input type="number" id="fnumber"><br>
+    <label for="">Enternumber2:</label>
+    <input type="number" id="snumber"><br>
+    <button onclick="remainder()" type="=button">Display Total</button>
+    <div id="displayremainder"></div>
+    <script>
+        function remainder(){
+            var firstnumber=Number(document.getElementById("fnumber").value);
+            console.log(firstnumber)
+            var secondnumber=Number(document.getElementById("snumber").value);
+            console.log(secondnumber)
+            var total=firstnumber%secondnumber;
+            document.getElementById("displayremainder").innerHTML="The Remainder is:"+total;
+
+        }
+    </script>
+
+</body>
+</html>

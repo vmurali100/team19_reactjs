@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="">Enter fname:</label>
+        <input type="text" id="firstelement"><br>
+        <label for="">Enter lname:</label>
+        <input type="text" id="secondelement"><br>
+        <label for="">Enter age:</label>
+        <input type="text" id="thirdelement"><br>
+        <label for="">Enter email:</label>
+        <input type="text" id="fourthelement"><br>
+        <label for="">Enter address:</label>
+        <input type="text" id="fifthelement"><br>
+        <button onclick="creatinganObject()" type="button">view 5 array</button>
+        <div id="displayarray"></div>
+    </form>
+    <script>
+        var student={};
+        function creatinganObject(){
+            student={
+                fname:document.getElementById("firstelement").value,
+                lname:document.getElementById("secondelement").value,
+                age:document.getElementById("thirdelement").value,
+                email:document.getElementById("fourthelement").value,
+                address:document.getElementById("fifthelement").value
+
+            }
+            var result=""
+            for(i in student ){
+                result=result+student[i]+"<br/>"
+            }
+            document.getElementById("displayarray").innerHTML=result
+
+        }
+    </script>
+</body>
+</html>

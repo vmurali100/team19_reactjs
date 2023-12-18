@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // adding an element from the beginnning,middle,end of an array
+        // adding an element in the beginning using unshift method
+        let myarray = [80, 90, 100, 110];
+        myarray.unshift(70);
+        console.log(myarray);
+        // adding an element in the middleindex using math.floor method
+        let middleindex = Math.floor(myarray.length / 2);
+        myarray.splice(middleindex, 0, 95);
+        console.log(myarray);
+         // adding an element in the end using push method
+        myarray.push(120);
+        console.log(myarray);
+    </script>
+</body>
+
+</html>

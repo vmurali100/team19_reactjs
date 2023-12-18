@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <label for="">fname:</label>
+        <input type="text" id="firstname"><br>
+        <label for="">Mname:</label>
+        <input type="text" id="secondname"><br>
+        <label for="">lname:</label>
+        <input type="text" id="Thirdname"><br>
+        <button onclick="printingvalue()" type="button">printingvalues</button>
+        <div id="Displayresult"></div>
+
+    </form>
+    <script>
+        function printingvalue(){
+            var names={
+                firstname: document.getElementById("firstname").value,
+                secondname: document.getElementById("secondname").value,
+                Thirdname:  document.getElementById("Thirdname").value
+            }
+            var result=document.getElementById("Displayresult").innerHTML="Printing the values " + "<br/>" + names.firstname+ "<br/>" + names.secondname + "<br/>" + names.Thirdname + "<br/>"
+        }
+    </script>
+        
+    
+</body>
+</html>
