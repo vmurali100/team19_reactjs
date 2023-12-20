@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //#1: How To find duplicate elements in array in javascript|Javascript Coding Interview Question 
+
+        const Arr=[1,2,3,4,2,3]
+        const duplicateArr=Arr.filter((ele,index,array)=>{
+            return array.indexOf(ele)!==index
+        })
+        console.log(duplicateArr)
+
+        //Without BuiltIN
+
+        // function Finduplicates(arr){
+        //     var duplicate=[];
+        //     for(i=0;i<arr.length;i++){
+        //         for(j=i+1;j<=arr.length;j++){
+        //             if(arr[i]!=arr[j]){
+        //                 console.log("Unique elements are", arr[i])
+        //              }
+        //         }
+        //     }
+        // }
+        // const arr=[1,2,3,4,5,4,3,2];
+        // var duplicate=Finduplicates(arr)
+        // console.log(duplicate)
+
+
+        
+
+    </script>
+</body>
+</html>
