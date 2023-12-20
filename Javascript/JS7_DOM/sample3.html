@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">First Name</label>
+        <input type="text" class="fname"> <br>
+
+        <label for="">Last Name</label>
+
+        <input type="text" class="lname"> <br>
+
+        <label for="">Email </label>
+
+        <input type="text" class="email"> <br>
+
+        <label for="">Mobile </label>
+
+        <input type="text" class="mobile"> <br>
+
+        <button onclick="createUserByClassName()" type="button">Create A User</button>
+
+       
+    </form>
+    <script>
+        function createUserByClassName(){
+            var person = {
+                fname:document.getElementsByClassName("fname")[0].value,
+                lname:document.getElementsByClassName("lname")[0].value,
+                email:document.getElementsByClassName("email")[0].value,
+                mobile:document.getElementsByClassName("mobile")[0].value
+            }
+
+            console.log(person)
+        }
+    </script>
+</body>
+</html>
