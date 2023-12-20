@@ -9,13 +9,32 @@
   <body>
     <form>
       <label for="">First Number :</label>
-      <input type="number" name="" id="fname" /> <br />
+      <input type="number" name="myInputField" id="fname" class="myFname"/> <br />
       <label for="">Seconf Number :</label>
-      <input type="number" name="" id="lname" /> <br />
+      <input type="number" name="myInputField" id="lname" /> <br />
       <button onclick="readAndTotalNos()" type="button">Display Total</button>
     </form>
     <div id="display"></div>
+
+<button onclick="changeColors()">Change Color</button>
+    <ul>
+      <li class="itemlist">Item1</li>
+      <li class="itemlist">Item2</li>
+      <li class="itemlist">Item3</li>
+      <li class="itemlist">Item4</li>
+      <li class="itemlist">Item5</li>
+      <li id="sample" class="itemlist">Item6</li>
+    </ul>
     <script>
+
+      function changeColors(){
+        // var allItems = document.getElementsByTagName("li");
+        var allItems = document.getElementsByClassName("itemlist")
+        for(i=0;i<allItems.length;i++){
+          allItems[i].style.color = "red"
+        }
+        document.getElementById("sample").style.background="yellow"
+      }
       // 1. Read Two Numbers from HTML
       // 2. ADD Two Numbers and Store in a Variable
       // 3. Display the Total in document
