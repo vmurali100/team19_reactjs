@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="">First Number :</label>
+        <input type="number" name="" id="num1" /> <br />
+        <label for="">Second Number :</label>
+        <input type="number" name="" id="num2" /> <br />
+        <button onclick="readAndTotalNos()" type="button">Display Total</button>
+      </form>
+      <div id="display">
+
+      </div>
+      <script>
+         function readAndTotalNos() {
+        // Getting Values By GetElementByid
+        var number1 = Number(document.getElementById("num1").value);
+        
+         var number2 = Number(document.getElementById("num2").value);
+        
+         var total = number1 + number2;
+        document.getElementById("display").innerHTML = "The Total is: " + total;
+         }
+      </script>
+</body>
+</html>

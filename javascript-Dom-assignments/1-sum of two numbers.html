@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<form action="">
+ <form action="">
     <label for="firstnumber">first number</label>
     <input type="text" name="" id="firstnumber">
 
@@ -21,25 +21,33 @@
     </div>
 </form>
 
-<script>
- 
- function sumnumbers(){
+<script> 
 
-    var num1=10;
-    var num2=20;
+function sumnumbers(){
 
-    var total=num1+num2
-    console.log(total)
+    number1=Number(document.getElementById("firstnumber").value);
+
+   number2= Number(document.getElementById("secondnumber").value);
+
+   
+
+    var total=number1+number2   
+     console.log(total)
 
     document.getElementById("display").innerHTML="Total is ="+total
- }
-
- sumnumbers()
-
-
-
+  } 
+ sumnumbers() 
 
 </script>
+    
+
+
+
+
+
+
+
+
     
 </body>
 </html>
