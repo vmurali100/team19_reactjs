@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- (Ques-no-7)---write code that accesses and modifies a property of an object. -->
+    
+    <form>
+        <label>firstname</label>
+        <input type="text" name="" id="fname"><br/>
+        <label>lastname</label>
+        <input type="text" name="" id="lname"><br/>
+        <label>email</label>
+        <input type="text" name="" id="email"><br/>
+        <button onclick="calculate()" type="button">display</button>
+        <button onclick="modifyproperty()" type="button">display</button>
+        <div id="one"></div>
+    </form>
+    <script>
+        var personname={}
+        function calculate(){
+            var personname={
+                fname:document.querySelector("#fname").value,
+                lname:document.querySelector("#lname").value,
+                email:document.querySelector("#email").value
+
+            }
+
+         
+
+            document.getElementById("one").innerHTML=personname.fname+"<br>"+personname.lname+"<br>"+personname.email+"<br>";
+        }
+
+        function modifyproperty(){
+            delete personname.fname;
+            console.log(personname);
+            personname.name="naveen";
+            console.log(personname);
+        }
+    </script>
+</body>
+</html>

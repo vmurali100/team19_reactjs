@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="chaingcolors()">chaing color</button>
+    <ul>
+        <li class="item">content</li>
+        <li class="item">test</li>
+        <li class="item">computer</li>
+        <li>laptop</li>
+        <li>bottel</li>
+        <li>books</li>
+    </ul>
+
+    <script>
+        function chaingcolors(){
+          var allitems = document.getElementsByClassName("item")
+
+          for(var i=0; i < allitems.length; i++){
+             allitems[i].style.color = "red";
+          }
+        }  
+    </script>
+</body>
+</html>

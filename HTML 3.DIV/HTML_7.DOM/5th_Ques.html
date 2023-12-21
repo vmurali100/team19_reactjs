@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- (Ques-no-5)Write code that increments and decrements a number by 1. -->
+    
+    <form>
+        <label for="">enter a number</label>
+        <input type="number" name="" id="num1"><br/>
+        <button onclick="Increment()" type="button">calculateincrement</button>
+        <button onclick="decrement()" type="button">calculatedecrement</button>
+        
+        <div id="display"></div>
+    </form>
+    <script>
+        function Increment(){
+            var num = Number(document.getElementById("num1").value);
+
+            var increment = num +1;
+            document.getElementById("display").innerHTML = num + "increment by 1 = "+increment;
+            console.log(increment);
+
+        }
+        function decrement(){
+            var num = Number(document.getElementById("num1").value);
+
+            var decrement = num -1;
+            document.getElementById("display").innerHTML =num +"decrement by 1 =" +decrement;
+            console.log(decrement);
+        }
+    </script>
+</body>
+</html>

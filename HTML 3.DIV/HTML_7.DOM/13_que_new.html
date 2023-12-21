@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="deleteFirstElement()">Delete First Element</button> <br>
+    <button onclick="deleteLastElement()">Delete Last Element</button> <br>
+    <button onclick="deleteMiddleElement()">Delete Middle Element</button>
+
+    <div id="results"></div>
+    <script>
+        var students = ["Ram", "Ravi", "Kiran", "Sam", "Kumar"];
+        function dislpayStudents() {
+            document.getElementById("results").innerHTML = students
+        };
+
+        function deleteFirstElement(){
+            students.shift()
+            dislpayStudents() 
+        }
+
+        function deleteLastElement(){
+            students.pop();
+            dislpayStudents();
+        }
+
+        function deleteMiddleElement(){
+            students.splice(2,1);
+            dislpayStudents()
+        }
+        dislpayStudents()
+    </script>
+</body>
+
+</html>

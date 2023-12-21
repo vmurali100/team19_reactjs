@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- (Ques-no-27)Write code that sorts an array of numbers in ascending or descending order. -->
+
+    
+    <form>
+        <label for="">first element</label>
+        <input type="text" name="" id="one"><br/>
+        <label for="">second element</label>
+        <input type="text" name="" id="two"><br/>
+        <label for="">third element</label>
+        <input type="text" name="" id="three"><br/>
+        <label for="">fourth element</label>
+        <input type="text" name="" id="four"><br/>
+        <label for="">fiveth element</label>
+        <input type="text" name="" id="five"><br/>
+         <button onclick="ascending()" type="button">display asending number</button>
+        <button onclick="createArray()" type="button">displaynumbers</button>
+       <button onclick="descending() " type="button">display disending number</button>
+        <div id="display"></div>
+        <div id="ascend"></div>
+        <div id="descend"></div>
+
+        
+    </form>
+    <script>
+        function createArray() {
+            var myArray = [
+                num1 = Number(document.getElementById("one").value),
+                num2 = Number(document.getElementById("two").value),
+                num3 = Number(document.getElementById("three").value),
+                num4 = Number(document.getElementById("four").value),
+                num5 = Number(document.getElementById("five").value)
+            
+            ]
+            var result = [];
+            for (var i = 0; i < myArray.length; i++) {
+                result = result + myArray[i] + ",";
+            }
+            document.getElementById("display").innerHTML = "Array is:  <br>[" + result + "]";
+        }
+
+
+        function ascending(){
+            var arr=[
+                num1=Number(document.getElementById("one").value),
+                num2=Number(document.getElementById("two").value),
+                num3=Number(document.getElementById("three").value),
+                num4=Number(document.getElementById("four").value),
+                num5=Number(document.getElementById("five").value)
+            ]
+            var ascend =(a, b)=>{
+                return a - b;
+            };
+            var sorting = arr.sort(ascend);
+            document.getElementById("ascend").innerHTML="ascending order:<br/>["+sorting+"]"
+        }
+
+        function descending() {
+            var myarray = [
+                num1 = Number(document.getElementById("one").value),
+                num2 = Number(document.getElementById("two").value),
+                num3 = Number(document.getElementById("three").value),
+                num4 = Number(document.getElementById("four").value),
+                num5 = Number(document.getElementById("five").value)
+        ]
+        var descend = (a,b)=>{
+            return b-a;
+        };
+        var sort = myarray.sort(descend);
+        document.getElementById("descend").innerHTML="descending order:<br/>["+sort+"]"
+        }
+    </script>
+</body>
+</html>

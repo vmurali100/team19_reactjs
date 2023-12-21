@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- (getelimentbyname accessing the eliments) -->
+
+    <form action="">
+        <label for="">first name</label>
+        <input type="text" name="one" id="fname"><br/>
+        <label for="">second name</label>
+        <input type="text" name="two" id="lname"><br/>
+        <label for="">email</label>
+        <input type="text" name="three" id="eamil"><br/>
+        <label for="">mobile number</label>
+        <input type="text" name="four" id="mobile"><br/>
+        <label for="">Gender</label>
+        <input type="text" name="five" id="Gender"><br/>
+        <button onclick="createUserbyname()" type="button">create a user</button>
+        
+    </form>
+    <script>
+        function createUserbyname(){
+            var person ={
+                fname:document.getElementsByName("one")[0].value,
+                lname:document.getElementsByName("two")[0].value,
+                email:document.getElementsByName("three")[0].value,
+                mobile:document.getElementsByName("four")[0].value,
+                Gender:document.getElementsByName("five")[0].value
+
+            }
+            console.log(person)
+        }
+        
+    </script>
+
+
+</body>
+</html>

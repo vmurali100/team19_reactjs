@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- (Ques-no-6)--Write code that creates an object with at least 3 key-value pairs -->
+    
+    <form>
+        <label for="">firstname</label>
+        <input type="text" name="" id="fname"><br/>
+        <label for="">lastname</label>
+        <input type="text" name="" id="lname"><br/>
+        <label for="">Email</label>
+        <input type="text" name="" id="email"><br/>
+        <button onclick="createobject()"type="button">display </button>
+        <div id="one"></div>
+    </form>
+
+    <script>
+        function createobject(){
+            var person = {
+                fname:(document.querySelector("#fname").value),
+                lname:(document.querySelector("#lname").value),
+                email:(document.querySelector("#email").value)
+
+        
+
+            }
+            document.getElementById("one").innerHTML="create the object"+person.fname+"<br>"+person.lname+"<br>"+person.email;
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+     <!-- (queryselectorall accessing the eliments)-->
+
+     <form action="">
+        <label for="">first name</label>
+        <input type="text" id="fname"><br/>
+        <label for="">second name</label>
+        <input type="text" id="lname"><br/>
+        <label for="">email</label>
+        <input type="text" id="email"><br/>
+        <label for="">mobile number</label>
+        <input type="text"  id="mobile"><br/>
+        <label for="">age</label>
+        <input type="text"  id="age"><br/>
+        <button onclick="creatuserbyqueryselector()" type="button">creat a user</button>
+     </form>
+     <script>
+        function creatuserbyqueryselector(){
+            var person={
+                fname:document.querySelectorAll("#fname")[0].value,
+                lname:document.querySelectorAll("#lname")[0].value,
+                email:document.querySelectorAll("#email")[0].value,
+                mobile:document.querySelectorAll("#mobile")[0].value,
+                age:document.querySelectorAll("#age")[0].value
+            }
+            console.log(person)
+        }
+     </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- (Ques-no-9)---write code that iterates  over  all properties of an object and prints them--- -->
+    <form>
+        <label for="">firstname</label>
+        <input type="text" id="fname"><br>
+        <label for="">lastname</label>
+        <input type="text" id="lname"><br>
+        <label for="">email</label>
+        <input type="text" id="email"><br>
+        <label for="">age</label>
+        <input type="number" id="age"><br>
+        <button onclick="createobject()" type="button">creating an object:</button>
+        <div id="display"></div>
+        </form>
+        <script>
+            function createobject(){
+                var myobject={
+                    fname:(document.querySelector("#fname").value),
+                    lname:(document.querySelector("#lname").value),
+                    email:(document.querySelector("#email").value),
+                    age:(document.querySelector("#age").value)
+
+                }
+                document.getElementById("display").innerHTML="create the object"+myobject.fname+"<br/>"+myobject.lname+"<br/>"+myobject.email+"<br/>"+myobject.age;
+            }
+        </script>
+
+
+
+
+
+
+
+</body>
+</html>

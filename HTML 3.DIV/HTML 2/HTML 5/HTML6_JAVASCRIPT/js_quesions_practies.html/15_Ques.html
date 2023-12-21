@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // (Ques-n0-15)--WritableStreamcode that searches for an element in an array and returns its index or -1 if not found--
+
+
+        function FindElementIndex(array, item) {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === item) {
+                    return i; // item found, returns item index 
+                }
+            }
+            return -1; // item not found
+        }
+
+        var myArray = [10, 12, 15, 5, 25, 35];
+        var elementToFind = 15;
+
+        var index = FindElementIndex(myArray, elementToFind);
+        console.log(index);
+
+
+        // --type2---
+
+        function element(array, item) {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === item) {
+                    return i;
+                }
+            }
+            return -1;
+
+        }
+
+        var myarray = [10, 20, 30, 4, 6, 15];
+        var elementtofind = 20;
+
+        var index = FindElementIndex(myarray, elementtofind);
+        console.log(index);
+
+
+    </script>
+</body>
+
+</html>

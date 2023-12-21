@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- (Ques-no-25)Write code that uses the ternary Operator to assign a  value based on a condition -->
+
+    
+    <form>
+        <label>Enter your Age</label>
+        <input type="number" id="age"/><br><br>
+
+        <button onclick="findAge()" type="button">Checking For Vote Eligibilty</button>
+        <div id="display"></div>
+    </form>
+
+    <script>
+        function findAge(){
+            age = Number(document.getElementById("age").value);
+            var EligibleToVote = age >= 18  ? "Eligible To vote" : "Not Eligible To Vote";
+            document.getElementById("display").innerHTML = EligibleToVote;
+        }
+    </script>
+</body>
+</html>

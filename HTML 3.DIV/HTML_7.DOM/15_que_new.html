@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- (Ques-no-15)---write code that searches for an Eliment ina na array  and returns its index -1 if not found-- -->
+
+
+    <input type="text" name="" id="user" placeholder="Enter Name ..."> <button onclick="searchUser()" type="button">Search</button>
+    <script>
+        var students = ["Ram", "Ravi", "Kiran", "Sam", "Kumar", "Ram"];
+        function searchUser() {
+            var username = document.getElementById("user").value;
+            let userIndex = students.indexOf(username);
+
+            console.log(userIndex)
+            return userIndex
+        }
+
+    </script>
+</body>
+
+</html>

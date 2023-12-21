@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- (Ques=-no-23)Write a function that checks if a number is within a specific range and returns "In range" or "Out of range". -->
+
+
+    <input type="number" name="" id="myNumber"> <button onclick="checkNumber()">Check</button>
+    <div id="demo"></div>
+    <script>
+        function checkNumber(){
+            var enteredNumber = document.getElementById("myNumber").value;
+            if(enteredNumber < 19 && enteredNumber > 1){
+                document.getElementById("demo").innerHTML = "You Are a Teenager"
+            }else if(enteredNumber > 19 && enteredNumber <60){
+                document.getElementById("demo").innerHTML = "You Are an Adult"
+
+            }else{
+                document.getElementById("demo").innerHTML = "You are Senior Citizen"
+            }
+        }
+    </script>
+
+</body>
+</html>

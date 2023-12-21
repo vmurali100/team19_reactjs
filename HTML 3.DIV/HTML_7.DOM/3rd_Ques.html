@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- (ques-no-3)---Write a function that takes two numbers and returns the remainder of their division. -->
+    <form>
+        <label>Enter firstnumber</label>
+        <input type="number" id="num1"><br>
+        <label>Enter secondnumber</label>
+        <input type="number" name="" id="num2"><br>
+
+        <button  type="button"  onclick="calculateRemainder()">Calculate Remainder</button>
+         <div id="display">
+
+         </div>
+    </form>
+    <script>
+            function calculateRemainder(){
+                var number1 = Number(document.getElementById("num1").value);
+        
+                var number2 = Number(document.getElementById("num2").value);
+       
+                var Remainder = number1 %number2;
+                document.getElementById("display").innerHTML = "Remainder is:" +  Remainder;
+
+        }
+
+    </script>
+</body>
+</html>
