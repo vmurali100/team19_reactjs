@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label> Laptop Name</label>
+
+        <input type="text" > <br>
+
+        <label>Laptop Model</label>
+
+        <input type="text" > <br>
+
+        <label> Ram</label>
+
+        <input type="text" > <br>
+
+        <label> Operating System </label>
+
+        <input type="text" > <br>
+
+        <label> Price Of Laptop</label>
+
+        <input type = "text" ><br>
+
+        <button onclick="createLaptopByTagName()" type="button">Create A Laptop Object</button>
+
+       
+    </form>
+    <script>
+        function createLaptopByTagName(){
+            var Laptop = {
+                name:document.getElementsByTagName("input")[0].value,
+                model:document.getElementsByTagName("input")[1].value,
+                ram:document.getElementsByTagName("input")[2].value,
+                os:document.getElementsByTagName("input")[3].value,
+                price:document.getElementsByTagName("input")[4].value
+
+
+            }
+
+            console.log(Laptop)
+        }
+    </script>
+</body>
+</html>
