@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta class="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter Brand:</label>
+    <input type="text" class="example1"> <br>
+    
+    <label for=""> Enter Model:</label>
+    <input type="text" class="example2"> <br>
+    
+    <label for="">Enter RAM:</label>
+    <input type="text" class="example3">  <br>
+    
+    <label for="">Enter ROM:</label>
+    <input type="text" class="example4">  <br> 
+
+    <button onclick="createLaptopObject()" type="button">createUser</button>
+    <div id="display"></div> 
+
+    <script>
+             function createLaptopObject(){
+            var Laptop={
+                Brand:document.querySelectorAll(".example1")[0].value,
+                Model:document.querySelectorAll(".example2")[0].value,
+                Ram:document.querySelectorAll(".example3")[0].value,
+                Rom:document.querySelectorAll(".example4")[0].value,
+
+            }
+            console.log(Laptop)
+            }
+
+       
+    </script>
+</body>
+</html>

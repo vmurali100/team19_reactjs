@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">FirstName:</label>
+    <input type="text" id="Fname"> <br>
+    
+    <label for="">LastName:</label>
+    <input type="text" id="Lname"> <br>
+    
+    <label for="">age:</label>
+    <input type="text" id="age">  <br>
+    
+    <label for="">Email:</label>
+    <input type="text" id="Email">  <br> 
+
+    <button onclick="createUser()" type="button">createUser</button>
+    <div id="display"></div> 
+    <script>
+        function createUser(){
+                Person={
+                fname:document.getElementById("Fname").value,
+                lname:document.getElementById("Lname").value,
+                age:document.getElementById("age").value,
+                Email:document.getElementById("Email").value
+            }
+            var Result='';
+            // document.getElementById("display").innerHTML=Person.fname
+            for (per in Person){
+                Result=Result+Person[per]+"<br/>";
+            }
+            document.getElementById("display").innerHTML="Created User" + Result+ "<br/>"
+        }
+    </script>
+</body>
+</html>

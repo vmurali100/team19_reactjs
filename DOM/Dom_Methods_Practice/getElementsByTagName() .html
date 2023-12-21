@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter Brand:</label>
+    <input type="text" name="Brand"> <br>
+    
+    <label for=""> Enter Model:</label>
+    <input type="text" name="Model"> <br>
+    
+    <label for="">Enter RAM:</label>
+    <input type="text" name="Ram">  <br>
+    
+    <label for="">Enter ROM:</label>
+    <input type="text" name="Rom">  <br> 
+
+    <button onclick="createLaptopObject()" type="button">createUser</button>
+    <div id="display"></div> 
+
+    <script>
+             function createLaptopObject(){
+            var Laptop={
+                Brand:document.getElementsByTagName("input")[0].value,
+                Model:document.getElementsByTagName("input")[1].value,
+                Ram:document.getElementsByTagName("input")[2].value,
+                Rom:document.getElementsByTagName("input")[3].value,
+
+            }
+            console.log(Laptop)
+            var Result="";
+            for(l in Laptop ){
+                Result+=Laptop[l]+ "<br/>"
+            }
+            document.getElementById("display").innerHTML="Created Laptop Object: "+""+"<br/>"+ Result 
+        }
+    </script>
+</body>
+</html>
