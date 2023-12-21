@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Please Enter Numbers From 1 to 10</label><br><br>
+        <label>Enter zero Element</label>
+        <input type="number" id="zero"><br>
+        <label>Enter First Element</label>
+        <input type="number" id="one"><br>
+        <label>Enter Second Element</label>
+        <input type="number" id="two"><br>
+        <label>Enter Third Element</label>
+        <input type="number" id="three"><br>
+        <label>Enter Fourth Element</label>
+        <input type="number" id="four"><br>
+        <label>Enter Fifth Element</label>
+        <input type="number" id="five"><br>
+        <label>Enter sixth Element</label>
+        <input type="number" id="six"><br>
+        <label>Enter seventh Element</label>
+        <input type="number" id="seven"><br>
+        <label>Enter eighth Element</label>
+        <input type="number" id="eight"><br>
+        <label>Enter Nineth Element</label>
+        <input type="number" id="nine"><br>
+        <label>Enter Tenth Element</label>
+        <input type="number" id="ten"><br>
+
+        <button onclick="numbersDisplay()" type="button">Display Numbers From 10 to 1</button>
+       
+        <div id="display">
+
+        </div>
+       
+    </form>
+    <script>
+        
+        function numbersDisplay() {
+            var myArray = [
+               num0 = Number(document.getElementById("zero").value),
+                num1 = Number(document.getElementById("one").value),
+                num2 = Number(document.getElementById("two").value),
+                num3 = Number(document.getElementById("three").value),
+                num4 = Number(document.getElementById("four").value),
+                num5 = Number(document.getElementById("five").value),
+                num6 = Number(document.getElementById("six").value),
+                num7 = Number(document.getElementById("seven").value),
+                num8 = Number(document.getElementById("eight").value),
+                num9 = Number(document.getElementById("nine").value),
+                num10 = Number(document.getElementById("ten").value)
+            ]
+           
+            var result = [];
+            var i = 10;
+           while(i > 0) {
+                result.push(myArray[i])
+                i--;
+            }
+            document.getElementById("display").innerHTML = "Array is:  <br>[" + result + "]";
+        }
+
+      
+     </script>
+</body>
+</html>

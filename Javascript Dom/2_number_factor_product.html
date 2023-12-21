@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label>Enter a number</label>
+        <input type="number" name="" id="num" /><br>
+        <button onclick="CalculateFactors()" type="button">Calculate Factors</button>
+    </form>
+    <div id="display">
+
+    </div>
+    <script>
+        function CalculateFactors() {
+            var number = Number(document.getElementById("num").value);
+            var product = 1
+            for (var i = 1; i <= number; i++) {
+                if (number % i == 0) {
+                   
+                    console.log(i);
+                    product *= i;
+                
+                    
+                }  
+            }
+            console.log(product);
+            // document.getElementById("display").innerHTML = i;
+            document.getElementById("display").innerHTML = "Product Of Factors is: "+ product;
+           
+           
+
+
+        }
+    </script>
+</body>
+
+</html>

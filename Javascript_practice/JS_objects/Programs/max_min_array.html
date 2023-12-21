@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var array = [10,20,30,40,50,89]
+        var maxfunction = (arr)=>{
+             return arr.reduce(function(pre,curr){
+                return pre > curr ? pre : curr
+             })
+        }
+        console.log(maxfunction(array));
+
+        var minfunction = (arr) =>{
+            return arr.reduce(function(pre, curr){
+                return pre < curr ? pre : curr
+            })
+        }
+        console.log(minfunction(array))
+        
+    </script>
+</body>
+</html>

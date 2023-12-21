@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var intArray = [2,7,9,6,5]
+        var largestValue = (arr) =>{
+            firstLargestValue = Math.max(...arr)
+            index = arr.indexOf(firstLargestValue);
+            arr.splice(index,1)
+
+            secondLargestValue = Math.max(...arr)
+            return secondLargestValue
+        }
+        console.log(largestValue(intArray))
+    </script>
+</body>
+</html>

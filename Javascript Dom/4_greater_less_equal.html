@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>First Number :</label>
+    <input type="number" name="" id="num1" /> <br />
+    <label>Second Number :</label>
+    <input type="number" name="" id="num2" /> <br />
+    <button onclick="GreaterLessEqual()" type="button">CalculateGreaterLesserEqual</button>
+    
+    <div id="display">
+
+    </div>
+    <script>
+        function GreaterLessEqual(){
+         var a = Number(document.getElementById("num1").value);
+        
+        var b = Number(document.getElementById("num2").value);
+       
+        if(a > b){
+            document.getElementById("display").innerHTML = a + "  is greater than  " + b;
+            
+        }
+        else if(a < b){
+            document.getElementById("display").innerHTML = a + "  is lesser than  " + b;
+            
+        }
+        else{
+            document.getElementById("display").innerHTML = a + "  is equal to  " + b;
+            
+        }
+
+        }
+
+    </script>
+</body>
+</html>

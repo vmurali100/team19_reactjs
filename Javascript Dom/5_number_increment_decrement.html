@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Enter a number</label>
+        <input type="number" name="" id="num1" placeholder="enter a number"/><br>
+       
+        <button onclick="Increment()" type="button">CalculateIncrement</button>
+        <button onclick="Decrement()" type="button">CalculateDecrement</button>
+        <div id="display">
+
+        </div>
+    </form>
+    <script>
+        function Increment(){
+            var num = Number(document.getElementById("num1").value);
+
+         // Increments by 1
+        var increment = num + 1;
+        document.getElementById("display").innerHTML = num + "   Increments by 1  =  " + increment;
+        console.log(increment);
+        }
+
+    function Decrement(){
+        var num = Number(document.getElementById("num1").value);
+  
+        // Decrements by 1
+        var decrement = num - 1;
+        document.getElementById("display").innerHTML = num + "   Decrements by 1 =   " + decrement;
+        console.log(decrement);
+
+        
+    }
+       
+    </script>
+</body>
+</html>

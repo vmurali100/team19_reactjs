@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Enter a number</label>
+        <input type="number" id="num"/><br>
+
+        <button onclick="checking()" type="button">CheckstheNumberPositiveNegativeZero</button>
+        <div id="display"></div>
+    </form>
+    <script>
+        function checking(){
+           num = Number(document.getElementById("num").value);
+
+           if(num > 0){
+            document.getElementById("display").innerHTML = num + " is Positive";
+           }
+           else if(num < 0){
+            document.getElementById("display").innerHTML = num + " is Negative";
+           }
+           else{
+            document.getElementById("display").innerHTML = num + " is Zero"
+           }
+        }
+    </script>
+</body>
+</html>

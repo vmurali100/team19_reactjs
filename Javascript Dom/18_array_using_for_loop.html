@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label>Enter First Element</label>
+        <input type="text" id="one"><br>
+        <label>Enter Second Element</label>
+        <input type="text" id="two"><br>
+        <label>Enter Third Element</label>
+        <input type="text" id="three"><br>
+        <label>Enter Fourth Element</label>
+        <input type="text" id="four"><br>
+        <label>Enter Fifth Element</label>
+        <input type="text" id="five"><br>
+        <label>Enter sixth Element</label>
+        <input type="text" id="six"><br>
+        <label>Enter seventh Element</label>
+        <input type="text" id="seven"><br>
+        <label>Enter Eighth Element</label>
+        <input type="text" id="eight"><br>
+        <label>Enter Nineth Element</label>
+        <input type="text" id="nine"><br>
+        <label>Enter Tenth Element</label>
+        <input type="text" id="ten"><br>
+
+        <button onclick="createArray()" type="button">Creating An Array</button>
+        <div id="display">
+
+        </div>
+    </form>
+    <script>
+        function createArray() {
+            var myArray = [
+                num1 = document.getElementById("one").value,
+                num2 = document.getElementById("two").value,
+                num3 = document.getElementById("three").value,
+                num4 = document.getElementById("four").value,
+                num5 = document.getElementById("five").value,
+                num6 = document.getElementById("six").value,
+                num7 = document.getElementById("seven").value,
+                num8 = document.getElementById("eight").value,
+                num9 = document.getElementById("nine").value,
+                num10 = document.getElementById("ten").value,
+
+            ]
+            var result = [];
+            for (var i = 0; i < myArray.length; i++) {
+                result.push( myArray[i] );
+            }
+            document.getElementById("display").innerHTML = "Array is:  <br>[" + result + "]";
+        }
+    </script>
+</body>
+
+</html>

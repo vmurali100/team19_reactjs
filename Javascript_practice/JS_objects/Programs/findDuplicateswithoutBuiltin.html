@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Method 1:
+        function findDuplicates(arr) {
+            var seen = {};
+            var duplicates = [];
+
+            for (var i = 0; i < arr.length; i++) {
+                var element = arr[i];
+
+                // Check if the element is already in the 'seen' object
+                // If yes, it's a duplicate; otherwise, mark it as seen
+                if (seen[element]) {
+                    duplicates.push(element);
+                }
+                 else {
+                    seen[element] = true;
+                }
+            }
+
+            return duplicates;
+        }
+
+        var myArray = [1, 2, 3, 4, 5, 2, 6, 7, 8, 9, 1];
+        var result = findDuplicates(myArray);
+        console.log("Duplicates: ", result);
+
+
+
+
+
+        //Method 2
+        function FindDuplicates(arr){
+            for(var i=0; i < arr.length; i++){
+                for(var j=i+1; j< arr.length; j++){
+                    if(arr[i] == arr[j]){
+                        console.log("Duplicate element found:", arr[i])
+                    }
+                }
+            }
+        }
+
+        var array = [1,2,2,1,3,5,5,]
+        var duplicates = FindDuplicates(array);
+        console.log(duplicates);
+
+    </script>
+</body>
+
+</html>

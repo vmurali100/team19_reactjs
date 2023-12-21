@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="">MobileName</label>
+        <input type="text" id="name"><br>
+        <label for="">Model</label>
+        <input type="text" id="model"><br>
+        <label for="">Ram</label>
+        <input type="text" id="ram"><br>
+        <button onclick="createObject()" type="button">CreateObjectValue</button>
+        <button onclick="modifyProperty()" type="button">Modifying Property</button>
+        <div id="display">
+
+        </div>
+    </form>
+    <script>
+        function createObject(){
+            var mobile = {
+                MobileName: document.getElementById("name").value,
+                Model: document.getElementById("model").value,
+                Ram: document.getElementById("ram").value
+            }
+             document.getElementById("display").innerHTML = "Object with Properties and values are <br> " + mobile.MobileName+",<br>"+mobile.Model+ " ,<br>"+ mobile.Ram;
+     
+        }
+        function modifyProperty(){
+           delete mobile.MobileName;
+           console.log(mobile);
+           mobile.name = "oppo";
+           console.log(mobile);
+        }
+    </script>
+</body>
+</html>

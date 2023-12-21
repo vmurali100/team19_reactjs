@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <form>
+            <label>Enter First Element</label>
+            <input type="number" id="one"><br>
+            <label>Enter Second Element</label>
+            <input type="number" id="two"><br>
+            <label>Enter Third Element</label>
+            <input type="number" id="three"><br>
+            <label>Enter Fourth Element</label>
+            <input type="number" id="four"><br>
+            <label>Enter Fifth Element</label>
+            <input type="number" id="five"><br>
+            <label>Enter a Number to find in the array or not</label>
+            <input type="number" id="element"><br>
+            <button onclick="createArray()" type="button">Creating An Array</button>
+            <button onclick="searchesAnElement()" type="button">SearchesAnElementInArray</button>
+
+            <div id="display">
+
+            </div>
+            <div id="elementfind"></div>
+        </form>
+        <script>
+            var myArray = [];
+            function createArray() {
+                myArray = [
+                    num1 = document.getElementById("one").value,
+                    num2 = document.getElementById("two").value,
+                    num3 = document.getElementById("three").value,
+                    num4 = document.getElementById("four").value,
+                    num5 = document.getElementById("five").value
+                ]
+                var result = [];
+                for (var i = 0; i < myArray.length; i++) {
+                    result .push( myArray[i]) + ",";
+                }
+                document.getElementById("display").innerHTML = "Array is:  <br>[" + result + "]";
+            }
+            function searchesAnElement() {
+               
+                var elementToFind = Number(document.getElementById("element").value);
+                var checkIndex = -1;
+                for (let i = 0; i < myArray.length; i++) {
+                    if (myArray[i] == elementToFind) {
+                       checkIndex = i
+                        //console.log( (typeof i))      
+                    }
+                   
+                }
+                console.log(checkIndex)
+                return checkIndex ? checkIndex : "-1";
+
+                //  document.getElementById("elementfind").innerHTML = "Elemnent found at index: " + i;
+
+            }
+
+
+
+
+        </script>
+</body>
+
+</html>

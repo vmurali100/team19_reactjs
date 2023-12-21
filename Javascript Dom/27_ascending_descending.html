@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label>Enter First Element</label>
+        <input type="number" id="one"><br>
+        <label>Enter Second Element</label>
+        <input type="number" id="two"><br>
+        <label>Enter Third Element</label>
+        <input type="number" id="three"><br>
+        <label>Enter Fourth Element</label>
+        <input type="number" id="four"><br>
+        <label>Enter Fifth Element</label>
+        <input type="number" id="five"><br>
+        <label>Enter sixth Element</label>
+        <input type="number" id="six"><br>
+
+        <button onclick="createArray()" type="button">DisplayNumbers</button>
+        <button onclick="ascending()" type="button">DisplayInAscendingOrder</button>
+        <button onclick="descending()" type="button">DisplayInDescendingOrder</button>
+
+
+
+        <div id="display"></div>
+        <div id="ascend"></div>
+        <div id="descend"></div>
+    </form>
+    <script>
+         var myArray = [];
+        function createArray() {
+            myArray = [
+                num1 = Number(document.getElementById("one").value),
+                num2 = Number(document.getElementById("two").value),
+                num3 = Number(document.getElementById("three").value),
+                num4 = Number(document.getElementById("four").value),
+                num5 = Number(document.getElementById("five").value),
+                num6 = Number(document.getElementById("six").value)
+            ]
+            var result = [];
+            for (var i = 0; i < myArray.length; i++) {
+                result.push( myArray[i]) ;
+            }
+            document.getElementById("display").innerHTML = "Array is:  <br>[" + result + "]";
+        }
+        function ascending() {
+           
+            var ascend = (a, b) => {
+                return a - b;
+            };
+
+            var sorting = myArray.sort(ascend);
+
+            document.getElementById("ascend").innerHTML = "Ascending Order: <br>[" + sorting + "]"
+        }
+
+
+        function descending() {
+           
+            var descend = (a, b) => {
+                return b - a;
+            };
+
+            var sort = myArray.sort(descend);
+
+            document.getElementById("descend").innerHTML = "Descending Order: <br>[" + sort + "]";
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Enter First Element</label>
+        <input type="text" id="one"><br>
+        <label>Enter Second Element</label>
+        <input type="text" id="two"><br>
+        <label>Enter Third Element</label>
+        <input type="text" id="three"><br>
+        <label>Enter Fourth Element</label>
+        <input type="text" id="four"><br>
+        <label>Enter Fifth Element</label>
+        <input type="text" id="five"><br>
+
+        <button onclick="createArray()" type="button">Creating An Array</button>
+        <button onclick="DeleteAtStart()" type="button">Deletes the Elements at Start</button>
+        <button onclick="DeleteAtMiddle()" type="button">Deletes the Elements at Middle</button>
+        <button onclick="DeleteAtEnd()" type="button">Deletes the elements at End</button>
+        <div id="display">
+
+        </div>
+        <div id="del"></div>
+        <div id="delelement"></div>
+        <div id="delMiddle"></div>
+        <div id="delElements"></div>
+        <div id="delEnd"></div>
+        <div id="delele"></div>
+        </form>
+        <script>
+            var myArray =[]
+          function createArray() {
+             myArray = [
+                ele1 = document.getElementById("one").value,
+                ele2 = document.getElementById("two").value,
+                ele3 = document.getElementById("three").value,
+                ele4 = document.getElementById("four").value,
+                ele5 = document.getElementById("five").value
+            ]
+            var result = [];
+            for (var i = 0; i < myArray.length; i++) {
+                 result.push( myArray[i] );
+            }
+            document.getElementById("display").innerHTML = "Array is:  <br>[" + result + "]";
+        }
+        function DeleteAtStart(){
+           
+            var delStart = myArray.shift();
+            console.log(delStart);
+            document.getElementById("del").innerHTML = "Modified Array is:<br>[" + myArray + "]"
+            document.getElementById("delelement").innerHTML = "Deleted Elemnt is: " + delStart 
+        }
+        function DeleteAtMiddle(){
+           
+            var delMiddle = myArray.splice(1,2);
+            document.getElementById("delMiddle").innerHTML = "Modified Array is:<br>[" + myArray + "]";
+            document.getElementById("delElements").innerHTML = "Deleted Elements are: " +delMiddle;
+        }
+        function DeleteAtEnd(){
+           
+            var delEnd = myArray.pop();
+            document.getElementById("delEnd").innerHTML = "Modified Array is:<br>[" + myArray + "]";
+            document.getElementById("delele").innerHTML = "Deleted Elements are: " +delEnd;
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+            <label>Enter First Element</label>
+            <input type="text" id="one"><br>
+            <label>Enter Second Element</label>
+            <input type="text" id="two"><br>
+            <label>Enter Third Element</label>
+            <input type="text" id="three"><br>
+            <label>Enter Fourth Element</label>
+            <input type="text" id="four"><br>
+            <label>Enter Fifth Element</label>
+            <input type="text" id="five"><br>
+            <button onclick="createArray()" type="button">Creating An Array</button>
+            <button onclick="AddingStart()" type="button">Adds the Elements at Start</button>
+            <button onclick="AddingMiddle()" type="button">Adds the Elements at Middle</button>
+            <button onclick="AddingEnd()" type="button">Adds the elements at End</button>
+            <div id="display">
+    
+            </div>
+            <div id="add">
+
+            </div>
+            <div id="len"></div>
+            <div id="middle"></div>
+            <div id="end"></div>
+    </form>
+    <script>
+        var myArray = []
+          function createArray() {
+             myArray = [
+                ele1 = document.getElementById("one").value,
+                ele2 = document.getElementById("two").value,
+                ele3 = document.getElementById("three").value,
+                ele4 = document.getElementById("four").value,
+                ele5 = document.getElementById("five").value
+            ]
+            var result = [];
+            for (var i = 0; i < myArray.length; i++) {
+                 result.push(myArray[i]) ;
+            }
+            document.getElementById("display").innerHTML = "Array is:  <br>[" + result + "]";
+        }
+        function AddingStart(){
+            
+            var addStart = myArray.unshift("Redme");
+            console.log(addStart);
+            document.getElementById("add").innerHTML = "Modified Array is: <br>[" + myArray + "]";
+            document.getElementById("len").innerHTML = "Total Length of Modified array is: <br>" + addStart ;
+        }
+        function AddingMiddle(){
+           
+            var addMiddle = myArray.splice(2,0,"Vivo","oppo");
+            console.log(addMiddle);
+            document.getElementById("middle").innerHTML =  "Modified Array is: <br>[" + myArray + "]";
+          
+        }
+        function AddingEnd(){
+           
+            var addEnd = myArray.push("Realme");
+            console.log(addEnd);
+            document.getElementById("end").innerHTML = "Modofied Array is: <br>[" + myArray + "]";
+        }
+        
+    </script>
+</body>
+</html>

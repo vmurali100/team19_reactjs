@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Enter First Element</label>
+        <input type="number" id="one"><br>
+        <label>Enter Second Element</label>
+        <input type="number" id="two"><br>
+        <label>Enter Third Element</label>
+        <input type="number" id="three"><br>
+        <label>Enter Fourth Element</label>
+        <input type="number" id="four"><br>
+        <label>Enter Fifth Element</label>
+        <input type="number" id="five"><br>
+        <button onclick="createArray()" type="button">Creating An Array</button>
+        <button onclick="sum()" type="button">DisplaySum</button>
+        <button onclick="average()" type="button">DisplayAverage</button>
+        <div id="display">
+
+        </div>
+        <div id="sum"></div>
+        <div id="average"></div>
+    </form>
+    <script>
+         var myArray = [];
+        function createArray() {
+             myArray = [
+                num1 = Number(document.getElementById("one").value),
+                num2 = Number(document.getElementById("two").value),
+                num3 = Number(document.getElementById("three").value),
+                num4 = Number(document.getElementById("four").value),
+                num5 = Number(document.getElementById("five").value),
+            ]
+            var result = [];
+            for (var i = 0; i < myArray.length; i++) {
+                result = result + myArray[i] + ",";
+            }
+            document.getElementById("display").innerHTML = "Array is:  <br>[" + result + "]";
+        }
+        function sum(){
+           
+            var sumNum = myArray.reduce((num1, num2)=>{
+             return num1 + num2 ;
+        });
+        document.getElementById("sum").innerHTML = "Array sum is:" + sumNum;     
+        }
+        function average(){
+           
+            var sumNum = myArray.reduce((num1, num2)=>{
+             return num1 + num2 ;
+        });
+        
+            var Average = sumNum / myArray.length;
+
+            document.getElementById("average").innerHTML = "Array average is:" + Average;
+        }
+    </script>
+</body>
+</html>
