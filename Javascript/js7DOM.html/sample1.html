@@ -7,18 +7,26 @@
 </head>
 <body>
     <label for="">fistname</label>
-    <input type="text" id="one">
+    <input type="text" id="one"><br>
     <label for="">secondname</label>
-    <input type="text" id="two">
+    <input type="text" id="two"><br>
     <label for="">thiredname</label>
-    <input type="text" id="three">
+    <input type="text" id="three"><br>
     <label for="">fourthname</label>
-    <input type="text" id="fourth">
+    <input type="text" id="fourth"><br>
     <button onclick="getelementbyid()" type="button">Click</button>
     <script>
         function getelementbyid(){
-            var numbers=
-            
+            var numbers= {
+                one:document.getElementById("one").value,
+                two:document.getElementById("two").value,
+                three:document.getElementById("three").value,
+                fourth:document.getElementById("fourth").value
+
+
+
+            }
+            console.log(numbers)
         }
     </script>
 </body>
