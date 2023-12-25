@@ -1,0 +1,42 @@
+!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <label for="fname">Firstname</label>
+        <input type="text" id="fname">
+
+        <label for="lname">Lastname</label>
+        <input type="text" id="lname">
+
+        <label for="mail">Email</label>
+        <input type="text" id="mail">
+
+        <button type="button" onclick="createobject()">createObject</button>
+
+        <div id="display">
+
+        </div>
+    </form>
+    <script>
+        function createobject(){
+            var person={
+                fname:document.getElementById("fname").value,
+                lname:document.getElementById("lname").value,
+                email:document.getElementById("mail").value
+            }
+            document.getElementById("display").innerHTML="createobject="+person.fname +"<br>" + person.lname +"<br>"+person.email
+            
+        }
+    </script>
+
+
+    
+</body>
+</html

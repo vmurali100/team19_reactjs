@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <label for="num">Number</label>
+        <input type="num" id="num">
+
+        <button type="button" onclick="Increment()">Increment</button>
+        <button type="button" onclick="Decrement()">Decrement</button>
+
+        <div id="display">
+
+        </div>
+    </form>
+    <script>
+   
+   
+   function Increment() {
+
+
+        var number=Number(document.getElementById("num").value);
+
+
+        // increment by 1
+
+        
+            var increment =number+1;
+
+        document.getElementById("display").innerHTML=number + "increment by 1=" +increment 
+        
+}
+        
+
+//decrement by 1
+
+function Decrement(){
+    var number=Number(document.getElementById("num").value);
+ var decrement =number-1;
+document.getElementById("display").innerHTML= number+ "decrement by 1=" +decrement;
+console.log(number)
+}
+
+
+</script>
+    
+</body>
+</html>

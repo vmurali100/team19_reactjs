@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+         
+        <label for="num1">Firstnumber</label>
+        <input type="num" id="num1">
+
+        <label for="num2">Secondnumber</label>
+        <input type="num" id="num2">
+
+        <button type="button" onclick="greterlessequal()">creategreaterlesserequal</button>
+
+    <div id="display">
+
+    </div>
+    </form>
+
+    <script>
+
+        function greterlessequal(){
+
+             var a=Number(document.getElementById("num1").value);
+             var b=Number(document.getElementById("num2").value);
+
+             if(a>b){
+                document.getElementById("display").innerHTML= a+"greater than"+b;
+             }else if(a<b){
+                document.getElementById("display").innerHTML= a+"less than"+b;
+             }else{
+                document.getElementById("display").innerHTML=a+"equal to"+b;
+             }
+        }
+    </script>
+    
+</body>
+</html>

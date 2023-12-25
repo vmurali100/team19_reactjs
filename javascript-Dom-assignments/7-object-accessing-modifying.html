@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="mobile">mobilename</label>
+        <input type="text" id="mobile">
+
+        <label for="ram">Ram</label>
+        <input type="text" id="ram">
+
+        <label for="silver">color</label>
+        <input type="text" name="" id="silver">
+
+
+        <button type="button" onclick="createbutton()">createbutton</button>
+        <button type="button" onclick="modifyingproperty()">modifyingobject</button>
+
+        <div id="display">
+
+        </div>
+    </form>
+
+    <script>
+        var object={}
+        function createbutton(){
+             object={
+                mobilename:document.getElementById("mobile").value,
+                Ram:document.getElementById("ram").value,
+                color:document.getElementById("silver").value
+                
+            }
+            document.getElementById("display").innerHTML="create object="+object.mobilename+"<br>"+object.Ram+"<br>"+object.color
+
+        }
+
+        function modifyingproperty(){
+            delete object.mobilename;
+            console.log(object);
+            object.phonenumber="oppo"
+            console.log(Object)
+        }
+    </script>
+
+
+</body>
+</html

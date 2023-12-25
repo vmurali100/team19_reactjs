@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <label for="num1">Firstnumber</label>
+        <input type="num" id="num1">
+
+        <label for="num2">Secondnumber</label>
+        <input type="num" id="num2">
+
+        <button type="button" onclick="remainder()">createremainder</button>
+
+        <div id="display">
+
+        </div>
+
+    </form>
+
+    <script>
+     
+     function remainder(){
+var number1=Number(document.getElementById("num1").value);
+var number2=Number(document.getElementById("num2").value);
+  
+var remainder=number1 % number2 ;
+
+document.getElementById("display").innerHTML= "Remainder is ="+ remainder
+
+
+
+     }
+
+    </script>
+    
+</body>
+</html>
