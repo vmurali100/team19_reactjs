@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">first name</label>
+        <input type="text" id="fname"><br/>
+        <label for="">second name</label>
+        <input type="text"  id="lname"><br/>
+        <label for="">email</label>
+        <input type="text"  id="email"><br/>
+        <!-- <button onclick="adduser()" type="button">Adding</button> -->
+        <button onclick="addingobject()" type="button">add  </button>
+    </form>
+    <script>
+        // function adduser(){
+        //     var user = {
+        //         fname:document.getElementById("fname").value,
+        //         lname:document.getElementById("lname").value,
+        //         email:document.getElementById("email").value
+        //     }
+        //     console.log(user)
+        // }
+
+        function addingobject(){
+            var person = {
+                fname:"m.swapna",
+                lname:'swapna',
+                email:"smswapna@gmail.com"
+
+            }
+            document.getElementById("fname").value=person.fname
+            document.getElementById("lname").value=person.lname
+            document.getElementById("email").value=person.email
+
+        }
+
+        
+
+
+    </script>
+</body>
+</html>
