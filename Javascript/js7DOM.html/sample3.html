@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">fistname</label>
+    <input type="text" class="one"><br>
+    <label for="">secondname</label>
+    <input type="text" class="two"><br>
+    <label for="">thiredname</label>
+    <input type="text" class="three"><br>
+    <label for="">fourthname</label>
+    <input type="text" class="fourth"><br>
+    <button onclick="crteateuserbyquaryselectorall()" type="button">Click</button>
+    <script>
+        function crteateuserbyquaryselectorall() {
+            var numbers= {
+            fistname:document.querySelectorAll(".one")[0].value,
+            secondname:document.querySelectorAll(".two")[0].value,
+            thiredname:document.querySelectorAll(".three")[0].value,
+            fourthname:document.querySelectorAll(".fourth")[0].value
+            
+        }
+    
+        console.log(numbers)
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">fistname</label>
+    <input type="text" name="dileep" id="one"><br>
+    <ll for="">secondname</label>
+    <input type="text" name="vasu" id="two"><br>
+    <label for="">thiredname</label>
+    <input type="text" name="mouli" id="three"><br>
+    <label for="">fourthname</label>
+    <input type="text" name="vamsi" id="fourth"><br>
+    <button onclick="createUserByName()" type="button">Click</button>
+    <script>
+        function createUserByName(){
+            var numbers= {
+
+                fistname:document.getElementsByName("dileep")[0].value,
+                secondname:document.getElementsByName("vasu")[0].value,
+                thiredname:document.getElementsByName("mouli")[0].value,
+                fourthname:document.getElementsByName("vamsi")[0].value
+
+
+
+            }
+            
+        }
+    </script> 
+</body>
+</html>

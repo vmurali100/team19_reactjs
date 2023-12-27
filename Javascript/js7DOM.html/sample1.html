@@ -5,29 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+abe<body>
     <label for="">fistname</label>
     <input type="text" id="one"><br>
-    <label for="">secondname</label>
+    <ll for="">secondname</label>
     <input type="text" id="two"><br>
     <label for="">thiredname</label>
     <input type="text" id="three"><br>
     <label for="">fourthname</label>
     <input type="text" id="fourth"><br>
-    <button onclick="getelementbyid()" type="button">Click</button>
+    <button onclick="createuserbyquaryseclector()" type="button">Click</button>
     <script>
-        function getelementbyid(){
+        function createuserbyquaryseclector(){
             var numbers= {
-                one:document.getElementById("one").value,
-                two:document.getElementById("two").value,
-                three:document.getElementById("three").value,
-                fourth:document.getElementById("fourth").value
+
+            //     one:document.getElementById("one").value,
+            //     two:document.getElementById("two").value,
+            //     three:document.getElementById("three").value,
+            //     fourth:document.getElementById("fourth").value
 
 
 
-            }
-            console.log(numbers)
+            // }
+
+            one:document.querySelector("#one").value,
+            two:document.querySelector("#two").value,
+            three:document.querySelector("#three").value,
+            fourth:document.querySelector("#fourth").value
+            
         }
+    
+        console.log(numbers)
+    }
     </script>
 </body>
 </html>
