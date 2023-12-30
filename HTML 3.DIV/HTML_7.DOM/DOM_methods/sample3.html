@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .myclass{
+            color: brown;
+            background-color: chartreuse;
+            text-align: center;
+            padding: 10px;
+
+
+        } 
+
+        
+        #myId{
+            color:aqua;
+            background-color: blueviolet;
+            text-align: center;
+        } 
+      
+    </style>
+</head>
+<body>
+    <button onclick="calculate()" type="button">change text</button>
+    <h2 id="demo">hello world in india</h2>
+    <script>
+        function calculate(){
+            // document.querySelector("h2").innerHTML="new text in queryselector"
+            // document.getElementsByTagName("h2")[0].innerHTML="new text in getelimentbytagname"
+
+
+            // document.querySelector("#demo").innerHTML="new text in queryselector of"
+
+
+            // document.querySelector("h2").style.color="rose"
+            // document.querySelector("h2").style.background= "yellow"
+            // document.querySelector("h2").style.textAlign="center"
+            // document.querySelector("h2").style.padding="15px"
+
+
+
+            document.querySelector("h2").setAttribute("class","myclass");
+            document.querySelector("h2").setAttribute("Id","myId");
+
+
+           
+            
+
+
+        }
+
+
+    </script>
+    
+</body>
+</html>

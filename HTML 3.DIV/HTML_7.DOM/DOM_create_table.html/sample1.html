@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- sample1 -->
+
+
+ <table border="1">
+        <thead>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Email</td>
+        </thead>
+       
+
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        for(var i=0;i<10;i++){
+            var myTr = document.createElement("tr") // Created a <tr> 
+        
+        var myTd1 = document.createElement("td");
+        myTd1.innerHTML = "m.swapna"
+        myTr.appendChild(myTd1)
+
+        var myTd2 = document.createElement("td");
+        myTd2.innerHTML = "swapna"
+        myTr.appendChild(myTd2)
+
+        var myTd3 = document.createElement("td");
+        myTd3.innerHTML = "smswapna@gmail.com"
+        myTr.appendChild(myTd3)
+
+        document.querySelector("tbody").appendChild(myTr)
+
+        }
+      
+    </script>
+
+
+
+<!-- sample2 -->
+
+
+</body>
+
+</html>
