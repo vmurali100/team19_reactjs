@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>fname</th>
+                <th>lname</th>
+                <th>tel</th>
+                <th>adress</th>
+                <th>city</th>
+                <th>state</th>
+                <th>Zip</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+
+var user=[
+    {
+        "fname": "Valerie",
+        "lname": "Dobbins",
+        "tel": "(579)017-2398",
+        "address": "4296 Magna Ct",
+        "city": "Marin",
+        "state": "FL",
+        "zip": 89741
+    },
+    {
+        "fname": "Nate",
+        "lname": "Flint",
+        "tel": "(929)822-6872",
+        "address": "8469 Ac Dr",
+        "city": "Stamford",
+        "state": "NH",
+        "zip": 15578
+    },
+    {
+        "fname": "Andrew",
+        "lname": "Briley",
+        "tel": "(568)204-3221",
+        "address": "4885 Facilisis Ave",
+        "city": "Longmont",
+        "state": "ID",
+        "zip": 13114
+    },
+    {
+        "fname": "Katina",
+        "lname": "Rios",
+        "tel": "(330)650-6606",
+        "address": "3459 Tincidunt Ave",
+        "city": "Laredo",
+        "state": "NV",
+        "zip": 77472
+    },
+    {
+        "fname": "Matina",
+        "lname": "Sutton",
+        "tel": "(139)791-4782",
+        "address": "899 Et Ln",
+        "city": "Algonquin",
+        "state": "AK",
+        "zip": 97630
+    },
+    {
+        "fname": "Sharful",
+        "lname": "Huseyin",
+        "tel": "(227)169-9255",
+        "address": "754 Pulvinar Ave",
+        "city": "Kalamazoo",
+        "state": "SC",
+        "zip": 14694
+    },
+    {
+        "fname": "Marc",
+        "lname": "Hettrick",
+        "tel": "(955)599-5758",
+        "address": "2400 Sollicitudin Ct",
+        "city": "Boston",
+        "state": "FL",
+        "zip": 79591
+    },
+    {
+        "fname": "Teri",
+        "lname": "Sadler",
+        "tel": "(288)282-7144",
+        "address": "7806 Adipiscing St",
+        "city": "Ligonier",
+        "state": "NC",
+        "zip": 87764
+    },
+    {
+        "fname": "Suwanto",
+        "lname": "Gardner",
+        "tel": "(616)424-8136",
+        "address": "7379 Mattis Rd",
+        "city": "Decatur",
+        "state": "HI",
+        "zip": 35615
+    },
+    {
+        "fname": "Jerrod",
+        "lname": "Clagg",
+        "tel": "(250)312-8633",
+        "address": "7649 Magna Ct",
+        "city": "Cassatt",
+        "state": "CT",
+        "zip": 95029
+    }
+]
+ for(i=0;i<user.length;i++){
+    var mytr=document.createElement("tr");
+    // console.log(mytr)
+
+for(a in user[i]){
+var mytd=document.createElement("td")
+mytd.innerHTML=user[i][a]
+mytr.appendChild(mytd)
+}
+document.querySelector("tbody").appendChild(mytr)
+ }
+ </script>
+     
+</body>
+</html>
