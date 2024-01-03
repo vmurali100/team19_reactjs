@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+      <th>hospital</th>
+      <th>patient</th>
+      <th>bedno</th>
+    </table>
+    <tbody>
+
+    </tbody>
+    <script>
+        var details = {
+            hospital:"CMC",
+            patient:"Himadeep",
+            bedno:500
+        }
+        var myTr=document.createElement("tr")
+        for (a in details){
+           var myTd=document.createElement("td")
+           myTd.innerHTML=details[a]
+           myTr.appendChild(myTd)
+        }
+        document.querySelector("tbody").appendChild(myTr)
+    </script>
+</body>
+
+</html>

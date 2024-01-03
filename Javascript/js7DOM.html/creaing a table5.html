@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <th>school</th>
+            <th>student</th>
+            <th>rollno</th>
+            <th>fee</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+        <script>
+            var myTr=document.createElement("tr")
+
+            var myTd1=document.createElement("td")
+            myTd1.innerHTML="VIJAYAM"
+            myTr.appendChild(myTd1)
+
+            var myTd2=document.createElement("td")
+            myTd2.innerHTML="himadeep"
+            myTr.appendChild(myTd2)
+
+            var myTd3=document.createElement("td")
+            myTd3.innerHTML=22
+            myTr.appendChild(myTd3)
+
+            var myTd4=document.createElement("td")
+            myTd4.innerHTML=100000
+            myTr.appendChild(myTd4)
+
+            document.querySelector("tbody").appendChild(myTr)
+        </script>
+    </table>
+</body>
+</html>

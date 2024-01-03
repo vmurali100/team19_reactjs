@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <th>firstname</th>
+            <th>secondname</th>
+            <th>Email</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        var myTr = document.createElement("tr")
+        
+        var myTd1=document.createElement("td");
+        myTd1.innerHTML = "ravi"
+        myTr.appendChild(myTd1)
+
+        var myTd2=document.createElement("td");
+        myTd2.innerHTML = "reddy"
+        myTr.appendChild(myTd2)
+
+        var myTd3=document.createElement("td");
+        myTd3.innerHTML = "ravi123@gmail.com"
+        myTr.appendChild(myTd3)
+
+        document.querySelector("tbody").appendChild(myTr)
+
+
+
+    </script>
+</body>
+</html>

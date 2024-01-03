@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+    <thead>
+        <th>student</th>
+        <th>name</th>
+        <th>rollno</th>
+    </thead>
+
+    <tbody>
+
+    </tbody>
+</table>
+    <script>
+        var details ={
+            student:"dileep",
+            name:"reddy",
+            rollno:22
+        }
+        var myTr=document.createElement("tr")
+        for(a in details){
+            var myTd=document.createElement("td")
+            myTd.innerHTML=details [a]
+            myTr.appendChild(myTd)
+            // console.log(details [a])
+        }
+        document.querySelector("tbody").appendChild(myTr)
+    </script>
+</body>
+</html>
