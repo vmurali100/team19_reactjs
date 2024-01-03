@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <td>fname</td>
+            <td>lname</td>
+            <td>DOB</td>
+            <td>email</td>
+            <td>address</td>
+        </thead>
+        <tbody></tbody>
+
+
+    </table>
+    <script>
+        var brother={
+            fname:"m.naveen",
+            lname:"naveen",
+            DoB:27,
+            email:"naveennaveen@gmail.com",
+            address:'dalavaipalli'
+        }
+
+        var myTr =document.createElement("tr")
+         for( a in brother){
+            var mytd = document .createElement("td")
+            mytd.innerHTML=brother[a]
+            myTr.appendChild(mytd)
+            console.log(brother[a])
+
+        
+            
+
+        }
+        document.querySelector("tbody").appendChild(myTr)
+        
+    </script>
+</body>
+</html>

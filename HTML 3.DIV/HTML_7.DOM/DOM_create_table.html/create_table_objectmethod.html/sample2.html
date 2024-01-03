@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+            <td>name</td>
+            <td>ram</td>
+            <td>color</td>
+            <td>height</td>
+            <td>price</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+
+    </table>
+    <script>
+        var mobile ={
+            name:"vivoy15",
+            ram:"2gb",
+            color:"silver" , 
+            height:4,
+             price:15000
+         }
+
+         var myTr =document.createElement("tr")
+         for( a in mobile){
+            var mytd = document .createElement("td")
+            mytd.innerHTML=mobile[a]
+            myTr.appendChild(mytd)
+            console.log(mobile[a])
+         }
+         document.querySelector("tbody").appendChild( myTr)
+         </script>
+</body>
+</html>

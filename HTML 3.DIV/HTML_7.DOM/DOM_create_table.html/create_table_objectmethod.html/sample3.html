@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>fname</td>
+                <td>lname</td>
+                <td>age</td>
+                <td>momname</td>
+                <td>dadname</td>
+                <td>village</td>
+            </tr>
+        </thead>
+     </table>
+     <tbody>
+
+     </tbody>
+     <script>
+        var  myfriend ={
+            fname:"B.pavitra",
+            lname:"pavi",
+            age:21,
+            momname:"prameela",
+            dadname:"ravi",
+            village:"bangarupalyam"
+        }
+       
+         var myTr=document.createElement("tr")
+        for(a in myfriend){
+            var mytd = document.createElement("td")
+            mytd.innerHTML=myfriend[a]
+            myTr.appendChild(mytd)
+            console.log(myfriend[a])
+        }
+        document.querySelector("tbody").appendChild(myTr)
+     </script>
+</body>
+</html>

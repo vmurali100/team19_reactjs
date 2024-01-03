@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>name</td>
+                <td>heroname</td>
+                <td>heroien1</td>
+                <td>heroien2</td>
+            </tr>
+           
+        </thead>
+        <tbody></tbody>
+        
+    </table>
+    <script>
+        var movie={
+            name:"Bahubali",
+            heroname:"prabhas",
+            heroien1:"anushka",
+            heroien2:"tamanaa"
+        }
+        var movie2 ={
+            name:"badrinadh",
+            heroname:"alluarjun",
+            heroien:"tamanna",
+            null:"null"
+            
+        }
+        var movie3 ={
+            name:"pushpa",
+            heroname:"alluarjun",
+            heroien:"rashmika",
+            null:"null"
+        }
+
+     
+        
+
+        var myTr=document.createElement("tr")
+        for(a in movie){
+            var mytd=document.createElement("td")
+            mytd.innerHTML=movie[a]
+            myTr.appendChild(mytd)
+            console.log(movie[a])
+
+
+        }
+        document.querySelector("tbody").appendChild(myTr)
+
+
+
+        var myTr=document.createElement("tr")
+        for(a in movie2){
+            var mytd=document.createElement("td")
+            mytd.innerHTML=movie2[a]
+            myTr.appendChild(mytd)
+            console.log(movie2[a])
+
+
+        }
+        document.querySelector("tbody").appendChild(myTr)
+
+        var myTr=document.createElement("tr")
+        for(a in movie3){
+            var mytd=document.createElement("td")
+            mytd.innerHTML=movie3[a]
+            myTr.appendChild(mytd)
+            console.log(movie3[a])
+        }
+        document.querySelector("tbody").appendChild(myTr)
+
+    </script>
+</body>
+</html>

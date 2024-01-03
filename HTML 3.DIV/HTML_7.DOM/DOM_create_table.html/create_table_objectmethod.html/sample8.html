@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>name</td>
+                <td>color</td>
+                <td>height</td>
+                <td>price</td>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var tv ={
+            name:"LED",
+            color:"black and white",
+            height:5.6,
+            peice:20000
+        }
+        var myTr=document.createElement("tr")
+        for(a in tv){
+            var mytd=document.createElement("td")
+            mytd.innerHTML=tv[a]
+            myTr.appendChild(mytd)
+            console.log(tv[a])
+        }
+        document.querySelector("tbody").appendChild(myTr)
+
+
+        
+    </script>
+</body>
+</html>

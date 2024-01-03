@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+            
+                <td>name</td>
+                <td>height</td>
+                <td>color</td>
+                <td>price</td>
+                </tr>
+                </thead>
+
+    </table>
+    <tbody>
+
+    </tbody>
+    <script>
+        var fridge ={
+            name:"samsung",
+            height:6.0,
+            color:"blue",
+            price:20000
+        }
+        var myTr =document.createElement("tr")
+         for( a in fridge){
+            var mytd = document .createElement("td")
+            mytd.innerHTML=fridge[a]
+            myTr.appendChild(mytd)
+            console.log(fridge[a])
+
+        
+            
+
+        }
+        document.querySelector("tbody").appendChild(myTr)
+
+       
+
+    </script>
+</body>
+</html>
