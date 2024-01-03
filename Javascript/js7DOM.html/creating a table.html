@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <th>studentname</th>
+            <th>fathername</th>
+            <th>mobileNo</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        var myTr = document.createElement("tr")
+
+        var myTd1=document.createElement("td");
+        myTd1.innerHTML = "dileep"
+        myTr.appendChild(myTd1)
+
+        var myTd2=document.createElement("td");
+        myTd2.innerHTML = "chandra"
+        myTr.appendChild(myTd2)
+
+        var myTd3=document.createElement("td");
+        myTd3.innerHTML = 5678997654378
+        myTr.appendChild(myTd3)
+
+        document.querySelector("tbody").appendChild(myTr)
+
+
+
+    </script>
+</body>
+</html>
