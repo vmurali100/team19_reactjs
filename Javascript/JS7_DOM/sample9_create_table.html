@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+        var person = {
+            fname:"Murali",
+            lname:"ram",
+            email:"ram@gmail.com"
+        }
+      var myTr = document.createElement("tr");
+
+      var mtd1 = document.createElement("td");
+      var mtd2 = document.createElement("td");
+      var mtd3 = document.createElement("td");
+
+      mtd1.innerHTML = person.fname;
+      mtd2.innerHTML = person.lname
+      mtd3.innerHTML = person.email
+
+      myTr.appendChild(mtd1);
+      myTr.appendChild(mtd2);
+      myTr.appendChild(mtd3);
+
+      document.querySelector("tbody").appendChild(myTr);
+    </script>
+  </body>
+</html>
