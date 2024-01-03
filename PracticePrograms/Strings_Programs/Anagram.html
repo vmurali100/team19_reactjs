@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function AnagramOrNot(str1,str2){
+            var sort1=str1.split('').sort().join().toLowerCase();
+            var sort2=str2.split('').sort().join().toLowerCase();
+
+            if(sort1 == sort2){
+            console.log("Anagram")
+            }
+            else{
+                console.log(" It is not Anagram")
+
+            }
+            return sort1 === sort2
+        }
+        var Anagram=AnagramOrNot("hello","fello")
+        console.log(Anagram);
+        
+
+
+
+    </script>
+</body>
+</html>

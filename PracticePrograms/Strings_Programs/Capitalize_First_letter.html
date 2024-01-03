@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var words="sandy-virat";
+        function CapitalizingFirstLetter(word){
+            var arr=word.split('-');
+            var NewArr=arr.map((value)=>{
+                return value.charAt(0).toUpperCase() + value.slice(1);
+            })
+            return NewArr.join(" ");
+        }
+        var functioncall=CapitalizingFirstLetter(words);
+        console.log(functioncall);
+
+    </script>
+</body>
+</html>

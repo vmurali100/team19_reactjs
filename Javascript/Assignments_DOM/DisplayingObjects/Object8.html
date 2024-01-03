@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <th>title</th>
+        <th>director</th>
+        <th>genre</th>
+        <th>durationMinutes</th>
+        <th>releaseYear</th>
+        <th>rating</th>
+      </thead>
+      <tbody></tbody>
+    </table>
+   
+  </body>
+  <script>
+    const movie = {
+      title: "Inception",
+      director: "Christopher Nolan",
+      genre: "Sci-Fi",
+      durationMinutes: 148,
+      releaseYear: 2010,
+      rating: 4.8,
+    };
+
+    var row1 = document.createElement("tr");
+
+    for (i in movie) {
+      var td1 = document.createElement("td");
+      td1.innerHTML = movie[i];
+      row1.appendChild(td1);
+    }
+    document.querySelector("tbody").appendChild(row1);
+  </script>
+</html>

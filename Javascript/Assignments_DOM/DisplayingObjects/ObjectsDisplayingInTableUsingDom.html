@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <th>Name</th>
+        <th>Age</th>
+        <th>College</th>
+        <th>University</th>
+        <th>RegNo</th>
+        <th>Department</th>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      // Object 1
+      var Student = {
+        Name: "sandy",
+        Age: 23,
+        College: "KMG College",
+        University: "Thiruvalluvar",
+        RegNo: "31519U18028",
+        Department: "Bsc Cs",
+      };
+
+      var row1 = document.createElement("tr");
+      for (stu in Student) {
+        var mytd = document.createElement("td");
+        mytd.innerHTML = Student[stu];
+        row1.appendChild(mytd);
+        document.querySelector("tbody").appendChild(row1);
+        // console.log(stu + " : " + Student[stu]);
+      }
+    </script>
+  </body>
+</html>

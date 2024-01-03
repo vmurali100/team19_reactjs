@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+       <thead>
+           <th>brand</th>
+           <th>model</th>
+           <th>screenSize</th>
+           <th>RAM</th>
+           <th>storage</th>
+           <th>operatingSystem</th>
+       </thead>
+
+       <tbody></tbody>
+    </table>
+
+    <script>
+        const laptop = {
+  brand: 'Dell',
+  model: 'XPS 13',
+  screenSize: 13.3,
+  RAM: 16,
+  storage: '512GB SSD',
+  operatingSystem: 'Windows 10',
+};
+
+var row1 = document.createElement("tr");
+
+for (i in laptop) {
+  var td1 = document.createElement("td");
+  td1.innerHTML = laptop[i];
+  row1.appendChild(td1);
+}
+document.querySelector("tbody").appendChild(row1);
+    </script>
+</body>
+</html>

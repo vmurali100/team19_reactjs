@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <th>name</th>
+        <th>cuisine</th>
+        <th>rating</th>
+        <th>location</th>
+        <th>capacity</th>
+        <th>hasOutdoorSeating</th>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      const restaurant = {
+        name: "Café Italia",
+        cuisine: "Italian",
+        rating: 4.5,
+        location: "Downtown",
+        capacity: 75,
+        hasOutdoorSeating: true,
+      };
+
+      var row1 = document.createElement("tr");
+
+      for (i in restaurant) {
+        var td1 = document.createElement("td");
+        td1.innerHTML = restaurant[i];
+        row1.appendChild(td1);
+      }
+      document.querySelector("tbody").appendChild(row1);
+    </script>
+  </body>
+</html>

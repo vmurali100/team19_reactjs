@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var string="Saanddyy";
+        var compressed="";
+        var count=1;
+        function StringCompression(str){
+            for(var i=0;i<=str.length;i++){
+                if(str[i]==str[i+1]){
+                    count++;
+                }
+                else{
+                    compressed=compressed+str[i]+ (count>=1?count:"");
+                    count=1;
+                }
+            }
+            return compressed;
+
+
+
+        }
+        var output=StringCompression(string);
+        console.log(output)
+    </script>
+</body>
+</html>

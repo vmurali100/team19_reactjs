@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var word="Javelin";
+        var count=0;
+        for(var i=0;i<word.length;i++){
+            var letter=word[i].toLowerCase();
+            if(letter=='a' || letter=='e' || letter=='i' || letter=='o' || letter=='o' || letter=='u'){
+                count++;
+            }
+        }
+        console.log(word)
+        console.log("vowels is : "+ count + " Consonats are : " + (word.length-count ));
+    </script>    
+</body>
+</html>

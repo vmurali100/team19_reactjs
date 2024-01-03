@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <th>brand</th>
+        <th>model</th>
+        <th>type</th>
+        <th>frameMaterial</th>
+        <th>wheelSizeInches</th>
+        <th>gears</th>
+      </thead>
+    </table>
+    <tbody></tbody>
+    <script>
+      const bicycle = {
+        brand: "Trek",
+        model: "FX 2",
+        type: "Hybrid",
+        frameMaterial: "Aluminum",
+        wheelSizeInches: 28,
+        gears: 21,
+      };
+
+    var row1 = document.createElement("tr");
+
+    for(i in bicycle){
+        var td1 = document.createElement("td");
+        td1.innerHTML = bicycle[i];
+        row1.appendChild(td1);
+        document.querySelector("tbody").appendChild(row1);
+
+    }
+    </script>
+  </body>
+</html>

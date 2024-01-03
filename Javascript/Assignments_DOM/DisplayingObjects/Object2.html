@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <th>Name</th>
+        <th>Age</th>
+        <th>College</th>
+        <th>University</th>
+        <th>RegNo</th>
+        <th>Department</th>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      // Object 1
+      
+      var Employee = {
+        Name: "Surya",
+        Age: 35,
+        Company: "Tcs",
+        LPA: "14LPA",
+        Designation: "FullStack",
+        Address: "Whitefield,Bnagalore",
+      };
+      var row2 = document.createElement("tr");
+
+      for (Emp in Employee) {
+        var td1 = document.createElement("td");
+        td1.innerHTML = Employee[Emp];
+        row2.appendChild(td1);
+      }
+      document.querySelector("tbody").appendChild(row2);
+    </script>

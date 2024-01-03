@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <th>name</th>
+            <th>population</th>
+            <th>areaSquareMiles</th>
+            <th>country</th>
+            <th>landmarks</th>
+            <th>timezone</th>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        const city = {
+  name: 'New York',
+  population: 8537673,
+  areaSquareMiles: 468.9,
+  country: 'United States',
+  landmarks: ['Statue of Liberty', 'Central Park'],
+  timezone: 'Eastern Time Zone',
+};
+
+var row1 = document.createElement("tr");
+
+for (i in city) {
+  var td1 = document.createElement("td");
+  td1.innerHTML = city[i];
+  row1.appendChild(td1);
+}
+document.querySelector("tbody").appendChild(row1);
+
+    </script>
+</body>
+</html>

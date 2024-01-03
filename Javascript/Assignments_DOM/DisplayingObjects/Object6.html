@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <th>brand</th>
+            <th>model</th>
+            <th>screenSize</th>
+            <th>storage</th>
+            <th>color</th>
+            <th>operatingSystem</th>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        const smartphone = {
+  brand: 'Samsung',
+  model: 'Galaxy S21',
+  screenSize: 6.2,
+  storage: '128GB',
+  color: 'Phantom Gray',
+  operatingSystem: 'Android 11',
+};
+ 
+var row1 = document.createElement("tr");
+
+for (i in smartphone) {
+  var td1 = document.createElement("td");
+  td1.innerHTML = smartphone[i];
+  row1.appendChild(td1);
+}
+document.querySelector("tbody").appendChild(row1);
+
+    </script>
+</body>
+</html>
