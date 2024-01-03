@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="2">
+      <thead>
+        <tr>
+          <th>fname</th>
+          <th>lname</th>
+          <th>tel</th>
+          <th>address</th>
+          <th>city</th>
+          <th>state</th>
+          <th>zip</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      var DummYInfo = [
+        {
+          fname: "Nirmal",
+          lname: "Palterman",
+          tel: "(869)412-4531",
+          address: "1438 Pretium Rd",
+          city: "Boulder",
+          state: "AL",
+          zip: 48584,
+        },
+        {
+          fname: "Erica",
+          lname: "Maas",
+          tel: "(760)353-8929",
+          address: "9112 Sed Ln",
+          city: "Conehatta",
+          state: "CA",
+          zip: 83480,
+        },
+        {
+          fname: "Preston",
+          lname: "Neff",
+          tel: "(130)091-8183",
+          address: "138 Dolor Dr",
+          city: "Kingsley",
+          state: "VA",
+          zip: 36081,
+        },
+        {
+          fname: "Kim",
+          lname: "Cheng",
+          tel: "(588)311-8290",
+          address: "8113 Egestas St",
+          city: "Johnsburg",
+          state: "DC",
+          zip: 14298,
+        },
+        {
+          fname: "Zoriy",
+          lname: "Khan",
+          tel: "(584)135-7283",
+          address: "7894 Vitae Ln",
+          city: "Brandon",
+          state: "TN",
+          zip: 99143,
+        },
+        {
+          fname: "Safiyyah",
+          lname: "Passanisi",
+          tel: "(502)090-9252",
+          address: "1503 Mi Rd",
+          city: "West Hollywood",
+          state: "IL",
+          zip: 58581,
+        },
+        {
+          fname: "Weibin",
+          lname: "Ferreira",
+          tel: "(613)201-4472",
+          address: "6241 Vitae Dr",
+          city: "Knightdale",
+          state: "TN",
+          zip: 52600,
+        },
+        {
+          fname: "Marina",
+          lname: "Dauk",
+          tel: "(561)141-1648",
+          address: "4858 Tincidunt Ave",
+          city: "Patrick Afb",
+          state: "HI",
+          zip: 60734,
+        },
+        {
+          fname: "Cerelia",
+          lname: "Adams",
+          tel: "(991)354-0449",
+          address: "3541 Convallis Rd",
+          city: "Salem",
+          state: "VT",
+          zip: 61730,
+        },
+        {
+          fname: "Dawn",
+          lname: "Ormond",
+          tel: "(922)694-7128",
+          address: "6166 Massa Ave",
+          city: "El Dorado",
+          state: "OH",
+          zip: 85621,
+        },
+        {
+          fname: "Jozette",
+          lname: "Lucas",
+          tel: "(936)093-9116",
+          address: "5502 Amet Ln",
+          city: "Gaithersburg",
+          state: "CA",
+          zip: 90013,
+        },
+        {
+          fname: "Fiaze",
+          lname: "Geis",
+          tel: "(635)258-6836",
+          address: "648 Odio Dr",
+          city: "Central",
+          state: "GA",
+          zip: 14323,
+        },
+        {
+          fname: "Chaiporn",
+          lname: "Cohen",
+          tel: "(111)117-2233",
+          address: "983 Consequat Ln",
+          city: "Berkeley",
+          state: "NM",
+          zip: 92801,
+        },
+        {
+          fname: "Dominic",
+          lname: "Henke",
+          tel: "(930)476-5751",
+          address: "826 Quis Ln",
+          city: "Hollywood",
+          state: "KS",
+          zip: 11070,
+        },
+        {
+          fname: "Arthur",
+          lname: "Anderson",
+          tel: "(687)994-4709",
+          address: "4301 Lorem Ct",
+          city: "Winter Garden",
+          state: "NY",
+          zip: 70728,
+        },
+        {
+          fname: "Teresa",
+          lname: "Darrah",
+          tel: "(172)369-5160",
+          address: "2673 Tincidunt Ln",
+          city: "Honolulu",
+          state: "AR",
+          zip: 58960,
+        },
+        {
+          fname: "Ellis",
+          lname: "Wrather",
+          tel: "(558)714-8425",
+          address: "9116 Orci Rd",
+          city: "Lansing",
+          state: "UT",
+          zip: 97630,
+        },
+        {
+          fname: "Tighe",
+          lname: "Olejnik",
+          tel: "(438)791-0163",
+          address: "236 Adipiscing St",
+          city: "New London Area",
+          state: "RI",
+          zip: 34506,
+        },
+        {
+          fname: "Victoria",
+          lname: "Dellabadia",
+          tel: "(654)966-7819",
+          address: "9326 Magna Ct",
+          city: "Neenah",
+          state: "NV",
+          zip: 61456,
+        },
+        {
+          fname: "Linnette",
+          lname: "Perez",
+          tel: "(666)905-5395",
+          address: "1814 Pulvinar Dr",
+          city: "Edison",
+          state: "CT",
+          zip: 71138,
+        },
+      ];
+      function displayUsers(){
+        document.querySelector("tbody").innerHTML="";
+        for(i=0;i<DummYInfo.length;i++){
+        var myrow=document.createElement("tr");
+        for(d in DummYInfo[i] ){
+            var mytd=document.createElement("td");
+            mytd.innerHTML=DummYInfo[i][d];
+            myrow.appendChild(mytd);
+        }
+        var delTd=document.createElement("td");
+        var delbtn=document.createElement("button");
+        delbtn.innerHTML="delete";
+        delTd.appendChild(delbtn);
+        myrow.appendChild(delTd);
+        delbtn.setAttribute("onClick","deleteUser("+i+")")
+
+        
+        document.querySelector("tbody").appendChild(myrow);
+      }
+      }
+      function deleteUser(i){
+        DummYInfo.splice(i,1);
+        displayUsers();
+      }
+      displayUsers();
+
+    </script>
+  </body>
+</html>
