@@ -5,10 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #updateBtn{
+            display: none;
+        }
+    </style>
     <title>Document</title>
 </head>
 
 <body>
+    <form>
+        <label for="id">ID </label>
+        <input type="text" name="" id="id"> <br>
+        <label for="id">Email </label>
+        <input type="text" name="" id="email"> <br>
+        <label for="id">Username </label>
+        <input type="text" name="" id="username"> <br>
+        <label for="id">Password </label>
+        <input type="text" name="" id="password"> <br>
+        <button type="button" onclick="createUser()" id="addBtn">Add User </button>
+        <button type="button" onclick="updateUser()" id="updateBtn">Update User </button>
+    </form>
     <table border="1">
         <thead>
             <tr>
@@ -23,6 +40,7 @@
         <tbody></tbody>
     </table>
     <script>
+        var gIndex = null;
         var students = [
             {
                 "id": 61,
@@ -72,6 +90,7 @@
 
             var editBtn = document.createElement("button");
             editBtn.innerHTML = "Edit"
+            editBtn.setAttribute("onClick","editUser("+i+")")
             var deleteBtn = document.createElement("button");
             deleteBtn.innerHTML = "Delete"
             deleteBtn.setAttribute("onClick","deleteUser("+i+")")
@@ -89,7 +108,50 @@
             students.splice(i,1)
             displayStudents()
         }
+        function editUser(index){
+            gIndex = index;
+            console.log(students[index])
+            var student = students[index]
+            document.getElementById("id").value=student.id;
+            document.getElementById("email").value=student.email;
+            document.getElementById("username").value=student.username;
+            document.getElementById("password").value=student.password;
+
+            document.getElementById("updateBtn").style.display ="block"
+            document.getElementById("addBtn").style.display ="none"
+        }
         displayStudents()
+        function clearUser(){
+            document.getElementById("id").value='';
+            document.getElementById("email").value="";
+            document.getElementById("username").value="";
+            document.getElementById("password").value=""
+        }
+        function createUser(){
+            var user = {
+                id:document.getElementById("id").value,
+                email:document.getElementById("email").value,
+                username:document.getElementById("username").value,
+                password:document.getElementById("password").value
+            }
+            students.push(user)
+            displayStudents()
+            clearUser()
+        }
+
+        function updateUser(){
+            var user = {
+                id:document.getElementById("id").value,
+                email:document.getElementById("email").value,
+                username:document.getElementById("username").value,
+                password:document.getElementById("password").value
+            }
+            students[gIndex] = user;
+            displayStudents();
+            clearUser();
+            document.getElementById("updateBtn").style.display ="none"
+            document.getElementById("addBtn").style.display ="block"
+        }
     </script>
 </body>
 
