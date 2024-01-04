@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <th>fname</th>
+            <th>lname</th>
+            <th>tel</th>
+            <th>address</th>
+            <th>city</th>
+            <th>state</th>
+            <th>zip</th>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var student=[
+        {
+        fname: "Daydria",
+        lname: "Clayton",
+        tel: 338950-4174,
+        address: "1337 Sed Ave",
+        city: "Guelph",
+        state: "OK",
+        zip: 31637
+    },
+    {
+        fname: "Kerrissa",
+        lname: "Jaques",
+        tel: 2440385775,
+        address: "888 Ipsum Rd",
+        city: "Arlington",
+        state: "NV",
+        zip: 63975
+    },
+    {
+        fname: "Teddy",
+        lname: "Tanguma",
+        tel: 8816000919,
+        address: "2978 Dolor Ct",
+        city: "Ogden",
+        state: "OH",
+        zip: 42385
+    },
+    {
+        fname: "Forest",
+        lname: "Harkema",
+        tel: 928099-6080,
+        address: "3765 Egestas Ct",
+        city: "Spokane",
+        state: "MT",
+        zip: 50131
+    },
+    {
+        fname: "Danyell",
+        lname: "Amick",
+        tel: 470738-9368,
+        address: "2267 Nec Ct",
+        city: "Tulsa",
+        state: "MS",
+        zip: 35936
+    }
+    
+]
+for(i=0;i<=student.length;i++)
+{var myTr=document.createElement("tr")
+document.querySelector("tbody").appendChild(myTr)
+console.log(student[i])
+
+}
+ 
+
+
+        
+    </script>
+</body>
+</html>
