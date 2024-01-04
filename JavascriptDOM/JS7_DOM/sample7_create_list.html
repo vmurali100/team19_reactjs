@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <ul>
+        <li>Item 1</li>
+    </ul> -->
+    <script>
+        // Step 1 : Create a Ul Tag .
+        var myUl = document.createElement("ul")
+       
+        // Step 2 : Add List (Li) 
+        var myLi = document.createElement("li")
+        myUl.appendChild(myLi);
+
+        var myLi2 = document.createElement("li");
+        myLi2.innerHTML = "I am Second List ";
+        myUl.appendChild(myLi2)
+        // Step 3 : Add Text to Li
+        myLi.innerHTML = "Some Value in List";
+
+        document.querySelector("body").appendChild(myUl)
+    </script>
+</body>
+</html>
