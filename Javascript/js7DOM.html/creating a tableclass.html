@@ -15,8 +15,12 @@
             <th>city</th>
             <th>state</th>
             <th>zip</th>
+            <th>edit</th>
+            <th>delete</th>
         </thead>
-        <tbody></tbody>
+        <tbody>
+
+        </tbody>
     </table>
     <script>
         var student=[
@@ -67,16 +71,42 @@
     }
     
 ]
-for(i=0;i<=student.length;i++)
-{var myTr=document.createElement("tr")
-document.querySelector("tbody").appendChild(myTr)
-console.log(student[i])
+function displayStudents(){
+    for(i=0;i<=student.length;i++){
+var myTr=document.createElement("tr")
+for(a in student[i]){
+    var mytd=document.createElement("td")
+    mytd.innerHTML=student[i][a]
+    myTr.appendChild(mytd)
 
 }
- 
+var editTd=document.createElement("td")
+var editBtn=document.createElement("button")
+editBtn.innerHTML="Edit"
+editTd.appendChild(editBtn)
+myTr.appendChild(editTd)
+
+var deleteTd=document.createElement("td")
+var deleteBtn=document.createElement("button")
+deleteBtn.innerHTML="Delete"
+deleteBtn.setAttribute("onclick","deleteUsewr("+i+")")
+deleteTd.appendChild(deleteBtn)
+myTr.appendChild(deleteTd)
+document.querySelector("tbody").appendChild(myTr)
+
+}
+
+}
+
+function deleteUser(i){
+    students.splice(i,1)
+    displayStudents()
+
+}
+displayStudents()
 
 
-        
-    </script>
+
+</script>
 </body>
 </html>
