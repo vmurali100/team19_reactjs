@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myString = 'hello world';
+
+        function capitalizeFirstLetter(str){
+            let arr = str.split(' ')
+           var newArr = arr.map((value) =>{
+                return value.charAt(0).toUpperCase() + value.slice(1)
+           })
+             
+            return newArr.join(' ')
+        }
+       let output= capitalizeFirstLetter(myString);
+       console.log(output)
+    </script>
+</body>
+</html>

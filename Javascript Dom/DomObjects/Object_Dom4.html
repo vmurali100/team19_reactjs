@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <table border="8">
+        <thead>
+            <th>Material</th>
+            <th>Color</th>
+            <th>Weight</th>
+            <th>Shape</th>
+            <th>Purpose</th>
+            <th>Size</th>
+        </thead>
+        <tbody></tbody>
+        <script>
+            var Airpodes = {
+                Material: "plastic",
+                Color: "grey",
+                Weight: "1ton",
+                Shape: "Aerodynamic",
+                Purpose: "Transportation",
+                Size: "sedan",
+            }
+
+            var row1=document.createElement("tr");
+            var row2=document.createElement("tr");
+            for( A in Airpodes){
+                var td1=document.createElement("td");
+                td1.innerHTML=Airpodes[A];
+                row1.appendChild(td1)
+                document.querySelector("tbody").appendChild(row1)
+                var td2=document.createElement("td");
+                td2.innerHTML=Airpodes[A];
+                row2.appendChild(td2)
+                document.querySelector("tbody").appendChild(row2);
+            }
+        </script>
+</body>
+</html>

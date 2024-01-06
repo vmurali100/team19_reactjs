@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr1 = [100, 8 , 9];
+        const arr2 = [59, 48, 34];
+
+        //concat
+        var finalArr = arr1.concat(arr2);
+        // console.log(finalArr);
+        var sortedArr = finalArr.sort((a ,b)=>{
+            return a -b
+        });
+
+        console.log(sortedArr);
+
+
+
+        //spread operator
+        // var result = [...arr1, ...arr2]
+        // var sortedArr2 = result.sort((a, b)=>{
+        //     return a - b;
+        // })
+        // console.log(sortedArr2);
+
+    </script>
+</body>
+</html>

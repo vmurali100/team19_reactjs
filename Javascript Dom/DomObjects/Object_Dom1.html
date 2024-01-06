@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        table{
+            background-color: lightcoral;
+            margin: 0 auto;
+            margin-top: 200px;
+        }
+        table td{
+            padding:10px;
+
+        }
+      
+    </style>
+</head>
+
+<body>
+    <table border="8">
+        <thead>
+            <th>Material</th>
+            <th>Color</th>
+            <th>Weight</th>
+            <th>Shape</th>
+            <th>Purpose</th>
+            <th>Size</th>
+        </thead>
+        <tbody></tbody>
+        <script>
+            var book = {
+                Material: "Paper",
+                Color: "white",
+                Weight: "200gram",
+                Shape: "square",
+                Purpose: "writing",
+                Size: "1mm"
+            }
+
+            var row1=document.createElement("tr");
+            var row2=document.createElement("tr");
+            for( b in book){
+                var td1=document.createElement("td");
+                td1.innerHTML=book[b];
+                row1.appendChild(td1)
+                document.querySelector("tbody").appendChild(row1)
+                var td2=document.createElement("td");
+                td2.innerHTML=book[b];
+                row2.appendChild(td2)
+                document.querySelector("tbody").appendChild(row2)
+
+
+            }
+           
+
+        </script>
+    </table>
+</body>
+
+</html>

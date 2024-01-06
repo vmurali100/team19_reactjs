@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        margin: 0 auto;
+    }
+</style>
+<body>
+    <table border="8">
+        <thead>
+            <th>Material</th>
+            <th>Color</th>
+            <th>Weight</th>
+            <th>Shape</th>
+            <th>Purpose</th>
+            <th>Size</th>
+        </thead>
+        <tbody></tbody>
+        <script>
+            var laptop = {
+                Material: "Metal",
+                Color: "Various",
+                Weight: "Lightweight",
+                Shape: "Rectangular",
+                Purpose: "Computing",
+                Size: "14 inch"
+            }
+            var row1 = document.createElement("tr");
+            for ( L in laptop){
+                var td1=document.createElement("td");
+                td1.innerHTML=laptop[L];
+                row1.appendChild(td1);
+                document.querySelector("tbody").appendChild(row1)
+            }
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var missArray = []
+        function missingValue(arr) {
+            const minValue = Math.min(...arr)
+            const maxValue = Math.max(...arr)
+
+            for (var i = minValue; i < maxValue; i++) {
+                if (arr.indexOf(i) < 0) {
+                    missArray.push(i)
+                }
+            }
+            return (missArray)
+        }
+
+
+        var arrNum = [1, 2, 3, 4, 5, 7, 9, 10];
+        var result = missingValue(arrNum);
+        console.log(result);
+    </script>
+</body>
+
+</html>

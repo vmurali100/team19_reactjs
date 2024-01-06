@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Without builtin method
+        var string = 'javascript';
+        var count = 0;
+
+        for(var i=0; i < string.length; i++){
+
+            var letter = string[i].toLowerCase();
+            if(letter == 'a' || letter == 'e' || letter == 'i' || 
+            letter == 'o'|| letter == 'u'){
+                count++;
+
+            }
+
+        }
+        console.log("String is: ", string);
+        console.log("vowels: ", count, "consonants:", (string.length-count))
+
+
+
+        //With BuiltIn method
+
+        var string = 'javascript';
+        var count = 0;
+        let vowels = ['a', 'e', 'i', 'o', 'u']
+        
+        for (var i = 0; i < string.length; i++) {
+
+            var letter = string[i].toLowerCase();
+            if (vowels.includes(letter)) {
+                count++
+            }
+        }
+
+        console.log("String is: ", string);
+        console.log("vowels: ", count, "consonants:", (string.length - count))
+    </script>
+</body>
+
+</html>

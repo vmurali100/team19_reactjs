@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #updatebtn{
+            display: none;
+        }
+    </style>
+    <form>
+        <label>Fname</label>
+        <input type="text" id="fname"><br>
+        <label>lname</label>
+        <input type="text" id="lname"><br>
+        <label>tel</label>
+        <input type="text" id="tel"><br>
+        <label>address</label>
+        <input type="text" id="address"><br>
+        <label>city</label>
+        <input type="text" id="city"><br>
+        <label>state</label>
+        <input type="text" id="state"><br>
+        <label>zip</label>
+        <input type="number" id="zip"><br>
+        <button onclick="addUser()" type="button" id="addbtn">AddUser</button>
+        <button onclick="updateUser()" type="button" id="updatebtn">UpdateUser</button>
+    </form>
+    <table border="1">
+        <thead>
+            <th>fname</th>
+            <th>lname</th>
+            <th>tel</th>
+            <th>address</th>
+            <th>city</th>
+            <th>state</th>
+            <th>zip</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var globalIndex = null;
+        var users = [
+    {
+        "fname": "Sandra",
+        "lname": "Levey",
+        "tel": "(651)332-5535",
+        "address": "550 Placerat Dr",
+        "city": "Colfax",
+        "state": "CT",
+        "zip": 85382
+    },
+    {
+        "fname": "Vera",
+        "lname": "Mauser",
+        "tel": "(925)752-4377",
+        "address": "3023 Non Ct",
+        "city": "Centreville",
+        "state": "MT",
+        "zip": 33064
+    },
+    {
+        "fname": "Alexandra",
+        "lname": "Kem",
+        "tel": "(855)939-0542",
+        "address": "8660 Morbi St",
+        "city": "Leesburg",
+        "state": "HI",
+        "zip": 18737
+    },
+    {
+        "fname": "Maegan",
+        "lname": "Couturier",
+        "tel": "(950)104-6185",
+        "address": "6885 Elit Ct",
+        "city": "Algonquin",
+        "state": "KY",
+        "zip": 97980
+    },
+    {
+        "fname": "Jane",
+        "lname": "Slate",
+        "tel": "(138)201-9206",
+        "address": "1831 Tempor St",
+        "city": "Duck River",
+        "state": "NE",
+        "zip": 66864
+    }
+]
+
+function displayUsers(){
+
+    document.querySelector("tbody").innerHTML = ""
+    for(var i = 0; i < users.length; i++){
+    var mytr = document.createElement("tr");
+    for(a in users[i]){
+     var mytd = document.createElement("td");
+     mytd.innerHTML = users[i][a]
+     mytr.appendChild(mytd)
+    }
+
+    var editTd = document.createElement("td");
+    var editBtn = document.createElement("button");
+    editBtn.innerHTML = "Edit";
+    editTd.appendChild(editBtn);
+    mytr.appendChild(editTd);
+    editBtn.setAttribute("onclick", "editUser("+i+")")
+
+   var delTd = document.createElement("td");
+   var delBtn = document.createElement("button");
+   delBtn.innerHTML = 'Delete';
+   delTd.appendChild(delBtn);
+   mytr.appendChild(delTd);
+   delBtn.setAttribute("onclick", "deleteUser("+i+")")
+
+    document.querySelector("tbody").appendChild(mytr)
+}
+}
+
+function editUser(index){
+    globalIndex = index;
+    var user = users[index];
+   document.getElementById("fname").value = user.fname,
+    document.getElementById("lname").value = user.lname,
+    document.getElementById("tel").value = user.tel,
+    document.getElementById("address").value = user.address,
+    document.getElementById("city").value = user.city,
+    document.getElementById("state").value = user.state,
+    document.getElementById("zip").value = user.zip
+
+    document.getElementById("updatebtn").style.display = "block"
+    document.getElementById("addbtn").style.display = "none"
+
+}
+function addUser(){
+    var user = {
+        fname: document.getElementById("fname").value,
+        lname:document.getElementById("lname").value ,
+        tel:document.getElementById("tel").value,
+        address: document.getElementById("address").value,
+        city: document.getElementById("city").value,
+        state: document.getElementById("state").value ,
+        zip: document.getElementById("zip").value
+    }
+    users.push(user);
+    displayUsers();
+    clearUsers();
+
+ 
+}
+function clearUsers(){
+    document.getElementById("fname").value = '',
+    document.getElementById("lname").value  ="",
+    document.getElementById("tel").value = "",
+    document.getElementById("address").value = "",
+    document.getElementById("city").value = "",
+    document.getElementById("state").value = "",
+    document.getElementById("zip").value = ""
+}
+function updateUser(){
+    var user = {
+        fname: document.getElementById("fname").value,
+        lname:document.getElementById("lname").value ,
+        tel:document.getElementById("tel").value,
+        address: document.getElementById("address").value,
+        city: document.getElementById("city").value,
+        state: document.getElementById("state").value ,
+        zip: document.getElementById("zip").value
+    }
+    users[globalIndex] = user;
+    displayUsers();
+    clearUsers();
+
+    document.getElementById("updatebtn").style.display = "none"
+    document.getElementById("addbtn").style.display = "block"
+
+
+}
+
+function deleteUser(i){
+    users.splice(i,1)
+    displayUsers()
+}
+displayUsers()
+    </script>
+</body>
+</html>

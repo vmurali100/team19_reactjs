@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table border="8">
+        <thead>
+            <th>Material</th>
+            <th>Color</th>
+            <th>Weight</th>
+            <th>Shape</th>
+            <th>Purpose</th>
+            <th>height</th>
+        </thead>
+        <tbody></tbody>
+        <script>
+            var Bottle= {
+                Material: "silver",
+                Color: "grey",
+                Weight: "100grm",
+                Cost:"RS.1200",
+                Purpose: "drinking",
+                height:"8 inches"
+            }
+
+            var row1=document.createElement("tr");
+            var row2=document.createElement("tr");
+            for( b in Bottle){
+                var td1=document.createElement("td");
+                td1.innerHTML=Bottle[b];
+                row1.appendChild(td1)
+                document.querySelector("tbody").appendChild(row1)
+                var td2=document.createElement("td");
+                td2.innerHTML=Bottle[b];
+                row2.appendChild(td2)
+                document.querySelector("tbody").appendChild(row2);
+            }
+        </script>
+</body>
+</html>

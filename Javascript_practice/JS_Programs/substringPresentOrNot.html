@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function isSubstringPresent(largerString, substring) {
+      // Check if the substring is present in the larger string
+      return largerString.indexOf(substring) != -1;
+    }
+
+
+    var largerString = "HelloWorld!";
+    var substringToCheck = "World";
+
+    if (isSubstringPresent(largerString, substringToCheck)) {
+      console.log(`"${substringToCheck}" is present in the larger string.`);
+    } else {
+      console.log(`"${substringToCheck}" is not present in the larger string.`);
+    }
+
+  </script>
+</body>
+
+</html>

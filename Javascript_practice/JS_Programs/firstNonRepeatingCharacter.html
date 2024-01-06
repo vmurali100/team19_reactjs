@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function firstNonRepeatingCharacter(str) {
+            for (let i = 0; i < str.length; i++) {
+                // Check if the current character is not repeated later in the string
+                if (str.indexOf(str[i]) == str.lastIndexOf(str[i])) {
+                    return str[i];
+                }
+            }
+
+            // If no non-repeating character is found, return null 
+            return null;
+        }
+
+
+        const inputString = "programming";
+        const result = firstNonRepeatingCharacter(inputString);
+
+        console.log("The first non-repeating character is:", result);
+
+    </script>
+</body>
+
+</html>

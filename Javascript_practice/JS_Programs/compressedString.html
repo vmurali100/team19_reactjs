@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function compressString(input){
+        var compressed = '';
+        var count =1;
+
+        for (var i=0; i < input.length; i++){
+             // If the current character is the same as the next one, increment the count
+             if(input[i] == input[i + 1]){
+                count++ ;
+             }
+             else{
+                compressed += input[i] + (count > 1 ? count : '');
+                count = 1;  // Reset count for the next character
+             }
+            }
+
+            return compressed
+    }
+
+    var string = "aabbccddd";
+    var compressed = compressString(string);
+    console.log(compressed);
+    </script>
+</body>
+</html>

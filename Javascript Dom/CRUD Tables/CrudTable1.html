@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #updatebtn{
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label>FirstName</label>
+      <input type="text" id="fname"><br>
+      <label>LastName</label>
+      <input type="text" id="lname"><br>
+      <label>Tel</label>
+      <input type="text" id="tel"><br>
+      <label>Address</label>
+      <input type="text" id="address"><br>
+      <label>city</label>
+      <input type="text" id="city"><br>
+      <label>state</label>
+      <input type="text" id="state"><br>
+      <label>zip</label>
+      <input type="number" id="zip"><br><br>
+      <button type="button" onclick="addUser()" id="addbtn">Add User</button>
+      <button type="button" onclick="updateUser()" id="updatebtn">Update User</button>
+    </form>
+    <table border="1">
+      <thead>
+        <th>Fist Name</th>
+        <th>Last Name</th>
+        <th>Tel</th>
+        <th>Address</th>
+        <th>city</th>
+        <th>state</th>
+        <th>zip</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      var globalIndex = null
+      var users = [
+        {
+          fname: "Bertha",
+          lname: "Cross",
+          tel: "(155)887-5955",
+          address: "6096 Massa Rd",
+          city: "Lockport",
+          state: "VA",
+          zip: 49071,
+        },
+        {
+          fname: "Dale",
+          lname: "Kahlig",
+          tel: "(407)747-2277",
+          address: "78 Eros Dr",
+          city: "Faribault",
+          state: "SD",
+          zip: 69580,
+        },
+        {
+          fname: "Nalika",
+          lname: "Sobczak",
+          tel: "(806)850-4530",
+          address: "3104 Odio Rd",
+          city: "Whitman",
+          state: "SC",
+          zip: 34713,
+        },
+        {
+          fname: "Fritz",
+          lname: "Hostetler",
+          tel: "(844)896-2173",
+          address: "4924 Nec St",
+          city: "Thomaston",
+          state: "HI",
+          zip: 56139,
+        },
+        {
+          fname: "Harris",
+          lname: "Braswell",
+          tel: "(763)803-8127",
+          address: "896 Sit Ct",
+          city: "Rockmart",
+          state: "MD",
+          zip: 34908,
+        },
+        {
+          fname: "Cheryl",
+          lname: "Merritt",
+          tel: "(781)717-8027",
+          address: "9475 Hendrerit Ave",
+          city: "Prince George",
+          state: "WV",
+          zip: 38312,
+        },
+        {
+          fname: "Michelamone",
+          lname: "Mcalevey",
+          tel: "(430)086-8496",
+          address: "8563 Morbi Ct",
+          city: "Alhambra",
+          state: "WI",
+          zip: 81337,
+        },
+        {
+          fname: "Petr",
+          lname: "Palmer",
+          tel: "(450)309-2013",
+          address: "4235 Vestibulum Ave",
+          city: "Tinley Park",
+          state: "GA",
+          zip: 48631,
+        },
+        {
+          fname: "Chandra",
+          lname: "Zhu",
+          tel: "(409)757-3285",
+          address: "1766 Pulvinar St",
+          city: "Andover",
+          state: "OH",
+          zip: 96479,
+        },
+        {
+          fname: "Trinelveli",
+          lname: "Birnstill",
+          tel: "(811)700-0451",
+          address: "29 In Ln",
+          city: "Old Bridge",
+          state: "HI",
+          zip: 22106,
+        },
+      ];
+
+      function displayUsers(){
+        document.querySelector("tbody").innerHTML="";
+        
+        for (var i = 0; i < users.length; i++) {
+        var mytr = document.createElement("tr");
+
+        for (a in users[i]) {
+
+          var mytd = document.createElement("td");
+          mytd.innerHTML = users[i][a];
+          mytr.appendChild(mytd);
+        }
+
+        document.querySelector("tbody").appendChild(mytr);
+
+          //Edit
+          var editTd = document.createElement("td");
+        var editBtn = document.createElement("button");
+        editBtn.innerHTML = "Edit";
+        editTd.appendChild(editBtn);
+        mytr.appendChild(editTd);
+        editBtn.setAttribute("onClick", "editUser("+i +")")
+
+
+        //Delete
+        var Deltd = document.createElement("td");
+        var delBtn = document.createElement("button");
+        delBtn.innerHTML = "Delete";
+        Deltd.appendChild(delBtn);
+        mytr.appendChild(Deltd);
+        delBtn.setAttribute("onClick", "deleteUser("+i+ ")");
+
+  
+       
+      }
+      }
+      function clearUsers(){
+        document.getElementById("fname").value = "";
+         document.getElementById("lname").value = "";
+         document.getElementById("tel").value = "";
+         document.getElementById("address").value = "";
+         document.getElementById("city").value = "";
+         document.getElementById("state").value = "";
+         document.getElementById("zip").value = "";
+      }
+
+      function editUser(index){
+        globalIndex = index;
+         console.log(users[index]);
+         var user = users[index];
+         document.getElementById("fname").value = user.fname;
+         document.getElementById("lname").value = user.lname;
+         document.getElementById("tel").value = user.tel;
+         document.getElementById("address").value = user.address;
+         document.getElementById("city").value = user.city;
+         document.getElementById("state").value = user.state;
+         document.getElementById("zip").value = user.zip;
+
+         document.getElementById("updatebtn").style.display = "block";
+         document.getElementById("addbtn").style.display = "none";
+      }
+
+      function addUser(){
+        var user = {
+          fname:document.getElementById("fname").value,
+             lname:document.getElementById("lname").value,
+             tel:document.getElementById("tel").value,
+             address:document.getElementById("address").value,
+             city:document.getElementById("city").value,
+             state:document.getElementById("state").value,
+             zip:document.getElementById("zip").value,
+        }
+        users.push(user);
+        displayUsers();
+        clearUsers();
+        
+      }
+      function updateUser(){
+         var user = {
+             fname:document.getElementById("fname").value,
+             lname:document.getElementById("lname").value,
+             tel:document.getElementById("tel").value,
+             address:document.getElementById("address").value,
+             city:document.getElementById("city").value,
+             state:document.getElementById("state").value,
+             zip:document.getElementById("zip").value,
+          
+       
+         }
+         users[globalIndex] = user;
+         displayUsers();
+         clearUsers();
+
+         document.getElementById("updatebtn").style.display = "none";
+         document.getElementById("addbtn").style.display = "block";
+
+      }
+     
+      function deleteUser(i){
+           user.splice(i, 1);
+           displayUsers();
+      }
+      displayUsers();
+    </script>
+
+  </body>
+</html>

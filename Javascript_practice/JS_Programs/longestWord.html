@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = "I am learning Javascript";
+
+        var arr = str.split(" ");
+
+        var newArr = [];
+
+        for(let i of arr){
+            // console.log(i.length);
+           newArr.push(i.length);
+        }
+
+       var arrSort =  newArr.sort((a,b)=>{
+            return b-a
+        })
+         console.log(arrSort[0])
+
+       var result= arr.filter((val)=> val.length == arrSort[0] )
+        
+        console.log(result);
+      
+    </script>
+</body>
+</html>

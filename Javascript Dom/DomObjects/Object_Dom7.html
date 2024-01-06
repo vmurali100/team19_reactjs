@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table border="8">
+        <thead>
+            <th>Material</th>
+            <th>Color</th>
+            <th>Weight</th>
+            <th>Shape</th>
+            <th>Purpose</th>
+            <th>Size</th>
+        </thead>
+        <tbody></tbody>
+        <script>
+            var chair= {
+                Material: "Glass",
+                Color: "transparent",
+                Weight: "dynamic",
+                Shape: "rectangle",
+                Purpose: "home",
+                Size: " Size varies",
+            }
+
+            var row1=document.createElement("tr");
+            var row2=document.createElement("tr");
+            for( c in chair){
+                var td1=document.createElement("td");
+                td1.innerHTML=chair[c];
+                row1.appendChild(td1)
+                document.querySelector("tbody").appendChild(row1)
+                var td2=document.createElement("td");
+                td2.innerHTML=chair[c];
+                row2.appendChild(td2)
+                document.querySelector("tbody").appendChild(row2);
+            }
+        </script>
+</body>
+</html>

@@ -16,6 +16,7 @@
     <div id="display">
 
     </div>
+    <div id="result"></div>
     <script>
         function CalculateFactors() {
             var number = Number(document.getElementById("num").value);
@@ -30,7 +31,7 @@
                 }  
             }
             console.log(product);
-            // document.getElementById("display").innerHTML = i;
+             document.getElementById("result").innerHTML =  " +i+";
             document.getElementById("display").innerHTML = "Product Of Factors is: "+ product;
            
            
