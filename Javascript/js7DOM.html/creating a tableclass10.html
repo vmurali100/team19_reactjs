@@ -64,7 +64,7 @@
                     mytd.innerHTML = students[i][a]
                     mytr.appendChild(mytd)
                 }
-            }
+            
 
         
         }
@@ -73,7 +73,15 @@
            editbtn.innerHTML="edit"
            edittd.appendChild("editbtn") 
            editbtn.setAttribute("onclick", "edituser(" +i+ ")")
-                mytr.appendChild(edittd)  
+                mytr.appendChild(edittd)
+                
+         var deletetd=document.createElement("td")
+         var deletebtn=document.createElement(deletebtn)
+         deletebtn.innerHTML="delete"
+         deletetd.appendChild(deletebtn)
+         deletebtn.setAttribute("onclick", "deleteuser("+i+")")
+         mytr.appendChild(deletetd)
+    }
     </script>
 </body>
 </html>
