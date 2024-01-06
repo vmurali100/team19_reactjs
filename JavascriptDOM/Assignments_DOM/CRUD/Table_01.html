@@ -4,8 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      label {
+        width: 60px;
+        display: inline-block;
+        margin: 4px;
+      }
+      #addbtn {
+        margin: 10px 10px 10px 0;
+      }
+      #updbtn{
+        display: none;
+      }
+    </style>
   </head>
   <body>
+  
+      <form>
+        <label for="">fname:</label>
+        <input type="text" id="fname" /> <br />
+        <label for="">lname:</label>
+        <input type="text" id="lname" /> <br />
+        <label for="">tel:</label>
+        <input type="text" id="tel" /> <br />
+        <label for="">address:</label>
+        <input type="text" id="address" /> <br />
+        <label for="">city:</label>
+        <input type="text" id="city" /> <br />
+        <label for="">state:</label>
+        <input type="text" id="state" /> <br />
+        <label for="">zip:</label>
+        <input type="number" id="zip" /> <br />
+      </form>
+  
+    <button onclick="AddUser()" type="button" id="addbtn">Add User</button>
+    <button onclick="UpdateUser()" type="button" id="updbtn">
+      Update User
+    </button>
     <table border="1">
       <thead>
         <tr>
@@ -16,12 +51,14 @@
           <th>city</th>
           <th>state</th>
           <th>zip</th>
+          <th>Edit</th>
           <th>delete</th>
         </tr>
       </thead>
       <tbody></tbody>
     </table>
     <script>
+      var gIndex = null;
       var Objects = [
         {
           fname: "Timika",
@@ -30,7 +67,7 @@
           address: "8265 Dui Dr",
           city: "Hagerstown",
           state: "GA",
-          zip: 19657,
+          zip: "19657",
         },
         {
           fname: "Wayne",
@@ -114,33 +151,111 @@
           zip: "78071",
         },
       ];
-      function displayUsers(){
-        document.querySelector("tbody").innerHTML="";
+      function displayUsers() {
+        document.querySelector("tbody").innerHTML = "";
         for (i = 0; i < Objects.length; i++) {
-        var myrow = document.createElement("tr");
-        for (obj in Objects[i]) {
-          var mytd = document.createElement("td");
-          myrow.appendChild(mytd);
-          mytd.innerHTML = Objects[i][obj];
+          var myrow = document.createElement("tr");
+          for (obj in Objects[i]) {
+            var mytd = document.createElement("td");
+            myrow.appendChild(mytd);
+            mytd.innerHTML = Objects[i][obj];
+          }
+
+          // edit btn
+          var td = document.createElement("td");
+          var edbtn = document.createElement("button");
+          edbtn.innerHTML = "Edit";
+          td.appendChild(edbtn);
+          myrow.appendChild(td);
+          edbtn.setAttribute("onClick", "EditUser(" + i + ")");
+
+          // delete btn
+
+          var delTd = document.createElement("td");
+          var delbtn = document.createElement("button");
+          delbtn.innerHTML = "Delete";
+          delTd.appendChild(delbtn);
+          myrow.appendChild(delTd);
+          delbtn.setAttribute("onclick", "deleteUser(" + i + ")");
+
+          document.querySelector("tbody").appendChild(myrow);
         }
-        var delTd = document.createElement("td");
-        var delbtn = document.createElement("button");
-        delbtn.innerHTML = "Delete";
-        delTd.appendChild(delbtn);
-        myrow.appendChild(delTd);
-        delbtn.setAttribute("onclick", "deleteUser(" + i + ")");
-        document.querySelector("tbody").appendChild(myrow);
-      }
       }
 
-      function deleteUser(i){
-        Objects.splice(i,1);
+      // delete User function
+
+      function deleteUser(i) {
+        Objects.splice(i, 1);
         displayUsers();
       }
+
+      // EditUser Function
+
+      function EditUser(index) {
+        gIndex = index;
+        console.log(Objects[index]);
+        var Object = Objects[index];
+        document.getElementById("fname").value = Object.fname;
+        document.getElementById("lname").value = Object.lname;
+        document.getElementById("tel").value = Object.tel;
+        document.getElementById("address").value = Object.address;
+        document.getElementById("city").value = Object.city;
+        document.getElementById("state").value = Object.state;
+        document.getElementById("zip").value = Object.zip;
+        
+        document.getElementById("addbtn").style.display = "none";
+        document.getElementById("updbtn").style.display = "block";
+      }
+
       displayUsers();
 
+      // clearuser function
+      function clearusers() {
+        document.getElementById("fname").value = "";
+        document.getElementById("lname").value = "";
+        document.getElementById("tel").value = "";
+        document.getElementById("address").value = "";
+        document.getElementById("city").value = "";
+        document.getElementById("state").value = "";
+        document.getElementById("zip").value = "";
+      }
 
+      
+      // AddUser
+      function AddUser() {
+        var User = {
+          fname: document.getElementById("fname").value,
+          lname: document.getElementById("lname").value,
+          tel: document.getElementById("tel").value,
+          address: document.getElementById("address").value,
+          city: document.getElementById("city").value,
+          state: document.getElementById("state").value,
+          zip: document.getElementById("zip").value,
+        };
+        Objects.push(User);
+        displayUsers();
+        clearusers();
+      }
 
+      // updateUser
+
+      function UpdateUser() {
+        var object1 = {
+          fname: document.getElementById("fname").value,
+          lname: document.getElementById("lname").value,
+          tel: document.getElementById("tel").value,
+          address: document.getElementById("address").value,
+          city: document.getElementById("city").value,
+          state: document.getElementById("state").value,
+          zip: document.getElementById("zip").value,
+        };
+        Objects[gIndex] = object1;
+        displayUsers();
+        clearusers();
+        document.getElementById("addbtn").style.display = "block";
+        document.getElementById("updbtn").style.display = "none";
+      }
+      
     </script>
   </body>
 </html>

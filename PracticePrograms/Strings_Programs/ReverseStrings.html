@@ -19,6 +19,23 @@
         var res=stringreverse(words);
         console.log(res)
 
+        // With built In
+
+        function reverseString(word){
+            var reverse="";
+            for(let i=word.length-1;i>=0;i--){
+                reverse=reverse+word[i];
+            }
+            return reverse
+
+
+        }
+        var words= "Sandy";
+        var reversedWord=reverseString(words);
+        console.log(reversedWord)
+        
+
+
     </script>
     
 </body>
