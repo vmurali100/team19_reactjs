@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="">id</label>
+        <input type="text" id="id"><br>
+        <label for="">Name</label>
+        <input type="text" id="name"><br>
+        <label for="">lname</label>
+        <input type="text" id="lname"><br>
+        <label for="">roll</label>
+        <input type="text" id="roll"><br>
+        <button onclick="">adduser</button>
+        <button onclick="">updateUser</button>
+    </form>
+    <table border="1">
+<thead>
+    <th>id</th>
+    <th>name</th>
+    <th>lname</th>
+    <th>roll</th>
+    <th>edit</th>
+    <th>delete</th>
+</thead>
+<tbody>
+
+</tbody>
+    </table>
+    <script>
+        var student=[
+      {      
+         id: 1,
+        name: JStevenson,
+        lname: KRadke,
+        roll: 11
+    },
+    {
+        id: 2,
+        name: CHruska,
+        lname: BLavallee,
+        roll: 12
+    },
+    {
+        id: 3,
+        name: BAdams,
+        username: RMaddalone,
+        roll: 13  
+        }
+    ]
+    function displayStudents() {
+            document.querySelector("tbody").innerHTML=""
+
+
+            for (i=0; i<students.length; i++) {
+                var mytr = document.createElement("tr")
+                console.log(students[i])
+                for (a in students[i]) {
+                    var mytd = document.createElement("td")
+                    mytd.innerHTML = students[i][a]
+                    mytr.appendChild(mytd)
+                }
+            }
+
+        
+        }
+        var edittd=document.createElement("td")
+        var editbtn=document.createElement(editbtn)
+           editbtn.innerHTML="edit"
+           edittd.appendChild("editbtn") 
+           editbtn.setAttribute("onclick", "edituser(" +i+ ")")
+                mytr.appendChild(edittd)  
+    </script>
+</body>
+</html>
