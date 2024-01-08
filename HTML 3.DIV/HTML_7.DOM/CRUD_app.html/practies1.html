@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #updatebtn{
+            display: none;
+
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="">fname</label>
+        <input type="text" name="" id="fname"><br>
+        <label for="">lname</label>
+        <input type="text" name="" id="lname"><br>
+        <label for="">age</label>
+        <input type="text" name="" id="age"><br>
+        <label for="">mobile</label>
+        <input type="text" name="" id="mobile"><br>
+        <button type="button" onclick="creatuser()" id="Addbtn">Add user</button>
+        <button type="button" onclick="updateuser()" id="updatebtn">updateuser</button>
+    </form>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>fname</th>
+                <th>lname</th>
+                <th>age</th>
+                <th>mobile</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var students = [
+            {
+                fname: "m.swapna",
+                lname: "swapna",
+                age: 21,
+                mobile: 12345
+            },
+            {
+                fname: "m.naveen",
+                lname: "naveen",
+                age: 24,
+                mobile: 1234
+            },
+            {
+                fname: "m.poornima",
+                lname: "poori",
+                age: 23,
+                mobile: 12345
+            },
+            {
+                fname: "m.Harsha",
+                lname: "harsha",
+                age: "2 years",
+                mobile: "null"
+            },
+            {
+                fname: "m.lokesh",
+                lname: "lokesh",
+                age: 23,
+                mobile: 6303394841
+            }
+
+        ]
+
+        function displayStudents() {
+            document.querySelector("tbody").innerHTML=""
+
+
+            for (i=0; i<students.length; i++) {
+                var mytr = document.createElement("tr")
+                console.log(students[i])
+                for (a in students[i]) {
+                    var mytd = document.createElement("td")
+                    mytd.innerHTML = students[i][a]
+                    mytr.appendChild(mytd)
+                }
+
+
+                var edittd = document.createElement("td")
+                var editbtn = document.createElement("button")
+                editbtn.innerHTML = "Edit"
+                edittd.appendChild(editbtn)
+                editbtn.setAttribute("onclick", "edituser(" +i+ ")")
+                mytr.appendChild(edittd)
+
+
+                var deletetd = document.createElement("td")
+                var deletebtn = document.createElement("button")
+                deletebtn.innerHTML = "Delete"
+                deletetd.appendChild(deletebtn)
+                deletebtn.setAttribute("onclick", "deleteuser("+i+")")
+                mytr.appendChild(deletetd)
+
+
+                document.querySelector("tbody").appendChild(mytr)
+            }
+        }
+        displayStudents()
+        function deleteuser(i){
+            students.splice(i,1)
+            displayStudents() 
+        }
+
+        function edituser(index){
+            gIndex=index;
+            console.log(students[index])
+            var student=students[index]
+            document.getElementById("fname").value=student.fname;
+            document.getElementById("lname").value=student.lname;
+            document.getElementById("age").value=student.age;
+            document.getElementById("mobile").value=student.mobile;
+
+            document.getElementById("updatebtn").style.display="block"
+            document.getElementById("Addbtn").style.display="none"
+
+            displayStudents()
+
+
+        }
+
+        function updateuser(){
+            var user = {
+                fname:document.getElementById("fname").value,   
+                lname:document.getElementById("lname").value,
+                age:document.getElementById("age").value,
+                mobile:document.getElementById("mobile").value
+
+            }
+            document.getElementById("updatebtn").style.display="none"
+            document.getElementById("Addbtn").style.display="block"
+
+            students[gIndex]=user;
+            displayStudents()
+            clearuser()
+        }
+        function clearuser(){
+            document.getElementById("fname").value="";
+            document.getElementById("lname").value="";
+            document.getElementById("age").value="";
+            document.getElementById("mobile").value=""
+        }
+        function creatuser(){
+            var user={
+                fname:document.getElementById("fname").value,
+                lname:document.getElementById("lname").value,
+                age:document.getElementById("age").value,
+                mobile:document.getElementById("mobile").value
+            }
+            students. push(user)
+            clearuser()
+            displayStudents()
+        }
+
+
+
+        
+         
+    </script>
+</body>
+
+</html>

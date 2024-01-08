@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>fname</th>
+                <th>lname</th>
+                <th>mobile</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var students = [
+            {
+                fname: "M.Bhuvaneswari",
+                lname: "Bhuvaneswari",
+                mobile: 1234567
+            },
+            {
+                fname: "R.Anusha",
+                lname: "Anusha",
+                mobile: 1111111
+            },
+            {
+                fname: "m.pramila",
+                lname: "pramila",
+                mobile: 101010101
+            },
+            {
+                fname: "R.Ravi",
+                lname: "Ravi",
+                mobile: 21212121
+            },
+            {
+                fname: "M.naveeen kumar",
+                lname: "naveen",
+                mobile: 98989898
+            }
+
+        ]
+        // function displayStudents() {
+        //     document.querySelector("tbody").innerHTML=""
+
+
+        //     for (i=0; i<students.length; i++) {
+        //         var mytr = document.createElement("tr")
+        //         console.log(students[i])
+        //         for (a in students[i]) {
+        //             var mytd = document.createElement("td")
+        //             mytd.innerHTML = students[i][a]
+        //             mytr.appendChild(mytd)
+        //         }
+
+
+        //         var edittd = document.createElement("td")
+        //         var editbtn = document.createElement("button")
+        //         editbtn.innerHTML = "Edit"
+        //         edittd.appendChild(editbtn)
+        //         editbtn.setAttribute("onclick", "edituser(" +i+ ")")
+        //         mytr.appendChild(edittd)
+
+
+        //         var deletetd = document.createElement("td")
+        //         var deletebtn = document.createElement("button")
+        //         deletebtn.innerHTML = "Delete"
+        //         deletetd.appendChild(deletebtn)
+        //         deletebtn.setAttribute("onclick", "deleteuser("+i+")")
+        //         mytr.appendChild(deletetd)
+
+
+        //         document.querySelector("tbody").appendChild(mytr)
+        //     }
+        // }
+        // displayStudents()
+        // function deleteuser(i){
+        //     students.splice(i,1)
+        //     displayStudents() 
+        // }
+
+        for(i=0;i<students.length;i++){
+            var mytr=document.createElement("tr")
+            console.log(students[i])
+            for(a in students[i]){
+                var mytr=document.createElement("td")
+                mytd.innerHTML=students[i][a]
+                mytr.appendChild(mytd)
+            }
+
+
+            
+
+
+        }
+        
+
+
+
+    </script>
+</body>
+
+</html>

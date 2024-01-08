@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #updateBtn {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="fname">fname:</label>
+        <input type="text" name="" id="fname"><br>
+        <label for="lname">lname:</label>
+        <input type="text" name="" id="lname"><br>
+        <label for="tel">tel:</label>
+        <input type="text" name="" id="tel"><br>
+        <label for="address">address:</label>
+        <input type="text" name="" id="address"><br>
+        <label for="city">city</label>
+        <input type="text" name="" id="city"><br>
+        <button type="button" onclick="creatuser()" id="addbtn">Add user</button>
+        <button type="button" onclick="updateuser()" id="updateBtn">update user</button>
+    </form>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>fname</th>
+                <th>lname</th>
+                <th>tel</th>
+                <th>address</th>
+                <th>city</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var students = [
+            {
+                "fname": "Lei",
+                "lname": "Willey",
+                "tel": "(913)948-5739",
+                "address": "3185 Egestas Dr",
+                "city": "Westwood"
+
+            },
+            {
+                "fname": "Lolita",
+                "lname": "Mooney",
+                "tel": "(637)635-0285",
+                "address": "7298 Orci Ln",
+                "city": "Panama City Beach"
+
+            },
+            {
+                "fname": "Danielle",
+                "lname": "Red",
+                "tel": "(733)449-6057",
+                "address": "8434 Placerat Ln",
+                "city": "Saint Louis"
+
+            },
+            {
+                "fname": "Magdalena",
+                "lname": "Siecke",
+                "tel": "(341)333-0456",
+                "address": "1715 Suspendisse Ave",
+                "city": "Odessa"
+
+            },
+            {
+                "fname": "Tara",
+                "lname": "Spataro",
+                "tel": "(870)899-0454",
+                "address": "6389 Turpis Dr",
+                "city": "Riverdale"
+
+            },
+            {
+                "fname": "Cary",
+                "lname": "Simpson",
+                "tel": "(221)303-7409",
+                "address": "8771 Sit Ln",
+                "city": "Chambersburg"
+
+            },
+            {
+                "fname": "Guadalupe",
+                "lname": "Reinhardt",
+                "tel": "(233)541-7951",
+                "address": "8827 Odio St",
+                "city": "Hattiesburg"
+
+            },
+            {
+                "fname": "Dalton",
+                "lname": "Holland",
+                "tel": "(542)701-4037",
+                "address": "6506 Placerat Dr",
+                "city": "Castle Rock"
+
+            },
+            {
+                "fname": "Shunita",
+                "lname": "Reinhard",
+                "tel": "(312)018-9831",
+                "address": "9651 Dolor Rd",
+                "city": "Mooresville"
+
+            },
+            {
+                "fname": "Liang",
+                "lname": "Burrs",
+                " tel ": "(398)213-5527",
+                " address": "5656 Orci Rd",
+                " city": "Moulton"
+
+            }
+        ]
+
+        function displayStudents() {
+            document.querySelector('tbody').innerHTML = ""
+
+
+            for (i = 0; i < students.length; i++) {
+                var mytr = document.createElement("tr");
+                console.log(students[i])
+                for (a in students[i]) {
+                    var mytd = document.createElement("td");
+                    mytd.innerHTML = students[i][a]
+                    mytr.appendChild(mytd)
+
+                }
+
+                var edittd = document.createElement("td")
+                var editBtn = document.createElement("button");
+                editBtn.innerHTML = "Edit"
+                edittd.appendChild(editBtn);
+                editBtn.setAttribute("onclick", "edituser(" + i + ")")
+                mytr.appendChild(edittd)
+
+
+
+                var deletetd = document.createElement("td")
+                var deleteBtn = document.createElement("button");
+                deleteBtn.innerHTML = "Delete"
+                deleteBtn.setAttribute("onclick", "deleteUser(" + i + ")")
+                deletetd.appendChild(deleteBtn)
+                mytr.appendChild(deletetd)
+
+                document.querySelector("tbody").appendChild(mytr)
+            }
+        }
+        function deleteUser(i) {
+            students.splice(i, 1)
+            displayStudents()
+        }
+
+        function edituser(index) {
+            gIndex = index;
+            console.log(students[index])
+            var student = students[index]
+            document.getElementById("fname").value = student.fname;
+            document.getElementById("lname").value = student.lname;
+            document.getElementById("tel").value = student.tel;
+            document.getElementById("address").value = student.address;
+            document.getElementById("city").value = student.city;
+            displayStudents()
+
+            document.getElementById("updateBtn").style.display = "block"
+            document.getElementById("addbtn").style.display = "none"
+        }
+
+
+        function clearuser() {
+            document.getElementById("fname").value = "";
+            document.getElementById("lname").value = "";
+            document.getElementById("tel").value = "";
+            document.getElementById("address").value = "";
+            document.getElementById("city").value = "";
+        }
+        function creatuser() {
+            var user = {
+                fname: document.getElementById("fname").value,
+                lname: document.getElementById("lname").value,
+                tel: document.getElementById("tel").value,
+                address: document.getElementById("address").value,
+                city: document.getElementById("city").value
+            }
+
+            students.push(user)
+            displayStudents()
+            clearuser()
+        }
+
+        function updateuser() {
+            var user = {
+                fname: document.getElementById("fname").value,
+                lname: document.getElementById("lname").value,
+                tel: document.getElementById("tel").value,
+                address: document.getElementById("address").value,
+                city: document.getElementById("city").value
+            }
+
+            students[gIndex] = user;
+            displayStudents();
+            clearuser();
+            document.getElementById("updateBtn").style.display = "none"
+            document.getElementById("addbtn").style.display = "block"
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
