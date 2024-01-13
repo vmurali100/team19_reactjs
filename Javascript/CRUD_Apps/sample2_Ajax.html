@@ -93,6 +93,7 @@
     <table id="userData">
         <thead>
             <tr>
+                <th>ID</th>
                 <th>Full Name</th>
                 <th>Email</th>
                 <th>Password</th>
@@ -104,11 +105,17 @@
     </table>
 
     <script>
-        var users = JSON.parse(localStorage.getItem('users'))
-        if (users === null) {
-            users = []
-        } else {
-            displayUsers()
+        var users = []
+        function getAllUsersFromServer(){
+            var getUsers = new XMLHttpRequest()
+            getUsers.onreadystatechange = function(){
+                if(getUsers.status == 200 && getUsers.readyState ==4){
+                    users=JSON.parse(getUsers.responseText);
+                    displayUsers();
+                }
+            }
+            getUsers.open("GET","http://localhost:3000/users");
+            getUsers.send()
         }
         function registerUser() {
             var user = {
@@ -116,9 +123,18 @@
                 email: document.getElementById("email").value,
                 password: document.getElementById("password").value
             }
-
-            users.push(user)
-            localStorage.setItem('users', JSON.stringify(users))
+            //
+            var sendproduct = new XMLHttpRequest()
+            sendproduct.onreadystatechange = function(){
+                if(sendproduct.status == 200 && sendproduct.readyState ==4){
+                    console.log(JSON.parse(sendproduct.responseText))
+                }
+            }
+            sendproduct.open("POST","http://localhost:3000/users");
+            sendproduct.setRequestHeader("Content-type", "application/json");
+            sendproduct.send(JSON.stringify(user))
+            //users.push(user)
+            //localStorage.setItem('users', JSON.stringify(users))
             displayUsers()
             clearUser()
         }
@@ -159,9 +175,16 @@
 
         function deleteUser(row) {
             console.log(row)
-            // users.splice(row, 1)
-            users = users.filter((usr,index)=>row !== index)
-            localStorage.setItem('users',JSON.stringify(users))
+            // // users.splice(row, 1)
+            // users = users.filter((usr,index)=>row !== index)
+            // localStorage.setItem('users',JSON.stringify(users))
+            var sendproduct = new XMLHttpRequest()
+            sendproduct.onreadystatechange = function(){
+                if(sendproduct.status == 200 && sendproduct.readyState ==4){
+                    getAllUsersFromServer()                }
+            }
+            sendproduct.open("DELETE","http://localhost:3000/users/"+users[row].id);
+            sendproduct.send()
             displayUsers()
         }
         var gIndex = null
@@ -181,13 +204,25 @@
                 email: document.getElementById("email").value,
                 password: document.getElementById("password").value
             }
-            users[gIndex]=user;
-            localStorage.setItem('users',JSON.stringify(users))
-            displayUsers()
-            clearUser()
+            var sendproduct = new XMLHttpRequest()
+            sendproduct.onreadystatechange = function(){
+                if(sendproduct.status == 200 && sendproduct.readyState ==4){
+                    console.log(JSON.parse(sendproduct.responseText))
+                }
+            }
+            sendproduct.open("PUT","http://localhost:3000/users/"+users[gIndex].id);
+            sendproduct.setRequestHeader("Content-type", "application/json");
+            sendproduct.send(JSON.stringify(user))
+            // users[gIndex]=user;
+            // localStorage.setItem('users',JSON.stringify(users))
+            // displayUsers()
+            // clearUser()
             document.getElementById('addBtn').style.display="block"
             document.getElementById('updatebtn').style.display="none"
         }
+    
+        getAllUsersFromServer()
+    
     </script>
 </body>
 
