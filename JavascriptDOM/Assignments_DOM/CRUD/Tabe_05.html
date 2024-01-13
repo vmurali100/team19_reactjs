@@ -40,7 +40,7 @@
     <button onclick="UpdateUser()" type="button" id="updbtn">
       Update User
     </button>
-    <table border="1">
+    <table border="4">
       <thead>
         <tr>
           <th>fname</th>
@@ -56,9 +56,8 @@
       </thead>
       <tbody></tbody>
     </table>
-
     <script>
-      var gindex = null;
+        var gindex=null;
       var Users = [
         {
           fname: "Timika",
@@ -114,28 +113,11 @@
           state: "IA",
           zip: "34749",
         },
-        {
-          fname: "Marie",
-          lname: "Kamradt",
-          tel: "(468)943-4008",
-          address: "3719 Eget Ave",
-          city: "Eglin Afb",
-          state: "IL",
-          zip: "11416",
-        },
-        {
-          fname: "D'Juan",
-          lname: "Forgey",
-          tel: "(589)073-5573",
-          address: "4465 Sed Dr",
-          city: "Conehatta",
-          state: "IN",
-          zip: "82407",
-        },
       ];
 
       function displayUsers() {
-        document.querySelector("tbody").innerHTML = "";
+        document.querySelector("tbody").innerHTML="";
+
         for (var i = 0; i < Users.length; i++) {
           var myrow = document.createElement("tr");
           for (u in Users[i]) {
@@ -144,56 +126,33 @@
             myrow.appendChild(mytd);
           }
 
-          // editbtn
-          var editd = document.createElement("td");
+          // editbutton
+
+          var edittd = document.createElement("td");
           var editbtn = document.createElement("button");
           editbtn.innerHTML = "Edit";
-          editd.appendChild(editbtn);
-          myrow.appendChild(editd);
-          editbtn.setAttribute("onclick", "edituser(" + i + ")");
+          edittd.appendChild(editbtn);
+          myrow.appendChild(edittd);
+          editbtn.setAttribute("onClick", "edituser(" + i + ")");
 
-          // deletebtn
+          // deletebutton
           var deltd = document.createElement("td");
           var delbtn = document.createElement("button");
-          delbtn.innerHTML = "delete";
+          delbtn.innerHTML = "Delete";
           deltd.appendChild(delbtn);
-          delbtn.setAttribute("onclick", "deleteuser(" + i + ")");
           myrow.appendChild(deltd);
+          delbtn.setAttribute("onClick", "deleteuser(" + i + ")");
+
 
           document.querySelector("tbody").appendChild(myrow);
         }
       }
-
-      // deleteuser
-
-      function deleteuser(i) {
-        Users.splice(i, 1);
-        displayUsers();
-      }
       displayUsers();
 
-      // edit users
+      // adduser
 
-      function edituser(index) {
-        gindex = index;
-        console.log(Users[gindex]);
-        var User = Users[gindex];
-        document.getElementById("fname").value = User.fname;
-        document.getElementById("lname").value = User.lname;
-        document.getElementById("tel").value = User.tel;
-        document.getElementById("address").value = User.address;
-        document.getElementById("city").value = User.city;
-        document.getElementById("state").value = User.state;
-        document.getElementById("zip").value = User.zip;
-
-        document.getElementById("addbtn").style.display = "none";
-        document.getElementById("updbtn").style.display = "block";
-      }
-
-      // updateuser
-
-      function UpdateUser() {
-        var user1 = {
+      function AddUser() {
+        var addinguser = {
           fname: document.getElementById("fname").value,
           lname: document.getElementById("lname").value,
           tel: document.getElementById("tel").value,
@@ -202,28 +161,40 @@
           state: document.getElementById("state").value,
           zip: document.getElementById("zip").value,
         };
-        document.getElementById("addbtn").style.display="block";
-        document.getElementById("updbtn").style.display="none";
-
-        Users[gindex] = user1;
+        Users.push(addinguser);
         displayUsers();
-        clearusers();
       }
 
-      // clearusers
+      //delete user
 
-      function clearusers() {
-        document.getElementById("fname").value = "";
-        document.getElementById("lname").value = "";
-        document.getElementById("tel").value = "";
-        document.getElementById("address").value = "";
-        document.getElementById("city").value = "";
-        document.getElementById("state").value = "";
-        document.getElementById("zip").value = "";
-      };
+      function deleteuser(i){
+        Users.splice(i,1);
+        displayUsers();
+      }
 
-      function AddUser(){
-        var addinguser={
+
+      //edit user
+
+       function edituser(index){
+        gindex=index;
+        console.log(Users[gindex]);
+        var user=Users[gindex];
+        document.getElementById("fname").value = user.fname;
+        document.getElementById("lname").value = user.lname;
+        document.getElementById("tel").value = user.tel;
+        document.getElementById("address").value = user.address;
+        document.getElementById("city").value = user.city;
+        document.getElementById("state").value = user.state;
+        document.getElementById("zip").value = user.zip;
+        
+        document.getElementById("addbtn").style.display = "none";
+        document.getElementById("updbtn").style.display = "block";
+       }
+
+       // update user
+
+       function UpdateUser(){
+        var object1 = {
           fname: document.getElementById("fname").value,
           lname: document.getElementById("lname").value,
           tel: document.getElementById("tel").value,
@@ -231,13 +202,25 @@
           city: document.getElementById("city").value,
           state: document.getElementById("state").value,
           zip: document.getElementById("zip").value,
-        }
-        Users.push(addinguser);
+        };
+        Users.push(object1);
         displayUsers();
         clearusers();
+       }
+
+       function clearusers(){
+        document.getElementById("fname").value = "";
+        document.getElementById("lname").value = "";
+        document.getElementById("tel").value = "";
+        document.getElementById("address").value = "";
+        document.getElementById("city").value = "";
+        document.getElementById("state").value = "";
+        document.getElementById("zip").value = "";
+       }
 
 
-      }
+
+
     </script>
   </body>
 </html>

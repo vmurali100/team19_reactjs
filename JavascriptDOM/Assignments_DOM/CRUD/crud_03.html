@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Registration Form</title>
+    <style>
+        /* Add your custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 500px;
+            margin: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: #fff;
+        }
+        .disabledBtn{
+            background-color: lightslategrey;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="registrationForm">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required onkeyup="validateform()">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required onkeyup="validateform()">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required onkeyup="validateform()">
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required onkeyup="validateform()">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" placeholder="YYYY-MM-DD" id="dob" name="dob" required onkeyup="validateform()">
+
+        <label for="education">Education:</label>
+        <input type="text" id="education" name="education" required onchange="validateform()">
+
+        <label for="skills">Skills (comma-separated):</label>
+        <input type="text" id="skills" name="skills" required onkeyup="validateform()">
+
+        <button type="button" disabled id="registerButton" onclick="adduser()" class="disabledBtn">Register</button>
+    </form>
+
+    <table id="userData">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Gender</th>
+                <th>Date of Birth</th>
+                <th>Education</th>
+                <th>Skills</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        var user = {};
+        function adduser() {
+            console.log("adduser called ....!!! ");
+            var myrow=document.createElement("tr");
+            for(u in user){
+                var mytd=document.createElement("td");
+                mytd.innerHTML=user[u];
+                myrow.appendChild(mytd);
+            }
+            document.querySelector("tbody").appendChild(myrow);
+            clearuser();
+
+
+        }
+        function clearuser(){
+            document.getElementById("fullName").value="";
+            document.getElementById("email").value="";
+            document.getElementById("password").value="";
+            document.getElementById("gender").value="";
+            document.getElementById("dob").value="";
+            document.getElementById("education").value="";
+            document.getElementById("skills").value="";
+        }
+        function validateform() {
+            user = {
+                fullName: document.getElementById("fullName").value,
+                email: document.getElementById("email").value,
+                password: document.getElementById("password").value,
+                gender: document.getElementById("gender").value,
+                dob: document.getElementById("dob").value,
+                education: document.getElementById("education").value,
+                skills: document.getElementById("skills").value,
+            }
+            
+            var dobRegex = /^\d{4}-\d{2}-\d{2}$/;
+                var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+            if (user.fullName !== '' && user.password !== '' && user.education !== '' && user.skills !== '' && dobRegex.test(user.dob) && emailRegex.test(user.email)) {
+                console.log("formvalidated...!!!") ;
+                    document.getElementById('registerButton').disabled = false;
+                    document.getElementById('registerButton').removeAttribute('class', 'disabledBtn');
+            }
+            else{
+                    document.getElementById('registerButton').disabled = true;
+                    document.getElementById('registerButton').setAttribute('class', 'disabledBtn');
+                }
+        }
+    </script>
+
+</body>
+
+</html>

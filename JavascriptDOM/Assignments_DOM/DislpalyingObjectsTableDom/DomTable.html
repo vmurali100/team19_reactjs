@@ -1,85 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <table border="1">
-        <thead>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Email</th>
-        </thead>
-        <tbody>
-
-        </tbody>
+      <thead>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+      </thead>
+      <tbody></tbody>
     </table>
     <script>
-        // creating an  row
-       for(var i=0; i<=10;i++){
-        var row1=document.createElement("tr")
+      // creating an  row
+      for (var i = 0; i <= 10; i++) {
+        var row1 = document.createElement("tr");
 
-// creating an  table data
-var td1=document.createElement("td")
-td1.innerHTML="santhosh";
-row1.appendChild(td1);
-
-var td2=document.createElement("td")
-td2.innerHTML="23";
-row1.appendChild(td2);
-
-var td3=document.createElement("td")
-td3.innerHTML="santhosh@123gmail.com";
-row1.appendChild(td3);
-document.querySelector("tbody").appendChild(row1);
-       }
-
-        // creating an  row
-        var row2=document.createElement("tr")
-
+        // creating an  table data
         var td1 = document.createElement("td");
-        td1.innerHTML = "Amar";
-        row2.appendChild(td1);
+        td1.innerHTML = "santhosh";
+        row1.appendChild(td1);
 
-        var td2=document.createElement("td")
-        td2.innerHTML="22";
-        row2.appendChild(td2);
+        var td2 = document.createElement("td");
+        td2.innerHTML = "23";
+        row1.appendChild(td2);
 
-        var td3=document.createElement("td")
-        td3.innerHTML="Amar@12gmail.com";
-        row2.appendChild(td3);
-        document.querySelector("tbody").appendChild(row2)
+        var td3 = document.createElement("td");
+        td3.innerHTML = "santhosh@123gmail.com";
+        row1.appendChild(td3);
+        document.querySelector("tbody").appendChild(row1);
+      }
 
-        var row3  = document.createElement("tr");
-
-        var td11 = document.createElement("td");
-        var td22 = document.createElement("td");
-        var td33= document.createElement("td");
-
-        td11.innerHTML = "abc"
-        td22.innerHTML = "45"
-        td33.innerHTML = "abc@gmail.com"
-
-        row3.appendChild(td11);
-        row3.appendChild(td22);
-        row3.appendChild(td33);
-        
-        document.querySelector("tbody").appendChild(row3)
-
-
-        document.querySelector("tbody").appendChild(row4)
-        
-        
-
-
-
-
-
-        
-
-        document.querySelector("tbody").appendChild(row2);
+    
     </script>
-</body>
+  </body>
 </html>

@@ -180,14 +180,18 @@
 
           document.querySelector("tbody").appendChild(myrow);
         }
+        
       }
 
       // delete User function
 
-      function deleteUser(i) {
-        Objects.splice(i, 1);
+      function deleteUser(ind) {
+        Objects.splice(ind, 1);
         displayUsers();
+        clearusers();
+        
       }
+    
 
       // EditUser Function
 
@@ -220,7 +224,6 @@
         document.getElementById("zip").value = "";
       }
 
-      
       // AddUser
       function AddUser() {
         var User = {
@@ -254,7 +257,7 @@
         clearusers();
         document.getElementById("addbtn").style.display = "block";
         document.getElementById("updbtn").style.display = "none";
-      }
+      };
       
     </script>
   </body>
