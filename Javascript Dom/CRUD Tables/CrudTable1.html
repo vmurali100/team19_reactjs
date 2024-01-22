@@ -236,9 +236,17 @@
 
       }
      
-      function deleteUser(i){
-           user.splice(i, 1);
+      function deleteUser(index){
+           users.splice(index, 1);
            displayUsers();
+
+        //   var filterArr = users.filter((value, index)=>{
+        //        index !== globalIndex
+        //   })
+        //  return filterArr;
+        //  console.log(filterArr)
+
+          
       }
       displayUsers();
     </script>

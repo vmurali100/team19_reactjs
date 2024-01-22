@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        /* Add your custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+       
+
+        .disabledBtn{
+            background-color: gray;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<form id="registrationForm">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName" required onkeyup="validateForm()">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required  onkeyup="validateForm()">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required  onkeyup="validateForm()">
+
+    <label>Mobile:</label>
+    <input type="number" id="mobile" name="mobile" required  onkeyup="validateForm()">
+
+    <button type="button" id="registerButton" disabled onclick="addUser()" class="disabledBtn">Register</button>
+</form>
+
+<table id="userData">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Mobile</th>
+        </tr>
+    </thead>
+
+    <tbody></tbody>
+</table>
+<script>
+    function addUser(){
+        console.log("add user called")
+        var mytr = document.createElement("tr");
+        for(i in user){
+            var mytd = document.createElement("td");
+            mytd.innerHTML = user[i];
+            mytr.appendChild(mytd);
+        }
+        document.querySelector("tbody").appendChild(mytr);
+        clearUsers()
+    }
+    function clearUsers(){
+            document.getElementById("fullName").value = "",
+            document.getElementById("email").value = "",
+            document.getElementById("password").value ="",
+            document.getElementById("mobile").value = ""
+        }
+    var user = {}
+    function validateForm(){
+        console.log("form validated");
+
+         user = {
+            fullname : document.getElementById("fullName").value,
+            email : document.getElementById("email").value,
+            password: document.getElementById("password").value,
+            mobile: document.getElementById("mobile").value
+        }
+
+        var emailReg =  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+         var pattern = /^\d{10}$/;
+
+        if(user.fullname !== "" && user.password !== "" && emailReg.test(user.email) && pattern.test(user.mobile)){
+           
+
+           
+                document.getElementById("registerButton").disabled = false;
+                document.getElementById("registerButton").removeAttribute("class", "disabledBtn")
+        }
+            else{
+                document.getElementById("registerButton").disabled = true;
+                document.getElementById("registerButton").setAttribute("class", "disabledBtn")
+            }
+        }
+    
+
+</script>
+
+
+</body>
+</html>
