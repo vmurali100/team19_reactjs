@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+      
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <label for="gender">Gender:</label> <br>
+
+        <input type="radio" id="male" name="gender" value="male"> 
+        <label for="male">Male</label> <br>
+        <input type="radio" id="female" name="gender" value="female"> 
+        <label for="female">Female</label> <br>
+        <input type="radio" id="other" name="gender" value="other"> 
+        <label for="other">Other</label><br>    
+
+        <!-- <label for="subjects">Subjects:</label>
+        <input type="checkbox" id="javascript" name="subjects" value="javascript">
+        <label for="javascript">JavaScript</label>
+        <input type="checkbox" id="reactjs" name="subjects" value="reactjs">
+        <label for="reactjs">ReactJS</label>
+
+        <label for="time">Preferred Time:</label>
+        <input type="text" id="time" name="time" placeholder="Enter preferred time"> -->
+
+        <!-- <label for="state">State:</label>
+        <select id="state" name="state">
+            <option value="karnataka">Karnataka</option>
+            <option value="maharashtra">Maharashtra</option>
+            <option value="tamilnadu">Tamil Nadu</option>
+        </select> -->
+
+        <button type="button" onclick="registerUser()">Submit</button>
+        <button type="button" onclick="selectGender()">Select Gender</button>
+    </form>
+    <script>
+        function registerUser(){
+
+            var user = {
+                fname:"",
+                lname:"",
+                gender:null
+            }
+            var allRadioBtns = document.getElementsByName("gender");
+            for(i=0;i<allRadioBtns.length;i++){
+                if(allRadioBtns[i].checked === true){
+                    console.log(allRadioBtns[i].value)
+                    user.gender = allRadioBtns[i].value
+                }
+            }
+            console.log(user)
+        }
+
+        function selectGender(){
+            var item = "female"
+            var allRadioBtns = document.getElementsByName('gender')
+            for(i=0;i<allRadioBtns.length;i++){
+                if(allRadioBtns[i].value === item){
+                    allRadioBtns[i].checked = 'true'
+                }
+            }
+        }
+    </script>
+</body>
+</html>
