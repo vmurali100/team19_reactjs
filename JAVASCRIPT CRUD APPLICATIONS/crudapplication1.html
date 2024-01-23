@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="fname">fname</label>
+        <input type="text" id="fname">
+
+        <label for="lname">lname</label>
+        <input type="text" id="lname">
+
+        <button type="button" onclick="adduser()">adduser</button>
+        <button type="button" onclick="updateuser()">updateuser</button>
+    </form>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>fname</th>
+                <th>lname</th>
+                <th>edit</th>
+                <th>delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        var person=[]
+       function adduser(){
+        var student={
+            fname:document.getElementById("fname").value,
+            lname:document.getElementById("lname").value
+
+       }
+       person.push(student)
+       clearUser()
+       displayUsers()
+    }
+
+    
+    function displayUsers(){
+        document.querySelector("tbody").innerHTML=""
+
+        for(i=0;i<person.length;i++){
+            var mytr=document.createElement("tr")
+
+            for( a in person[i]){
+
+                var mytd=document.createElement("td")
+                mytd.innerHTML=person[i][a]
+
+                mytr.appendChild(mytd)
+                 }
+                 var edittd=document.createElement('td')
+            var editbtn=document.createElement('button')
+            editbtn.innerHTML='edit'
+
+            editbtn.setAttribute("onclick","edituser("+i+")")
+            edittd.appendChild(editbtn)
+            mytr.appendChild(edittd)
+
+
+            var deltd=document.createElement("td")
+            var delbtn=document.createElement("button")
+            delbtn.innerHTML="delete"
+            delbtn.setAttribute("onclick","deleteuser("+i+")")
+
+            deltd.appendChild(delbtn)
+            mytr.appendChild(deltd)
+           
+        document.querySelector("tbody").appendChild(mytr)
+     }
+
+     }
+      var gindex=null;
+      function edituser(i){
+        gindex=i
+        fname:document.getElementById('fname').value=person[i].fname
+        lname:document.getElementById("lname").value=person[i].lname
+
+      }
+     function updateuser(){
+        var student={
+            fname:document.getElementById("fname").value,
+            lname:document.getElementById("lname").value
+        }
+        person[gindex]=student
+        displayUsers()
+        clearUser()
+        
+     }
+
+    //  function deleteuser(i){
+    //     person=person.filter((usr=>{
+    //         return usr.fname!==person[i].fname
+
+    //     }))
+    //     displayUsers()
+    //  }
+
+
+    // function deleteuser(){
+    //     person=person.filter((usr)=>{
+    //         return usr.fname!==person[i].fname
+    //     })
+    //     displayusers()
+
+    // }
+
+    function deleteuser(i){
+        person=person.filter((usr)=>{
+        return usr.fname!==person[i].fname
+        })
+        displayUsers()
+    }
+
+
+
+    function clearUser(){
+        fname:document.getElementById("fname").value="";
+        lname:document.getElementById("lname").value="";
+
+    }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html

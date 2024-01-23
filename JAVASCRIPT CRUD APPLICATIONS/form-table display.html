@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <table border="1">
+   <thead>
+    <tr>
+        <th>fname</th>
+        <th>lname</th>
+    </tr>
+   </thead>
+
+   <tbody></tbody>
+
+   
+</table>
+<body> -->
+    
+    <!-- <form action="">
+        <label for="fname">First name</label>
+        <input type="text" id="fname">
+        <label for="lname">Last name</label>
+        <input type="text" id="lname">
+
+        <button type="button" onclick="adduser()">adduser</button>
+    </form>
+
+
+    <Script>
+        function adduser(){
+            var user={
+                fname:document.getElementById("fname").value,
+                lname:document.getElementById("lname").value
+            }
+             var mytr=document.createElement("mytr")
+             
+            
+
+            for( a in user){
+                var mytd= document.createElement("td")
+                mytd.innerHTML=user[a]
+                mytr.appendChild(mytd)
+                
+            }
+            document.querySelector("tbody").appendChild(mytr)
+        } -->
+    <!-- </Script> -->
+
+
+
+    <form action="">
+        <label for="fname">fname</label>
+        <input type="text" id="fname">
+
+        <label for="lname">lname</label>
+        <input type="text" id="lname">
+
+        <button type="button" onclick="adduser()">adduser</button>
+    </form>
+
+
+    <table border="1">
+        <tr>
+            <th>fname</th>
+            <th>lname</th>
+            <th>edit</th>
+            <th>delete</th>
+        </tr>
+    
+        <tbody></tbody>
+    
+    </table>
+        
+
+    <script>
+        function adduser(){
+var student={
+    fname:document.getElementById("fname").value,
+    lname:document.getElementById("lname").value
+
+    }
+    
+        var mytr=document.createElement("tr")
+
+        for( a in student){
+            var mytd=document.createElement("td")
+             mytd.innerHTML=student[a]
+
+            mytr.appendChild(mytd)
+
+
+        //     var edittd = document.createElement("td");
+        //   var editbtn = document.createElement("button");
+
+        //   editbtn.innerHTML = "edit";
+        //   editbtn.setAttribute("onclick", "editUser()");
+        //   edittd.appendChild(editbtn);
+        //   editbtn.setAttribute('onclick',"editUser("+i+")")
+        //   mytr.appendChild(edittd);
+
+
+       
+        }
+
+        var edittd=document.createElement("td")
+            var editbtn=document.createElement("button")
+            editbtn.innerHTML="edit"
+
+            edittd.appendChild(editbtn)
+
+            mytr.appendChild(edittd)
+
+
+            var deltd=document.createElement("td")
+            var delbtn=document.createElement("button")
+
+            delbtn.innerHTML="delete"
+
+            deltd.appendChild(delbtn)
+
+            mytr.appendChild(deltd)
+
+        
+       
+        document.querySelector("tbody").appendChild(mytr)
+
+
+    }
+   
+    </script>
+
+
+
+</body>
+</html>
+
+
+
+ 

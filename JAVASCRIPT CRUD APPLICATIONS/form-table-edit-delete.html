@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="fname">fname</label>
+      <input type="text" id="fname" /><br />
+      <label for="lname">lname</label>
+      <input type="text" id="lname" /><br />
+      <button type="button" onclick="adduser()">adduser</button>
+      <button type="button" onclick="updateUser()">Update User</button>
+    </form>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>fname</th>
+          <th>lname</th>
+          <th>edit</th>
+          <th>delete</th>
+        </tr>
+      </thead>
+
+      <tbody></tbody>
+    </table>
+
+    <script>
+      //      var users = [];
+      //   function adduser() {
+      //     var details = {
+      //       fname: document.getElementById("fname").value,
+      //       lname: document.getElementById("lname").value,
+      //       email: document.getElementById("email").value,
+      //       password: document.getElementById("password").value,
+      //       //  edit:document.getElementById("edit").value,
+      //       //  delete:document.getElementById("delete").value
+      //     };
+
+      //     // Add the Object in to the Array
+      //     users.push(details);
+      //     displayUsers()
+      //   }
+
+      var people = [];
+      function adduser() {
+        var details = {
+          fname: document.getElementById("fname").value,
+          lname: document.getElementById("lname").value,
+        };
+        people.push(details);
+        displayUsers();
+        clearUser();
+      }
+
+      function clearUser() {
+        fname: document.getElementById("fname").value = "";
+        lname: document.getElementById("lname").value = "";
+      }
+
+      //     function displayUsers() {
+      //     document.querySelector("tbody").innerHTML = ""
+      //     for (i = 0; i < users.length; i++) {
+      //       var mytr = document.createElement("tr");
+
+      //       for (a in users[i]) {
+      //         var mytd = document.createElement("td");
+      //         mytd.innerHTML = users[i][a];
+      //         mytr.appendChild(mytd);
+      //       }
+
+      //       var edittd = document.createElement("td");
+      //       var editbtn = document.createElement("button");
+
+      //       editbtn.innerHTML = "edit";
+      //       editbtn.setAttribute("onclick", "editUser()");
+      //       edittd.appendChild(editbtn);
+      //       editbtn.setAttribute('onclick',"editUser("+i+")")
+      //       mytr.appendChild(edittd);
+
+      //       var deltd = document.createElement("td");
+      //       var delbtn = document.createElement("button");
+      //       delbtn.setAttribute('onclick',"deleteUser("+i+")")
+      //       delbtn.innerHTML = "Delete";
+      //       deltd.appendChild(delbtn);
+      //       mytr.appendChild(deltd);
+
+      //       document.querySelector("tbody").appendChild(mytr);
+      //       clearUser();
+      //     }
+      // }
+
+      function displayUsers() {
+        document.querySelector("tbody").innerHTML = "";
+        for (i = 0; i < people.length; i++) {
+          var mytr = document.createElement("tr");
+
+          for (a in people[i]) {
+            var mytd = document.createElement("td");
+            mytd.innerHTML = people[i][a];
+            mytr.appendChild(mytd);
+          }
+
+          var edittd = document.createElement("td");
+          var editbtn = document.createElement("button");
+          editbtn.innerHTML = "edit";
+          editbtn.setAttribute("onclick", "editUser(" + i + ")");
+          edittd.appendChild(editbtn);
+
+          mytr.appendChild(edittd);
+
+          var deltd = document.createElement("td");
+          var delbtn = document.createElement("button");
+          delbtn.innerHTML = "delete";
+          delbtn.setAttribute("onclick", "deleteuser(" + i + ")");
+          deltd.appendChild(delbtn);
+          mytr.appendChild(deltd);
+          document.querySelector("tbody").appendChild(mytr);
+        }
+      }
+      //     var gIndex = null;
+      //   function editUser(i) {
+      //     gIndex = i;
+      //     document.getElementById("fname").value = users[i].fname;
+      //     document.getElementById("lname").value =  users[i].lname;
+      //     document.getElementById("email").value =  users[i].email;
+      //     document.getElementById("password").value =  users[i].password;
+      //   }
+
+      //   function updateUser(){
+      //     var details = {
+      //       fname: document.getElementById("fname").value,
+      //       lname: document.getElementById("lname").value,
+      //       email: document.getElementById("email").value,
+      //       password: document.getElementById("password").value,
+      //       //  edit:document.getElementById("edit").value,
+      //       //  delete:document.getElementById("delete").value
+      //     };
+      //     users[gIndex] = details;
+      //     displayUsers()
+      //   }
+
+      var gIndex = null;
+      function editUser(i) {
+        gIndex = i;
+        document.getElementById("fname").value = people[i].fname;
+        document.getElementById("lname").value = people[i].lname;
+      }
+      function updateUser() {
+        var details = {
+          fname: document.getElementById("fname").value,
+          lname: document.getElementById("lname").value,
+        };
+        people[gIndex] = details;
+        displayUsers();
+        clearUser()
+      }
+
+      function deleteuser(i){
+        people = people.filter((usr)=>{
+            return usr.fname !== people[i].fname
+        })
+        displayUsers()
+      }
+    </script>
+  </body>
+</html>

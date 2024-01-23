@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <table border="1">
+        <thead>
+            <tr>
+                <th>sname</th>
+                <th>fname</th>
+                <th>mname</th>
+                <th>Adress</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    
+    <form action="">
+        <label for="sname">Studentname</label>
+        <input type="text" id="sname"><br>
+
+        <label for="fname">Fathername</label>
+        <input type="text" id="fname"><br>
+
+        <label for="mname">Mothername</label>
+        <input type="text" id="mname"><br>
+
+        <label for="adress">Adress</label>
+        <input type="text" id="adress"><br>
+
+        <button type="button" onclick="studentdetails()">studentdetails</button>
+    </form>
+    <script>
+        function studentdetails(){
+
+            var student={
+                Studentname:document.getElementById("sname").value,
+            Fathername:document.getElementById("fname").value,
+            Mothername:document.getElementById("mname").value,
+            Adress:document.getElementById("adress").value
+
+            }
+            var mytr=document.createElement("tr")
+
+            for( a in student){
+                var mytd=document.createElement("td")
+
+            mytd.innerHTML=student[a]
+             mytr.appendChild(mytd)
+
+            }
+            document.querySelector("tbody").appendChild(mytr)
+
+        }
+         </script> -->
+    <form action="">
+      <label for="fname">Fname</label>
+      <input type="text" id="fname" /><br />
+
+      <label for="lname">Lname</label>
+      <input type="text" id="lname" /><br />
+
+      <label for="mail">Email</label>
+      <input type="text" id="email" /><br />
+
+      <label for="pass">Password</label>
+      <input type="text" id="password" /><br />
+
+      <button type="button" onclick="adduser()">adduser</button>
+      <button type="button" onclick="updateUser()">Update User</button>
+      <!-- <button type="button" onclick="clearUser()">clearUser</button> -->
+    </form>
+
+    <br /><br />
+    <table border="1">
+      <thead>
+        <tr>
+          <th>fname</th>
+          <th>lname</th>
+          <th>mail</th>
+          <th>pass</th>
+          <th>edit</th>
+          <th>delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      var users = [];// multiple objects ni handle cheyadanki
+      function adduser() {
+        var details = {
+          fname: document.getElementById("fname").value,
+          lname: document.getElementById("lname").value,
+          email: document.getElementById("email").value,
+          password: document.getElementById("password").value,
+          //  edit:document.getElementById("edit").value,
+          //  delete:document.getElementById("delete").value
+        };
+
+        // Add the Object in to the Array
+        users.push(details);
+        displayUsers()
+      }
+
+      function clearUser() {
+        document.getElementById("fname").value = "";
+        document.getElementById("lname").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("password").value = "";
+      }
+      // clearUser();
+
+      function displayUsers() {
+        document.querySelector("tbody").innerHTML = ""
+        for (i = 0; i < users.length; i++) {
+          var mytr = document.createElement("tr");
+
+          for (a in users[i]) {  // object nu iterate cheyadaniki
+            var mytd = document.createElement("td");
+            mytd.innerHTML = users[i][a];
+            mytr.appendChild(mytd);
+          }
+
+          var edittd = document.createElement("td");
+          var editbtn = document.createElement("button");
+
+          editbtn.innerHTML = "edit";
+          editbtn.setAttribute("onclick", "editUser()");
+          edittd.appendChild(editbtn);
+          editbtn.setAttribute('onclick',"editUser("+i+")")
+          mytr.appendChild(edittd);
+
+          var deltd = document.createElement("td");
+          var delbtn = document.createElement("button");
+          delbtn.setAttribute('onclick',"deleteUser("+i+")")
+          delbtn.innerHTML = "Delete";
+          deltd.appendChild(delbtn);
+          mytr.appendChild(deltd);
+
+          document.querySelector("tbody").appendChild(mytr);
+          clearUser();
+        }
+      }
+      var gIndex = null;
+      function editUser(i) {
+        gIndex = i;
+        document.getElementById("fname").value = users[i].fname;
+        document.getElementById("lname").value =  users[i].lname;
+        document.getElementById("email").value =  users[i].email;
+        document.getElementById("password").value =  users[i].password;
+      }
+
+      function updateUser(){
+        var details = {
+          fname: document.getElementById("fname").value,
+          lname: document.getElementById("lname").value,
+          email: document.getElementById("email").value,
+          password: document.getElementById("password").value,
+          //  edit:document.getElementById("edit").value,
+          //  delete:document.getElementById("delete").value
+        };
+        users[gIndex] = details;
+        displayUsers()
+      }
+
+      // function deleteuser(i){
+      //   people = people.filter((usr)=>{
+      //       return usr.fname !== people[i].fname
+      //   })
+      //   displayUsers()
+      // }
+
+      function deleteUser(i){
+        users=users.filter((usr)=>{
+          return usr.fname !== users[i].fname
+        })
+        displayUsers()
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+
+        <thead>
+            <tr>
+                <th>fname</th>
+                <th>lname</th>
+                <th>tel</th>
+                <th>address</th>
+                <th>city</th>
+                <th>state</th>
+                <th>zip</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+
+    </table>
+
+    
+    
+    <script>
+        var student=[
+        {
+        "fname": "Valerie",
+        "lname": "Dobbins",
+        "tel": "(579)017-2398",
+        "address": "4296 Magna Ct",
+        "city": "Marin",
+        "state": "FL",
+        "zip": 89741
+    },
+    {
+        "fname": "Nate",
+        "lname": "Flint",
+        "tel": "(929)822-6872",
+        "address": "8469 Ac Dr",
+        "city": "Stamford",
+        "state": "NH",
+        "zip": 15578
+    },
+    {
+        "fname": "Andrew",
+        "lname": "Briley",
+        "tel": "(568)204-3221",
+        "address": "4885 Facilisis Ave",
+        "city": "Longmont",
+        "state": "ID",
+        "zip": 13114
+    },
+    {
+        "fname": "Katina",
+        "lname": "Rios",
+        "tel": "(330)650-6606",
+        "address": "3459 Tincidunt Ave",
+        "city": "Laredo",
+        "state": "NV",
+        "zip": 77472
+    }]
+
+    for(i=0;i<student.length;i++){
+        var mytr=document.createElement("tr")
+
+        for(a in student[i]){
+            var mytd=document.createElement("td")
+
+            mytd.innerHTML=student[i][a]
+
+       mytr.appendChild(mytd)
+
+
+        }
+
+        document.querySelector("tbody").appendChild(mytr)
+    }
+    </script>
+</body>
+</html>

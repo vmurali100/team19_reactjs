@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="fname">fname</label>
+      <input type="text" id="fname" /><br />
+
+      <label for="lname">lname</label>
+      <input type="text" id="lname" /> <br />
+
+      <button type="button" onclick="adduser()">adduser</button>
+      <button type="button" onclick="updateUser()">updateuser</button>
+    </form>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>fname</th>
+          <th>lname</th>
+          <th>edit</th>
+          <th>delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      var users = [];
+      function adduser() {
+        var details = {
+          fname: document.getElementById("fname").value,
+          lname: document.getElementById("lname").value,
+        };
+        users.push(details);
+        displayUsers();
+        // clearUser();
+      }
+
+      function clearUser() {
+        fname: document.getElementById("fname").value = "";
+        lname: document.getElementById("lname").value = "";
+      }
+
+      // for(i=0;i<users.length;i++){
+      //     var mytr=document.createElement("tr")
+
+      //     for(a in users[i]){
+      //         var mytd=document.getElementById("td")
+      //         mytd.innerHTML=users[i][a]
+
+      //         mytr.appendChild(mytd)
+      //     }
+
+      // }
+      // document.querySelector("tbody").appendChild(mytr)
+
+      function displayUsers() {
+        document.querySelector("tbody").innerHTML = "";
+        for (i = 0; i < users.length; i++) {
+          var mytr = document.createElement("tr");
+
+          for (a in users[i]) {
+            var mytd = document.createElement("td");
+
+            mytd.innerHTML = users[i][a];
+
+            mytr.appendChild(mytd);
+          }
+
+          var edittd = document.createElement("td");
+          var editbtn = document.createElement("button");
+
+          editbtn.innerHTML = "edit";
+
+          edittd.appendChild(editbtn);
+            editbtn.setAttribute("onclick","edituser("+i+")")
+
+          mytr.appendChild(edittd);
+
+
+          var deltd=document.createElement("td")
+          var delbtn=document.createElement("button")
+
+          delbtn.innerHTML="delete";
+
+          deltd.appendChild(delbtn)
+          deltd.setAttribute("onclick",'deleteuser('+i+')')
+
+          mytr.appendChild(deltd)
+
+          document.querySelector("tbody").appendChild(mytr);
+          clearUser()
+        }
+      }
+    //   var gIndex = null;
+    //   function editUser(i) {
+    //     gIndex = i;
+    //     document.getElementById("fname").value = users[i].fname;
+    //     document.getElementById("lname").value =  users[i].lname;
+    //     document.getElementById("email").value =  users[i].email;
+    //     document.getElementById("password").value =  users[i].password;
+    //   }
+
+    //   function updateUser(){
+    //     var details = {
+    //       fname: document.getElementById("fname").value,
+    //       lname: document.getElementById("lname").value,
+    //       email: document.getElementById("email").value,
+    //       password: document.getElementById("password").value,
+    //       //  edit:document.getElementById("edit").value,
+    //       //  delete:document.getElementById("delete").value
+    //     };
+    //     users[gIndex] = details;
+    //     displayUsers()
+    //   }
+
+       var gIndex=null;
+
+       function editUser(i){
+        gIndex=i;
+        document.getElementById('fname').value=users[i].fname;
+        document.getElementById("lname").value=users[i].lname;
+       }
+
+       function updateUser(){
+        var details={
+            fname:document.getElementById("fname").value,
+            lname:document.getElementById("lname").value
+        }
+        users[gIndex]=details;
+        displayUsers()
+       }
+
+
+
+
+      
+    </script>
+  </body>
+</html>
