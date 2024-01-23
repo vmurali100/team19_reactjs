@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     /* Add your custom styles here */
+     body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: #fff;
+        }
+        #updatebtn{
+            display: none;
+        }
+</style>
+<body>
+    <form id="registrationForm">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="button" id="addBtn" onclick="registerUser()">Register</button> 
+        <button type="button" id="updatebtn" onclick="updateUser()">Update</button>
+    </form>
+
+    <table id="userData">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        var gindex=null;
+
+        var Users=JSON.parse(localStorage.getItem('Users'));
+        if(Users=== null){
+            Users=[];
+        }
+        else{
+            dispalyUsers();
+        }
+
+        // RegisterUsers
+
+        function registerUser(){
+            var user={
+                fullName:document.getElementById("fullName").value,
+                email:document.getElementById("email").value,
+                password:document.getElementById("password").value,
+            }
+            Users.push(user);
+            localStorage.setItem("Users",JSON.stringify(Users));
+            dispalyUsers();
+            clearUsers();
+        }
+
+        // DispalyUsers
+
+        function dispalyUsers(){
+        document.querySelector("tbody").innerHTML="";
+
+             Users.forEach((usr,i)=>{
+                let myTr=document.createElement("tr");
+                for(u in usr){
+                    let myTd=document.createElement("td");
+                    myTd.innerHTML=usr[u];
+                    myTr.appendChild(myTd);
+                }
+
+                //edituser
+
+                var edittd=document.createElement("td");
+                var editBtn=document.createElement("button");
+                editBtn.innerHTML="Edit";
+                edittd.appendChild(editBtn);
+                editBtn.setAttribute('onclick','Edituser('+i+')')
+                myTr.appendChild(edittd);
+
+
+                //deletebtn
+
+                var deltd=document.createElement("td");
+                var delbtn=document.createElement("button");
+                delbtn.innerHTML="Delete";
+                delbtn.setAttribute('onclick','deleteuser('+i+')');
+                deltd.appendChild(delbtn);
+                myTr.appendChild(deltd);
+                document.querySelector("tbody").appendChild(myTr);
+             })
+        }
+
+        // clearUsers
+
+        function clearUsers(){
+            document.getElementById("fullName").value="";
+            document.getElementById("email").value="";
+            document.getElementById("password").value="";
+        };
+
+        // editusers
+
+        function Edituser(index){
+            gindex=index;
+            document.getElementById("fullName").value=Users[index].fullName;
+            document.getElementById("email").value=Users[index].email;
+            document.getElementById("password").value=Users[index].password;
+
+            document.getElementById('addBtn').style.display="none"
+            document.getElementById("updatebtn").style.display="block";
+        }
+
+        function updateUser(index){
+            var user={
+                fullName:document.getElementById("fullName").value,
+                email:document.getElementById("email").value,
+                password:document.getElementById("password").value,
+            }
+            Users[gindex]=user;
+            localStorage.setItem("Users",JSON.stringify(Users));
+            dispalyUsers();
+            clearUsers();
+
+            document.getElementById("addBtn").style.display="block";
+            document.getElementById("updatebtn").style.display="none";
+
+        }
+
+        //delete user
+
+        function deleteuser(index){
+            Users=Users.filter((usr,i)=>index != i);
+            localStorage.setItem('Users',JSON.stringify(Users));
+            dispalyUsers();
+        }
+
+</script>
+
+    
+</body>
+</html>
