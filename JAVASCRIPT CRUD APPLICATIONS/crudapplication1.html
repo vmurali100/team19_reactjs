@@ -13,6 +13,13 @@
         <label for="lname">lname</label>
         <input type="text" id="lname">
 
+        <label for="">Gender</label>
+        <input type="radio" name="gender" value="male">male
+        <input type="radio" name="gender" value="female">female
+        <input type="radio" name="gender" value="others">others
+
+        <button type="button" onclick="representuser()">submit</button>
+
         <button type="button" onclick="adduser()">adduser</button>
         <button type="button" onclick="updateuser()">updateuser</button>
     </form>
@@ -34,7 +41,9 @@
        function adduser(){
         var student={
             fname:document.getElementById("fname").value,
-            lname:document.getElementById("lname").value
+            lname:document.getElementById("lname").value,
+            gender:"null"
+        
 
        }
        person.push(student)
@@ -117,6 +126,18 @@
         return usr.fname!==person[i].fname
         })
         displayUsers()
+    }
+
+    function representuser(){
+       
+        var allRadiobtns=document.getElementsByName("gender")
+        for(i=0;i<allRadiobtns.length;i++){
+            if(allRadiobtns[i].checked){
+                console.log(allRadiobtns[i].value)
+                student.gender=allRadiobtns[i].value
+            }
+            console.log(student)
+        }
     }
 
 
