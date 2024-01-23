@@ -135,11 +135,108 @@
         users[gIndex]=details;
         displayUsers()
        }
+       </script>
 
 
 
+       <form>
+        <label for="gender">Gender:</label> <br>
 
-      
-    </script>
-  </body>
-</html>
+        <input type="radio" id="male" name="gender" value="male"> 
+        <label for="male">Male</label> <br>
+        <input type="radio" id="female" name="gender" value="female"> 
+        <label for="female">Female</label> <br>
+        <input type="radio" id="other" name="gender" value="other"> 
+        <label for="other">Other</label><br> 
+        <button type="button" onclick="registerUser()">Submit</button>
+        <button type="button" onclick="selectGender()">Select Gender</button>
+    </form>
+    <script>
+        // function registerUser(){
+
+        //     var user = {
+        //         fname:"",
+        //         lname:"",
+        //         gender:null
+        //     }
+        //     var allRadioBtns = document.getElementsByName("gender");
+        //     for(i=0;i<allRadioBtns.length;i++){
+        //         if(allRadioBtns[i].checked === true){
+        //             console.log(allRadioBtns[i].value)
+        //             user.gender = allRadioBtns[i].value
+        //         }
+        //     }
+        //     console.log(user)
+        // }
+
+        // function selectGender(){
+        //     var item = "female"
+        //     var allRadioBtns = document.getElementsByName('gender')
+        //     for(i=0;i<allRadioBtns.length;i++){
+        //         if(allRadioBtns[i].value === item){
+        //             allRadioBtns[i].checked = 'true'
+        //         }
+        //     }
+        // }
+
+
+        // function registerUser(){
+        //   var user={
+        //     fname:"",
+        //     lname:"",
+        //     gender:"",
+        //   }
+        //   var allRadiobtns=document.getElementsByName("gender");
+        //   for(i=0;i<allRadioBtns.length;i++){
+        //     if(allRadioBtns[i].checked === true){
+        //       console.log(allRadioBtns[i].value)
+        //       user.gender=allRadioBtns[i].value
+        //     }
+        //   }
+        //   console.log(user)
+        // }
+
+
+        // function registerUser(){
+        //   var user={
+        //     fname:"",
+        //     lname:"",
+        //     gender:"",
+
+        //   }
+
+        //   var allradiobuttons=document.getElementsByName("gender")
+        //   for(i=0;i<allradiobuttons.length;i++){
+        //     if(allradiobuttons[i].checked){
+        //       console.log(allradiobuttons[i].value)
+        //       user.gender=allradiobuttons[i].value
+        //     }
+        //     console.log(user)
+        //   }
+        // }
+
+        function registerUser(){
+          var user={
+            fname:"",
+            lname:"",
+            gender:"",
+          }
+          var allradiobuttons=document.getElementsByName("gender")
+          for(i=0;i<allradiobuttons.length;i++){
+            if(allradiobuttons[i].checked){
+              console.log(allradiobuttons[i].value)
+              user.gender=allradiobuttons[i].value
+            }
+            console.log(user)
+
+          }
+        }
+
+
+
+        
+        
+       </script> 
+</body>
+</html>   
+ 
