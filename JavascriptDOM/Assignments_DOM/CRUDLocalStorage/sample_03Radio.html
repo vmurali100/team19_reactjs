@@ -59,32 +59,36 @@
         <button type="button" onclick="selectGender()">Select Gender</button>
     </form>
     <script>
-        function registerUser(){
-
-            var user = {
-                fname:"",
-                lname:"",
-                gender:null
+        function  registerUser(){
+            var user={
+                fname:"sandy",
+                age:23,
+                gender:null,
             }
-            var allRadioBtns = document.getElementsByName("gender");
-            for(i=0;i<allRadioBtns.length;i++){
-                if(allRadioBtns[i].checked === true){
-                    console.log(allRadioBtns[i].value)
-                    user.gender = allRadioBtns[i].value
+            var getallradiobtns=document.getElementsByName("gender");
+            for (let index = 0; index < getallradiobtns.length; index++) {
+                if(getallradiobtns[index].checked === true){
+                    console.log(getallradiobtns[index].value);
+                    user.gender=getallradiobtns[index].value;
                 }
             }
             console.log(user)
         }
 
         function selectGender(){
-            var item = "female";  
-            var allRadioBtns = document.getElementsByName('gender')
-            for(i=0;i<allRadioBtns.length;i++){
-                if(allRadioBtns[i].value === item){
-                    allRadioBtns[i].checked = 'true'
+            var item="male";
+            var getallradiobtns=document.getElementsByName("gender");
+            for (let index = 0; index < getallradiobtns.length; index++) {
+                if(getallradiobtns[index].value === item){
+                    getallradiobtns[index].checked='true';
                 }
+                
+                
             }
+
         }
     </script>
+   
+  
 </body>
 </html>

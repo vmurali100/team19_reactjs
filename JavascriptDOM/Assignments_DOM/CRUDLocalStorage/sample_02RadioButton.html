@@ -60,31 +60,33 @@
     </form>
     <script>
         function registerUser(){
-
-            var user = {
-                fname:"",
-                lname:"",
-                gender:null
+            var user={
+                Name:"sandy",
+                Age:"23",
+                Gender:null,
             }
-            var allRadioBtns = document.getElementsByName("gender");
-            for(i=0;i<allRadioBtns.length;i++){
-                if(allRadioBtns[i].checked === true){
-                    console.log(allRadioBtns[i].value)
-                    user.gender = allRadioBtns[i].value
+            var RadioBtns=document.getElementsByName('gender');
+            for(i=0;i<RadioBtns.length;i++){
+                if(RadioBtns[i].checked === true){
+                    console.log(RadioBtns[i].value);
+                    user.Gender=RadioBtns[i].value;
                 }
             }
-            console.log(user)
+            console.log(user);
         }
 
-        function selectGender(){
-            var item = "female";  
-            var allRadioBtns = document.getElementsByName('gender')
+         function selectGender(){
+            var item="male";
+            var allRadioBtns=document.getElementsByName('gender');
             for(i=0;i<allRadioBtns.length;i++){
                 if(allRadioBtns[i].value === item){
-                    allRadioBtns[i].checked = 'true'
+                    allRadioBtns[i].checked = 'true';
                 }
             }
-        }
+         }
+
+        
     </script>
+  
 </body>
 </html>
