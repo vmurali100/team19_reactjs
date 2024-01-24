@@ -129,6 +129,12 @@
 
 
         }
+        function clearuser(){
+            document.getElementById("fname").value="";
+            document.getElementById("lname").value="";
+            document.getElementById("age").value="";
+            document.getElementById("mobile").value=""
+        }
 
         function updateuser(){
             var user = {
@@ -145,12 +151,7 @@
             displayStudents()
             clearuser()
         }
-        function clearuser(){
-            document.getElementById("fname").value="";
-            document.getElementById("lname").value="";
-            document.getElementById("age").value="";
-            document.getElementById("mobile").value=""
-        }
+       
         function creatuser(){
             var user={
                 fname:document.getElementById("fname").value,

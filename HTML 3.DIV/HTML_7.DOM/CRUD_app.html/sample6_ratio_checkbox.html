@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            background-color:#fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba (0,0,0,0.1);
+        }
+        label{
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        button{
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border:none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="gender">Gender:</label><br>
+
+        <input type="radio" name="gender" id="male">
+        <label for="male">male</label><br>
+        <input type="radio" name="gender" id="female">
+        <label for="female">female</label><br>
+        <input type="radio" name="gender" id="other">
+        <label for="other">others</label><br>
+
+        <button type="button" onclick="registerUser()">submit</button>
+        <button type="button" onclick="selectGender()">select Gender</button>
+    </form>
+    <script>
+        function registerUser(){
+            var user={
+                male:"naveen",
+                female:"swapna",
+                other:"null"
+            }
+            var allRadioBtns=document.getElementsByName("gender");
+            for(i=0;i<allRadioBtns.length;i++){
+                if(allRadioBtns[i].checked===true){
+                    console.log(allRadioBtns[i].value)
+                    user.gender=allRadioBtns[i].value
+                }
+            }
+            console.log(user)
+            
+        }
+
+        function selectGender(){
+            var item = "female"
+            var allRadioBtns = document.getElementsByName('gender')
+            for(i=0;i<allRadioBtns.length;i++){
+                if(allRadioBtns[i].value === item){
+                    allRadioBtns[i].checked = 'true'
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>

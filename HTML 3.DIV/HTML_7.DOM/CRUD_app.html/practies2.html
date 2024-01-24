@@ -5,9 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #updatebtn{
+            display: none;
+
+
+        }
+    </style>
 </head>
 
 <body>
+    <form>
+        <label for="">fname</label>
+        <input type="text" name="" id="fname"><br>
+        <label for="">lname</label>
+        <input type="text" name="" id="lname"><br>
+        <label for="">mobile</label>
+        <input type="text" name="" id="mobile"><br>
+        <button type="button" onclick="creatuser()" id="Addbtn">Add user</button>
+        <button type="button" onclick="updateuser()" id="updatebtn">update user</button>
+    </form>
     <table border="1">
         <thead>
             <tr>
@@ -49,60 +66,101 @@
             }
 
         ]
-        // function displayStudents() {
-        //     document.querySelector("tbody").innerHTML=""
+
+        function displayStudents() {
+            document.querySelector("tbody").innerHTML = ""
 
 
-        //     for (i=0; i<students.length; i++) {
-        //         var mytr = document.createElement("tr")
-        //         console.log(students[i])
-        //         for (a in students[i]) {
-        //             var mytd = document.createElement("td")
-        //             mytd.innerHTML = students[i][a]
-        //             mytr.appendChild(mytd)
-        //         }
+            for (i = 0; i < students.length; i++) {
+                var mytr = document.createElement("tr")
+                console.log(students[i])
+                for (a in students[i]) {
+                    var mytd = document.createElement("td")
+                    mytd.innerHTML = students[i][a]
+                    mytr.appendChild(mytd)
+                }
 
 
-        //         var edittd = document.createElement("td")
-        //         var editbtn = document.createElement("button")
-        //         editbtn.innerHTML = "Edit"
-        //         edittd.appendChild(editbtn)
-        //         editbtn.setAttribute("onclick", "edituser(" +i+ ")")
-        //         mytr.appendChild(edittd)
+                var edittd = document.createElement("td")
+                var editbtn = document.createElement("button")
+                edittd.innerHTML = "Edit"
+                edittd.appendChild(editbtn)
+                editbtn.setAttribute("onclick", "edituser("+i+")")
+                mytr.appendChild(edittd)
 
 
-        //         var deletetd = document.createElement("td")
-        //         var deletebtn = document.createElement("button")
-        //         deletebtn.innerHTML = "Delete"
-        //         deletetd.appendChild(deletebtn)
-        //         deletebtn.setAttribute("onclick", "deleteuser("+i+")")
-        //         mytr.appendChild(deletetd)
+
+                var deletetd = document.createElement("td")
+                var deletebtn = document.createElement("button")
+                deletebtn.innerHTML = "Delete"
+                deletetd.appendChild(deletebtn)
+                deletebtn.setAttribute("onclick", "deleteuser("+i+")")
+                mytr.appendChild(deletetd)
 
 
-        //         document.querySelector("tbody").appendChild(mytr)
-        //     }
-        // }
-        // displayStudents()
-        // function deleteuser(i){
-        //     students.splice(i,1)
-        //     displayStudents() 
-        // }
 
-        for(i=0;i<students.length;i++){
-            var mytr=document.createElement("tr")
-            console.log(students[i])
-            for(a in students[i]){
-                var mytr=document.createElement("td")
-                mytd.innerHTML=students[i][a]
-                mytr.appendChild(mytd)
+                document.querySelector("tbody").appendChild(mytr)
+
             }
-
-
-            
+        }
+        displayStudents()
+        function deleteuser(i) {
+            students.splice(i, 1)
+            displayStudents()
 
 
         }
-        
+
+        function edituser(index) {
+            gindex = index;
+            console.log(students[index])
+            var students = students[index]
+            document.getElementById("fname").value = students.fname;
+            document.getElementById("lname").value = students.lname;
+            document.getElementById("mobile").value = students.mobile;
+
+
+            document.getElementById("updatebtn").style.display="block"
+            document.getElementById("addbtn").style.display="nones"
+
+
+
+        }
+        displayStudents()
+        function clearuser(){
+            document.getElementById("fname").value="";
+            document.getElementById("lname").value="";
+            document.getElementById("mobile").value="";
+        }
+        function updateUser(){
+            var user={
+                fname:getElementById("fname").value,
+                lname:getElementById("lname").value,
+                mobile:getElementById("mobile").value
+
+            }
+            document.getElementById("updatebtn").style.display="none"
+            document.getElementById("addbtn").style.display="block"
+
+            students[gindex]=user;
+            displayStudents()
+            clearuser()
+
+        }
+        function creatuser(){
+            var user= {
+                fname:document.getElementById("fname").value,   
+                lname:document.getElementById("lname").value,
+                mobile:document.getElementById("mobile").value,
+
+                
+
+            }
+            students.push(user)
+            clearuser()
+            displayStudents()
+
+        }
 
 
 
