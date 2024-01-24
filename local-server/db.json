@@ -18,5 +18,19 @@
       "password": "2222",
       "id": "7b92"
     }
+  ],
+  "people": [
+    {
+      "fname": "ram",
+      "lname": "sam",
+      "gender": "",
+      "subjects": [
+        "HTML",
+        "CSS"
+      ],
+      "dob": "2024-01-15",
+      "stateName": "AP",
+      "id": 1
+    }
   ]
 }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="">First Name</label> 
+        <input type="text" name="" id=""> <br>
+        Male <input type="radio" name="gender" value="Male"> <br>
+        Female <input type="radio" name="gender" value="Female"> <br>
+        Others <input type="radio" name="gender" value="Others"> <br>
+        <label for=""></label>
+        <button onclick="getGender()" type="button">Select Gender</button>
+    </form>
+    <script>
+        function getGender(){
+            var person={
+                fname:"Ram",
+                lname:"ravi"
+            }
+            var allRadioBtns = document.getElementsByName("gender")
+            for (let index = 0; index < allRadioBtns.length; index++) {
+                if(allRadioBtns[index].checked == true){
+                    console.log(allRadioBtns[index].value)
+                    person.gender = allRadioBtns[index].value
+                }
+            }
+
+            console.log(person)
+        }
+    </script>
+</body>
+</html>
