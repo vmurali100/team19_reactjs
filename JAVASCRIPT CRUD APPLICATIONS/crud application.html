@@ -213,30 +213,25 @@
         //     }
         //     console.log(user)
         //   }
-        // }
 
-        function registerUser(){
-          var user={
-            fname:"",
-            lname:"",
-            gender:"",
-          }
-          var allradiobuttons=document.getElementsByName("gender")
-          for(i=0;i<allradiobuttons.length;i++){
-            if(allradiobuttons[i].checked){
-              console.log(allradiobuttons[i].value)
-              user.gender=allradiobuttons[i].value
-            }
-            console.log(user)
+function registerUser(){
+  var user={
+    fname:"",
+    lname:"",
+    gender:"",
+  }
+  var allradiobuttons=document.getElementsByName("gender")
+  for(i=0;i<allradiobuttons.length;i++){
+    if(allradiobuttons[i].checked){
+      console.log(allradiobuttons[i].value)
+      user.gender=allradiobuttons[i].value
+    }
+    console.log(user)
 
-          }
-        }
+  }
+}
 
-
-
-        
-        
-       </script> 
+</script> 
 </body>
 </html>   
  

@@ -42,7 +42,8 @@
         var student={
             fname:document.getElementById("fname").value,
             lname:document.getElementById("lname").value,
-            gender:"null"
+            gender:"null",
+            subjects:[]
         
 
        }
@@ -147,24 +148,95 @@
         lname:document.getElementById("lname").value="";
 
     }
+</script>
 
+<form>
+    <label for="">Gender </label> <br>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Others"> Others
+    <br><br>
+    <label for="">Subjects : </label> <br>
+    HTML <input type="checkbox" name="subjects" value="HTML"> <br>
+    CSS <input type="checkbox" name="subjects" value="CSS"> <br>
+    Javascript <input type="checkbox" name="subjects" value="Javascript"> <br>
+    ReactJS <input type="checkbox" name="subjects" value="ReactJS"> <br>
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <label for="">DOB</label>
+    <input type="date" name="" id="dob"> <br>
+    
+    <label for="">State :</label>
+    <select name="" id="stateName">
+        <option value="AP">AP</option>
+        <option value="TS">TS</option>
+        <option value="TN">TN</option>
+        <option value="KA">KA</option>
+        <option value="MP">MP</option>
+    </select> <br> <br>
+    <button type="button" onclick="addUser()">Add User</button>
+    
+    </form>
+    
+    <script>
+    function addUser() {
+        var person = {
+            fname: "ram",
+            lname: "sam",
+            gender: "",
+            subjects: [],
+    
+        }
+        var allCheckBoxes = document.getElementsByName("subjects");
+        for (let index = 0; index < allCheckBoxes.length; index++) {
+            if (allCheckBoxes[index].checked === true) {
+                person.subjects.push(allCheckBoxes[index].value);
+            }
+    
+        }
+    
+        var allRadioBtns = document.getElementsByName("gender")
+    
+        for (let index = 0; index < allRadioBtns.length; index++) {
+            if (allRadioBtns[index].checked) {
+                person.gender = allRadioBtns[index].value;
+            }
+    
+        }
+    
+        person.dob = document.getElementById("dob").value
+        person.stateName = document.getElementById("stateName").value
+        console.log(person)
+        postDataToServer(person)
+    }
+    function postDataToServer(person) {
+        var addData = new XMLHttpRequest();
+        addData.onreadystatechange = function () {
+            if (addData.readyState == 4 && addData.status == 201) {
+                console.log("User Added Successfully")
+            }
+        }
+        addData.open("POST", "http://localhost:3000/people");
+        addData.setRequestHeader("Content-Type", "Application/json");
+        addData.send(JSON.stringify(person))
+    }
+    
+    function getDataFromServer() {
+        var getPeople = new XMLHttpRequest();
+        getPeople.onreadystatechange = function () {
+            if (getPeople.readyState == 4 && getPeople.status == 200) {
+                console.log(JSON.parse(getPeople.response))
+            }
+        }
+        getPeople.open("GET","http://localhost:3000/people");
+        getPeople.send()
+    }
+    
+    getDataFromServer()
+    
+    
+    var allCheckBoxes=document.getElementsByName("subjects")
+    for(i=0;i<allCheckBoxes.length;i++);
+    
 
     </script>
 

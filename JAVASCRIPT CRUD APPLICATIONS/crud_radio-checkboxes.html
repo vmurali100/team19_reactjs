@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <label for="fname">firstname</label>
+        <input type="text" id="fname"><br>
+
+        <label for="lname">lastname</label>
+        <input type="text" id="lname"><br>
+
+        <label for="">gender</label>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female
+        <input type="radio" name="gender" value="others">Others <br>
+
+        <label for="">students</label>
+        <input type="checkbox" name="students" value="html">HTML
+        <input type="checkbox" name="students" value="css">css
+        <input type="checkbox" name="students" value="JS">JS
+        <input type="checkbox" name="students" value="ReactJS">ReactJS <br>
+
+        <button onclick="adduser()" type="button">adduser</button>
+            </form>
+
+            <table>
+            <thead>
+                <tr>
+                    <th>fname</th>
+                    <th>lname</th>
+                    <th>edit</th>
+                    <th>delete</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            </table>
+
+            <script>
+                var users=[]
+                function adduser(){
+                     var details={
+                        fname:document.getElementById("fname"),
+                        lname:document.getElementById("lname"),
+                        gender:"",
+                        Students:[]
+
+                     }
+
+                     users.push(details)
+                     displayusers()
+                     clearUser()
+                }
+
+                function displayusers(){
+                    for(i=0;i<users.length;i++){
+                        var mytr=document.createElement("tr")
+
+                        for(a in users[i]){
+                            var mytd=document.createElement("td")
+                            mytd.innerHTML=users[i][a]
+                            mytr.appendChild(mytd)
+                        }
+                        document.querySelector("tbody").appendChild(mytr)
+                        }
+                   
+                        }
+
+                        function clearUser(){
+                            fname:document.getElementById("fname").value;
+                            lname:document.getElementById("lname").value;
+                            gender:"";
+                            Students:[]
+                        }
+
+
+
+</script>
+    
+</body>
+</html>
