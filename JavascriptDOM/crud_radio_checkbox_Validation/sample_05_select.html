@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <select name="" id="stateName" onchange="validateselect()">
+            <option value="">Select A State:</option>
+            <option value="Andhra">AP</option>
+            <option value="Tamilnadu">TN</option>
+            <option value="Karnataka">KA</option>
+            <option value="Telangana">TS</option>
+        </select> <br>
+        <small id="error" style="color: red;">State is Required</small>  <br>
+        <button type="button"  onclick="validatestate()" id="disabledbtn">Select</button>
+    </form>
+
+    <script>
+        function validateselect(){
+            document.getElementById("error").style.display="block";
+            document.getElementById("disabledbtn").setAttribute("disabled",true);
+            var getcheckboxvalue=document.getElementById("stateName").value;
+            if(getcheckboxvalue !== ""){
+                document.getElementById("error").style.display = "none";
+                document.getElementById("disabledbtn").removeAttribute("disabled", true)
+            }
+
+
+
+            
+
+        }
+       
+        
+
+    </script>
+</body>
+</html>

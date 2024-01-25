@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Subjects : </label>
+        <input type="checkbox" name="Subjects" value="HTML" onchange="validatechecbox()" > HTML
+        <input type="checkbox" name="Subjects" value="CSS" onchange="validatechecbox()"> CSS
+        <input type="checkbox" name="Subjects" value="JS"  onchange="validatechecbox()"> JS
+        <input type="checkbox" name="Subjects" value="ReactJS"onchange="validatechecbox()" > ReactJS <br>
+        <small id="checkboxerror" style="color: red;">Select Atleast 1 checkbox</small>
+<br>
+        <button type="button" disabled id="RegisterBtn">Register</button>
+    </form>
+
+    <script>
+        function validatechecbox(){
+            document.getElementById("checkboxerror").style.display="block";
+            document.getElementById("RegisterBtn").setAttribute("disabled",true);
+
+            var getcheckboxvalue=document.getElementsByName("Subjects");
+            for(i=0;i<getcheckboxvalue.length; i++){
+                if(getcheckboxvalue[i].checked === true){
+                document.getElementById("checkboxerror").style.display="none";
+                document.getElementById("RegisterBtn").removeAttribute("disabled",false);
+
+                }
+          }
+
+        }
+    </script>
+</body>
+</html>

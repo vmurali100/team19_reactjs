@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="'">Gender : </label>
+        <input type="radio" name="gender" id="" onchange="validradioBtn()"> Male
+        <input type="radio" name="gender" id="" onchange="validradioBtn()"> Female
+        <input type="radio" name="gender" id="" onchange="validradioBtn()"> Others <br>
+        <small id="gendererror" style="color: red;">Gender is Required</small>
+<br>
+        <button type="button" disabled id="RegisterBtn">Register</button>
+    </form>
+    <script>
+        function validradioBtn(){
+            document.getElementById("gendererror").style.display="block";
+            document.getElementById("RegisterBtn").setAttribute("disabled",true);
+            
+            var GetRadioBtn=document.getElementsByName("gender");
+            for(i=0;i<GetRadioBtn.length;i++){
+                if(GetRadioBtn[i].checked === true){
+                    document.getElementById("gendererror").style.display="none";
+                    document.getElementById("RegisterBtn").removeAttribute("disabled",false);
+                }
+
+            }
+        }
+        
+    </script>
+</body>
+</html>

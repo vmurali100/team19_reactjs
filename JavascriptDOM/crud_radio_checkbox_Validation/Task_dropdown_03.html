@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <select name="" id="States" onchange="ValiditateState()">
+            <option value="">Select A State</option>
+            <option value="Andhazzr">AP</option>
+            <option value="Telangana">TS</option>
+            <option value="Tamilnadu">TN</option>
+            <option value="karnata">KA</option>
+        </select> <br>
+
+        <small id="error" style="color: red;">State is Required</small> <br> <br>
+        <button disabled id="RegisterBtn" type="button">Register</button>
+    </form>
+    <script>
+        function ValiditateState(){
+            document.getElementById("error").style.display="block";
+            document.getElementById("RegisterBtn").setAttribute("disabled",true);
+            var getvalue=document.getElementById("States").value;
+            if( getvalue !==""){
+            document.getElementById("error").style.display="none";
+            document.getElementById("RegisterBtn").removeAttribute("disabled",false);
+
+            }
+
+        }
+    </script>
+</body>
+</html>
