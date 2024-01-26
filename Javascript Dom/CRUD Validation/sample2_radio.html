@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label for="'">Gender : </label>
+        <input type="radio" name="gender" id="male" onchange="validate()"> Male
+        <input type="radio" name="gender" id="female" onchange="validate()"> Female
+        <input type="radio" name="gender" id="others" onchange="validate()"> Others
+        <br>
+        <span style="color:red"  ; id="genderErr">select any gender</span><br>
+        <button type="button" disabled id="addBtn">Register</button>
+    </form>
+    <script>
+        function validate() {
+            document.getElementById("genderErr").style.display = "block";
+            document.getElementById("addBtn").setAttribute("disabled", true)
+
+            var allRadioBtns = document.getElementsByName("gender")
+
+            for (let i = 0; i < allRadioBtns.length; i++) {
+                if (allRadioBtns[i].checked == true) {
+                    document.getElementById("genderErr").style.display = "none";
+                    document.getElementById("addBtn").removeAttribute("disabled", true)
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

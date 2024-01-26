@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <select name="" id="dropdown" onchange="validate()">
+            <option value="">Select A State</option>
+            <option value="Andhar">AP</option>
+            <option value="Telangana">TS</option>
+            <option value="Tamilnadu">TN</option>
+            <option value="karnata">KA</option>
+        </select><br>
+        <span style="color:red";  id="dropdownErr">Must select one option</span><br>
+        <button type="button" disabled id="addBtn">Register</button>
+    </form>
+
+    <script>
+        function validate(){
+            
+            document.getElementById("dropdownErr").style.display = "block";
+            document.getElementById("addBtn").setAttribute("disabled" , true);
+
+            var dropdown = document.getElementById("dropdown").value;
+
+            if(dropdown.length >  0 || dropdown !== ""){
+                document.getElementById("dropdownErr").style.display = "none";
+                document.getElementById("addBtn").removeAttribute("disabled", true)
+            }
+           
+           
+            
+        }
+    </script>
+</body>
+</html>

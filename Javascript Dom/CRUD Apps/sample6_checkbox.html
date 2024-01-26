@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="">Subjects:</label><br>
+
+        <input type="checkbox" name="subjects" value="html">Html <br>
+        <input type="checkbox" name="subjects" value="css">Css <br>
+        <input type="checkbox" name="subjects" value="js">Javascript <br>
+        <input type="checkbox" name="subjects" value="reactjs">Reactjs <br>
+
+        <button type="button" onclick="registerUser()">Submit</button>
+    </form>
+
+    <script>
+        function registerUser(){
+           var user = {
+            fname:"",
+            lname:"",
+            subjects: []
+           }
+
+           var allCheckBoxes = document.getElementsByName("subjects");
+           for(var i=0; i < allCheckBoxes.length; i++){
+              if(allCheckBoxes[i].checked == true){
+                console.log(allCheckBoxes[i].value)
+                user.subjects.push(allCheckBoxes[i].value)
+              }
+           }
+
+           console.log(user)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="gender">Gender:</label><br>
+
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="male"><br>
+
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="female"><br>
+
+        <label for="others">Others</label>
+        <input type="radio" name="gender" id="others" value="others"><br>
+
+        <button type="button" onclick="registerUser()">Submit</button>
+
+    </form>
+    <script>
+        function registerUser(){
+            var user = {
+                fname: "",
+                lname: "",
+                gender: null
+            }
+
+            var allRadioButtons = document.getElementsByName("gender")
+
+            for(var i=0; i < allRadioButtons.length; i++){
+                if(allRadioButtons[i].checked == true){
+                    console.log(allRadioButtons[i].value);
+                    user.gender = allRadioButtons[i].value
+                }
+            }
+
+            console.log(user)
+        }
+    </script>
+</body>
+</html>

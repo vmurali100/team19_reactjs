@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="">First name</label>
+        <input type="text" name="" id="fname" onkeyup="validate()"><br>
+
+        <span style="color: red; display: none;" id="fnameErr">First Name should be minimum 6 characters</span>
+        <button disabled id="addBtn">Register</button>
+    </form>
+
+    <script>
+        function validate(){
+            document.getElementById("fnameErr").style.display = "block";
+            document.getElementById("addBtn").setAttribute("disabled" , true)
+
+            var fname = document.getElementById("fname").value;
+            if(fname.length >= 6){
+                document.getElementById("fnameErr").style.display = "none";
+            document.getElementById("addBtn").removeAttribute("disabled" , true)
+            }
+        }
+    </script>
+</body>
+</html>
