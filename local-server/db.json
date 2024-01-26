@@ -1,36 +1,75 @@
 {
   "users": [
     {
-      "id": "f5bb",
-      "fullName": "Murali V",
+      "fname": "vmr",
       "email": "vmurali100@gmail.com",
-      "password": "44455"
-    },
-    {
-      "id": "75e7",
-      "fullName": "Sam",
-      "email": "Sam@gmail.com",
-      "password": "88"
-    },
-    {
-      "fullName": "Rehman",
-      "email": "user@gmail.com",
-      "password": "2222",
-      "id": "7b92"
-    }
-  ],
-  "people": [
-    {
-      "fname": "ram",
-      "lname": "sam",
-      "gender": "",
+      "state": "Karnataka",
+      "dob": "1990-10-16",
       "subjects": [
-        "HTML",
-        "CSS"
+        "subject1",
+        "subject2"
       ],
-      "dob": "2024-01-15",
-      "stateName": "AP",
+      "gender": "male",
       "id": 1
+    },
+    {
+      "fname": "Murali",
+      "email": "murali.veesambattu@gmail.com",
+      "state": "Karnataka",
+      "dob": "1995-07-20",
+      "subjects": [
+        "subject1"
+      ],
+      "gender": "male",
+      "id": 2
+    },
+    {
+      "fname": "mmm",
+      "email": "vmurali100@gmail.com",
+      "state": "Karnataka",
+      "dob": "2003-06-26",
+      "subjects": [
+        "subject2",
+        "subject3"
+      ],
+      "gender": "other",
+      "id": 4
+    },
+    {
+      "fname": "vmr",
+      "email": "vmurali100@gmail.com",
+      "state": "Karnataka",
+      "dob": "2024-01-16",
+      "subjects": [
+        "subject1",
+        "subject2"
+      ],
+      "gender": "male",
+      "id": 5
+    },
+    {
+      "fname": "vmr",
+      "email": "vmurali100@gmail.com",
+      "state": "Karnataka",
+      "dob": "1998-02-02",
+      "subjects": [
+        "subject1",
+        "subject2"
+      ],
+      "gender": "male",
+      "id": 6
+    },
+    {
+      "fname": "vmr",
+      "email": "vmurali100@gmail.com",
+      "state": "Karnataka",
+      "dob": "1995-06-06",
+      "subjects": [
+        "subject1",
+        "subject2"
+      ],
+      "gender": "male",
+      "id": 7
     }
   ]
 }
