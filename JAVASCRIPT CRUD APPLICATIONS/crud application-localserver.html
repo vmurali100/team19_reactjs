@@ -9,6 +9,113 @@
     
     <form action="">
         <label for="fname">fname</label>
+        <input type="text" id="fname">
+
+        <label for="lname">lname</label>
+        <input type="text" id="lname">
+
+        <button type="button" onclick="adduser()">adduser</button>
     </form>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>fname</th>
+                <th>lname</th>
+                <th>edit</th>
+                <th>delete</th>
+
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+<script>
+    var users=[]
+     function adduser(){
+   var details={
+    fname:document.getElementById("fname").value,
+    lname:document.getElementById("lname").value,
+}
+users.push(details)
+displayusers()
+clearuser()
+}
+
+function displayusers(){
+    document.querySelector("tbody").innerHTML=""
+    for(i=0;i<users.length;i++){
+        var mytr=document.createElement("tr");
+
+        for(a in users[i]){
+            var mytd=document.createElement("td")
+            mytd.innerHTML=users[i][a]
+
+            mytr.appendChild(mytd)
+        }
+
+        var edittd=document.createElement("td")
+        var editbtn=document.createElement("button")
+
+        editbtn.innerHTML="edit"
+        editbtn.setAttribute("onclick","edituser("+i+")")
+
+        edittd.appendChild(editbtn)
+        mytr.appendChild(edittd)
+
+        var deltd=document.createElement("td")
+        var delbtn=document.createElement('button')
+        delbtn.innerHTML="delete"
+        delbtn.setAttribute("onclick","deleteuser("+i+")")
+
+        deltd.appendChild(delbtn)
+        mytr.appendChild(deltd)
+
+
+
+        document.querySelector("tbody").appendChild(mytr)
+    }
+}
+
+ gindex="null"
+ function edituser(i){
+   gindex=i;
+   fname:document.getElementById('fname').value=users[i].fname
+   lname:document.getElementById("lname").value=users[i].lname
+ }
+
+ function updateuser(i){
+    var details={
+        fname:document.getElementById("fname").value,
+        lname:document.getElementById('lname').value
+    }
+    users[gindex]=details
+    displayusers()
+    clearuser()
+}
+
+function deleteuser(i){
+    users=users.filter((usr)=>{
+        return usr.fname!==users[i].fname
+    })
+    displayusers()
+}
+
+function clearuser(){
+    fname:document.getElementById("fname").value ="";
+    lname:document.getElementById("lname").value = "";
+}
+
+function postdatatoserver(){
+    var adddata=new XMLHttpRequest();
+    adddata.onreadystatechange=function(){
+        if(adddata)
+    }
+
+}
+        
+
+
+</script>
 </body>
 </html>
