@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <select name="" id="">
+            <option value="">Select A State</option>
+            <option value="Andhar">AP</option>
+            <option value="Telangana">TS</option>
+            <option value="Tamilnadu">TN</option>
+            <option value="karnata">KA</option>
+        </select>
+
+        <input type="text" name="" id="select"onchange="validate()">
+        <span style="color:red;display:none;id:value"></span>
+        <button type="button">Register</button>
+    </form>
+    <!-- <form>
+        <label for="">First Name :</label>
+        <input type="text" name="" id="fname" onkeyup="validate()"> <br>
+        <span style="color: red;display: none;" id="fnameError">First Name should me minimum 6 Characters</span> <br>
+        <button disabled id="addBtn">Register</button>
+    </form>
+
+    <script>
+        function validate() {
+            document.getElementById("fnameError").style.display = "block";
+            document.getElementById("addBtn").setAttribute("disabled", true)
+            var fname = document.getElementById("fname").value;
+            if (fname.length >= 6) {
+                document.getElementById("fnameError").style.display = "none";
+                document.getElementById("addBtn").removeAttribute("disabled", true)
+            } 
+        } -->
+    <!-- </script> -->
+    <script>
+        function validate(){
+            document.getElementById('dropdown').style.display="block";
+            
+            var newdropdown=document.getElementById("select").value;
+            if(select.length>=4){
+                document.getElementById('selecterror').style.display="none";
+                document.getElementById('addbtn').removeAttribute("disabled",true)
+
+            }else{
+                document.getElementById('addbtn').setAttribute('enabled',true)
+            }
+        }
+    </script>
+</body>
+</html>

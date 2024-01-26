@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+    <label for="fname">firstname</label>
+    <input type="text" id="fname"><br><br>
+
+    <label for="lname">lastname</label>
+    <input type="text" id="lname"><br><br>
+
+    <label for="">gender</label>
+    <input type="radio" name="gender" value="male">male
+    <input type="radio" name="gender" value="female">female
+    <input type="radio" name="gender" value="others">others <br>
+    <br>
+
+    <label for="">subjects</label>
+    <input type="checkbox" name="subjects" value="html">html
+    <input type="checkbox" name="subjects" value="css">css
+    <input type="checkbox" name="subjects" value="js">js
+    <input type="checkbox" name="subjects" value="RJS">RJs <br><br>
+
+    <button type="button" onclick="adduser()">adduser</button>
+    <button type="button" onclick="updateuser()">updateuser</button>
+</form>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>fname</th>
+            <th>lname</th>
+            <th>gender</th>
+            <th>student</th>
+            <th>edit</th>
+            <th>delete</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script>
+    var users=[]
+    function adduser(){
+        var details={
+            fname:document.getElementById("fname").value,
+            lname:document.getElementById("lname").value,
+            gender:"",
+           subjects:[]
+        }
+        
+        getgender(details)
+        getsubjects(details)
+        users.push(details)
+        displayusers()
+        clearform()
+    }
+
+    function displayusers(){
+        document.querySelector("tbody").innerHTML=""
+        for(i=0;i<users.length;i++){
+        
+        var mytr=document.createElement("tr")
+         
+        for(a in users[i]){
+            var mytd=document.createElement("td")
+            mytd.innerHTML=users[i][a]
+            mytr.appendChild(mytd)
+        }
+
+        var edittd=document.createElement("td")
+        var editbtn=document.createElement("button")
+        editbtn.innerHTML="edit"
+        editbtn.setAttribute("onclick","edituser("+i+")")
+
+        edittd.appendChild(editbtn)
+        mytr.appendChild(edittd)
+
+        var deltd=document.createElement("td")
+        var delbtn=document.createElement("button")
+        delbtn.innerHTML="delete"
+        delbtn.setAttribute("onclick","deleteuser("+i+")")
+        deltd.appendChild(delbtn)
+        mytr.appendChild(deltd)
+
+    document.querySelector("tbody").appendChild(mytr)
+    }
+}
+
+gindex=null;
+function edituser(i){
+    gindex=i
+    document.getElementById("fname").value=users[i].fname;
+    document.getElementById("lname").value=users[i].lname;
+    gender="",
+    subjects=[]
+}
+
+function updateuser(i){
+    var details={
+            fname:document.getElementById("fname").value,
+            lname:document.getElementById("lname").value,
+            gender:"",
+            subjects:[]
+        }
+users[gindex]=details
+displayusers()
+clearform()
+}
+
+function deleteuser(i){
+    users=users.filter((usr)=>{
+        return usr.fname!==users[i].fname
+    })
+    displayusers()
+}
+
+
+function getgender(details){
+     var allradiobutons=document.getElementsByName("gender")
+     for(i=0;i<allradiobutons.length;i++){
+        if(allradiobutons[i].checked==true){
+            details.gender=allradiobutons[i].value
+        }
+        }
+    }
+
+    function getsubjects(details){
+        var allcheckboxes=document.getElementsByName("subjects")
+        for(i=0;i<allcheckboxes.length;i++){
+            if(allcheckboxes[i].checked==true){
+                details.subjects.push(allcheckboxes[i].value)
+            }
+        }
+    }
+
+function clearform(){
+   
+            fname:document.getElementById("fname").value="";
+            lname:document.getElementById("lname").value="";
+           gender:"",
+           subjects=[]
+    }
+
+
+
+
+
+
+    
+        
+</script>
+
+
+</body>
+</html>
