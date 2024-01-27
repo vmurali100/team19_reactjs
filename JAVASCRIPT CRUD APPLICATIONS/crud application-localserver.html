@@ -15,6 +15,7 @@
         <input type="text" id="lname">
 
         <button type="button" onclick="adduser()">adduser</button>
+        <button type="button" onclick=""updateuser()>updateuser</button>
     </form>
 
     <table border="1">
@@ -109,10 +110,28 @@ function clearuser(){
 function postdatatoserver(){
     var adddata=new XMLHttpRequest();
     adddata.onreadystatechange=function(){
-        if(adddata)
+       if(adddata.readyState==4 && adddata.status==201){
+        console.log("user added succesfully")
     }
-
+    }
+    adddata.open("post","http://localhost:3000/users")
+    adddata.setRequestHeader("content-type","Applicaton/json");
+    adddata.send(JSON.stringify())
 }
+    
+function getdatafromserver(){
+    var getpeople=new XMLHttpRequest();
+    getpeople.onreadystatechange=function(){
+        if(getpeople.readyState==4 && getpeople.status==200){
+            console.log(JSON.parse(getpeople.response))
+        }
+    }
+    getpeople.open("GET","http://localhost:3000/users");
+    getpeople.send()
+}
+getdatafromserver()
+
+
         
 
 
