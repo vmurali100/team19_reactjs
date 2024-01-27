@@ -1,75 +1,47 @@
 {
   "users": [
     {
-      "fname": "vmr",
-      "email": "vmurali100@gmail.com",
-      "state": "Karnataka",
-      "dob": "1990-10-16",
-      "subjects": [
-        "subject1",
-        "subject2"
-      ],
-      "gender": "male",
-      "id": 1
-    },
-    {
       "fname": "Murali",
-      "email": "murali.veesambattu@gmail.com",
-      "state": "Karnataka",
-      "dob": "1995-07-20",
-      "subjects": [
-        "subject1"
-      ],
-      "gender": "male",
-      "id": 2
-    },
-    {
-      "fname": "mmm",
       "email": "vmurali100@gmail.com",
-      "state": "Karnataka",
-      "dob": "2003-06-26",
+      "gender": "male",
+      "state": "Andhra Pradesh",
       "subjects": [
         "subject2",
         "subject3"
       ],
-      "gender": "other",
+      "id": 1
+    },
+    {
+      "fname": "Murali Krishna",
+      "email": "vmurali100@gmail.com",
+      "gender": "male",
+      "state": "Andhra Pradesh",
+      "subjects": [
+        "subject2",
+        "subject3"
+      ],
+      "id": 2
+    },
+    {
+      "fname": "Ram Krishna",
+      "email": "ram@gmail.com",
+      "gender": "male",
+      "state": "dd",
+      "subjects": [
+        "subject2"
+      ],
+      "id": 3
+    },
+    {
+      "fname": "vmr12",
+      "email": "vmurali100@gmail.com",
+      "gender": "male",
+      "state": "Andhra Pradesh",
+      "subjects": [
+        "subject1",
+        "subject2"
+      ],
       "id": 4
-    },
-    {
-      "fname": "vmr",
-      "email": "vmurali100@gmail.com",
-      "state": "Karnataka",
-      "dob": "2024-01-16",
-      "subjects": [
-        "subject1",
-        "subject2"
-      ],
-      "gender": "male",
-      "id": 5
-    },
-    {
-      "fname": "vmr",
-      "email": "vmurali100@gmail.com",
-      "state": "Karnataka",
-      "dob": "1998-02-02",
-      "subjects": [
-        "subject1",
-        "subject2"
-      ],
-      "gender": "male",
-      "id": 6
-    },
-    {
-      "fname": "vmr",
-      "email": "vmurali100@gmail.com",
-      "state": "Karnataka",
-      "dob": "1995-06-06",
-      "subjects": [
-        "subject1",
-        "subject2"
-      ],
-      "gender": "male",
-      "id": 7
     }
   ]
 }
