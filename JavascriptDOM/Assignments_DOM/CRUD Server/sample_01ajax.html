@@ -77,6 +77,11 @@
 <body>
 
     <form id="registrationForm">
+
+        <label for="fullName">Id</label>
+        <input type="text" id="id" name="id" required>
+
+          
         <label for="fullName">Full Name:</label>
         <input type="text" id="fullName" name="fullName" required>
 
@@ -105,7 +110,7 @@
     </table>
 
     <script>
-        var users = []
+         var users = []
         function getAllUsersFromServer(){
             var getUsers = new XMLHttpRequest()
             getUsers.onreadystatechange = function(){
@@ -119,6 +124,7 @@
         }
         function registerUser() {
             var user = {
+                id: document.getElementById("id").value,
                 fullName: document.getElementById("fullName").value,
                 email: document.getElementById("email").value,
                 password: document.getElementById("password").value
@@ -139,6 +145,7 @@
             clearUser()
         }
         function clearUser() {
+            document.getElementById("id").value=""
             document.getElementById("fullName").value = ""
             document.getElementById("email").value = ""
             document.getElementById("password").value = ""
@@ -190,6 +197,7 @@
         var gIndex = null
         function editUser(index){
             gIndex = index
+            document.getElementById("id").value=users[index].id
             document.getElementById("fullName").value =users[index].fullName
             document.getElementById("email").value = users[index].email
             document.getElementById("password").value = users[index].password
@@ -200,6 +208,7 @@
 
         function updateUser(){
             var user = {
+                id: document.getElementById("id").value,
                 fullName: document.getElementById("fullName").value,
                 email: document.getElementById("email").value,
                 password: document.getElementById("password").value
@@ -222,8 +231,9 @@
         }
     
         getAllUsersFromServer()
+       
     
     </script>
 </body>
 
-</html>
+</html> 

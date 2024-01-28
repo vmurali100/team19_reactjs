@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        /* Add your custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: #fff;
+        }
+        #updatebtn{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="registrationForm">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="button" id="addBtn" onclick="registerUser()">Register</button>
+        <button type="button" id="updatebtn" onclick="updateUser()">Update</button>
+    </form>
+
+    <table id="userData">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var users=[]
+        //getAllUsersFromServer
+
+        function getAllUsersFromServer(){
+            var getUsers=new XMLHttpRequest()
+            getUsers.onreadystatechange=function(){
+                if(getUsers.status == 200 && getUsers.readyState == 4){
+                    users=JSON.parse(getUsers.responseText);
+                    displayUsers();
+                }
+            }
+            getUsers.open("GET","http://localhost:3000/users");
+            getUsers.send()
+        }
+
+        // registerUser
+
+        function registerUser(){
+            var user = {
+                fullName:document.getElementById("fullName").value,
+                email:document.getElementById("email").value,
+                password:document.getElementById("password").value,
+
+            }
+
+            var sendproduct= new XMLHttpRequest()
+            sendproduct.onreadystatechange = function(){
+                if(sendproduct.status == 200  && sendproduct.readyState == 4){
+                    console.log(JSON.parse(sendproduct.responseText))
+                }
+            }
+            sendproduct.open("POST","http://localhost:3000/users");
+            sendproduct.setRequestHeader("Content-type","application/json");
+            sendproduct.send(JSON.stringify(user))
+            displayUsers();
+
+        }
+        //   clearUser
+
+        function clearUser(){
+            document.getElementById("fullName").value="";
+            document.getElementById("email").value="";
+            document.getElementById("password").value="";
+
+        }
+
+        // displayUsers
+
+        function displayUsers(){
+            document.querySelector("tbody").innerHTML="";
+            users.forEach((usr , i)=>{
+                var mytr=document.createElement("tr");
+                for(u in usr){
+                    var mytd=document.createElement("td");
+                    mytd.innerHTML=usr[u];
+                    mytr.appendChild(mytd);
+                }
+                // editbtn
+
+                var editTd=document.createElement("td");
+                var editbtn=document.createElement("button")
+                editbtn.setAttribute("onclick", "editUser("+i+")");
+                editbtn.innerHTML="Edit";
+                editTd.appendChild(editbtn);
+                mytr.appendChild(editTd)
+
+                // deletebtn
+
+                var deleteTd=document.createElement("td");
+                var deleteBtn=document.createElement("button")
+                deleteBtn.setAttribute("onclick", "deleteUser("+i+")");
+                deleteBtn.innerHTML="Delete";
+                deleteTd.appendChild(deleteBtn);
+                mytr.appendChild(deleteTd);
+
+
+                document.querySelector("tbody").appendChild(mytr);
+            })
+        }
+
+        //Deleteuser
+
+        function deleteUser(row){
+            console.log(row);
+            var sendproduct= new XMLHttpRequest()
+            sendproduct.onreadystatechange = function(){
+                if(sendproduct.status == 200  && sendproduct.readyState == 4){
+                    getAllUsersFromServer();
+
+                    
+                }
+            }
+            sendproduct.open("DELETE","http://localhost:3000/users/"+users[row].id);
+            sendproduct.send();
+            displayUsers();
+
+
+        }
+
+        // edituser
+        var gIndex=null;
+        function editUser(index){
+            gIndex=index;
+            document.getElementById("fullName").value=users[index].fullName;
+            document.getElementById("email").value=users[index].email;
+            document.getElementById("password").value=users[index].password;
+
+            document.getElementById("addBtn").style.display="none";
+            document.getElementById("updatebtn").style.display="block";
+            
+        }
+
+        // updateuser
+
+        function updateUser(index){
+            var user = {
+                fullName:document.getElementById("fullName").value,
+                email:document.getElementById("email").value,
+                password:document.getElementById("password").value,
+
+            }
+
+            var sendproduct= new XMLHttpRequest()
+            sendproduct.onreadystatechange = function(){
+                if(sendproduct.status == 200  && sendproduct.readyState == 4){
+                    console.log(JSON.parse(sendproduct.responseText))
+                }
+            }
+            sendproduct.open("PUT","http://localhost:3000/users/"+users[gIndex].id);
+            sendproduct.setRequestHeader("Content-type","application/json");
+            sendproduct.send(JSON.stringify(user))
+
+            document.getElementById("addBtn").style.display="block";
+            document.getElementById("updatebtn").style.display="none";
+        }
+        
+
+        getAllUsersFromServer();
+
+
+
+  
+
+       
+
+       
+       
+
+
+
+    </script>
+</body>
+
+</html> 

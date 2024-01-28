@@ -1,25 +1,4 @@
 {
-  "users": [
-    {
-      "id": "jhdgaj"
-    },
-    {
-      "id": "52fc",
-      "fullName": "sandy",
-      "email": "sandy@123gmail.com",
-      "password": "bvb"
-    },
-    {
-      "id": "1c32",
-      "fullName": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "46c8",
-      "fullName": "",
-      "email": "",
-      "password": ""
-    }
-  ]
+  "users": []
+  
 }
