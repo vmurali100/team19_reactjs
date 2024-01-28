@@ -78,6 +78,9 @@
 
 <body>
     <form>
+        <label>Id</label>
+        <input type="text"  id="id">
+
         <label for="fname">First Name</label>
         <input type="text" id="fname">
 
@@ -123,7 +126,7 @@
 
     <table>
         <tr>
-            
+            <th>ID</th>
             <th>First Name</th>
             <th>Email</th>
             <th>State</th>
@@ -132,7 +135,7 @@
             <th>Subjects</th>
             <th>Gender</th>
 
-            <th>ID</th>
+           
             <th>Edit</th>
             <th>Delete</th>
         </tr>
@@ -143,7 +146,7 @@
         //Create user
         function addUser() {
             var user = {
-
+                id : document.getElementById("id").value,
                 fname: document.getElementById("fname").value,
                 email: document.getElementById("email").value,
                 state: document.getElementById("state").value,
@@ -239,6 +242,7 @@
         function editUser(i) {
             console.log(users[i]);
             gIndex = i
+            document.getElementById("id").value = users[i].id
             document.getElementById("fname").value = users[i].fname;
             document.getElementById("email").value = users[i].email;
             document.getElementById("dob").value = users[i].dob;
@@ -266,6 +270,7 @@
 
         function updateUser() {
             var user = {
+                id: document.getElementById("id").value,
                 fname: document.getElementById("fname").value,
                 email: document.getElementById("email").value,
                 state: document.getElementById("state").value,
