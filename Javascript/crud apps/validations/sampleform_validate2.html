@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validate2</title>
+</head>
+<body>
+    <form>
+        <label for="">Gender:</label>
+        <input type="radio" name="gender" id="" onchange="validateradio()">Male
+        <input type="radio" name="gender" id="" onchange="validateradio()">Female
+        <input type="radio" name="gender" id="" onchange="validateradio()">Others <br>
+        <span id="select" style="color: red;">please select a gender</span> <br> <br>
+        <button  type="button" disabled id="Registerbtn">Register</button>
+    </form>
+    <script>
+        function validateradio(){
+            document.getElementById("select").style.display="block";
+            document.getElementById("Registerbtn").setAttribute("disabled",true)
+            var selectradio=document.getElementsByName("gender");
+            for(i=0;i<selectradio.length;i++){
+               if(selectradio[i].checked === true){
+                document.getElementById("select").style.display="none";
+
+                document.getElementById("Registerbtn").removeAttribute("disabled",false)
+               }
+            }
+        }
+    </script>
+</body>
+</html>

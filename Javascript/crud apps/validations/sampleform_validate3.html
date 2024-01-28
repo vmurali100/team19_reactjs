@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validate3</title>
+</head>
+
+<body>
+    <form>
+        <label for="" style="font-size: 20px; font-weight: bold;">Sports</label> <br>
+        <input type="checkbox" name="Sports" value="Cricket" id="" onchange="validatecheckbox()">Cricket <br>
+        <input type="checkbox" name="Sports" value="Volleyball" id="" onchange="validatecheckbox()">Volleyball <br>
+        <input type="checkbox" name="Sports" value="Basketball" id="" onchange="validatecheckbox()">Basketball <br>
+        <input type="checkbox" name="Sports" value="Kabadi" id="" onchange="validatecheckbox()">Kabadi <br>
+        <input type="checkbox" name="Sports" value="Tennis" id="" onchange="validatecheckbox()">Tennis <br>
+        <input type="checkbox" name="Sports" value="Hockey" id="" onchange="validatecheckbox()">Hockey <br>
+        <span id="checkbox" style="color: red;">Select atleast Two Activities</span> <br> <br>
+        <button type="button" disabled id="Registerbtn">Register</button>
+    </form>
+    <script>
+        function validatecheckbox(){
+            document.getElementById("checkbox").style.display="block";
+            document.getElementById("Registerbtn").setAttribute("disabled",true);
+            var validatecheckbox=document.getElementsByName("Sports");
+            for (let index = 0; index < validatecheckbox.length; index++) {
+                if(validatecheckbox[index   ].checked === true){
+                    document.getElementById("checkbox").style.display="none";
+                    document.getElementById("Registerbtn").removeAttribute("disabled",false);
+
+                }
+
+                
+                
+            }
+        }
+    </script>
+</body>
+
+</html>

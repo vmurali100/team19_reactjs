@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validate1</title>
+</head>
+
+<body>
+    <h2>Select a subject</h2>
+    <form>
+        <select name="" id="selectid" onchange="validate()">
+            <option value="">select a subject</option>
+            <option value="Telugu">Telugu</option>
+            <option value="English">English</option>
+            <option value="Hindi">Hindi</option>
+            <option value="Social">Social</option>
+        </select> <br> <br>
+        <span style="color: red;" id="subjecterror">Select a atleast one subject</span> <br> <br>
+        <button type="button" disabled id="Registerbtn">Register</button>
+    </form>
+    <script>
+        function validate(){
+            document.getElementById("subjecterror").style.display="block";
+            document.getElementById("Registerbtn").setAttribute("disabled",true)
+            var selectdrop=document.getElementById("selectid").value;
+            if(selectdrop !==""){
+                document.getElementById("subjecterror").style.display="none";
+            document.getElementById("Registerbtn").removeAttribute("disabled",false)
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
