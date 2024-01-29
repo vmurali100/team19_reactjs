@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="" id="subject" >Subjects : </label>
+        <input type="checkbox" name="subject"  onchange="validate()"> HTML
+        <input type="checkbox" name="subject"  onchange="validate()"> CSS
+        <input type="checkbox" name="subject"  onchange="validate()"> JS
+        <input type="checkbox" name="subject"  onchange="validate()"> ReactJS
+        <br>
+
+        <span style="color:red" id="apperror"> select anyone subject  </span><br>
+
+        <button type="button" disabled id="addbtn">Register</button>
+<br>
+        
+    </form>
+    <script>
+        function validate(){
+            document.getElementById("apperror").style.display = "block";
+            document.getElementById("addbtn").setAttribute("disabled", true)
+            var selectedValue = document.getElementsByName("subject");
+            console.log(selectedValue)
+            for(var i=0 ; i < selectedValue.length; i++){
+                if(selectedValue[i].checked == true){
+                    document.getElementById("apperror").style.display = "none";
+                    document.getElementById("addbtn").removeAttribute("disabled", true)
+                }
+            }
+              
+
+        
+        }
+    </script>
+</body>
+</html>
