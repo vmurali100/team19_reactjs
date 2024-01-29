@@ -1,17 +1,6 @@
 {
   "users": [
     {
-      "fname": "yochan",
-      "email": "chandrakaladande1505@gmail.com",
-      "gender": "male",
-      "state": "andhra pradesh",
-      "subjects": [
-        "subject1",
-        "subject2"
-      ],
-      "id": "8fb2"
-    },
-    {
       "id": "e5eb",
       "fname": "nanniiiiii",
       "email": "jhsdk@gmail.com",
