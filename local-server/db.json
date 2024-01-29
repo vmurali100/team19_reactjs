@@ -1,36 +1,83 @@
 {
   "users": [
     {
-      "id": "f5bb",
-      "fullName": "Murali V",
+      "fname": "Murali",
       "email": "vmurali100@gmail.com",
-      "password": "44455"
+      "gender": "male",
+      "state": "Andhra Pradesh",
+      "subjects": [
+        "subject2",
+        "subject3"
+      ],
+      "id": 1
     },
     {
-      "id": "75e7",
-      "fullName": "Sam",
-      "email": "Sam@gmail.com",
-      "password": "88"
+      "fname": "Murali Krishna",
+      "email": "vmurali100@gmail.com",
+      "gender": "male",
+      "state": "Andhra Pradesh",
+      "subjects": [
+        "subject2",
+        "subject3"
+      ],
+      "id": 2
     },
     {
-      "fullName": "Rehman",
-      "email": "user@gmail.com",
-      "password": "2222",
-      "id": "7b92"
+      "fname": "Ram Krishna",
+      "email": "ram@gmail.com",
+      "gender": "male",
+      "state": "dd",
+      "subjects": [
+        "subject2"
+      ],
+      "id": 3
+    },
+    {
+      "fname": "vmr12",
+      "email": "vmurali100@gmail.com",
+      "gender": "male",
+      "state": "Andhra Pradesh",
+      "subjects": [
+        "subject1",
+        "subject2"
+      ],
+      "id": 4
     }
   ],
-  "people": [
+  "students": [
     {
-      "fname": "ram",
-      "lname": "sam",
-      "gender": "",
-      "subjects": [
-        "HTML",
-        "CSS"
-      ],
-      "dob": "2024-01-15",
-      "stateName": "AP",
+      "firstName": {},
       "id": 1
+    },
+    {
+      "firstName": "Murali",
+      "id": 2
+    },
+    {
+      "firstName": "Sam KM",
+      "id": 3
+    },
+    {
+      "firstName": "Murali",
+      "id": 4
+    },
+    {
+      "firstName": "mm",
+      "id": 5
+    },
+    {
+      "firstName": "sss",
+      "id": 6
+    },
+    {
+      "firstName": "Murali KMR",
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
     }
   ]
 }

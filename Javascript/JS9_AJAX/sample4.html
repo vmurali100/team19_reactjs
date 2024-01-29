@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="myForm">
+        <input type="text" name="firstName" />
+        <button type="submit">Add User</button>
+    </form>
+    <script>
+        const form = document.getElementById("myForm");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // prevent the page from refreshing
+            const data = new FormData(form);
+
+            fetch("http://localhost:3000/students", {
+                method: "POST",
+                body: data
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // handle the response from the server
+                })
+                .catch(error => {
+                    // handle any errors
+                });
+        });
+    </script>
+</body>
+
+</html>
