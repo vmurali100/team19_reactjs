@@ -1,1 +1,13 @@
-hello
+Practice For DOM - Tables 30/12/2023
+
+1. Create at least 10 Objects like follows
+ var student = {
+            fname:"Ram",
+            lname:"Ravi",
+            email:"ram@gmail.com",
+            city:"chittoor",
+            mob:9663856625,
+            state:"Ap"
+        }
+
+2.Create Dynamic Table tows and display in that .

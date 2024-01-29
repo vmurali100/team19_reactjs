@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">First Name :</label>
+        <input type="text"  id="fname"> <br>
+        <label for="">Last Name :</label>
+        <input type="text"  id="lname"> <br>
+        <label for="">Email  :</label>
+        <input type="text"  id="email"> <br>
+        <!-- <button onclick="addUser()" type="button">Add</button> -->
+        <button onclick="addUser()" type="button">Set Values</button>
+    </form>
+    <script>
+        function addUser(){
+            // var user = {
+            //     fname:document.getElementById("fname").value,
+            //     lname:document.getElementById("lname").value,
+            //     email:document.getElementById("email").value
+            // }
+            // console.log(user)
+
+
+            var person ={
+                fname:"Murali",
+                lname:"krishna",
+                email:"murali@gmail.com"
+            }
+
+            document.getElementById("fname").value = person.fname
+            document.getElementById("lname").value = person.lname
+            document.getElementById("email").value = person.email
+        }
+    </script>
+</body>
+</html>

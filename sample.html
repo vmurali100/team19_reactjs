@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            background: #0b0423;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #left,
+        #right {
+            width: 300px;
+            min-height: 400px;
+            border: 1px dotted red;
+            margin: 20px;
+        }
+
+        li {
+            margin: 10px;
+            padding: 10px;
+            background: white;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        img {
+            width: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="left">
+            <li class="list" draggable="true"> <img src="https://cdn-icons-png.flaticon.com/512/8950/8950785.png" alt=""> Item 1</li>
+            <li class="list" draggable="true"> <img src="https://cdn-icons-png.flaticon.com/512/8950/8950785.png" alt=""> Item 1</li>
+            <li class="list" draggable="true"><img src="https://cdn-icons-png.flaticon.com/512/8950/8950785.png" alt=""> Item 2</li>
+            <li class="list" draggable="true"><img src="https://cdn-icons-png.flaticon.com/512/8950/8950785.png" alt="">Item 3</li>
+            <li class="list" draggable="true"><img src="https://cdn-icons-png.flaticon.com/512/8950/8950785.png" alt="">Item 4</li>
+            <li class="list" draggable="true"><img src="https://cdn-icons-png.flaticon.com/512/8950/8950785.png" alt="">Item 5</li>
+        </div>
+        <div id="right"></div>
+    </div>
+    <script>
+        var allListItems = document.getElementsByClassName("list");
+        var rightBox = document.getElementById("right")
+        var leftBox = document.getElementById("right")
+        for (list of allListItems) {
+            list.addEventListener('dragstart', (e) => {
+                let selected = e.target
+                console.log(selected);
+                rightBox.addEventListener('dragover', (e) => {
+                    e.preventDefault()
+                })
+                rightBox.addEventListener('drop', (e) => {
+                    if(selected !== null){
+                        rightBox.appendChild(selected);
+                        selected = null
+                    }
+                    
+                })
+                leftBox.addEventListener('dragover', (e) => {
+                    e.preventDefault()
+                })
+                leftBox.addEventListener('drop', (e) => {
+                    leftBox.appendChild(selected)
+                    console.log(e)
+                })
+            })
+
+        }
+    </script>
+</body>
+
+</html>
