@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+   
+    <input type="button" value="Delete" onclick="deleteUser()">
+    <script>
+        var userToDelete = JSON.parse(localStorage.getItem("userToDelete"));
+        console.log("In Delete User Page", userToDelete);
+
+
+        function deleteUser(){
+            fetch("http://localhost:3000/users/" + userToDelete.id ,{
+                method : "DELETE",
+                
+            }).then(() =>{
+                console.log("User Deleted!!")
+                window.location.href = "sample1.html"
+            })
+        }
+
+       
+    </script>
+</body>
+</html>

@@ -1,53 +1,26 @@
 {
   "users": [
     {
-      "id": "fbc5",
-      "fname": "yochan",
-      "email": "r171041@rguktrkv.ac.in",
-      "state": "TamilNadu",
-      "dob": "2024-01-04",
-      "subjects": [
-        "Html"
-      ],
-      "gender": "male"
-    },
-    {
-      "id": "2404",
       "fname": "yochan",
       "email": "chandrakaladande1505@gmail.com",
-      "state": "AndhraPradesh",
-      "dob": "2024-01-04",
+      "gender": "male",
+      "state": "andhra pradesh",
       "subjects": [
-        "Html",
-        "Css",
-        "Javascript"
+        "subject1",
+        "subject2"
       ],
-      "gender": "male"
+      "id": "8fb2"
     },
     {
-      "id": "78",
-      "fname": "chandrakala",
-      "email": "cde@gmail.com",
-      "state": "TamilNadu",
-      "dob": "2024-01-18",
-      "subjects": [
-        "Html",
-        "Javascript",
-        "ReactJs"
-      ],
-      "gender": "female"
-    },
-    {
-      "id": "c06f",
-      "fname": "naniii",
+      "id": "e5eb",
+      "fname": "nanniiiiii",
       "email": "jhsdk@gmail.com",
-      "state": "AndhraPradesh",
-      "dob": "2024-01-05",
+      "gender": "male",
+      "state": "andhra pradesh",
       "subjects": [
-        "Html",
-        "Css"
-      ],
-      "gender": "male"
+        "subject1",
+        "subject2"
+      ]
     }
   ]
 }
