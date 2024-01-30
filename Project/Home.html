@@ -52,7 +52,6 @@
         .content {
             padding: 16px;
             height: 100vh;
-            /* Set the height to 100% of the viewport height */
         }
 
         footer {
@@ -70,7 +69,6 @@
             padding: 16px;
         }
 
-        /* Media query for responsive layout */
         @media screen and (min-width: 600px) {
             .content {
                 /* margin-left: 220px; */
@@ -81,7 +79,6 @@
             background: linear-gradient(90deg, rgba(2, 0, 6, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
             color: white;
             overflow-y: auto;
-            /* Enable vertical scrolling within #mainContent */
         }
     </style>
 </head>
@@ -109,23 +106,13 @@
     </footer>
 
     <script>
-       function loadRegisterPage() {
-    fetch('Register.html')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text();
-        })
-        .then(html => {
+        async function loadRegisterPage() {
+            var res = await fetch('Register.html')
+            var html = await res.text()
             document.getElementById('mainContent').innerHTML = html;
-        })
-        .catch(error => {
-            console.error('Error during fetch operation:', error);
-        });
-}
-
+        }
     </script>
+
 </body>
 
 </html>
