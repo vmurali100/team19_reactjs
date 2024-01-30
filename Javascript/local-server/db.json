@@ -1,257 +1,65 @@
 {
   "users": [
     {
+      "id": "1",
       "fname": "m.swapna",
-      "lname": "swapna",
-      "age": 21,
-      "id": "c06a"
-    },
-    {
-      "fname": "m.naveen",
-      "lname": "navii",
-      "age": 24,
-      "id": "2455"
-    },
-    {
-      "fname": "G.poornima",
-      "lname": "poori",
-      "age": 25,
-      "id": "f770"
-    },
-    {
-      "id": "06fb",
-      "fname": "m.swapna",
-      "email": "smswapna@gmail.com",
-      "state": "Tamil Nadu",
-      "dob": "",
-      "subjects": [],
+      "email": "smswapna924@gmail.com",
+      "state": "Andrapradesh",
+      "dob": "2002-06-26",
+      "subjects": [
+        "HTML",
+        "css"
+      ],
       "gender": "female"
     },
     {
-      "id": "671b",
-      "fname": "m.swapna",
-      "email": "smswapna@gmail.com",
-      "state": "Tamil Nadu",
-      "dob": "2024-01-11",
+      "id": "2",
+      "fname": "G.lokesh",
+      "email": "lokesh@gmail.com",
+      "state": "Andrapradesh",
+      "dob": "2001-07-23",
       "subjects": [
-        "subject1"
+        "javascript"
       ],
       "gender": "male"
     },
     {
-      "id": "87ab",
-      "fname": "m.swapna",
-      "email": "smswapna@gmail.com",
-      "state": "Maharashtra",
-      "dob": "2024-01-18",
+      "id": "3",
+      "fname": "m.naveenkumar",
+      "email": "mnaveen@gmail.com",
+      "state": "karnataka",
+      "dob": "2000-07-27",
       "subjects": [
-        "subject2"
-      ],
-      "gender": "female"
-    },
-    {
-      "id": "b370",
-      "fname": "",
-      "email": "",
-      "state": "Select",
-      "dob": "",
-      "subjects": []
-    },
-    {
-      "id": "95d7",
-      "fname": "",
-      "email": "",
-      "state": "Select",
-      "dob": "",
-      "subjects": []
-    },
-    {
-      "id": "589f",
-      "fname": "",
-      "email": "",
-      "state": "Select",
-      "dob": "",
-      "subjects": []
-    },
-    {
-      "id": "276a",
-      "fname": "",
-      "email": "",
-      "state": "Select",
-      "dob": "",
-      "subjects": []
-    },
-    {
-      "id": "9893",
-      "fname": "",
-      "email": "",
-      "state": "Select",
-      "dob": "",
-      "subjects": []
-    },
-    {
-      "id": "e613",
-      "fname": "m.swapna",
-      "email": "smswapna@gmail.com",
-      "state": "Maharashtra",
-      "dob": "2024-01-17",
-      "subjects": [
-        "subject1"
+        "Reactjs"
       ],
       "gender": "male"
     },
     {
-      "id": "73f2",
-      "fname": "m.swapna",
-      "email": "smswapna@gmail.com",
-      "state": "Maharashtra",
-      "dob": "2024-01-17",
+      "id": "4",
+      "fname": "poornima",
+      "email": "poori@gmail.com",
+      "state": "karnataka",
+      "dob": "2001-06-25",
       "subjects": [
-        "subject1"
+        "HTML",
+        "css",
+        "javascript",
+        "Reactjs"
       ],
       "gender": "female"
     },
     {
-      "id": "4443",
-      "fname": "swapna",
-      "email": "smswapna924@gmail.com",
-      "state": "Karnataka",
-      "dob": "2024-01-02",
+      "id": "5",
+      "fname": "B.pavitra",
+      "email": "pavitra@gmail.com",
+      "state": "Tamilnadu",
+      "dob": "2003-10-03",
       "subjects": [
-        "subject1"
+        "HTML",
+        "css",
+        "Reactjs"
       ],
       "gender": "female"
-    },
-    {
-      "id": "bf5d",
-      "fname": "",
-      "email": "",
-      "state": "Select",
-      "dob": "",
-      "subjects": []
-    },
-    {
-      "id": "f5e4",
-      "fname": "swapna",
-      "email": "smswapna924@gmail.com",
-      "state": "Karnataka",
-      "dob": "2024-01-02",
-      "subjects": [
-        "subject1"
-      ],
-      "gender": "male"
-    },
-    {
-      "id": "50b1",
-      "fname": "swapna",
-      "email": "smswapna924@gmail.com",
-      "state": "Maharashtra",
-      "dob": "",
-      "subjects": []
-    },
-    {
-      "id": "7179",
-      "fname": "",
-      "email": "",
-      "state": "Select",
-      "dob": "",
-      "subjects": []
-    },
-    {
-      "id": "1c2d",
-      "fname": "",
-      "email": "",
-      "state": "Select",
-      "dob": "",
-      "subjects": []
-    },
-    {
-      "id": "2fe5",
-      "fname": "",
-      "email": "",
-      "state": "Select",
-      "dob": "",
-      "subjects": []
-    },
-    {
-      "id": "b5fa",
-      "fname": "",
-      "email": "",
-      "state": "Select",
-      "dob": "",
-      "subjects": []
-    },
-    {
-      "id": "9acd",
-      "fname": "",
-      "email": "",
-      "state": "Select",
-      "dob": "",
-      "subjects": []
-    },
-    {
-      "id": "0c23",
-      "fname": "swapna",
-      "email": "smswapna924@gmail.com",
-      "state": "Select",
-      "dob": "",
-      "subjects": []
-    },
-    {
-      "id": "a6b0",
-      "fname": "",
-      "email": "",
-      "state": "Select",
-      "dob": "",
-      "subjects": []
-    },
-    {
-      "id": "1b4a",
-      "fname": "",
-      "email": "",
-      "state": "Select",
-      "dob": "",
-      "subjects": []
-    },
-    {
-      "id": "eb91",
-      "fname": "",
-      "email": "",
-      "state": "Select",
-      "dob": "",
-      "subjects": []
-    },
-    {
-      "id": "3911",
-      "fname": "",
-      "email": "",
-      "state": "Select",
-      "dob": "",
-      "subjects": []
-    },
-    {
-      "id": "b3fb",
-      "fname": "",
-      "email": "",
-      "state": "Select",
-      "dob": "",
-      "subjects": []
-    },
-    {
-      "id": "bd47",
-      "fname": "swapna",
-      "email": "smswapna924@gmail.com",
-      "state": "Karnataka",
-      "dob": "",
-      "subjects": []
-    },
-    {
-      "id": "939b",
-      "fname": "swapna",
-      "email": "smswapna924@gmail.com",
-      "state": "Select",
-      "dob": "",
-      "subjects": []
     }
   ]
 }

@@ -36,7 +36,7 @@ postdata.onreadystatechange=function(){
         console.log("user added")
     }
 }
-postdata.open ("post","http://localhost:3000/users");
+postdata.open ("POST","http://localhost:3000/users");
 postdata.setRequestHeader("content-type","application/json");
 postdata.send(JSON.stringify(user))
 
