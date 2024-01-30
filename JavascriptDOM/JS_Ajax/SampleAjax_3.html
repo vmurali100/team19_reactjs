@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample_03_Ajax</title>
+  </head>
+  <body>
+    <script>
+      // handling data with Async and Await
+
+      var users = [];
+
+      // getalluser from server
+
+      function getAllUsersfromServer() {
+        return new Promise((resolve, reject) => {
+          var getInfo = new XMLHttpRequest();
+          getInfo.onreadystatechange = function () {
+            if (getInfo.status === 200 && getInfo.readyState === 4) {
+              users = JSON.parse(getInfo.response);
+              resolve();
+            }
+          };
+          getInfo.open("GET", "http://localhost:3000/users");
+          getInfo.send();
+        });
+      }
+
+      function displayUsers() {
+        console.log(users);
+      }
+
+       async function handleAjaxcalls() {
+        var response =  await getAllUsersfromServer();
+        displayUsers();
+      }
+      handleAjaxcalls();
+      
+      displayUsers();
+      getAllUsersfromServer();
+    </script>
+  </body>
+</html>

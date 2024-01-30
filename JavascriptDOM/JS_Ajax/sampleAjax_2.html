@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sample_Ajax_02</title>
+  </head>
+  <body>
+    <script>
+
+        // geting data with Help of Promise Object functions 
+
+      var users = [];
+      function getAllUsersfromServer() {
+        return new Promise((resolve,reject)=>{
+            var getInfo = new XMLHttpRequest();
+        getInfo.onreadystatechange = function () {
+          if (getInfo.status === 200 && getInfo.readyState === 4) {
+            users = JSON.parse(getInfo.responseText);
+            resolve();
+            // reject("Data is Failed to get")
+          }
+        };
+        getInfo.open("GET", "http://localhost:3000/users");
+        getInfo.send();
+        })
+        
+      }
+
+      function displayUsers() {
+        console.log(users);
+      }
+
+      getAllUsersfromServer()
+      .then(()=>{
+        displayUsers();
+      })
+      .catch((err)=>{
+        console.log(err)
+      })
+      .finally(()=>{
+        console.log("API Consumption is Complted !!!")
+      })
+    </script>
+  </body>
+</html>

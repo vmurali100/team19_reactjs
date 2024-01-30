@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sample_Ajax_01</title>
+  </head>
+  <body>
+    <script>
+
+      //  getting data with callback functions
+      
+      var users = [];
+      function getAllUsersFromServer(displayUsers) {
+        var getdata = new XMLHttpRequest();
+        getdata.onreadystatechange = function () {
+          if (getdata.status === 200 && getdata.readyState === 4) {
+            users = JSON.parse(getdata.response);
+            displayUsers();
+          }
+        };
+        getdata.open("GET", "http://localhost:3000/users");
+        getdata.send();
+      }
+
+      function displayUsers() {
+        console.log(users);
+      }
+
+      getAllUsersFromServer(displayUsers);
+      // displayUsers();
+    </script>
+  </body>
+</html>
