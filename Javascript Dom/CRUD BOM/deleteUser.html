@@ -1,30 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-   
-   
+
+    <table border="1">
+        <tr>
+            <thead>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>subjects</th>
+                <th>state</th>
+                
+            </thead>
+        </tr>
+        <tbody></tbody>
+    </table><br>
     <input type="button" value="Delete" onclick="deleteUser()">
     <script>
         var userToDelete = JSON.parse(localStorage.getItem("userToDelete"));
         console.log("In Delete User Page", userToDelete);
 
+       function displayUsers(){
+        var myTr = document.createElement("tr");
+             for(a in userToDelete){
+                if(a != "subjects" ){
+                 var myTd = document.createElement("td");
+                  myTd.innerHTML = userToDelete[a];
+                  myTr.appendChild(myTd)
+                }
+                else if(a == "subjects"){
+                    var result = "";
+                    for(b in userToDelete[a]){
+                        result = result + userToDelete[a][b] + "<br>"
+                    }
+                    myTd.innerHTML = result;
+                    myTr.appendChild(myTd)
+                }
+                 
+             }
+             document.querySelector("tbody").appendChild(myTr)
+       }
+        
+       displayUsers()
 
-        function deleteUser(){
-            fetch("http://localhost:3000/users/" + userToDelete.id ,{
-                method : "DELETE",
-                
-            }).then(() =>{
+        function deleteUser() {
+            fetch("http://localhost:3000/users/" + userToDelete.id, {
+                method: "DELETE",
+
+            }).then(() => {
                 console.log("User Deleted!!")
                 window.location.href = "sample1.html"
             })
         }
 
-       
+
     </script>
 </body>
+
 </html>

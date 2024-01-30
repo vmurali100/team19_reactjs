@@ -1,17 +1,6 @@
 {
   "users": [
     {
-      "id": "e5eb",
-      "fname": "nanniiiiii",
-      "email": "jhsdk@gmail.com",
-      "gender": "male",
-      "state": "andhra pradesh",
-      "subjects": [
-        "subject1",
-        "subject2"
-      ]
-    },
-    {
       "id": "95b1",
       "fname": "geetha",
       "email": "geetha@gmail.com",
@@ -25,6 +14,17 @@
       "id": "b360",
       "fname": "ravi",
       "email": "cde@gmail.com",
+      "gender": "male",
+      "state": "tamilnadu",
+      "subjects": [
+        "subject1",
+        "subject2"
+      ]
+    },
+    {
+      "id": "70a8",
+      "fname": "nani",
+      "email": "jhsdk@gmail.com",
       "gender": "male",
       "state": "tamilnadu",
       "subjects": [
