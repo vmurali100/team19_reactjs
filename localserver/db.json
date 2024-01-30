@@ -2,26 +2,48 @@
   "users": [
     {
       "id": "6f7e",
-      "fname": "",
-      "dob": "",
-      "gender": "",
-      "subjects": []
+      "fname": "meena",
+      "dob": "2024-01-02",
+      "gender": "female",
+      "subjects": [
+        "html"
+      ]
     },
     {
-      "fname": "hggv",
-      "dob": "2024-01-30",
-      "gender": "",
-      "subjects": [],
-      "id": "155b"
-    },
-    {
-      "fname": "kfkjnfkjnz",
+      "id": "155b",
+      "fname": "seetha",
       "dob": "2024-01-30",
       "gender": "female",
       "subjects": [
-        "subject2"
-      ],
-      "id": "f125"
+        "css"
+      ]
+    },
+    {
+      "id": "f125",
+      "fname": "geetha",
+      "dob": "2024-01-30",
+      "gender": "female",
+      "subjects": [
+        "html"
+      ]
+    },
+    {
+      "id": "1",
+      "fname": "shanthi",
+      "dob": "2024-01-09",
+      "gender": "male",
+      "subjects": [
+        "html"
+      ]
+    },
+    {
+      "id": "1",
+      "fname": "shanthi",
+      "dob": "2024-01-09",
+      "gender": "female",
+      "subjects": [
+        "html"
+      ]
     }
   ]
 }
