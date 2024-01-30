@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="fname">firstname</label>
+      <input type="text" id="fname" /> <br /><br />
+
+      <label for="lname">lastname</label>
+      <input type="text" id="lname" /> <br /><br />
+
+      <label for="email">email</label>
+      <input type="email" id="email" /> <br /><br />
+
+      <label for="state">state</label>
+      <input type="text" id="state" /> <br /><br />
+
+      <label for="dob"> DoB</label>
+      <input type="date" id="dob" /> <br /><br />
+
+      <label for="">gender</label>
+      <input type="radio" name="gender" value="male" /> male
+      <input type="radio" name="gender" value="female" />female
+      <input type="radio" name="gender" value="others" />others <br /><br />
+
+      <label for="">subjects</label>
+      <input type="checkbox" name="subjects" value="subject1" />subject1
+      <input type="checkbox" name="subjects" value="subject2" />subject2
+      <input type="checkbox" name="subjects" value="subject3" />subject3
+      <br /><br />
+
+      <button onclick="adduser()" type="button">adduser</button>
+    </form>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>fname</th>
+          <th>lname</th>
+          <th>email</th>
+          <th>state</th>
+          <th>dob</th>
+          <th>gender</th>
+          <th>checkbox</th>
+          <th>edit</th>
+          <th>delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      function adduser() {
+        var user = {
+          fname: document.getElementById("fname").value,
+          lname: document.getElementById("lname").value,
+          email: document.getElementById("email").value,
+          state: document.getElementById("state").value,
+          dob: document.getElementById("dob").value,
+          gender: "",
+          subjects: [],
+        };
+
+        var allRadioBtns = document.getElementsByName("gender");
+        for (i = 0; i < allRadioBtns.length; i++) {
+          if (allRadioBtns[i].checked) {
+            user.gender = allRadioBtns[i].value;
+          }
+        }
+
+        var allcheckboxes = document.getElementsByName("subjects");
+        for (i = 0; i < allcheckboxes.length; i++) {
+          if (allcheckboxes[i].checked) {
+            user.subjects.push(allcheckboxes[i].value);
+          }
+        }
+        addusertoAPI(user);
+      }
+
+      function addusertoAPI(user) {
+        var postdata = new XMLHttpRequest();
+        postdata.onreadystatechange = function () {
+          if (postdata.readyState == 4 && postdata.status == 201) {
+            console.log(user);
+          }
+        };
+        postdata.open("POST", "http://localhost:3000/users");
+        postdata.setRequestHeader("content-type", "application/JSON");
+        postdata.send(user);
+      }
+
+      //read
+
+      var users = [];
+      function getusersfromAPI() {
+        var getdata = new XMLHttpRequest();
+        getdata.onreadystatechange = function () {
+          if (getdata.readyState === 4 && getdata.status === 200) {
+            //debugger
+            console.log(JSON.parse(getdata.response));
+          }
+          // users=JSON.parse(getdata.response)
+          displayusers();
+        };
+        getdata.open("GET", "http://localhost:3000/users");
+        // getdata.send()
+      }
+      getusersfromAPI();
+
+      function displayusers() {
+        document.querySelector("tbody").innerHTML = "";
+        for (let i = 0; i < users.length; i++) {
+          var mytr = document.createElement("tr");
+          var eachobj = users[i];
+          for (a in eachobj) {
+            var mytd = document.createElement("td");
+            mytd.innerHTML = eachobj[a];
+            mytr.appendChild(mytd);
+          }
+
+            var edittd = document.createElement("td");
+            var editbtn = document.createElement("button");
+            editbtn.innerHTML = "edit";
+            editbtn.setAttribute("onclick", "edituser(" + i + ")");
+            edittd.appendChild(editbtn);
+            mytr.appendChild(edittd);
+
+            var deltd = document.createElement("td");
+            var delbtn = document.createElement("button");
+            delbtn.innerHTML = "delete";
+            delbtn.setAttribute("onclick", "deleteuser(" + i + ")");
+            deltd.appendChild(delbtn);
+            mytr.appendChild(deltd);
+
+            document.querySelector("tbody").appendChild(mytr);
+          
+        }
+      }
+
+      var gindex = null;
+      function edituser(i) {
+        gindex = i;
+        document.getElementById("fname").value = users[i].fname;
+        document.getElementById("lname").value = users[i].lname;
+        document.getElementById("email").value = users[i].email;
+        document.getElementById('dob').value=users[i].dob;
+        document.getElementById("state").value = users[i].state;
+
+        var allRadioBtns = document.getElementsByName("gender");
+        for (let index = 0; index < allRadioBtns.length; index++) {
+          if (allRadioBtns[index].value == users[i].gender) {
+            allRadioBtns[index].checked = true;
+          }
+        }
+        var allcheckboxes = document.getElementsByName("subjects");
+        for (let index = 0; index < allcheckboxes.length; index++) {
+          var check = users[i].subjects.some((val) => {
+            allcheckboxes[index].value == val;
+          });
+        }
+      }
+
+      
+        
+      
+
+      
+      
+
+      
+
+
+    </script>
+  </body>
+</html>
