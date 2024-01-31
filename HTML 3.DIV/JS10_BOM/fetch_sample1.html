@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .form-container {
+            width: 30%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            width: 65%;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form action="#" method="POST">
+                <label for="fname">first Name:</label><br>
+                <input type="text" name="fname" id="fname"><br>
+
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="email"><br>
+
+                <label for="gender">Gender:</label><br>
+                <select name="gender" id="gender">
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                    <option value="others">others</option>
+                </select><br>
+
+                <label for="state">state:</label><br>
+                <input type="text" id="State" NAME="state"><br>
+
+                <label for="">subjects:</label><br>
+                <input type="checkboxe" id="subject1" name="subjects" value="subject1">
+                <label for="subject1">subject1 </label><br>
+                <input type="checkbox" name="subjects" id="subject2" value="subject2">
+                <label for="subject2">subject2</label><br>
+                <input type="checkbox" name="subjects" id="subject3" value="subject3">
+                <label for="subject3">subject3</label><br>
+
+                <input type="button" value="Submit" onclick="createUser()">
+            </form>
+        </div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>first Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>state</th>
+                <th>subjects</th>
+                <th>ID</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+
+        <tbody></tbody>
+    </table>
+    <script src="./create.js"></script>
+    <script src="./read.js"></script>
+    <script src="./update.js"></script>
+    <script src="./delete.js"></script>
+</body>
+
+</html>

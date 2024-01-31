@@ -1,25 +1,14 @@
 {
   "users": [
     {
-      "id": "1",
-      "fname": "m.swapna",
-      "email": "smswapna924@gmail.com",
-      "state": "Andrapradesh",
-      "dob": "2002-06-26",
-      "subjects": [
-        "HTML",
-        "css"
-      ],
-      "gender": "female"
-    },
-    {
       "id": "2",
       "fname": "G.lokesh",
       "email": "lokesh@gmail.com",
-      "state": "Andrapradesh",
+      "state": "AndhraPradesh",
       "dob": "2001-07-23",
       "subjects": [
-        "javascript"
+        "Html",
+        "Css"
       ],
       "gender": "male"
     },
