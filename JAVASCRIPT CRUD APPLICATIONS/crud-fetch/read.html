@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var users=[]
+    function getusersfromAPI(){
+        fetch("http://localhost:3000/users")
+        .then((response)=>{
+            console.log(response)
+            return response.json()
+        })
+        .then((data)=>{
+            users=data;
+            console.log(data);
+            displayusers()
+        })
+    }
+
+    function displayusers(){
+        for(let index=0;index<users.length;index++){
+            var eachobj=users[index]
+            var mytr=document.createElement('tr')
+            for(a in eachobj){
+                var mytd=document.createElement("td")
+                mytd.innerHTML=eachobj[a]
+                mytr.appendChild(mytd)
+            }
+            
+            var edittd=document.createElement("td")
+            var editbtn=document.createElement('button')
+            editbtn.innerHTML="edit"
+            editbtn.setAttribute("onclick","edituser("+index+")");
+            edittd.appendChild(editbtn)
+            mytr.appendChild(edittd)
+
+            document.querySelector("tbody").appendChild(mytr)
+        }
+        }
+        getusersfromAPI()
+
+        function edituser(i){
+            console.log(i)
+            localStorage.setItem("usertoedit",JSON.stringify(users[i]))
+            window.location.href="edituser.html"
+        }
+
+        var usertoedit=JSON.parse(localStorage.getItem("usertoedit"))
+        console.log('in edit user page',usertoedit)
+        for(a in usertoedit){
+            if(a!=="subjects"){
+                document.getElementById(a).value=usertoedit[a]
+            }elseif(a=="subjects"){
+                let subjects=usertoedit.subject;
+                var allcheckboxes=document.getElementsByName('subjects'),
+                const element=allcheckboxes[index];
+                var check=subjects.some((sub)=>element.value==sub)
+                element.checked=check
+            }
+            }
+        
+    
+            
+        
+
+    
+
+    </script>
+   
+</body>
+</html>

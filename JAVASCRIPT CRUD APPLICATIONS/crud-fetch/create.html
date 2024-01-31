@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <label for="">fname</label>
+        <input type="text" id="fname"> <br>
+
+        <label for="">email</label>
+        <input type="text" id="email"> <br>
+
+        <label for="">gender</label>
+        <input type="text" id="gender"> <br>
+
+        <label for="">state</label>
+        <input type="text" id="state"><br>
+</form>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>fname</th>
+            <th>email</th>
+            <th>gender</th>
+            <th>state</th>
+            <th>subjects</th>
+            <th>edit</th>
+            <th>delete</th>
+        </tr>
+    </thead>
+</table>
+
+<script>
+
+    function readusersfromForm(){
+
+        var user={
+            fname:document.getElementById("fname").value,
+            email:document.getElementById('email').value,
+            gender:document.getElementById("gender").value,
+            state:document.getElementById("state").value,
+            subjects:[]
+        }
+
+        var allsubjects=document.getElementsByName("subjects")
+        for(let index=0; index<allsubjects.length;index++){
+            if(allsubjects[index].checked){
+                user.subjects.push(allsubjects[index].value)
+            }
+        }
+        return user
+    }
+
+    function  createuser(){
+        var user=readusersfromForm()
+
+        fetch("http://localhost:3000/users",{
+            method:"POST",
+            body:JSON.stringify(user),
+            headers:{"content-type":"application/json"},
+        }).then(()=>{
+            getusersfromAPI()
+        })
+    } 
+
+    
+</script>
+</body>
+</html>
