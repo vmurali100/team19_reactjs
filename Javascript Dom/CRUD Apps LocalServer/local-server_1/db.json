@@ -1,36 +1,72 @@
 {
   "users": [
     {
-      "id": "95b1",
       "fname": "geetha",
       "email": "geetha@gmail.com",
-      "gender": "female",
-      "state": "tamilnadu",
+      "gender": "male",
+      "state": "Karnataka",
       "subjects": [
-        "subject3"
-      ]
+        "subject1"
+      ],
+      "id": "95b1"
     },
     {
-      "id": "b360",
       "fname": "ravi",
       "email": "cde@gmail.com",
       "gender": "male",
-      "state": "tamilnadu",
+      "state": "Karnataka",
       "subjects": [
         "subject1",
         "subject2"
-      ]
+      ],
+      "id": "b360"
     },
     {
-      "id": "70a8",
       "fname": "nani",
       "email": "jhsdk@gmail.com",
       "gender": "male",
-      "state": "tamilnadu",
+      "state": "Karnataka",
       "subjects": [
         "subject1",
-        "subject2"
-      ]
+        "subject3"
+      ],
+      "id": "70a8"
+    }
+  ],
+  "people": [
+    {
+      "id": "1",
+      "fname": "yochan",
+      "email": "jhsdk@gmail.com",
+      "state": "Karnataka",
+      "dob": "2024-01-28",
+      "subjects": [
+        "Html"
+      ],
+      "gender": "male"
+    },
+    {
+      "id": "2",
+      "fname": "chandrakala",
+      "email": "chandrakaladande1505@gmail.com",
+      "state": "Karnataka",
+      "dob": "2023-07-11",
+      "subjects": [
+        "Css",
+        "Javascript"
+      ],
+      "gender": "female"
+    },
+    {
+      "id": "45",
+      "fname": "naniii",
+      "email": "nani@gmail.com",
+      "state": "AndhraPradesh",
+      "dob": "2024-01-31",
+      "subjects": [
+        "Css"
+      ],
+      "gender": "male"
     }
   ]
 }
