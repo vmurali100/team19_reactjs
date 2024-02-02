@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>User Registration</h2>
+        <form>
+            <div class="form-group">
+                <label for="id">ID</label>
+                <input type="text" id="id" name="id">
+            </div>
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fname" name="fullname">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirmpassword" name="password">
+            </div>
+            <div class="form-group">
+                <label for="birthdate">Date of Birth</label>
+                <input type="date" id="dob" name="birthdate">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Interests</label><br>
+                <input type="checkbox" id="interest1" name="interest" value="Reading">
+                <label for="interest1">Reading</label><br>
+                <input type="checkbox" id="interest2" name="interest" value="Sports">
+                <label for="interest2">Sports</label><br>
+                <input type="checkbox" id="interest3" name="interest" value="Music">
+                <label for="interest3">Music</label><br>
+            </div>
+            <div class="form-group">
+                <label for="appointment_date">Preferred Appointment Date</label>
+                <input type="date" id="date" name="appointment_date">
+            </div>
+            <div class="form-group">
+                <label for="appointment_time">Preferred Appointment Time</label>
+                <input type="time" id="time" name="appointment_time">
+            </div>
+            <div class="form-group">
+                <button type="button" onclick="createUser()">Register</button>
+            </div>
+            <div class="form-group">
+                <button type="button" onclick="updateUser()">Update</button>
+            </div>
+
+        </form>
+    </div>
+
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>confirmpassword</th>
+                <th>Date of Birth</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Interests</th>
+                <th>prefered oppointment date</th>
+                <th>prefered oppointment time</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+
+        <tbody></tbody>
+    </table>
+
+    <script>
+        // create
+        function createUser() {
+
+
+            var user = {
+                id: document.getElementById("id").value,
+                fname: document.getElementById("fname").value,
+                email: document.getElementById("email").value,
+                password: document.getElementById("password").value,
+                confirmpassword: document.getElementById("confirmpassword").value,
+                dob: document.getElementById("dob").value,
+                gender: document.getElementById("gender").value,
+                address: document.getElementById("address").value,
+                interests: [],
+                date: document.getElementById("date").value,
+                time: document.getElementById("time").value
+
+            }
+
+            var allCheckBoxes = document.getElementsByName("interest");
+            for (var i = 0; i < allCheckBoxes.length; i++) {
+                if (allCheckBoxes[i].checked) {
+                    user.interests.push(allCheckBoxes[i].value)
+                }
+            }
+
+            addUserToApi(user)
+        }
+
+        function addUserToApi(user) {
+            var sendData = new XMLHttpRequest();
+            sendData.onreadystatechange = function () {
+                if (sendData.status == 201 && sendData.readyState == 4) {
+                    console.log(JSON.parse(sendData.response))
+                }
+            }
+            sendData.open("POST", "http://localhost:3000/posts");
+            sendData.setRequestHeader("content-type", "application/json");
+            sendData.send(JSON.stringify(user))
+        }
+
+
+        // Read User
+        var users = []
+        function getAllUsersFromApi() {
+            var getData = new XMLHttpRequest()
+            getData.onreadystatechange = function () {
+                if (getData.status == 200 && getData.readyState == 4) {
+                    users = JSON.parse(getData.response);
+                    displayUsers()
+                }
+            }
+            getData.open("GET", "http://localhost:3000/posts");
+            getData.send()
+        }
+
+        getAllUsersFromApi()
+
+        function displayUsers() {
+            for (var i = 0; i < users.length; i++) {
+                var myTr = document.createElement("tr");
+                for (a in users[i]) {
+                    var myTd = document.createElement("td");
+                    myTd.innerHTML = users[i][a];
+                    myTr.appendChild(myTd)
+                }
+
+                var editTd = document.createElement("td");
+                var editBtn = document.createElement("button");
+                editBtn.innerHTML = "EDIT";
+                editTd.appendChild(editBtn);
+                myTr.appendChild(editTd);
+                editBtn.setAttribute("onclick", "editUSer(" + i + ")");
+
+                var delTd = document.createElement("td");
+                var delBtn = document.createElement("button");
+                delBtn.innerHTML = "DELETE";
+                delTd.appendChild(delBtn);
+                myTr.appendChild(delTd);
+                delBtn.setAttribute("onclick", "delUser(" + i + ")");
+
+
+                document.querySelector("tbody").appendChild(myTr)
+
+            }
+        }
+
+        // Edit User 
+        var gIndex = null;
+        function editUSer(i) {
+            gIndex = i;
+            var obj = users[i];
+            for(a in obj){
+                if(a !== 'interests'){
+                    document.getElementById(a).value = obj[a]
+                }
+                else if(a == "interests"){
+                    var interest = obj.interests
+                    var allCheckBoxes = document.getElementsByName("interest");
+                    for(var index = 0; index < allCheckBoxes.length; index++){
+                        var check =interest.some((val) => allCheckBoxes[index].value == val);
+                        allCheckBoxes[index].checked = check
+                    }
+                }
+            }
+      
+    }
+
+    // Update
+
+    function updateUser(){
+        var user = {
+                id: document.getElementById("id").value,
+                fname: document.getElementById("fname").value,
+                email: document.getElementById("email").value,
+                password: document.getElementById("password").value,
+                confirmpassword: document.getElementById("confirmpassword").value,
+                dob: document.getElementById("dob").value,
+                gender: document.getElementById("gender").value,
+                address: document.getElementById("address").value,
+                interests: [],
+                date: document.getElementById("date").value,
+                time: document.getElementById("time").value
+
+            }
+
+            var allCheckBoxes = document.getElementsByName("interest");
+            for (var i = 0; i < allCheckBoxes.length; i++) {
+                if (allCheckBoxes[i].checked) {
+                    user.interests.push(allCheckBoxes[i].value)
+                }
+            }
+
+        updateUserToApi(user)
+    }
+
+    function updateUserToApi(user){
+        var sendData = new XMLHttpRequest();
+        sendData.onreadystatechange = function(){
+            if(sendData.status == 201 && sendData.readyState == 4){
+                users = JSON.stringify(sendData.response);
+                displayUsers()
+            }
+        }
+        sendData.open("PUT", "http://localhost:3000/posts/" + users[gIndex].id);
+        sendData.setRequestHeader("content-type", "application/json");
+        sendData.send(JSON.stringify(user))
+    }
+
+    function delUser(i){
+        var deleteData = new XMLHttpRequest();
+        deleteData.onreadystatechange = function(){
+            if(deleteData.status == 200 && deleteData.readyState == 4){
+                displayUsers()
+            }
+        }
+        deleteData.open("DELETE", "http://localhost:3000/posts/" + users[i].id);
+        deleteData.send()
+    }
+    </script>
+</body>
+
+</html>

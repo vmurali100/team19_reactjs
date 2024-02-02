@@ -68,5 +68,24 @@
       ],
       "gender": "male"
     }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "fname": "chandrakala",
+      "email": "chandrakaladande1505@gmail.com",
+      "password": "jfh",
+      "confirmpassword": "jfh",
+      "dob": "2001-07-23",
+      "gender": "female",
+      "address": "tadipatri",
+      "interests": [
+        "Reading",
+        "Sports",
+        "Music"
+      ],
+      "date": "2024-01-29",
+      "time": "11:52"
+    }
   ]
 }
