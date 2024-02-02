@@ -1,0 +1,89 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "fullname": "Shanthi.battu Battu",
+      "email": "hemasekarvinnamoor@gmail.com",
+      "password": "vsv",
+      "confirmpassword": "undefined",
+      "dateofbirth": "",
+      "gender": "female",
+      "address": "santhapet,chittoor",
+      "preferedoppointmentdate": "2024-01-30",
+      "preferedoppointmenttime": "13:50",
+      "interests": []
+    },
+    {
+      "id": "2",
+      "fullname": "Shanthi Battu",
+      "email": "hemasekarvinnamoor@gmail.com",
+      "password": "12345",
+      "confirmpassword": "1234",
+      "dateofbirth": "2024-02-22",
+      "gender": "male",
+      "address": "santhapet,chittoor",
+      "preferedoppointmentdate": "2024-02-15",
+      "preferedoppointmenttime": "20:07",
+      "interests": []
+    },
+    {
+      "id": "3",
+      "fullname": "aaaa zxzx",
+      "email": "hemasekarvinnamoor@gmail.com",
+      "password": "1111",
+      "confirmpassword": "2222",
+      "dateofbirth": "2024-02-24",
+      "gender": "male",
+      "address": "santhapet,chittoor",
+      "preferedoppointmentdate": "2024-02-15",
+      "preferedoppointmenttime": "20:10",
+      "interests": []
+    },
+    {
+      "id": "11",
+      "fullname": "B Shanthi",
+      "email": "hemasekarvinnamoor@gmail.com",
+      "password": "12345",
+      "confirmpassword": "12345",
+      "dateofbirth": "",
+      "gender": "",
+      "address": "santhapet,chittoor",
+      "preferedoppointmentdate": "2024-02-15",
+      "preferedoppointmenttime": "20:15",
+      "interests": []
+    },
+    {
+      "id": "4",
+      "fullname": "Shanthi.battu Battu",
+      "email": "hemasekarvinnamoor@gmail.com",
+      "password": "1234",
+      "confirmpassword": "1234",
+      "dateofbirth": "2024-02-15",
+      "gender": "male",
+      "address": "santhapet,chittoor",
+      "preferedoppointmentdate": "2024-02-15",
+      "preferedoppointmenttime": "20:15",
+      "interests": []
+    },
+    {
+      "id": "6",
+      "fullname": "Shanthi.battu Battu",
+      "email": "hemasekarvinnamoor@gmail.com",
+      "password": "112233",
+      "confirmpassword": "112233",
+      "dateofbirth": "2024-02-15",
+      "gender": "female",
+      "address": "santhapet,chittoor",
+      "preferedoppointmentdate": "2024-02-22",
+      "preferedoppointmenttime": "20:21",
+      "interests": [
+        "Sports",
+        "Music"
+      ]
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,111 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Registration</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            width: 300px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 90%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .form-group input[type="submit"] {
-            background-color: #007bff;
-            color: #fff;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .form-group input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        width: 300px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 90%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .form-group input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .form-group input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h2>User Registration</h2>
-        <form action="#" method="POST">
-            <div class="form-group">
-                <label for="fullname">Full Name</label>
-                <input type="text" id="fullname" name="fullname" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="confirm_password">Confirm Password</label>
-                <input type="password" id="confirm_password" name="confirm_password" required>
-            </div>
-            <div class="form-group">
-                <label for="birthdate">Date of Birth</label>
-                <input type="date" id="birthdate" name="birthdate" required>
-            </div>
-            <div class="form-group">
-                <label for="gender">Gender</label>
-                <select id="gender" name="gender" required>
-                    <option value="">Select Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="address">Address</label>
-                <textarea id="address" name="address" rows="3" required></textarea>
-            </div>
-            <div class="form-group">
-                <label>Interests</label><br>
-                <input type="checkbox" id="interest1" name="interest[]" value="Reading">
-                <label for="interest1">Reading</label><br>
-                <input type="checkbox" id="interest2" name="interest[]" value="Sports">
-                <label for="interest2">Sports</label><br>
-                <input type="checkbox" id="interest3" name="interest[]" value="Music">
-                <label for="interest3">Music</label><br>
-            </div>
-            <div class="form-group">
-                <label for="appointment_date">Preferred Appointment Date</label>
-                <input type="date" id="appointment_date" name="appointment_date" required>
-            </div>
-            <div class="form-group">
-                <label for="appointment_time">Preferred Appointment Time</label>
-                <input type="time" id="appointment_time" name="appointment_time" required>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Register">
-            </div>
-        </form>
+      <h2>User Registration</h2>
+      <form>
+        <div class="form-group">
+          <label for="id">ID</label>
+          <input type="text" id="id" name="id" />
+        </div>
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" />
+        </div>
+        <div class="form-group">
+          <label for="confirm_password">Confirm Password</label>
+          <input type="password" id="confirm_password" name="password" />
+        </div>
+        <div class="form-group">
+          <label for="birthdate">Date of Birth</label>
+          <input type="date" id="birthdate" name="birthdate" />
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+          <label>Interests</label><br />
+          <input
+            type="checkbox"
+            id="interest1"
+            name="interests"
+            value="Reading"
+          />
+          <label for="interest1">Reading</label><br />
+          <input
+            type="checkbox"
+            id="interest2"
+            name="interests"
+            value="Sports"
+          />
+          <label for="interest2">Sports</label><br />
+          <input
+            type="checkbox"
+            id="interest3"
+            name="interests"
+            value="Music"
+          />
+          <label for="interest3">Music</label><br />
+        </div>
+        <div class="form-group">
+          <label for="appointment_date">Preferred Appointment Date</label>
+          <input type="date" id="appointment_date" name="appointment_date" />
+        </div>
+        <div class="form-group">
+          <label for="appointment_time">Preferred Appointment Time</label>
+          <input type="time" id="appointment_time" name="appointment_time" />
+        </div>
+        <div class="form-group">
+          <button type="button" onclick="adduser()">Register</button>
+        </div>
+        <div class="form-group">
+          <button type="button" onclick="updateuser()">update</button>
+        </div>
+      </form>
     </div>
-</body>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>confirmpassword</th>
+          <th>Date of Birth</th>
+          <th>Gender</th>
+          <th>Address</th>
+          
+          <th>prefered oppointment date</th>
+          <th>prefered oppointment time</th>
+          <th>Interests</th>
+        </tr>
+      </thead>
+
+      <tbody></tbody>
+    </table>
+
+    <script>
+      function adduser() {
+        var user = {
+          id: document.getElementById("id").value,
+          fullname: document.getElementById("fullname").value,
+          email: document.getElementById("email").value,
+          password: document.getElementById("password").value,
+          confirmpassword: document.getElementById("confirm_password").value,
+          dateofbirth: document.getElementById("birthdate").value,
+          gender: document.getElementById("gender").value,
+          address: document.getElementById("address").value,
+          preferedoppointmentdate:
+            document.getElementById("appointment_date").value,
+          preferedoppointmenttime:
+            document.getElementById("appointment_time").value,
+          interests: [],
+        };
+
+        var allcheckboxes = document.getElementsByName("interests");
+        for (i = 0; i < allcheckboxes.length; i++) {
+          if (allcheckboxes[i].checked) {
+            user.interests.push(allcheckboxes[i].value);
+          }
+        }
+        addusertoAPI(user);
+      }
+
+      function addusertoAPI(user) {
+        var postdata = new XMLHttpRequest();
+        postdata.onreadystatechange = function () {
+          if (postdata.readyState == 4 && postdata.status == 201) {
+          }
+        };
+        postdata.open("POST", "http://localhost:3000/posts");
+        postdata.setRequestHeader("content-type", "application/json");
+        postdata.send(JSON.stringify(user));
+      }
+
+      var users = [];
+      function getusersfromAPI() {
+        var getdata = new XMLHttpRequest();
+        getdata.onreadystatechange = function () {
+          if (getdata.readyState == 4 && getdata.status == 200) {
+            users = JSON.parse(getdata.response);
+            displayusers();
+          }
+        };
+        getdata.open("GET", "http://localhost:3000/posts");
+        getdata.send();
+      }
+      getusersfromAPI();
+
+      function displayusers() {
+        for (i = 0; i < users.length; i++) {
+          var mytr = document.createElement("tr");
+
+          var eachobj = users[i];
+          for (a in eachobj) {
+            var mytd = document.createElement("td");
+            mytd.innerHTML = eachobj[a];
+            mytr.appendChild(mytd);
+          }
+
+          var edittd = document.createElement("td");
+          var editbtn = document.createElement("button");
+          editbtn.innerHTML = "Edit";
+          editbtn.setAttribute("onclick", "edituser(" + i + ")");
+          edittd.appendChild(editbtn);
+          mytr.appendChild(edittd);
+
+          var deltd = document.createElement("td");
+          var delbtn = document.createElement("button");
+          delbtn.innerHTML = "Delete";
+          delbtn.setAttribute("onclick", "deleteuser(" + i + ")");
+          deltd.appendChild(delbtn);
+          mytr.appendChild(deltd);
+
+          document.querySelector("tbody").appendChild(mytr);
+        }
+      }
+
+      var gindex = null;
+      function edituser(i) {
+        gindex = i;
+
+        document.getElementById("id").value = users[i].id;
+        document.getElementById("fullname").value = users[i].fullname;
+        document.getElementById("email").value = users[i].email;
+        document.getElementById("password").value = users[i].password;
+        document.getElementById("confirm_password").value =
+          users[i].confirm_password;
+        document.getElementById("birthdate").value = users[i].birthdate;
+        document.getElementById("gender").value = users[i].gender;
+        document.getElementById("address").value = users[i].address;
+        document.getElementById("appointment_date").value =
+          users[i].preferedoppointmentdate;
+        document.getElementById("appointment_time").value =
+          users[i].preferedoppointmenttime;
+      }
+
+      var allcheckboxes = document.getElementsByName("interests");
+      for (let index = 0; index < allcheckboxes.length; index++) {
+        var check = users[i].interests.some(
+          (val) => allcheckboxes[index].value == val
+        );
+        allcheckboxes[index].checked = check;
+      }
+
+      function updateuser() {
+        var user = {
+          id: document.getElementById("id").value,
+          fullname: document.getElementById("fullname").value,
+          email: document.getElementById("email").value,
+          password: document.getElementById("password").value,
+          confirmpassword: document.getElementById("confirm_password").value,
+          dateofbirth: document.getElementById("birthdate").value,
+          gender: document.getElementById("gender").value,
+          address: document.getElementById("address").value,
+          preferedoppointmentdate:
+            document.getElementById("appointment_date").value,
+          preferedoppointmenttime:
+            document.getElementById("appointment_time").value,
+          interests: [],
+        };
+        var allcheckboxes = document.getElementsByName("Interests");
+        for (i = 0; i < allcheckboxes; i++) {
+          if (allcheckboxes[i].checked) {
+            user.interests.push(allcheckboxes[i].value);
+          }
+        }
+
+        updateusertoAPI(user);
+      }
+
+      function updateusertoAPI(user) {
+        var postdata = new XMLHttpRequest();
+        postdata.onreadystatechange = function () {
+          if (postdata.readyState == 4 && postdata.status == 200) {
+          }
+        };
+        postdata.open("PUT", "http://localhost:3000/posts/" + users[gindex].id);
+        postdata.setRequestHeader("content-type", "application/json");
+        postdata.send(JSON.stringify(user));
+      }
+
+      function deleteuser(i) {
+        var deletedata = new XMLHttpRequest();
+        deletedata.onreadystatechange = function () {
+          if (deletedata.readyState == 4 && deletedata.status == 200) {
+            users = JSON.parse(deletedata.response);
+            displayusers();
+          }
+        };
+        deletedata.open("DELETE", "http://localhost:3000/posts/" + users[i].id);
+        deletedata.setRequestHeader("content-type", "application/json");
+        deletedata.send();
+      }
+    </script>
+  </body>
 </html>
