@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    function adduser() {
+        var user = {
+        id : document.getElementById("id").value,
+          fname: document.getElementById("fname").value,
+          lname: document.getElementById("lname").value,
+          gender: "",
+          subjects: [],
+        };
+
+        var allradiobtns = document.getElementsByName("gender");
+        for (i = 0; i < allradiobtns.length; i++) {
+          if (allradiobtns[i].checked) {
+            user.gender = allradiobtns[i].value;
+          }
+        }
+
+        var allcheckboxes = document.getElementsByName("subjects");
+        for (i = 0; i < allcheckboxes.length; i++) {
+          if (allcheckboxes[i].checked) {
+            user.subjects.push(allcheckboxes[i].value);
+          }
+        }
+        addusertoAPI(user);
+      }
+
+      function addusertoAPI(user) {
+        var postdata = new XMLHttpRequest();
+        postdata.onreadystatechange = function () {
+          if (postdata.readyState == 4 && postdata.status == 201) {
+            console.log(user);
+          }
+        };
+        postdata.open("POST", "http://localhost:3000/users");
+        postdata.setRequestHeader("content-type", "application/json");
+        postdata.send(JSON.stringify(user));
+      }
+    </script>
+</body>
+</html>
