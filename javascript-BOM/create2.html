@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-    
-    function adduser() {
+      function adduser() {
         var user = {
-        id : document.getElementById("id").value,
+          id: document.getElementById("id").value,
           fname: document.getElementById("fname").value,
           lname: document.getElementById("lname").value,
           gender: "",
@@ -45,5 +44,5 @@
         postdata.send(JSON.stringify(user));
       }
     </script>
-</body>
+  </body>
 </html>
