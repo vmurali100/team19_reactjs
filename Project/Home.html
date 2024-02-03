@@ -80,6 +80,76 @@
             color: white;
             overflow-y: auto;
         }
+        #registrationForm{
+            display: none;
+        }
+    </style>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"] {
+            margin-bottom: 5px;
+        }
+
+        input[type="button"] {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        table {
+            flex: 1;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+        input[type="button"]:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 
@@ -99,6 +169,25 @@
 
 
     <div class="content" id="mainContent">
+        <form id="registrationForm" >
+
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+
+            <label for="state">State</label>
+            <select id="state" name="state">
+                <option value="Select">Select</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+            </select>
+
+            <button type="button" onclick="addUser(event)">Click me</button>
+        </form >
     </div>
 
     <footer>
@@ -107,9 +196,22 @@
 
     <script>
         async function loadRegisterPage() {
-            var res = await fetch('Register.html')
-            var html = await res.text()
-            document.getElementById('mainContent').innerHTML = html;
+            document.getElementById("registrationForm").style.display="block"
+            // window.location.href = "Register.html"
+            // var res = await fetch('Register.html')
+            // var html = await res.text()
+            // document.getElementById('mainContent').innerHTML = html;
+        }
+        function addUser(event) {
+            event.preventDefault();
+
+            var user = {
+                fname: document.getElementById("fname").value,
+                email: document.getElementById("email").value,
+                state: document.getElementById("state").value,
+            };
+
+            console.log(user);
         }
     </script>
 
