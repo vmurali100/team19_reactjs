@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ *{
+    margin: 0;
+    padding: 0;
+ }
+
+ body{
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: black;
+    /* background-color:lightgreen; */
+ }
+
+ div.wrapper {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    overflow: hidden;
+    
+}
+.row1{
+    background-color: tomato;
+    width: 100%;
+ }
+ #header {
+    padding: 0;
+    overflow: auto;
+    width: 960px;
+    margin: 0 auto;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+}
+#header  a{
+    text-decoration: none;
+}
+
+.clear {
+    display: block;
+    clear: both;
+}
+#header #hgroup {
+    /* float: left; */
+    margin: 0 0 20px 0;
+    
+}
+#header #hgroup h1 {
+    font-size: 36px;
+}
+#header #hgroup h1, #header #hgroup h2 {
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+}
+.row1, .row1 a {
+    color: black;
+    /* background-color: #333333; */
+}
+#header #hgroup h2 {
+    font-size: 13px;
+}
+
+#header nav {
+    display: block;
+    /* float: right; */
+    margin: 10px 0;
+    padding: 20px 0;
+    color: #C0BAB6;
+    background-color: lightgray;
+}
+#header nav ul {
+    padding: 0 20px;
+    list-style: none;
+}
+#header nav li {
+    display: inline;
+    margin-right: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+#header nav li a:hover{
+    color: yellow;
+}
+#header nav li.last {
+    margin-right: 0;
+}
+
+/* <----------------------------------------------wrapper2----------------------------------------------------> */
+
+#container {
+    padding: 20px 0;
+    width: 960px;
+    margin: 0 auto;
+    overflow: auto;
+}
+#container section {
+    /* display: block; */
+    width: 100%;
+    margin:0 0 30px 0;
+    padding: 0;
+}
+/* ----------------------------------------homepage---------------------------------- */
+#homepage{
+    overflow: auto;
+}
+#homepage #services {
+    background-color: sandybrown;
+    /* border: 1px solid red; */
+    overflow: auto;
+}
+#homepage #services .one_third {
+    width: 300px;
+    margin-right:30px;
+    /* float: left; */
+}
+#homepage #services {
+    background-color: sandybrown;
+    /* border: 1px solid red; */
+    overflow: auto;
+    display: flex;
+}
+#intro figcaption{
+    width: 50%;
+    float: left;
+}
+
+#homepage #services .one_third img {
+    border: 5px solid lightcyan;
+}
+#homepage #services .lastbox{
+    margin-right: 0;
+}
+#homepage #services h2{
+    margin-top: 10px;
+    font-style: italic;
+}
+#homepage #services p{
+    margin-top: 10px;
+}
+#homepage #services .more{
+    margin-top: 10px;
+    float: right;
+}
+#homepage #services .more a{
+    text-decoration: none;
+}
+section#intro {
+    background-color: grey;
+    overflow: auto;
+}
+#intro img {
+    float: right;
+
+}
+#intro figcaption h2{
+    font-style: italic;
+    font-size: 30px;
+    font-weight: normal;
+
+}
+#intro figcaption p{
+    padding:20px 0px;
+}
+#intro .more {
+    float: right;
+    padding: 0px 0;
+    margin-top: 48px;
+}
+#intro .more a{
+   text-decoration: none;
+   color: white;
+
+}
+#intro .more a:hover{
+   color: black;
+}
+#footer{
+    background-color: lightblue;
+    width: 960px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 10px 0;
+}
+#footer .one_quarter{
+    float: left;
+    width: 200px;
+    margin-right: 40px;
+}
+#footer .one_quarter ul li {
+    list-style: none;
+    font-size: 18px;
+    font-style: italic;
+    padding-bottom: 3px;
+    
+}
+#footer .one_quarter ul li a{
+    padding-bottom: 10px;
+    
+}
+#footer .one_quarter ul{
+    padding-top: 10px;
+}
+.row4{
+    background-color:tomato;
+}
+#copyright{
+   
+    width: 960px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 20px 0;
+    color: white;
+}
+#copyright a{
+    color: white;
+    font-size: 15px;
+}
+#copyright .fl_left{
+    float: left;
+
+}
+#copyright .fl_right{
+    float: right;
+
+}
+#copyright p a{
+    text-decoration: none;
+}
+#footer {
+    background-color: lightblue;
+    width: 960px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 10px 0;
+    display: flex;
+}
+#copyright {
+    width: 960px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 20px 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* // media queries // */
+
+@media screen and (max-width:425px){
+   
+    #header,#container,#slider img,#copyright{
+        width: 100%;
+        text-align: center;
+        background-color: lightpink;
+    }
+    #header #hgroup {
+    float: none;
+    margin: 0 0 20px 0;
+    }
+    #header nav {
+    display: block;
+    float: none;
+    margin: 10px 0 0 0;
+    padding: 20px 0;
+ 
+    
+    }
+    #header nav li {
+    display: block;
+    margin-right: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0;
+    background-color: lightskyblue;
+    padding: 10px;
+    margin: 10px;
+
+    }
+    #header nav li.last {
+    margin-right: 10px;
+    }
+    #footer {
+    background-color: rgb(243, 227, 45);
+    width: 100%;
+    /* margin: 0 auto;
+    overflow: auto; */
+    padding: 10px 0;
+   }
+   #homepage #services .one_third {
+    width: 300px;
+    margin-right: 0px;
+    float:none;
+    margin: 0 auto;
+    box-sizing: border-box;
+    }
+    #intro img {
+    float:none;
+    width: 99%;
+    border: 1.99px solid lawngreen;
+    }
+    #intro figcaption h2 {
+    font-style: italic;
+    font-size: 29px;
+    font-weight: normal;
+    }
+    #footer .one_quarter {
+    float: none;
+    width: 200px;
+    margin-right:0;
+    margin: 0 auto;
+    text-align: center;
+    }
+    #copyright .fl_left {
+    float: none;
+    }
+    #copyright .fl_right {
+    float: none;
+    }
+    #copyright  a {
+    color: black;
+    font-size: 12px;
+}
+}
+@media screen and  (min-width:425px) and (max-width:768px){
+    div.wrapper{
+        width: 100%;
+    }
+    #header{
+        background-color: rgb(94, 105, 105);
+        width:100%;
+
+
+    }
+    #header #hgroup{
+        text-align: center;
+        float: none;
+    }
+    #header nav{
+        float: none;
+        text-align: center;
+        margin-right: 25px;
+    }
+    #header nav{
+        margin: 3px 0 0 0;
+    }
+    #container{
+        width: 100%;
+    }
+    #container img{
+        width: 100%;
+    }
+    #homepage #services .one_third {
+    width: 426px;
+    margin-right: 0;
+    float: left;
+    }
+    #homepage #services .one_third {
+    width: 98.7%;
+    margin-right: 0;
+    float: left;
+    box-sizing: border-box;
+}
+#footer .one_quarter {
+    float: left;
+    width: 370px;
+    margin-right: 0;
+    text-align: center;
+}
+#copyright{
+    width: 100%;
+    text-align: center;
+}
+#footer{
+    width: 100%;
+
+}
+#footer .one_quarter {
+    width: 50%;
+    margin-right: 0;
+    text-align: center;
+}
+#homepage #services .one_third img {
+    border: 6px solid lightcyan;
+    width: 100%;
+    /* box-sizing: border-box; */
+}
+#copyright .fl_right {
+    float: none;
+}
+#copyright .fl_left {
+    float:none;
+}
+}
+
+    </style>
+</head>
+<body>
+    <div class="wrapper row1">
+        <header id="header" class="clear">
+            <div id="hgroup">
+                <h1><a href="#">SG TECH</a></h1>
+                <h2>Free HTML5 Website Template</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Carear</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li class="last"><a href="#">Services</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <!---------------------------------------------------wrapper2------------------------------------------------>
+    <div class="wrapper row2">
+        <div id="container" class="clear">
+            <section id="slider">
+                <a href="#"><img src="images/960x360.gif" alt="image"></a>
+            </section>
+            <div id="homepage">
+                <section id="services" class="clear">
+                    <article class="one_third">
+                        <figure><img src="images/290x180.gif" width="290" height="180" alt="">
+                          <figcaption>
+                            <h2>Indonectetus facilis</h2>
+                            <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                            <footer class="more"><a href="#">Read More &raquo;</a></footer>
+                          </figcaption>
+                        </figure>
+                      </article>
+
+                      <article class="one_third">
+                        <figure><img src="images/290x180.gif" width="290" height="180" alt="">
+                          <figcaption>
+                            <h2>Indonectetus facilis</h2>
+                            <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                            <footer class="more"><a href="#">Read More &raquo;</a></footer>
+                          </figcaption>
+                        </figure>
+                      </article>
+
+                      <article class="one_third lastbox">
+                        <figure><img src="images/290x180.gif" width="290" height="180" alt="">
+                          <figcaption>
+                            <h2>Indonectetus facilis</h2>
+                            <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                            <footer class="more"><a href="#">Read More &raquo;</a></footer>
+                          </figcaption>
+                        </figure>
+                      </article>
+                </section>
+                <section id="intro" class="last clear">
+                    <article>
+                        <figure><img src="images/450x250.gif" width="450" height="250" alt="">
+                            <div class="indonectetus">                          
+                            <figcaption>
+                            <h2>Indonectetus facilis leo nibh</h2>
+                            <p>This is a W3C compliant free website template from <a href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="https://www.os-templates.com/template-terms">website template licence</a>.</p>
+                            <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more HTML5 templates visit <a href="https://www.os-templates.com/">free website templates</a>.</p>
+                            <footer class="more"><a href="#">Read More &raquo;</a></footer>
+                            </figcaption>
+                            </div>
+                        </figure>
+                      </article>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper row3">
+        <div id="footer" class="clear">
+            <section class="one_quarter">
+                <h2 class="title">Link Block</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit</a></li>
+                        <li><a href="#">Amet consectetur</a></li>                        
+                        <li><a href="#">Praesent vel sem id</a></li>                        
+                        <li><a href="#">Curabitur hendrerit est</a></li>                        
+                        <li class="last"><a href="#">Sed a nulla urna</a></li>                        
+                    </ul>
+                </nav>
+            </section>
+
+            <section class="one_quarter">
+                <h2 class="title">Link Block</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit</a></li>
+                        <li><a href="#">Amet consectetur</a></li>                        
+                        <li><a href="#">Praesent vel sem id</a></li>                        
+                        <li><a href="#">Curabitur hendrerit est</a></li>                        
+                        <li class="last"><a href="#">Sed a nulla urna</a></li>                        
+                    </ul>
+                </nav>
+            </section>
+
+            <section class="one_quarter">
+                <h2 class="title">Link Block</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit</a></li>
+                        <li><a href="#">Amet consectetur</a></li>                        
+                        <li><a href="#">Praesent vel sem id</a></li>                        
+                        <li><a href="#">Curabitur hendrerit est</a></li>                        
+                        <li class="last"><a href="#">Sed a nulla urna</a></li>                        
+                    </ul>
+                </nav>
+            </section>
+
+            <section class="one_quarter quarterlast">
+                <h2 class="title">Link Block</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit</a></li>
+                        <li><a href="#">Amet consectetur</a></li>                        
+                        <li><a href="#">Praesent vel sem id</a></li>                        
+                        <li><a href="#">Curabitur hendrerit est</a></li>                        
+                        <li class="last"><a href="#">Sed a nulla urna</a></li>                        
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </div>
+    <div class="wrapper row4">
+        <footer id="copyright" class="clear">
+            <p class="fl_left"> <a href="#">Copyright © 2018 - All Rights Reserved - Domain Name</a></p>
+            <p class="fl_right"> <a href="#">Template by OS Templates</a></p>
+        </footer>
+    </div>
+</body>
+</html>

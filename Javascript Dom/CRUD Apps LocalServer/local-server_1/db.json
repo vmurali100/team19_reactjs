@@ -20,17 +20,6 @@
         "subject2"
       ],
       "id": "b360"
-    },
-    {
-      "fname": "nani",
-      "email": "jhsdk@gmail.com",
-      "gender": "male",
-      "state": "Karnataka",
-      "subjects": [
-        "subject1",
-        "subject3"
-      ],
-      "id": "70a8"
     }
   ],
   "people": [
@@ -109,6 +98,26 @@
       "priority": "medium",
       "duedate": "2024-01-30",
       "description": "todo using crud with local server"
+    }
+  ],
+  "newUsers": [
+    {
+      "id": "e9e8",
+      "fname": "chandrakla",
+      "email": "chandrakaladande1505@gmail.com",
+      "password": "kala"
+    },
+    {
+      "id": "1ef4",
+      "fname": "chandrakala",
+      "email": "chandrakaladande1505@gmail.com",
+      "password": "nani"
+    },
+    {
+      "id": "34f1",
+      "fname": "shanti",
+      "email": "shanti@gmail.com",
+      "password": "asdf"
     }
   ]
 }
