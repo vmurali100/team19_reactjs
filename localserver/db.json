@@ -1,41 +1,14 @@
 {
   "users": [
     {
-      "id": "27a9",
-      "fname": "Shanthi.battu",
-      "lname": "Battu",
-      "gender": "female",
+      "id": "1",
+      "fname": "aaaa",
+      "lname": "zxzx",
       "subjects": [
         "html",
         "css"
-      ]
-    },
-    {
-      "id": "b5ee",
-      "fname": "Shanthi.battu",
-      "lname": "Battu",
-      "gender": "female",
-      "subjects": [
-        "html"
-      ]
-    },
-    {
-      "id": "8051",
-      "fname": "Shanthi.battu",
-      "lname": "Battu",
-      "gender": "female",
-      "subjects": [
-        "css"
-      ]
-    },
-    {
-      "id": "1",
-      "fname": "Shanthi.battu",
-      "lname": "Battu",
-      "gender": "female",
-      "subjects": [
-        "html"
-      ]
+      ],
+      "gender": "male"
     }
   ]
 }

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">ID</label>
+        <input type="text" id="id"> <br>
+
+        <label for="">fname</label>
+        <input type="text" id="fname"> <br>
+
+        <label for="">lname</label>
+        <input type="text" id="lname"> <br>
+
+        <label for="">gender</label>
+        <input type="radio" name="gender" value="male">male
+        <input type="radio" name="gender" value="female">female <br>
+
+        <label for="">subjects</label>
+        <input type="checkbox" name="subjects" value="html">html
+        <input type="checkbox" name="subjects" value="css">css <br>
+
+        <button type="button" onclick="adduser()">adduser</button>
+
+
+    </form>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>fname</th>
+                <th>lname</th>
+                <th>subjects</th>            
+                <th>gender</th>
+                <th>edit</th>
+                <th>delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        function adduser(){
+            var user={
+                id:document.getElementById("id").value,
+                fname:document.getElementById("fname").value,
+                lname:document.getElementById("lname").value,
+                subjects : [],
+                gender : null
+
+            }
+            
+            var allradiobtns=document.getElementsByName("gender")
+            for(i=0;i<allradiobtns.length;i++){
+                if(allradiobtns[i].checked==true){
+                    user.gender=allradiobtns[i].value
+                }
+            }
+
+            var allcheckboxes=document.getElementsByName("subjects")
+            for(i=0;i<allcheckboxes.length;i++){
+                if(allcheckboxes[i].checked==true){
+                    user.subjects.push(allcheckboxes[i].value)
+                }
+            }
+            addusertoAPI(user)
+        }
+
+        function addusertoAPI(user){
+            var postdata=new XMLHttpRequest()
+            postdata.onreadystatechange=function(){
+                if(postdata.readyState==4 && postdata.readyState==201){
+
+                }
+            }
+            postdata.open("POST","http://localhost:3000/users")
+            postdata.setRequestHeader("content-type","application/json")
+            postdata.send(JSON.stringify(user))
+
+        }
+
+         var users=[]
+        function getusersfromAPI(){
+            var getdata=new XMLHttpRequest()
+            getdata.onreadystatechange=function(){
+                if(getdata.readyState==4 && getdata.status==200){
+                    users=JSON.parse(getdata.response);
+                    console.log(users)
+                    displayusers()
+                }
+            }
+            getdata.open("GET","http://localhost:3000/users")
+            getdata.send()
+        }
+        getusersfromAPI()
+
+        function displayusers(){
+            for(i=0;i<users.length;i++){
+                var mytr=document.createElement("tr")
+
+                var eachobj=users[i]
+                for(a in eachobj){
+                    var mytd=document.createElement("td")
+                    mytd.innerHTML=eachobj[a]
+                    mytr.appendChild(mytd)
+                }
+
+
+                var edittd=document.createElement("td")
+                var editbtn=document.createElement("button")
+                editbtn.innerHTML="Edit"
+                editbtn.setAttribute("onclick","Edituser("+i+")")
+                edittd.appendChild(editbtn)
+                mytr.appendChild(edittd)
+
+                var deltd=document.createElement("td")
+                var delbtn=document.createElement("button")
+                delbtn.innerHTML="Delete"
+                delbtn.setAttribute("onclick","Deleteuser("+i+")")
+                deltd.appendChild(delbtn)
+                mytr.appendChild(deltd)
+
+                document.querySelector("tbody").appendChild(mytr)
+            }
+        }
+
+        function Edituser(i){
+            localStorage.setItem("usertoedit",JSON.stringify(users[i]))
+            window.location.href = "edituser3.html"
+        }
+
+        function Deleteuser(i){
+            var deleteData = new XMLHttpRequest();
+            deleteData.onreadystatechange = function () {
+            if (deleteData.readyState == 4 && deleteData.status == 200) {
+              console.log("User Deleted Successfully")
+            }
+          };
+          deleteData.open("DELETE", "http://localhost:3000/users/" + users[i].id);
+          deleteData.send();
+        }
+    </script>
+    
+</body>
+</html>

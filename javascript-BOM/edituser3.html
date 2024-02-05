@@ -14,25 +14,27 @@
       <input type="text" id="fname" /> <br />
 
       <label for="">lname</label>
-      <input type="text" id="lname" /><br />
+      <input type="text" id="lname" /> <br />
 
       <label for="">gender</label>
       <input type="radio" name="gender" value="male" />male
-      <input type="radio" name="gender" value="female" />female <br /><br />
+      <input type="radio" name="gender" value="female" />female <br />
 
       <label for="">subjects</label>
-      <input type="checkbox" name="subjects" value="html" />HTML
-      <input type="checkbox" name="subjects" value="css" />CSS <br /><br />
+      <input type="checkbox" name="subjects" value="html" />html
+      <input type="checkbox" name="subjects" value="css" />css <br />
 
       <button type="button" onclick="updateuser()">updateuser</button>
     </form>
 
     <script>
       var user = JSON.parse(localStorage.getItem("usertoedit"));
+
       for (a in user) {
         if (a !== "gender" && a !== "subjects") {
           document.getElementById(a).value = user[a];
         }
+
         if (a == "gender") {
           var allradiobtns = document.getElementsByName("gender");
           for (index = 0; index < allradiobtns.length; index++) {
@@ -41,9 +43,12 @@
             }
           }
         }
-        if (a === "subjects") {
+        if (a == "subjects") {
           var allcheckboxes = document.getElementsByName("subjects");
           for (index = 0; index < allcheckboxes.length; index++) {
+            // // var check=user.subjects.some((val)=>
+            // //     allcheckboxes[index].value==val
+            // )
             var check = user.subjects.some((val) => {
               return allcheckboxes[index].value == val;
             });
@@ -57,8 +62,8 @@
           id: document.getElementById("id").value,
           fname: document.getElementById("fname").value,
           lname: document.getElementById("lname").value,
-          gender: "",
           subjects: [],
+          gender: "",
         };
 
         var allradiobtns = document.getElementsByName("gender");
@@ -67,33 +72,27 @@
             user.gender = allradiobtns[i].value;
           }
         }
+
         var allcheckboxes = document.getElementsByName("subjects");
         for (i = 0; i < allcheckboxes.length; i++) {
           if (allcheckboxes[i].checked == true) {
             user.subjects.push(allcheckboxes[i].value);
           }
-        //   updateUserToApi(user)
+          updateUserToApi(user);
         }
 
-    //    function updateUserToApi(user){
-        var postdata = new XMLHttpRequest();
-        postdata.onreadystatechange = function () {
-          if (postdata.readyState == 4 && postdata.status == 200) {
-            window.location.href = "BOM2.html";
-          }
-        };
-        postdata.open("PUT", "http://localhost:3000/users/" + user.id);
-        postdata.setRequestHeader("content-type", "application/JSON");
-        postdata.send(JSON.stringify(user));
+        function updateUserToApi(user) {
+          var postdata = new XMLHttpRequest();
+          postdata.onreadystatechange = function () {
+            if (postdata.readyState == 4 && postdata.status == 200) {
+              window.location.href = "BOM3.html";
+            }
+          };
+          postdata.open("PUT", "http://localhost:3000/users/" + user.id);
+          postdata.setRequestHeader("content-type", "application/JSON");
+          postdata.send(JSON.stringify(user));
+        }
       }
-       
-      //   for (index = 0; index < allcheckboxes.length; i++) {
-      //     var check = users[i].subjects.some((val) => {
-      //       allcheckboxes[index].value == val;
-      //     });
-      //     allcheckboxes[index].checked == check;
-      //   }
-      // }
     </script>
   </body>
 </html>
