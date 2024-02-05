@@ -185,7 +185,7 @@
           if (postdata.readyState == 4 && postdata.status == 201) {
           }
         };
-        postdata.open("POST", "http://localhost:3000/posts");
+        postdata.open("POST", "http://localhost:3000/users");
         postdata.setRequestHeader("content-type", "application/json");
         postdata.send(JSON.stringify(user));
       }
@@ -199,7 +199,7 @@
             displayusers();
           }
         };
-        getdata.open("GET", "http://localhost:3000/posts");
+        getdata.open("GET", "http://localhost:3000/users");
         getdata.send();
       }
       getusersfromAPI();
@@ -292,7 +292,7 @@
           if (postdata.readyState == 4 && postdata.status == 200) {
           }
         };
-        postdata.open("PUT", "http://localhost:3000/posts/" + users[gindex].id);
+        postdata.open("PUT", "http://localhost:3000/users" + users[gindex].id);
         postdata.setRequestHeader("content-type", "application/json");
         postdata.send(JSON.stringify(user));
       }
@@ -305,7 +305,7 @@
             displayusers();
           }
         };
-        deletedata.open("DELETE", "http://localhost:3000/posts/" + users[i].id);
+        deletedata.open("DELETE", "http://localhost:3000/users" + users[i].id);
         deletedata.setRequestHeader("content-type", "application/json");
         deletedata.send();
       }
