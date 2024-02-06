@@ -181,6 +181,9 @@
                 </div>
 
                 <button class="formbold-btn" type="button" onclick="addUser()">Submit</button>
+                <button class="formbold-btn" type="button" onclick="goTo()">Go To DisplayUsers Page</button>
+                <button class="formbold-btn" type="button" onclick="goToHome()">Go To Home Page</button>
+
             </form>
         </div>
     </div>
@@ -244,7 +247,13 @@
                 })
         }
 
+    function goTo(){
+        window.location.href = "displayUsers.html"
+    }
 
+    function goToHome(){
+        window.location.href = "homePage.html"
+    }
 
     </script>
 
