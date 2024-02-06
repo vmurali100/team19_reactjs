@@ -157,7 +157,7 @@
 
        
 
-         var userExist = users.some((user =>
+         var userExist = users.every((user =>
           user.fname == name && user.email == email && user.password == password
          ));
 
