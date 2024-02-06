@@ -1,30 +1,3 @@
 {
-  "users": [
-    {
-      "id": "1",
-      "fname": "aaaa",
-      "lname": "zxzx",
-      "subjects": [
-        "html",
-        "css"
-      ],
-      "gender": "male"
-    },
-    {
-      "id": "1",
-      "fullname": "Shanthi.battu Battu",
-      "email": "hemasekarvinnamoor@gmail.com",
-      "password": "shanthi123",
-      "confirmpassword": "shanthi123",
-      "dateofbirth": "2024-02-05",
-      "gender": "female",
-      "address": "santhapet,chittoor",
-      "preferedoppointmentdate": "2024-02-08",
-      "preferedoppointmenttime": "19:54",
-      "interests": [
-        "Reading",
-        "Sports"
-      ]
-    }
-  ]
+  "users": []
 }

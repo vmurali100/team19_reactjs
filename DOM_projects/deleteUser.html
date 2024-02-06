@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Welcome to Delete Page</h2>
+    <h3></h3>
+    <button onclick="handleDelete()">Yes , Delete</button>
+    <button>No , Cancel</button>
+    <script>
+      var user = JSON.parse(localStorage.getItem("usertodelete"));
+      document.querySelector("h3").innerHTML =
+        "Do You want to Delete " + user.name;
+
+      function handleDelete() {
+        var deleteData = new XMLHttpRequest();
+        deleteData.onreadystatechange = function () {
+          if (deleteData.readyState == 4 && deleteData.status == 200) {
+            console.log("User Deleted Successfully");
+            window.location.href = "displayusers.html"
+          }
+        };
+        deleteData.open("DELETE", "http://localhost:3000/users/" + user.id);
+        deleteData.send();
+      }
+    </script>
+  </body>
+</html>

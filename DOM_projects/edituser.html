@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./mystyles.css" />
   </head>
   <body>
     <div class="formbold-main-wrapper">
@@ -282,7 +283,7 @@
             ></textarea>
           </div>
 
-          <button type="button" onclick="adduser()">Submit</button>
+          <button type="button" onclick="updateuser()">update</button>
         </form>
       </div>
     </div>
@@ -452,8 +453,37 @@
     </style>
 
     <script>
-      function adduser() {
+      var user = JSON.parse(localStorage.getItem("usertoedit"));
+
+      for (a in user) {
+        if (a !== "ans" && a !== "subjects") {
+          document.getElementById(a).value = user[a];
+        }
+
+        if (a == "ans") {
+          var allradiobtns = document.getElementsByName("ans");
+          for (index = 0; index < allradiobtns.length; index++) {
+            if (allradiobtns[index].value == user.ans) {
+              allradiobtns[index].checked = true;
+            }
+          }
+        }
+
+        if (a == "subjects") {
+          var allcheckboxes = document.getElementsByName("subjects");
+          for (index = 0; index < allcheckboxes.length; index++) {
+            var check = user.subjects.some((val) => {
+              return allcheckboxes[index].value == val;
+            });
+            allcheckboxes[index].checked = check;
+          }
+        }
+      }
+
+
+      function updateuser() {
         var user = {
+          id: document.getElementById("id").value,
           name: document.getElementById("name").value,
           email: document.getElementById("email").value,
           age: document.getElementById("age").value,
@@ -475,25 +505,29 @@
             user.subjects.push(allcheckboxes[i].value);
           }
         }
-        adduserfromAPI(user);
+        updateuserfromAPI(user);
       }
 
-      function adduserfromAPI(user) {
-        var postdata = new XMLHttpRequest();
-        postdata.onreadystatechange = function () {
-          if (postdata.readyState == 4 && postdata.status == 201) {
-            // window.location.href = "displayusers.html";
-          }
+      function updateuserfromAPI(user) {
+        var updatedata = new XMLHttpRequest();
+        updatedata.onreadystatechange = function () {
+          if (updatedata.readyState == 4 && updatedata.status == 200) {
+            window.location.href = "displayusers.html";          }
         };
 
-        postdata.open("POST", "http://localhost:3000/users");
-        postdata.setRequestHeader("content-type", "application/json");
-        postdata.send(JSON.stringify(user));
+        updatedata.open("PUT", "http://localhost:3000/users/" +user.id);
+        updatedata.setRequestHeader("content-type", "application/json");
+        updatedata.send(JSON.stringify(user));
       }
 
-      function displayusers(user) {
-        window.location.href = "displayusers.html";
-      }
+     
+
+
+
+
+
+
+      
 
       
     </script>
