@@ -229,23 +229,23 @@
                 headers: { "content-type": "application/json" }
 
             }).then(() => {
-                getUsersFromApi();
+               
                 window.location.href = "displayUsers.html"
 
             })
         };
 
         var users = []
-        function getUsersFromApi() {
-            fetch("http://localhost:3000/student")
-                .then((response) => {
-                    return response.json();
-                })
-                .then((data) => {
-                    users = data;
-                    displayUsers()
-                })
-        }
+        // function getUsersFromApi() {
+        //     fetch("http://localhost:3000/student")
+        //         .then((response) => {
+        //             return response.json();
+        //         })
+        //         .then((data) => {
+        //             users = data;
+        //             displayUsers()
+        //         })
+        // }
 
     function goTo(){
         window.location.href = "displayUsers.html"
