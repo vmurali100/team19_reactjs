@@ -1,3 +1,17 @@
 {
-  "users": []
+  "users": [
+    {
+      "id": "3216",
+      "name": "Hari babu",
+      "email": "hemasekarvinnamoor@gmail.com",
+      "age": "36",
+      "occupation": "Student",
+      "ans": "yes",
+      "subjects": [
+        "javaScript",
+        "react",
+        "bootstrap"
+      ]
+    }
+  ]
 }

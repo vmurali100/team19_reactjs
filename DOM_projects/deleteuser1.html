@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>email</th>
+                <th>age</th>
+                <th>occupation</th>
+                <th>ans</th>
+                <th>subjects</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <button type="button" onclick="deleteuser()">delete</button>
+    <input type="button" value="delete" onclick="deleteuser()">
+
+    <script>
+        var  deletetouser=JSON.parse(localStorage.getItem("deletetouser"))
+
+        function displayusers(){
+            var mytr=document.createElement("tr")
+
+            for(a in deletetouser){
+
+                if(a !=="subjects"){
+                    var mytd=document.createElement('td')
+                    mytd.innerHTML=deletetouser[a]
+                    mytr.appendChild(mytd)
+                }
+                else if(a=="sunjects"){
+                    var result=""
+                    for(b in deletetouser[a]){
+                        result=result+deletetouser[a][b]
+                    }
+                    var mytd=document.createElement("td")
+                    mytd.innerHTML="result"
+                    mytr.appendChild(mytd)
+
+                }
+            }
+            document.querySelector("tbody").appendChild(mytr)
+        }
+
+        displayusers()
+
+        function displayusers1(){
+            fetch("http://localhost:3000/users/"+deletetouser.id,{
+                method:"DELETE"
+            }).then(()=>{
+                console.log("User deleted")
+            })
+           
+        }
+    </script>
+    
+</body>
+</html>
