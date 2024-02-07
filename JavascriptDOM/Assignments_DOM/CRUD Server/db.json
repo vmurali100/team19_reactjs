@@ -1,22 +1,24 @@
 {
   "users": [
     {
-      "id": "02",
-      "fullName": "Amar",
-      "email": "Amar@123gmail.com",
-      "password": "22222222222"
-    },
-    {
-      "id": "03",
-      "fullName": "Aswini",
-      "email": "Aswini@gmail.com",
-      "password": "33333333333"
-    },
-    {
-      "id": "01",
-      "fullName": "Sandy",
+      "fname": "sandy",
       "email": "sandy@123gmail.com",
-      "password": "11111111111"
+      "gender": "male",
+      "state": "TN",
+      "subjects": [
+        "subject3"
+      ],
+      "id": "e0cc"
+    },
+    {
+      "fname": "Anuska",
+      "email": "Anuska@123gmail.com",
+      "gender": "female",
+      "state": "UP",
+      "subjects": [
+        "subject2"
+      ],
+      "id": "3265"
     }
   ]
 }

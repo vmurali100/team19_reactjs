@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>editUser_html</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<style>
+    form{
+        width: 60%;
+        margin: auto;
+        margin-top: 50px;
+    }
+</style>
+<body>
+    <form action="#" method="POST">
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="gender">Gender:</label><br>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br>
+
+        <label for="state">State:</label><br>
+        <input type="text" id="state" name="state"><br>
+
+        <label>Subjects:</label><br>
+        <input type="checkbox" id="subject1" name="subjects" value="subject1">
+        <label for="subject1">Subject 1</label><br>
+        <input type="checkbox" id="subject2" name="subjects" value="subject2">
+        <label for="subject2">Subject 2</label><br>
+        <input type="checkbox" id="subject3" name="subjects" value="subject3">
+        <label for="subject3">Subject 3</label><br> <br>
+
+        <input type="button" value="Submit" onclick="updateUser()">
+    </form>
+    
+
+    <script>
+         var userToEdit = JSON.parse(localStorage.getItem("userToEdit"));
+        console.log("In Edit User Page ", userToEdit)
+
+        for (a in userToEdit) {
+            if (a !== "subjects" && a!== "id"   ) {
+                document.getElementById(a).value = userToEdit[a]
+            } else if (a == "subjects") {
+                // let subjects = userToEdit["subjects"]; // Accessing With [] notation
+                let subjects = userToEdit.subjects; // Accesging with . notation
+
+                var allCheckBoxes = document.getElementsByName("subjects");
+                for (let index = 0; index < allCheckBoxes.length; index++) {
+                    const element = allCheckBoxes[index];
+                    var check = subjects.some((sub) => element.value === sub);
+                    element.checked = check
+                }
+            }
+        }
+
+
+      function updateUser(){
+        var user=readUsersFromServer();
+        fetch("http://localhost:3000/users/"+userToEdit['id'],{
+            method:"PUT",
+            body:JSON.stringify(user),
+            headers:{"Content-type":"application/json"}
+        }).then(()=>{
+            console.log("user updated");
+            window.location.href="sample_01.html"
+        })
+
+      }
+
+    </script>
+    <script src="create.js"></script>
+</body>
+</html>

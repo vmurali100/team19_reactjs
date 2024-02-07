@@ -28,6 +28,15 @@ function displayUsers() {
        editTd.appendChild(editBtn)
        myTr.appendChild(editTd);
 
+       //deletebtn
+
+       var Deleted = document.createElement("td");
+       var deletebtn = document.createElement("button");
+       deletebtn.innerHTML = "Edit"
+       deletebtn.setAttribute("onclick","deleteUser("+index+")")
+       Deleted.appendChild(deletebtn)
+       myTr.appendChild(Deleted);
+
         document.querySelector("tbody").appendChild(myTr)
     }
 }

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Table Layout</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form action="#" method="POST">
+                <label for="fname">First Name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+
+                <label for="gender">Gender:</label><br>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select><br>
+
+                <label for="state">State:</label><br>
+                <input type="text" id="state" name="state"><br>
+
+                <label>Subjects:</label><br>
+                <input type="checkbox" id="subject1" name="subjects" value="subject1">
+                <label for="subject1">Subject 1</label><br>
+                <input type="checkbox" id="subject2" name="subjects" value="subject2">
+                <label for="subject2">Subject 2</label><br>
+                <input type="checkbox" id="subject3" name="subjects" value="subject3">
+                <label for="subject3">Subject 3</label><br>
+
+                <input type="button" value="Submit" onclick="createUser()">
+            </form>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>First Name</th>
+
+                    <th>Gender</th>   
+                    <th>ID</th>
+                    <th>State</th>
+                    <th>Subjects</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+           
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="create.js"></script>
+    <script src="read.js"></script>
+    <script src="update.js"></script>
+    <script src="delete.js"></script>
+</body>
+</html>

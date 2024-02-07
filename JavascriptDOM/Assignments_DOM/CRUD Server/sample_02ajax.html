@@ -199,8 +199,6 @@
             sendproduct.onreadystatechange = function(){
                 if(sendproduct.status == 200  && sendproduct.readyState == 4){
                     getAllUsersFromServer();
-
-                    
                 }
             }
             sendproduct.open("DELETE","http://localhost:3000/users/"+users[row].id);
@@ -214,7 +212,7 @@
         var gIndex=null;
         function editUser(index){
             gIndex=index;
-            document.getElementById("fullName").value=users[index].id;
+            document.getElementById("id").value=users[index].id;
             document.getElementById("fullName").value=users[index].fullName;
             document.getElementById("email").value=users[index].email;
             document.getElementById("password").value=users[index].password;
@@ -223,7 +221,6 @@
             document.getElementById("updatebtn").style.display="block";
             
         }
-
         // updateuser
 
         function updateUser(index){
