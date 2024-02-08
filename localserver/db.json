@@ -1,40 +1,8 @@
 {
   "users": [
     {
-      "id": "0f01",
-      "firstname": "Shanthi.battu",
-      "lastname": "Battu",
-      "email": "hemasekarvinnamoor@gmail.com",
-      "phone": "214123434",
-      "address": "santhapet,chittoor",
-      "address2": "fafa",
-      "state": "Ap",
-      "country": "India",
-      "post": "123",
-      "area": "453534",
-      "class": [
-        "yes"
-      ]
-    },
-    {
-      "id": "1518",
-      "name": "aaaa zxzx",
-      "email": "hemasekarvinnamoor@gmail.com",
-      "age": "30",
-      "occupation": "Student",
-      "ans": "yes",
-      "subjects": [
-        "javaScript"
-      ]
-    },
-    {
-      "id": "53c1",
-      "name": "",
-      "email": "",
-      "age": "",
-      "occupation": "Student",
-      "ans": "",
-      "subjects": []
+     
     }
   ]
+  
 }
