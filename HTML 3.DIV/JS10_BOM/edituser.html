@@ -18,34 +18,45 @@
 
 <body>
     <form action="#" method="POST">
-        <label for="fname">First Name:</label><br>
-        <input type="text" id="fname" name="fname"><br>
+        <label for="id">id</label><br>
+        <input type="text" name="id" id="id">
+        <label for="fname">first Name:</label><br>
+        <input type="text" name="fname" id="fname"><br>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br>
+        <label for="email">Email</label><br>
+        <input type="email" name="email" id="email"><br>
+
+        <label for="state">state</label>
+        <select name="state" id="state">
+        <option value="select">select</option>
+        <option value="karnataka">karnataka</option>
+        <option value="Andrapradesh">Andrapradesh</option>
+        <option value="Tamilnadu">Tamilnadu</option>
+        <option value="Maharastra">Maharastra</option>
+        </select>
+        <br>
 
         <label for="gender">Gender:</label><br>
-        <select id="gender" name="gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
+        <select name="gender" id="gender">
+            <option value="male">male</option>
+            <option value="female">female</option>
+            <option value="others">others</option>
         </select><br>
 
-        <label for="state">State:</label><br>
-        <input type="text" id="state" name="state"><br>
+       
 
-        <label for="state">ID:</label><br>
-        <input type="text" id="id" name="state" disabled><br>
+        <label for="">subjects:</label><br>
+        <input type="checkboxe" id="subject1" name="subjects" value="subject1">
+        <label for="subject1">subject1 </label><br>
+        <input type="checkbox" name="subjects" id="subject2" value="subject2">
+        <label for="subject2">subject2</label><br>
+        <input type="checkbox" name="subjects" id="subject3" value="subject3">
+        <label for="subject3">subject3</label><br>
 
-        <label>Subjects:</label><br>
-        <input type="checkbox" id="subject1" name="subjects" value="subject1">
-        <label for="subject1">Subject 1</label><br>
-        <input type="checkbox" id="subject2" name="subjects" value="subject2">
-        <label for="subject2">Subject 2</label><br>
-        <input type="checkbox" id="subject3" name="subjects" value="subject3">
-        <label for="subject3">Subject 3</label><br>
+        <label for="dob">dob </label>
+                <input type="date" name="date" id="dob"><br><br>
 
-        <input type="button" value="Update" onclick="updateUser()">
+        <input type="button" value="Submit" onclick="updateUser()">
     </form>
 
     <script src="./create.js"></script>
@@ -57,8 +68,7 @@
             if (a !== "subjects"    ) {
                 document.getElementById(a).value = userToEdit[a]
             } else if (a == "subjects") {
-                // let subjects = userToEdit["subjects"]; // Accessing With [] notation
-                let subjects = userToEdit.subjects; // Accesging with . notation
+                 let subjects = userToEdit.subjects; // Accesging with . notation
 
                 var allCheckBoxes = document.getElementsByName("subjects");
                 for (let index = 0; index < allCheckBoxes.length; index++) {
@@ -78,9 +88,22 @@
                 headers: { "Content-Type": "application/json" },
             }).then(() => {
                 console.log("User Updated !!!")
-                window.location.href = 'sample1_intro.html'
+                window.location.href = 'fetch_sample1.html'
             })
         }
+        // function deleteUser(i) {
+        //     console.log(users[i])
+
+        //     var deleteData = new XMLHttpRequest();
+        //     deleteData.onreadystatechange = function () {
+        //         if (deleteData.status == 200 && deleteData.readyState == 4) {
+        //             users = JSON.parse(deleteData.response);
+        //             displayUsers()
+        //         }
+        //     }
+        //     deleteData.open("DELETE", "http://localhost:3000/users/" + users[i].id);
+        //     deleteData.send()
+        // }
     </script>
 </body>
 

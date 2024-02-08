@@ -36,5 +36,5 @@ getUsersFromAPI()
 function editUser(i){
     console.log(i)
     localStorage.setItem("userToEdit",JSON.stringify(users[i]));
-    window.location.href = "editUser.html"
+    window.location.href = "edituser.html"
 }

@@ -1,52 +1,25 @@
 {
   "users": [
     {
-      "id": "2",
-      "fname": "G.lokesh",
-      "email": "lokesh@gmail.com",
-      "state": "AndhraPradesh",
-      "dob": "2001-07-23",
-      "subjects": [
-        "Html",
-        "Css"
-      ],
-      "gender": "male"
-    },
-    {
       "id": "3",
       "fname": "m.naveenkumar",
       "email": "mnaveen@gmail.com",
       "state": "karnataka",
       "dob": "2000-07-27",
       "subjects": [
-        "Reactjs"
+        "HTML"
       ],
       "gender": "male"
     },
     {
-      "id": "4",
-      "fname": "poornima",
-      "email": "poori@gmail.com",
-      "state": "karnataka",
-      "dob": "2001-06-25",
+      "id": "1",
+      "fname": "m.swapna",
+      "email": "smswapna924@gmail.com",
+      "state": "Andrapradesh",
+      "dob": "2002-06-26",
       "subjects": [
         "HTML",
-        "css",
-        "javascript",
-        "Reactjs"
-      ],
-      "gender": "female"
-    },
-    {
-      "id": "5",
-      "fname": "B.pavitra",
-      "email": "pavitra@gmail.com",
-      "state": "Tamilnadu",
-      "dob": "2003-10-03",
-      "subjects": [
-        "HTML",
-        "css",
-        "Reactjs"
+        "css"
       ],
       "gender": "female"
     }

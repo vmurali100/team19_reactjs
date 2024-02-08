@@ -92,11 +92,24 @@
     <div class="container">
         <div class="form-container">
             <form action="#" method="POST">
+                <label for="id">id:</label><br>
+                <input type="text" name="id" id="id"><br>
+
                 <label for="fname">first Name:</label><br>
                 <input type="text" name="fname" id="fname"><br>
 
                 <label for="email">Email</label><br>
                 <input type="email" name="email" id="email"><br>
+
+                <label for="state">state</label>
+                <select name="state" id="state">
+                <option value="select">select</option>
+                <option value="karnataka">karnataka</option>
+                <option value="Andrapradesh">Andrapradesh</option>
+                <option value="Tamilnadu">Tamilnadu</option>
+                <option value="Maharastra">Maharastra</option>
+                </select>
+                <br>
 
                 <label for="gender">Gender:</label><br>
                 <select name="gender" id="gender">
@@ -105,8 +118,7 @@
                     <option value="others">others</option>
                 </select><br>
 
-                <label for="state">state:</label><br>
-                <input type="text" id="State" NAME="state"><br>
+               
 
                 <label for="">subjects:</label><br>
                 <input type="checkboxe" id="subject1" name="subjects" value="subject1">
@@ -116,6 +128,9 @@
                 <input type="checkbox" name="subjects" id="subject3" value="subject3">
                 <label for="subject3">subject3</label><br>
 
+                <label for="dob">dob </label>
+                <input type="date" name="date" id="dob"><br><br>
+
                 <input type="button" value="Submit" onclick="createUser()">
             </form>
         </div>
@@ -123,14 +138,16 @@
     <table>
         <thead>
             <tr>
+                <th>id</th>
                 <th>first Name</th>
                 <th>Email</th>
-                <th>Gender</th>
                 <th>state</th>
+                <th>dob</th>
                 <th>subjects</th>
-                <th>ID</th>
+                <th>gender</th>
                 <th>Edit</th>
-                <th>Delete</th>
+               
+             
             </tr>
         </thead>
 
