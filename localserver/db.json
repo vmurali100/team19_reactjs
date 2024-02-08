@@ -1,16 +1,19 @@
 {
   "users": [
     {
-      "id": "3216",
-      "name": "Hari babu",
+      "id": "0f01",
+      "firstname": "Shanthi.battu",
+      "lastname": "Battu",
       "email": "hemasekarvinnamoor@gmail.com",
-      "age": "36",
-      "occupation": "Student",
-      "ans": "yes",
-      "subjects": [
-        "javaScript",
-        "react",
-        "bootstrap"
+      "phone": "214123434",
+      "address": "santhapet,chittoor",
+      "address2": "fafa",
+      "state": "Ap",
+      "country": "India",
+      "post": "123",
+      "area": "453534",
+      "class": [
+        "yes"
       ]
     }
   ]
