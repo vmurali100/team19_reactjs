@@ -10,6 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "json-server": "^1.0.0-alpha.23"
+=======
+    "json-server": "^1.0.0-alpha.17"
+>>>>>>> 6be68c26ecb49fef97a7fc379c0dd6b521f77208
   }
 }

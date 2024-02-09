@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .myClass{
+            color: red;
+            background: lightgray;
+            text-align: center;
+            padding: 10px;
+        }
+        #myId{
+            font-size: 32px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+  </head>
+  <body>
+    <button onclick="changeText()">Change Text</button>
+    <h2 id="demo">Hello World</h2>
+
+    <script>
+      function changeText() {
+        // document.querySelector("h2").innerHTML = "New Text added by Javascript !!!"
+        // document.getElementsByTagName("h2")[0].innerHTML = "New Text Added by JS With getElementsByTagName !!!"
+
+        // document.querySelector("#demo").innerHTML =
+        //   "New Text added by Javascript !!! querySelector";
+
+        // document.getElementsByClassName("myClass")[0].innerHTML = "New Text Added by JS With getElementsByClassName !!!"
+
+        // document.querySelector("h2").style.color="red"
+        // document.querySelector("h2").style.background="yellow"
+        // document.querySelector("h2").style.textAlign="center"
+
+        document.querySelector("h2").setAttribute("class","myClass");
+        document.getElementById("demo").setAttribute("id","myId")
+      }
+    </script>
+  </body>
+</html>

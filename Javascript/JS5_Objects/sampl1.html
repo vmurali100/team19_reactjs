@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var myMobile = {
+        name: "Nokia",
+        rate: 10000,
+        isItWorking: true,
+        damage: null,
+        showInfo: function () {},
+        btteryDetails: {
+            capacity:"5000MH"
+        },
+      };
+
+      myMobile.os="Android" // Adding a property with .(dot) Notation
+      myMobile['ram']="6GB" // Adding a Prperty with [] Notation
+      myMobile.damage = "No Damage"
+      delete myMobile.showInfo
+      console.log(myMobile)
+
+
+      document.write(myMobile.name+"<br>");
+      document.write(myMobile.rate)
+    </script>
+  </body>
+</html>
