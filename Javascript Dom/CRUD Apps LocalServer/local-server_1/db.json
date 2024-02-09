@@ -24,6 +24,19 @@
         "Javascript"
       ],
       "gender": "male"
+    },
+    {
+      "id": "1",
+      "fname": "kala",
+      "email": "jhsdk@gmail.com",
+      "state": "Karnataka",
+      "dob": "2024-01-28",
+      "subjects": [
+        "Html",
+        "Css",
+        "Javascript"
+      ],
+      "gender": "female"
     }
   ],
   "people": [

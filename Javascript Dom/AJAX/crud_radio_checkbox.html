@@ -121,7 +121,7 @@
 
         <input type="button" id="addUserBtn" value="submit" onclick="addUser()">
         <input type="button" id="updateUserBtn" value="updateUser" onclick="updateUser()">
-        
+
     </form>
 
     <table>
@@ -135,7 +135,7 @@
             <th>Subjects</th>
             <th>Gender</th>
 
-           
+
             <th>Edit</th>
             <th>Delete</th>
         </tr>
@@ -182,7 +182,7 @@
                 }
             }
             sendData.open("POST", "http://localhost:3000/users");
-            sendData.setRequestHeader("content-type", "application/json")
+            // sendData.setRequestHeader("content-type", "application/json")
             sendData.send(JSON.stringify(user))
         }
 
@@ -304,7 +304,7 @@
                 }
             }
             postData.open("PUT", "http://localhost:3000/users/" + users[gIndex].id);
-            postData.setRequestHeader("content-type", "application/json");
+            // postData.setRequestHeader("content-type", "application/json");
             postData.send(JSON.stringify(user))
         }
         // Delete user

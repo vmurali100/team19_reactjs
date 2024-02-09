@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        input {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        var users = [
+            {
+                uname: "Seetha"
+            },
+            {
+                uname: "Geetha"
+            },
+            {
+                uname: "Ravi"
+            }
+        ]
+
+        function displayUsers() {
+            document.querySelector("tbody").innerHTML = "";
+            users.forEach((data, i) => {
+                var myTr = document.createElement("tr");
+                for (a in data) {
+                    var myTd = document.createElement("td");
+                    var myinput = document.createElement("input");
+                    myinput.setAttribute("type", "text");
+                    myinput.setAttribute("readonly", "");
+                    myinput.setAttribute("id", a)
+                    myinput.setAttribute("value", data[a])
+                    myTd.appendChild(myinput);
+                    myTr.appendChild(myTd);
+                }
+
+                var editTd = document.createElement("td");
+                var editBtn = document.createElement("button");
+                editTd.setAttribute("id", "editUser")
+                editBtn.innerHTML = "EDIT";
+                editBtn.setAttribute("onclick", "editUser(" + i + ")")
+                editTd.appendChild(editBtn);
+                myTr.appendChild(editTd);
+
+
+
+
+                var updateTd = document.createElement("td");
+                var updateBtn = document.createElement("button");
+                updateTd.setAttribute("id", "updateUser");
+                updateBtn.innerHTML = "UPDATE";
+                updateBtn.setAttribute("onclick", "updateUser(" + i + ")");
+                updateTd.setAttribute("style", "display:none")
+                updateTd.appendChild(updateBtn);
+                myTr.appendChild(updateTd);
+
+
+
+
+                var deleteTd = document.createElement("td");
+                var deleteBtn = document.createElement("button");
+                deleteBtn.innerHTML = "DELETE";
+                deleteTd.appendChild(deleteBtn);
+                myTr.appendChild(deleteTd);
+                deleteBtn.setAttribute("onclick", "delUser(" + i + ")")
+
+
+                document.querySelector("tbody").appendChild(myTr)
+
+            })
+
+        }
+        displayUsers();
+
+        delUser = (i) => {
+            console.log(i);
+            users = users.filter((usr, index) => index !== i);
+            displayUsers(users)
+        }
+        var updateIndex = null;
+
+        let editToggle = document.querySelectorAll("#editUser");
+        console.log(editToggle);
+        let updateToggle = document.querySelectorAll("#updateUser");
+
+        editUser = (i) => {
+            console.log(i);
+            updateIndex = i
+
+
+            var allInputs = document.querySelectorAll("input");
+            console.log(allInputs);
+            allInputs.forEach((data, index) => {
+                if (i == index) {
+                    data.removeAttribute("readonly", "");
+                    editToggle[i].setAttribute("style", "display:none");
+                    updateToggle[i].setAttribute("style", "display:block");
+                }
+            })
+
+        }
+
+        updateUser = () => {
+            console.log(updateIndex);
+            var allInputs = document.querySelectorAll("input");
+            allInputs.forEach((data, index) => {
+                if (updateIndex == index) {
+                    var payload = {
+                        uname: " "
+                    }
+                    for (a in payload) {
+                        allInputs[updateIndex] = document.getElementById(a).value;
+                    }
+                    editToggle[updateIndex].setAttribute("style", "display:block");
+                    updateToggle[updateIndex].setAttribute("style", "display:none");
+                }
+            })
+        }
+
+    </script>
+</body>
+
+</html>
