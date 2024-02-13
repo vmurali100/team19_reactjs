@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>displayUser_html</title>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <thead>
+          <th>Age</th>
+          <th>Answer</th>
+
+          <th>Email</th>
+
+          <th>Name</th>
+          <th>Id</th>
+          <th>Languages</th>
+          <th>Suggestions</th>
+
+          <th>occupation</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </thead>
+      </tr>
+      <tbody></tbody>
+
+      <script>
+        var students = [];
+        function getAllUsersFromAPI() {
+          fetch("http://localhost:3000/students")
+            .then((response) => {
+              return response.json();
+            })
+            .then((data) => {
+              students = data;
+              const sortedArray = sortArrayOfObjects(data);
+              students = sortedArray;
+              displayUsers();
+            });
+        }
+        function sortArrayOfObjects(array) {
+          return array.map((obj) => sortObjectProperties(obj));
+        }
+        function sortObjectProperties(obj) {
+          const sortedObj = {};
+          Object.keys(obj)
+            .sort()
+            .forEach((key) => {
+              sortedObj[key] = obj[key];
+            });
+          return sortedObj;
+        }
+
+        function displayUsers() {
+          for (let i = 0; i < students.length; i++) {
+            var myTr = document.createElement("tr");
+            for (a in students[i]) {
+              var myTd = document.createElement("td");
+              myTd.innerHTML = students[i][a];
+              myTr.appendChild(myTd);
+            }
+
+            var editTd = document.createElement("td");
+            var editBtn = document.createElement("button");
+            editBtn.innerHTML = "Edit";
+            editBtn.style.background = "yellow";
+            editTd.appendChild(editBtn);
+            myTr.appendChild(editTd);
+            editBtn.setAttribute("onclick", "editUser(" + i + ")");
+
+            var delTd = document.createElement("td");
+            var delBtn = document.createElement("button");
+            delBtn.innerHTML = "Delete";
+            delBtn.style.background = "red";
+            delTd.appendChild(delBtn);
+            myTr.appendChild(delTd);
+            delBtn.setAttribute("onclick", "delUser(" + i + ")");
+
+            document.querySelector("tbody").appendChild(myTr);
+          }
+        }
+
+        function editUser(i) {
+          var studentToEdit = localStorage.setItem(
+            "StudentToedit",
+            JSON.stringify(students[i])
+          );
+          window.location.href = "editUser.html";
+        }
+
+        function delUser(i) {
+          var studentToDelete = localStorage.setItem(
+            "StudentTodelete",
+            JSON.stringify(students[i])
+          );
+          window.location.href = "delete.html";
+        }
+        getAllUsersFromAPI();
+      </script>
+          
+    </table>
+  </body>
+</html>

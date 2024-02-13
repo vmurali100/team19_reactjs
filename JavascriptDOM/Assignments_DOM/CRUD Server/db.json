@@ -1,24 +1,83 @@
 {
-  "users": [
+  "users": [],
+  "students": [
     {
+      "id": "57cc",
       "fname": "sandy",
-      "email": "sandy@123gmail.com",
-      "gender": "male",
-      "state": "TN",
-      "subjects": [
-        "subject3"
+      "email": "sandy@123@gmail.com",
+      "age": "22",
+      "occupation": "designer",
+      "answer": "yes",
+      "languages": [
+        "JavaScript"
       ],
-      "id": "e0cc"
+      "message": "qqqq"
+    }
+  ],
+  "User": [
+    {
+      "firstname": "Sandy",
+      "lastname": "S",
+      "email": "sandy@123gmail.com",
+      "phone": "9080396738",
+      "address1": "paradarami",
+      "address2": "samiredyypalli",
+      "state": "TN",
+      "country": "India",
+      "post": "111111",
+      "area": "222222",
+      "checkbox": [
+        "on"
+      ],
+      "id": "2e5c"
     },
     {
-      "fname": "Anuska",
-      "email": "Anuska@123gmail.com",
-      "gender": "female",
-      "state": "UP",
-      "subjects": [
-        "subject2"
+      "firstname": "Neeraj",
+      "lastname": "S",
+      "email": "Neeraj@123gmail.com",
+      "phone": "9080396738",
+      "address1": "UttarPradesh",
+      "address2": "Mittoor",
+      "state": "TN",
+      "country": "",
+      "post": "111111",
+      "area": "700000",
+      "checkbox": [
+        "on"
       ],
-      "id": "3265"
+      "id": "c9d3"
+    },
+    {
+      "firstname": "Sandyhulken",
+      "lastname": "S",
+      "email": "Sandyhulk@123gmail.com",
+      "phone": "9080396738",
+      "address1": "paradarami",
+      "address2": "samiredyypalli",
+      "state": "TN",
+      "country": "India",
+      "post": "60000",
+      "area": "700000",
+      "checkbox": [
+        "on"
+      ],
+      "id": "2f1c"
+    },
+    {
+      "id": "4d55",
+      "firstname": "Sandy",
+      "lastname": "S",
+      "email": "sandy@123gmail.com",
+      "phone": "9080396738",
+      "address1": "Chittoor",
+      "address2": "Mittoor",
+      "state": "AP",
+      "country": "India",
+      "post": "000000",
+      "area": "111111",
+      "checkbox": [
+        "Marked"
+      ]
     }
   ]
 }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeletePage</title>
+</head>
+<body>
+  <h3 id="deleteuser">Delete User</h3>
+
+    <button type="button" onclick="deleteuser()" style="background-color: red;">ClickToDelete</button>
+    <button type="button" onclick="No_Cancel()" style="background-color: greenyellow;">No_Cancel</button>
+    <script>
+        alert("Are You Sure ! You Want to delete this Person.");
+
+        var  UserToDelete=JSON.parse(localStorage.getItem("UserToDelete"));
+        document.getElementById("deleteuser").innerHTML="Are You  Sure " +UserToDelete.firstname+" want To Delete."
+        
+
+        console.log(UserToDelete);
+
+        function deleteuser(){
+          fetch("http://localhost:3000/User/"+UserToDelete.id,{
+            method:"DELETE",
+          }).then(()=>{
+            alert("User Deleted Sucessfully !!")
+            window.location.href="displayUser.html"
+          })
+        }
+        function No_Cancel(){
+          window.location.href="displayUser.html"
+        }
+
+       
+
+
+    </script>
+    
+</body>
+</html>

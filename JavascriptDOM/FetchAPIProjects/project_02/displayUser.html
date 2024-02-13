@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>displayUser</title>
+  </head>
+  <body>
+    <h2 style="width: 20%; margin: auto; margin-top: 20px; margin-bottom: 20px">
+      User Data Table
+    </h2>
+    <table border="1" style="width: 60%; margin: auto">
+      <thead>
+        <th>address1</th>
+        <th>address2</th>
+        <th>area Code</th>
+        <th>check</th>
+        <th>state</th>
+        <th>email</th>
+        <th>firstname</th>
+        <th>Id</th>
+        <th>lastname</th>
+        <th>phone</th>
+        <th>post</th>
+        <th>country</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button
+      onclick="BackToMainMenu()"
+      style="margin-top: 20px; margin-left: 42%; background-color: greenyellow"
+    >
+      clickToGoBack
+    </button>
+
+    <script>
+      var Users = [];
+      function getAllUsersFromServer() {
+        fetch("http://localhost:3000/User")
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            Users = data;
+            const sortedArray = sortArrayOfObjects(data);
+            Users=sortedArray;
+
+            displayUsers();
+
+            function sortArrayOfObjects(array) {
+              return array.map((obj) => sortObjectProperties(obj));
+            }
+            function sortObjectProperties(obj) {
+              const sortedObj = {};
+              Object.keys(obj)
+                .sort()
+                .forEach((key) => {
+                  sortedObj[key] = obj[key];
+                });
+              return sortedObj;
+            }
+          });
+      }
+
+      function displayUsers() {
+        for (let index = 0; index < Users.length; index++) {
+          var mytr = document.createElement("tr");
+          document.querySelector("tbody").appendChild(mytr);
+          for (a in Users[index]) {
+            var mytd = document.createElement("td");
+            mytd.innerHTML = Users[index][a];
+            mytr.appendChild(mytd);
+          }
+          // editTd
+
+          var editTd = document.createElement("td");
+          var editbtn = document.createElement("button");
+          editbtn.innerHTML = "edit";
+          editbtn.setAttribute("onClick", "editUser(" + index + ")");
+          editbtn.style.backgroundColor = "yellow";
+          editTd.appendChild(editbtn);
+          mytr.appendChild(editTd);
+
+          // deletd
+
+          var deletd = document.createElement("td");
+          var deletebtn = document.createElement("button");
+          deletebtn.innerHTML = "delete";
+          deletebtn.style.backgroundColor = "red";
+          deletebtn.setAttribute("onClick", "deleteUser(" + index + ")");
+          deletd.appendChild(deletebtn);
+          mytr.appendChild(deletd);
+        }
+      }
+
+      function editUser(i) {
+        console.log(i);
+        var UserToEdit = localStorage.setItem(
+          "userToEdit",
+          JSON.stringify(Users[i])
+        );
+        window.location.href = "editUser.html";
+      }
+
+      getAllUsersFromServer();
+
+      function BackToMainMenu() {
+        window.location.href = "sample_01.html";
+      }
+
+      function deleteUser(i) {
+        var UserToDelete=localStorage.setItem("UserToDelete",JSON.stringify(Users[i]))
+        console.log(UserToDelete);
+        window.location.href="deleteUser.html"
+      }
+    </script>
+  </body>
+</html>
