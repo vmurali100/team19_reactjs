@@ -1,0 +1,12 @@
+{
+  "Users": [
+    {
+      "name": "raju j",
+      "email": "rajubhai7341@gmail.com",
+      "age": "24",
+      "occupation": "frontend",
+      "recomendSiteToFriend": "Maybe",
+      "id": 1
+    }
+  ]
+}
