@@ -7,6 +7,25 @@
       "occupation": "frontend",
       "recomendSiteToFriend": "Maybe",
       "id": 1
+    },
+    {
+      "name": "S Singamani",
+      "email": "jayasankar121@gmail.com",
+      "age": "41",
+      "occupation": "fullstack",
+      "recomendSiteToFriend": "Maybe",
+      "skill": "Tailwind CSS",
+      "id": 2
+    },
+    {
+      "name": "j saikiran",
+      "email": "jayasankar121@gmail.com",
+      "age": "21",
+      "occupation": "frontend",
+      "suggestions": "xkn,mx nbxb xm ,x",
+      "recomendSiteToFriend": "Maybe",
+      "skill": "Java",
+      "id": 3
     }
   ]
 }

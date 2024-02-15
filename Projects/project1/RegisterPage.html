@@ -33,6 +33,8 @@
                     <th>you recomend our site to a friend</th>
                     <th>Skills</th>
                     <th>suggestions</th>
+                    <th>Edit</th>
+
                 </thead>
                 <tbody>
 
@@ -114,7 +116,7 @@
                         <div class="formbold-radio-flex">
                             <div class="formbold-radio-group">
                                 <label class="formbold-radio-label" for="c">
-                                    <input class="formbold-input-radio" type="radio" name="c" id="c" />
+                                    <input class="formbold-input-radio" type="radio" name="skills" id="c" value="C" />
                                     C
                                     <span class="formbold-radio-checkmark"></span>
                                 </label>
@@ -122,7 +124,8 @@
 
                             <div class="formbold-radio-group">
                                 <label class="formbold-radio-label" for="c++">
-                                    <input class="formbold-input-radio" type="radio" name="c++" id="c++" />
+                                    <input class="formbold-input-radio" type="radio" name="skills" id="c++"
+                                        value="C++" />
                                     c++
                                     <span class="formbold-radio-checkmark"></span>
                                 </label>
@@ -130,7 +133,8 @@
 
                             <div class="formbold-radio-group">
                                 <label class="formbold-radio-label" for="java">
-                                    <input class="formbold-input-radio" type="radio" name="java" id="java" />
+                                    <input class="formbold-input-radio" type="radio" name="skills" id="java"
+                                        value="Java" />
                                     Java
                                     <span class="formbold-radio-checkmark"></span>
                                 </label>
@@ -138,7 +142,8 @@
 
                             <div class="formbold-radio-group">
                                 <label class="formbold-radio-label" for="python">
-                                    <input class="formbold-input-radio" type="radio" name="python" id="python" />
+                                    <input class="formbold-input-radio" type="radio" name="skills" id="python"
+                                        value="Python" />
                                     Python
                                     <span class="formbold-radio-checkmark"></span>
                                 </label>
@@ -146,8 +151,8 @@
 
                             <div class="formbold-radio-group">
                                 <label class="formbold-radio-label" for="javaScript">
-                                    <input class="formbold-input-radio" type="radio" name="javaScript"
-                                        id="javaScript" />
+                                    <input class="formbold-input-radio" type="radio" name="skills" id="javaScript"
+                                        value="JavaScript" />
                                     JavaScript
                                     <span class="formbold-radio-checkmark"></span>
                                 </label>
@@ -155,7 +160,8 @@
 
                             <div class="formbold-radio-group">
                                 <label class="formbold-radio-label" for="react">
-                                    <input class="formbold-input-radio" type="radio" name="react" id="react" />
+                                    <input class="formbold-input-radio" type="radio" name="skills" id="react"
+                                        value="React" />
                                     React
                                     <span class="formbold-radio-checkmark"></span>
                                 </label>
@@ -163,7 +169,8 @@
 
                             <div class="formbold-radio-group">
                                 <label class="formbold-radio-label" for="angular">
-                                    <input class="formbold-input-radio" type="radio" name="angular" id="angular" />
+                                    <input class="formbold-input-radio" type="radio" name="skills" id="angular"
+                                        value="Angular" />
                                     Angular
                                     <span class="formbold-radio-checkmark"></span>
                                 </label>
@@ -171,7 +178,8 @@
 
                             <div class="formbold-radio-group">
                                 <label class="formbold-radio-label" for="django">
-                                    <input class="formbold-input-radio" type="radio" name="django" id="django" />
+                                    <input class="formbold-input-radio" type="radio" name="skills" id="django"
+                                        value="Django" />
                                     Django
                                     <span class="formbold-radio-checkmark"></span>
                                 </label>
@@ -179,7 +187,8 @@
 
                             <div class="formbold-radio-group">
                                 <label class="formbold-radio-label" for="tailwind">
-                                    <input class="formbold-input-radio" type="radio" name="tailwind" id="tailwind" />
+                                    <input class="formbold-input-radio" type="radio" name="skills" id="tailwind"
+                                        value="Tailwind CSS" />
                                     Tailwind CSS
                                     <span class="formbold-radio-checkmark"></span>
                                 </label>
@@ -187,7 +196,8 @@
 
                             <div class="formbold-radio-group">
                                 <label class="formbold-radio-label" for="bootstrap">
-                                    <input class="formbold-input-radio" type="radio" name="bootstrap" id="bootstrap" />
+                                    <input class="formbold-input-radio" type="radio" name="skills" id="bootstrap"
+                                        value="Bootstrap" />
                                     Bootstrap
                                     <span class="formbold-radio-checkmark"></span>
                                 </label>
@@ -228,12 +238,20 @@
                 email: document.getElementById("email").value,
                 age: document.getElementById("age").value,
                 occupation: document.getElementById("occupation").value,
+                suggestions: document.getElementById("message").value
             }
             var recomendSiteToFriend = document.getElementsByName("ans")
             for (let i = 0; i < recomendSiteToFriend.length; i++) {
                 if (recomendSiteToFriend[i].checked) {
                     Users.recomendSiteToFriend = recomendSiteToFriend[i].value
                 }
+            }
+            var allSkills = document.getElementsByName("skills")
+            for (let index = 0; index < allSkills.length; index++) {
+                if (allSkills[index].checked) {
+                    Users.skill = allSkills[index].value;
+                }
+
             }
 
 
@@ -245,8 +263,8 @@
                 }
             })
 
-            document.getElementById("registrationForm").style.display = "none"
-            document.getElementById("tableDiv").style.display = "block";
+            // document.getElementById("registrationForm").style.display = "none"
+            // document.getElementById("tableDiv").style.display = "block";
 
         }
 
