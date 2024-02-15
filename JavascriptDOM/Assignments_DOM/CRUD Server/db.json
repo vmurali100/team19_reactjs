@@ -2,7 +2,6 @@
   "users": [],
   "students": [
     {
-      "id": "57cc",
       "fname": "sandy",
       "email": "sandy@123@gmail.com",
       "age": "22",
@@ -11,7 +10,21 @@
       "languages": [
         "JavaScript"
       ],
-      "message": "qqqq"
+      "message": "qqqq",
+      "id": "57cc"
+    },
+    {
+      "id": "e0bf",
+      "fname": "sandyVirat",
+      "email": "sandy@123@gmail.com",
+      "age": "22",
+      "occupation": "designer",
+      "answer": "yes",
+      "languages": [
+        "python",
+        "JavaScript"
+      ],
+      "message": "some !!!"
     }
   ],
   "User": [
@@ -78,6 +91,78 @@
       "checkbox": [
         "Marked"
       ]
+    }
+  ],
+  "Questions": [
+    {
+      "firstname": "Sandyhulken",
+      "lastname": "",
+      "qusone": "option Three",
+      "qustwo": "option Two",
+      "qusthree": "option One",
+      "id": "23d9"
+    },
+    {
+      "firstname": "Sandy",
+      "lastname": "S",
+      "qusone": "option One",
+      "qustwo": "option Two",
+      "qusthree": "option Three",
+      "id": "bec1"
+    },
+    {
+      "firstname": "Sandyhulk",
+      "lastname": "S",
+      "qusone": "option One",
+      "qustwo": "option Two",
+      "qusthree": "option Three",
+      "id": "da43"
+    },
+    {
+      "id": "51bc",
+      "firstname": "Sandy",
+      "lastname": "S",
+      "qusone": "option One",
+      "qustwo": "option Two",
+      "qusthree": "option Three"
+    }
+  ],
+  "userDetails": [
+    {
+      "id": "2",
+      "name": "sandy",
+      "phone": "9080396738",
+      "email": "sandy@123gmail.com",
+      "date": "2024-02-15",
+      "time": "17:03",
+      "area": "mittor",
+      "city": "chittor",
+      "state": "AP",
+      "postcode": "654321"
+    },
+    {
+      "id": "4",
+      "name": "Sandiya",
+      "phone": "9080396738",
+      "email": "sandy@123gmail.com",
+      "date": "2024-02-13",
+      "time": "17:19",
+      "area": "mittor",
+      "city": "chittor",
+      "state": "AP",
+      "postcode": "654321"
+    },
+    {
+      "name": "Sandiya",
+      "phone": "9080396738",
+      "id": "9",
+      "email": "sandy@123gmail.com",
+      "date": "2024-02-14",
+      "time": "17:58",
+      "area": "mittor",
+      "city": "chittor",
+      "state": "Delhi",
+      "postcode": "654321"
     }
   ]
 }

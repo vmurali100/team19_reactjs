@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <thead>
+                <th>Area</th>
+                <th>city</th>
+                <th>Date</th>
+                <th>Email</th>
+                <th>Id</th>
+                <th>FullName</th>
+                <th>PhoneNumber</th>
+                <th>PostCode</th>
+                <th>state</th>
+                <th>Time</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </thead>
+        </tr>
+        <tbody></tbody>
+
+    </table> <br>
+    <button onclick="BackTo()" style="background-color: chartreuse;">BackToHomePage </button>
+    <script>
+        var users = [];
+        function getAllUsersFromServer() {
+            fetch("http://localhost:3000/userDetails").then((response) => {
+                return response.json();
+            }).then((data) => {
+                users = data;
+                const sortedArray = sortArrayOfObjects(data);
+                users = sortedArray;
+                displayUsers();
+            });
+        }
+        function sortArrayOfObjects(array) {
+            return array.map((obj) => sortObjectProperties(obj));
+        }
+        function sortObjectProperties(obj) {
+            const sortedObj = {};
+            Object.keys(obj)
+                .sort()
+                .forEach((key) => {
+                    sortedObj[key] = obj[key];
+                });
+            return sortedObj;
+        }
+
+
+        getAllUsersFromServer();
+
+        function displayUsers() {
+            for (let index = 0; index < users.length; index++) {
+                var mytr = document.createElement("tr");
+                document.querySelector("tbody").appendChild(mytr);
+                for (u in users[index]) {
+                    var mytd = document.createElement("td");
+                    mytd.innerHTML = users[index][u];
+                    mytr.appendChild(mytd);
+                }
+
+                //editd
+
+                var editTd = document.createElement("td");
+                var editBtn = document.createElement("button");
+                editBtn.innerHTML = "EDIT";
+                editBtn.setAttribute("Onclick", "editUser(" + index + ")");
+                editBtn.style.backgroundColor="yellow";
+
+                editTd.appendChild(editBtn);
+                mytr.appendChild(editTd);
+
+                //deleteTd
+
+                var deleteTd = document.createElement("td");
+                var deletebtn = document.createElement("button");
+                deletebtn.innerHTML = "DELETE";
+                deletebtn.setAttribute("Onclick", "deleteUser(" + index + ")");
+                deletebtn.style.backgroundColor="red";
+                deleteTd.appendChild(deletebtn);
+                mytr.appendChild(deleteTd);
+            }
+        }
+
+        function editUser(i) {
+            localStorage.setItem("editUser", JSON.stringify(users[i]));
+            window.location.href = "editUser.html";
+        }
+
+        function deleteUser(i) {
+            window.location.href = "deleteUser.html"
+            localStorage.setItem("deleteUser", JSON.stringify(users[i]))
+        }
+
+        function BackTo(){
+            window.location.href="sample_01.html";
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
