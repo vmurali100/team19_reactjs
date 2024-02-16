@@ -201,12 +201,13 @@
 
                     <div>
                         <label for="message" class="formbold-form-label">Any comments or suggestions</label>
-                        <textarea rows="6" name="message" id="message" placeholder="Type here..."
+                        <textarea rows="6" name="message" id="suggestions" placeholder="Type here..."
                             class="formbold-form-input"></textarea>
                         <p id="suggestionsErrorMessage" style="color: red;"></p>
                     </div>
 
-                    <button class="formbold-btn" type="submit"  >Submit</button>
+                    <button id="submitBtn" class="formbold-btn" type="submit"  >Submit</button>
+                    <button id="updateBtn" onclick="updateUser()">Update</button>
                 </form>
             </div>
         </div>
@@ -226,7 +227,7 @@
             var occupation = document.getElementById("occupation").value;
             var ans = document.querySelector('input[name="ans"]:checked');
             var skills = document.querySelector('input[name="skills"]:checked');
-            var message = document.getElementById("message").value;
+            var suggestions = document.getElementById("suggestions").value;
 
 
             document.getElementById("nameErrorMessage").innerHTML = "";
@@ -284,18 +285,18 @@
                 email: document.getElementById("email").value,
                 age: document.getElementById("age").value,
                 occupation: document.getElementById("occupation").value,
-                suggestions: document.getElementById("message").value
+                suggestions: document.getElementById("suggestions").value
             };
             var recomendSiteToFriend = document.getElementsByName("ans");
             for (let i = 0; i < recomendSiteToFriend.length; i++) {
                 if (recomendSiteToFriend[i].checked) {
-                    Users.recomendSiteToFriend = recomendSiteToFriend[i].value;
+                    Users.recomendations = recomendSiteToFriend[i].value;
                 }
             }
             var allSkills = document.getElementsByName("skills");
             for (let index = 0; index < allSkills.length; index++) {
                 if (allSkills[index].checked) {
-                    Users.skill = allSkills[index].value;
+                    Users.skills = allSkills[index].value;
                 }
             }
 

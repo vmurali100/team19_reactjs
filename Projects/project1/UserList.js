@@ -3,8 +3,8 @@ async function GetData() {
     data = await response.json()
 
     data.map((element, i) => {
-        var { name, email, age, occupation, recomendSiteToFriend, skill, suggestions } = element
-        var newData = { name, email, age, occupation, recomendSiteToFriend, skill, suggestions };
+        var { name, email, age, occupation, recomendations, skills, suggestions } = element
+        var newData = { name, email, age, occupation, recomendations, skills, suggestions };
 
         var mytr = document.createElement("tr")
         for (a in newData) {
