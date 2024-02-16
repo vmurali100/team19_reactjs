@@ -5,27 +5,20 @@
       "email": "rajubhai7341@gmail.com",
       "age": "24",
       "occupation": "frontend",
-      "recomendSiteToFriend": "Maybe",
+      "suggestions": "hfghgfbj jhbjmhg jgnhj",
+      "recomendSiteToFriend": "Yes",
+      "skill": "JavaScript",
       "id": 1
     },
     {
-      "name": "S Singamani",
-      "email": "jayasankar121@gmail.com",
-      "age": "41",
-      "occupation": "fullstack",
-      "recomendSiteToFriend": "Maybe",
-      "skill": "Tailwind CSS",
-      "id": 2
-    },
-    {
       "name": "j saikiran",
-      "email": "jayasankar121@gmail.com",
-      "age": "21",
-      "occupation": "frontend",
-      "suggestions": "xkn,mx nbxb xm ,x",
+      "email": "sai12@gmail.com",
+      "age": "24",
+      "occupation": "fullstack",
+      "suggestions": "ujgnhghfjgjnvbch",
       "recomendSiteToFriend": "Maybe",
-      "skill": "Java",
-      "id": 3
+      "skill": "React",
+      "id": 2
     }
   ]
 }

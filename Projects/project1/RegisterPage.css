@@ -5,7 +5,6 @@ body {
     /* Prevent scrolling */
 }
 
-
 header {
     background-color: #333;
     color: #fff;
@@ -132,14 +131,18 @@ table {
     background: linear-gradient(90deg, rgba(2, 0, 6, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    border: 1px solid black;
+    max-width: 915px;
+    margin: 0 auto;
 }
 
 table,
 th,
 td {
-    border: 1px solid #070707;
     border-collapse: collapse;
     padding: 8px;
+
 }
 
 th {
@@ -163,7 +166,7 @@ input[type="button"]:hover {
     background: linear-gradient(90deg, rgba(2, 0, 6, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
 
     margin: 0 auto;
-    max-width: 570px;
+    /* max-width: 570px; */
     width: 100%;
 }
 
@@ -300,11 +303,4 @@ input[type="button"]:hover {
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* #registrationForm {
-    display: block;
 
-}
-
-#tableDiv {
-    display: none;
-} */
