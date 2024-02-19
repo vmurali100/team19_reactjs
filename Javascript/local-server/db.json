@@ -1,27 +1,5 @@
 {
-  "users": [
-    {
-      "id": "3",
-      "fname": "m.naveenkumar",
-      "email": "mnaveen@gmail.com",
-      "state": "karnataka",
-      "dob": "2000-07-27",
-      "subjects": [
-        "HTML"
-      ],
-      "gender": "male"
-    },
-    {
-      "id": "1",
-      "fname": "m.swapna",
-      "email": "smswapna924@gmail.com",
-      "state": "Andrapradesh",
-      "dob": "2002-06-26",
-      "subjects": [
-        "HTML",
-        "css"
-      ],
-      "gender": "female"
-    }
-  ]
+  "users": [],
+  "form": [],
+  "data": []
 }

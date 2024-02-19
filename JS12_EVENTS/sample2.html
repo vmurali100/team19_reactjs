@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            width:900px;
+            height: 600px;
+            background: lightcoral;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+        #child{
+            width:300px;
+            height:200px;
+            background: lightgray;
+
+        }
+        #supermain{
+            width: 1200px;
+            height:800px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background: lightgreen;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="supermain">
+        <div id="main">
+            <div id="child"></div>
+
+        </div>
+
+    </div>
+    <script>
+        document.querySelector("#main").addEventListener("click",function(){
+            console.log("main clicked")
+        })
+        document.querySelector("#child").addEventListener("click",function(event){
+            event.stoppropagation()
+            console.log("child clicked")
+        })
+        document.querySelector("#supermain").addEventListener("click",function(){
+            console.log("supermain clicked")
+        })
+    </script>
+</body>
+</html>
