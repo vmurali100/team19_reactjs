@@ -305,5 +305,50 @@ button#updateBtn {
 .formbold-btn:hover {
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
 }
+.custom-popup {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 34%;
+    height: 180px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.custom-popup p {
+    margin-bottom: 10px;
+}
+
+.custom-popup button {
+    margin-right: 10px;
+    cursor: pointer;
+}
+p#deleteMessage {
+    margin-top: 25px;
+}
+button#confirmButton {
+    background: blue;
+    border: none;
+    padding: 6px 13px 6px 13px;
+    border-radius: 6px;
+}
+button#cancelButton {
+    background: red;
+    border: none;
+    padding: 6px 16px 6px 16px;
+    border-radius: 6px;
+}
+div#buttonDiv {
+    margin-top: 50px;
+    text-align: end;
+}
+
 
 

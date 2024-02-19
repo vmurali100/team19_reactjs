@@ -1,14 +1,24 @@
 {
   "Users": [
     {
-      "name": "raju j",
-      "email": "jayasankarraju121@gmail.com",
-      "age": "24",
-      "occupation": "fullstack",
-      "suggestions": "HELLO JAVASCRIPT\n",
-      "recomendations": "Yes",
-      "skills": "JavaScript",
-      "id": 2
+      "name": "j saikiran",
+      "email": "sai12@gmail.com",
+      "age": "21",
+      "occupation": "frontend",
+      "suggestions": "kjk,f ljfkngjkfmn",
+      "recomendations": "No",
+      "skills": "React",
+      "id": 3
+    },
+    {
+      "name": "M Niranjan",
+      "email": "rajubhai7341@gmail.com",
+      "age": "16",
+      "occupation": "frontend",
+      "suggestions": "kjbn,ṁ,.m",
+      "recomendations": "Maybe",
+      "skills": "C++",
+      "id": 4
     }
   ]
 }
