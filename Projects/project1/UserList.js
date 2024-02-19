@@ -17,12 +17,19 @@ async function GetData() {
         var editBtn = document.createElement("button")
         editBtn.addEventListener("click", (() => {
             navigateTo('register');
-            editFunction(i);
-           
-        }));
-        
+            editFunction(i);           
+        }));        
         editBtn.innerHTML = "Edit"
         editTd.appendChild(editBtn)
+
+        var deleteTd = document.createElement("td")
+        mytr.appendChild(deleteTd)
+        var deleteBtn = document.createElement("button")
+        deleteBtn.addEventListener("click", (() => {
+            deleteFunction(i);           
+        }));        
+        deleteBtn.innerHTML = "Delete"
+        deleteTd.appendChild(deleteBtn)
 
         document.querySelector("tbody").appendChild(mytr)
     });
@@ -30,5 +37,4 @@ async function GetData() {
 
 
 GetData()
-
 
