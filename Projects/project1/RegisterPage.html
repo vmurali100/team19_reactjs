@@ -20,7 +20,7 @@
     </nav>
 
     <div class="content" id="mainContent">
-        <div class="formbold-main-wrapper">          
+        <div class="formbold-main-wrapper">
             <div class="formbold-form-wrapper">
                 <table id="tableDiv">
                     <thead>
@@ -32,6 +32,8 @@
                         <th>Skills</th>
                         <th>Suggestions</th>
                         <th>Edit</th>
+                        <th>Delete</th>
+
                     </thead>
                     <tbody>
                     </tbody>
@@ -206,7 +208,7 @@
                         <p id="suggestionsErrorMessage" style="color: red;"></p>
                     </div>
 
-                    <button id="submitBtn" class="formbold-btn" type="submit"  >Submit</button>
+                    <button id="submitBtn" class="formbold-btn" type="submit">Submit</button>
                     <button id="updateBtn" onclick="updateUser()">Update</button>
                 </form>
             </div>
@@ -306,19 +308,20 @@
                 headers: {
                     "Content-Type": "application/json; charset=UTF-8"
                 }
-            }) .then(response => {
-            if (response.ok) {
-                navigateTo('userList');
-            } else {
-                console.error('Error posting user data');
-            }
-        });;
+            }).then(response => {
+                if (response.ok) {
+                    navigateTo('userList');
+                } else {
+                    console.error('Error posting user data');
+                }
+            });;
         }
 
     </script>
     <script src="UserList.js"></script>
     <script src="./Navigatin.js"></script>
     <script src="./EditFun.js"></script>
+    <script src="./deleteUser.js"></script>
 
 </body>
 
