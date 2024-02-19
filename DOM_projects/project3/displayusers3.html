@@ -68,6 +68,11 @@
         localStorage.setItem("usertoedit", JSON.stringify(users[i]));
         window.location.href = "edituser3.html";
       }
+
+      function deleteuser(i){
+        localStorage.setItem("usertodelete",JSON.stringify(users[i]));
+        window.location.href="deleteuser3.html"
+      }
     </script>
   </body>
 </html>
