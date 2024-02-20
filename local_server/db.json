@@ -1,34 +1,56 @@
 {
   "Users": [
     {
-      "name": "j saikiran",
-      "email": "sai12@gmail.com",
-      "age": "21",
-      "occupation": "frontend",
-      "suggestions": "kjk,f ljfkngjkfmn",
-      "recomendations": "No",
-      "skills": "React",
-      "id": 3
-    },
-    {
       "name": "raju j",
       "email": "rajubhai7341@gmail.com",
       "age": "21",
       "occupation": "designer",
       "suggestions": "kjhj,bn,b",
-      "recomendations": "Yes",
-      "skills": "React",
-      "id": 4
+      "recomendations": [
+        "Yes"
+      ],
+      "skills": [
+        "Tailwind CSS"
+      ],
+      "id": 7
     },
     {
-      "name": "raju j",
+      "name": "raju jnkMKM",
+      "email": "rajubhai7341@gmail.com",
+      "age": "21",
+      "occupation": "designer",
+      "suggestions": "kjhj,bn,b",
+      "recomendations": [
+        "Yes"
+      ],
+      "skills": [
+        "Tailwind CSS"
+      ],
+      "id": 8
+    },
+    {
+      "name": "raju jnkMKM - new",
+      "email": "rajubhai7341@gmail.com",
+      "age": "21",
+      "occupation": "designer",
+      "suggestions": "kjhj,bn,b",
+      "recomendations": [
+        "Yes"
+      ],
+      "skills": [
+        "Tailwind CSS"
+      ],
+      "id": 9
+    },
+    {
+      "name": "raju jnkMKM - new",
       "email": "rajubhai7341@gmail.com",
       "age": "21",
       "occupation": "designer",
       "suggestions": "kjhj,bn,b",
       "recomendations": "Yes",
-      "skills": "React",
-      "id": 5
+      "skills": "Tailwind CSS",
+      "id": 10
     }
   ]
 }
