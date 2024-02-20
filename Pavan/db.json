@@ -1,1 +1,16 @@
-{}
+{
+    "students": [
+        {
+          "fname": "sandy",
+          "email": "sandy@123@gmail.com",
+          "age": "22",
+          "occupation": "designer",
+          "answer": "yes",
+          "languages": [
+            "JavaScript"
+          ],
+          "message": "qqqq",
+          "id": "57cc"
+        }
+    ]
+}

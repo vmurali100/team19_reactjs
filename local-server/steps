@@ -1,5 +1,0 @@
-1. npm init --yes
-2. Install json-server locallly and Globally 
-2. Create a file Called db.json
-3. Creare End Points
-4. Run the server using command "json-server --watch db.json"
