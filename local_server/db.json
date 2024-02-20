@@ -9,6 +9,26 @@
       "recomendations": "No",
       "skills": "React",
       "id": 3
+    },
+    {
+      "name": "raju j",
+      "email": "rajubhai7341@gmail.com",
+      "age": "21",
+      "occupation": "designer",
+      "suggestions": "kjhj,bn,b",
+      "recomendations": "Yes",
+      "skills": "React",
+      "id": 4
+    },
+    {
+      "name": "raju j",
+      "email": "rajubhai7341@gmail.com",
+      "age": "21",
+      "occupation": "designer",
+      "suggestions": "kjhj,bn,b",
+      "recomendations": "Yes",
+      "skills": "React",
+      "id": 5
     }
   ]
 }
