@@ -1,6 +1,6 @@
 export function User(){
-    return <h2>Welcome to User Component</h2>
+    return <h4>Welcome to User Component</h4>
 }
 export default function NewUser(){
-    return <h3>Welcome to NewUser Component</h3>
+    return <h5>Welcome to NewUser Component</h5>
 }

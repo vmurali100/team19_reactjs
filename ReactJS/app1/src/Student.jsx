@@ -1,5 +1,5 @@
 import React from "react"
 
 export default function Student(){
-    return <h3>Welcome to student Component</h3>
+    return <h1>Welcome to student Component</h1>
 }

@@ -1,6 +1,6 @@
 
 export default function Employee(){
-    return <h1>Welcome to employee component</h1>
+    return <h2>Welcome to employee component</h2>
 }
 
 export function NewEmp(){

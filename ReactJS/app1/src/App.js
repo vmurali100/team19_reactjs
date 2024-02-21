@@ -1,7 +1,9 @@
 import './App.css';
 import Employee, { NewEmp } from './Employee';
+import Rectangle, { NewRectangle } from './Rectangle';
+import { Square } from './Square';
 import Student from './Student';
-import NewUser, { User } from './User';
+import NewComponent, { User } from './User';
 
 
 
@@ -12,7 +14,10 @@ function App() {
          <Employee/>
          <NewEmp/>
          <User/>
-         <NewUser/>
+         <NewComponent/>
+         <Square/>
+         <Rectangle/>
+         <NewRectangle/>
 
 
 
