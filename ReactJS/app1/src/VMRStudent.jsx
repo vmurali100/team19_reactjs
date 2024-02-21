@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function User() {
+export default function VMRStudent() {
   const [welcomeMessage, setWelcomeMessage] = useState("Welcome to ReactJS");
   const [user, setUser] = useState({
     fname: "Murali",
@@ -17,23 +17,25 @@ export default function User() {
   return (
     <div>
       <h2>{welcomeMessage}</h2>
+      <hr />
+      <p>Display Object With Map Method ::</p>
       <ul>
-        <li>{user.fname}</li>
-        <li>{user.lname}</li>
-        <li>{user.email}</li>
+        {Object.values(user).map((val) => {
+          return <li>{val}</li>;
+        })}
       </ul>
+      <hr />
+      <p>Display Students with Map Statement :--</p>
       <ul>
-        <li>{students[0]}</li>
-        <li>{students[1]}</li>
-        <li>{students[2]}</li>
-        <li>{students[3]}</li>
-        <li>{students[4]}</li>
+        {students.map((student) => {
+          return <li>{student}</li>;
+        })}
       </ul>
-      <img  
+      <img
         src="https://media.istockphoto.com/id/895454734/photo/beautiful-lotus-flower-on-the-water-in-a-park-close-up.jpg?s=2048x2048&w=is&k=20&c=BMCNvYbtGfySorWiIV-ZA9ufKJwhqk3LtdleXN2fBBY="
         alt=""
         srcset=""
-        style={{border:"2px solid red",padding:'5px'}}
+        style={{ border: "2px solid red", padding: "5px" }}
       />
 
       <table style={{ width: "100%" }} border={1}>
