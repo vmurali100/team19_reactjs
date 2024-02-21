@@ -3,6 +3,7 @@ import Employee, { NewEmp } from './Employee';
 import Rectangle, { NewRectangle } from './Rectangle';
 import { Square } from './Square';
 import Student from './Student';
+import NewTriangle, { Triangle } from './Triangle';
 import NewComponent, { User } from './User';
 
 
@@ -18,6 +19,8 @@ function App() {
          <Square/>
          <Rectangle/>
          <NewRectangle/>
+         <Triangle/>
+         <NewTriangle/>
 
 
 
