@@ -1,5 +1,10 @@
+function editFunction(index) {
+    i = index;
 
-function editFunction(i) {
+
+    document.getElementById("updateBtn").style.display = "block";
+    document.getElementById("submitBtn").style.display = "none"; 
+
 
     document.getElementById("name").value = data[i].name;
     document.getElementById("email").value = data[i].email;
@@ -20,6 +25,7 @@ function editFunction(i) {
 }
 
 function updateUser() {
+
     var Users = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
@@ -44,17 +50,12 @@ function updateUser() {
         }
     });
 
+
     fetch("http://localhost:3000/Users/" + data[i].id, {
         method: "PUT",
         body: JSON.stringify(Users),
         headers: {
             "Content-Type": "application/json; charset=UTF-8"
         }
-    }).then(response => {
-        if (response.ok) {
-            navigateTo('userList');
-        } else {
-            console.error('Error updating user data');
-        }
-    });
+    })
 }

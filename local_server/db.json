@@ -1,34 +1,18 @@
 {
   "Users": [
     {
-      "name": "j saikiran",
-      "email": "sai12@gmail.com",
-      "age": "21",
-      "occupation": "frontend",
-      "suggestions": "kjk,f ljfkngjkfmn",
-      "recomendations": "No",
-      "skills": "React",
-      "id": 3
-    },
-    {
-      "name": "raju j",
-      "email": "rajubhai7341@gmail.com",
-      "age": "21",
-      "occupation": "designer",
-      "suggestions": "kjhj,bn,b",
-      "recomendations": "Yes",
-      "skills": "React",
-      "id": 4
-    },
-    {
-      "name": "raju j",
-      "email": "rajubhai7341@gmail.com",
-      "age": "21",
-      "occupation": "designer",
-      "suggestions": "kjhj,bn,b",
-      "recomendations": "Yes",
-      "skills": "React",
-      "id": 5
+      "name": "Thiru",
+      "email": "Thiru123@gmail.com",
+      "age": "34",
+      "occupation": "Student",
+      "suggestions": " hey prabhu  hey hariram krishna jagan mohanreddy kya hua?!!!!!!!kjhmjb",
+      "recomendations": [
+        "Maybe"
+      ],
+      "skills": [
+        "Python"
+      ],
+      "id": 1
     }
   ]
 }

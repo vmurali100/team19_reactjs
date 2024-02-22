@@ -3,7 +3,7 @@ async function deleteFunction(i) {
 
     if (shouldDelete) {
         try {
-            const response = await fetch("http://localhost:3000/Users/" + i, {
+            const response = await fetch("http://localhost:3000/Users/" + data[i].id, {
                 method: 'DELETE',
             });
 

@@ -209,7 +209,7 @@
                     </div>
 
                     <button id="submitBtn" class="formbold-btn" type="submit">Submit</button>
-                    <button id="updateBtn" onclick="updateUser()">Update</button>
+                    <button id="updateBtn" onclick="updateUser()" >Update</button>
                 </form>
             </div>
         </div>
@@ -220,6 +220,10 @@
     </footer>
 
     <script>
+        document.getElementById("submitBtn").style.display = "block";
+        document.getElementById("updateBtn").style.display = "none";
+
+
         function validateForm(event) {
             event.preventDefault();
 
@@ -279,6 +283,7 @@
 
             PostUser();
             // return false; 
+
         }
 
         function PostUser() {
@@ -314,7 +319,8 @@
                 } else {
                     console.error('Error posting user data');
                 }
-            });;
+            })
+                ;
         }
 
     </script>
