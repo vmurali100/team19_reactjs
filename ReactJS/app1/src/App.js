@@ -7,6 +7,7 @@ import User, { NewUser } from "./User";
 import Sample from "./Sample";
 import VMRStudent from "./VMRStudent";
 import VMRUser from "./VMRUser";
+import { NewComp } from "./NewComp";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       <Sample /> */}
       {/* <User/> */}
       {/* <VMRStudent/> */}
-      <VMRUser/>
+      {/* <VMRUser/> */}
+      <NewComp/>
     </div>
   );
 }
