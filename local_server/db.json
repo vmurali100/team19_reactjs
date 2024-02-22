@@ -1,6 +1,7 @@
 {
   "Users": [
     {
+<<<<<<< HEAD
       "name": "Thiru",
       "email": "Thiru123@gmail.com",
       "age": "34",
@@ -13,6 +14,58 @@
         "Python"
       ],
       "id": 1
+=======
+      "name": "raju j",
+      "email": "rajubhai7341@gmail.com",
+      "age": "21",
+      "occupation": "designer",
+      "suggestions": "kjhj,bn,b",
+      "recomendations": [
+        "Yes"
+      ],
+      "skills": [
+        "Tailwind CSS"
+      ],
+      "id": 7
+    },
+    {
+      "name": "raju jnkMKM",
+      "email": "rajubhai7341@gmail.com",
+      "age": "21",
+      "occupation": "designer",
+      "suggestions": "kjhj,bn,b",
+      "recomendations": [
+        "Yes"
+      ],
+      "skills": [
+        "Tailwind CSS"
+      ],
+      "id": 8
+    },
+    {
+      "name": "raju jnkMKM - new",
+      "email": "rajubhai7341@gmail.com",
+      "age": "21",
+      "occupation": "designer",
+      "suggestions": "kjhj,bn,b",
+      "recomendations": [
+        "Yes"
+      ],
+      "skills": [
+        "Tailwind CSS"
+      ],
+      "id": 9
+    },
+    {
+      "name": "raju jnkMKM - new",
+      "email": "rajubhai7341@gmail.com",
+      "age": "21",
+      "occupation": "designer",
+      "suggestions": "kjhj,bn,b",
+      "recomendations": "Yes",
+      "skills": "Tailwind CSS",
+      "id": 10
+>>>>>>> c003166ecf2c2a50d8c44d0c6f84edc7c3a25d6d
     }
   ]
 }
