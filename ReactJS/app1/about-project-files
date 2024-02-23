@@ -1,0 +1,27 @@
+File No : README.md
+    Which contains instructions abou the Project .
+
+Package.json
+    Contains  information about the project and  its dependencies.
+
+package-lock.json
+    contains all the dependecies details including dependencies depencdencies , versions used etc.
+
+gitIgnore 
+    contains  a list of files/folders to be ignored by git.
+
+node_modues
+    contains  all the installed node modules. 
+
+public 
+    contains  static assets that will be served directly from public folder using express.js server.
+src 
+    contains  source code for our application. It is divided into following folders:
+    
+    index.js
+        Index.js is  the entry point of our application, where we import other necessary modules and initiate the app function from - Entry point of our app, where we import other components and start our app.  
+    index.css
+        index.css is  the main CSS file which includes styles for the whole app.
+    
+    App.js 
+        App.js is  the entry point of our React Application, where we wrap our entire application with Provider component provided by

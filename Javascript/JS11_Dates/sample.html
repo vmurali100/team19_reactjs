@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3 {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>00:00:00</h3>
+    <h2></h2>
+    <script>
+        function displayDate() {
+            var now = new Date();
+            document.querySelector("h3").innerHTML = now.getHours() + " : " + now.getMinutes() + " : " + now.getSeconds()
+        }
+        setInterval(() => {
+            displayDate()
+        }, 1000);
+
+        var dob = new Date("02/03/1980")
+        console.log(dob.getTime())
+        var currentDate = new Date().getTime()
+        console.log(currentDate);
+
+        var diff = currentDate - dob.getTime();
+        var forYears = 1000 * 60 * 60 * 24 * 365
+        var years = Math.floor(diff / forYears)
+        var months = Math.floor((diff - (forYears * years)) / (1000 * 60 * 60 * 24 * 31))
+
+        var forDays = Math.floor((diff - (years * forYears) - (months * 1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24))
+        console.log(forDays)
+        console.log(months)
+
+        document.querySelector("h2").innerHTML = "You Are " + years + "years , and  " + months + " Months and " + forDays + " Old "
+
+    </script>
+</body>
+
+</html>
