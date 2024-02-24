@@ -1,18 +1,14 @@
 
 import './App.css';
-import StudentLoop from './StudentLoop';
-import UserBasic from './UserBasic';
-import UserButton from './UserButton';
-import UserLoop from './UserLoop';
-
+ import StudentButton from './StudentButton';
 
 function App() {
   return (
     <div className="App">
-    {/* <UserBasic/> */}
-    {/* <UserLoop/> */}
-    <UserButton/>
-    {/* <StudentLoop/> */}
+
+   <StudentButton/>
+
+
 
     </div>
   );
