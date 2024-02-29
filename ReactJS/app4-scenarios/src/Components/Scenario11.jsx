@@ -4,7 +4,7 @@ export const RandomNumber = () =>{
 const[randomNum, setRandomNum] = useState( );
 
 const getRandomNumber = () =>{
-    const newRandomNum = Math.floor(Math.random() * 100);
+    var newRandomNum = Math.floor(Math.random() * 100);
     setRandomNum(newRandomNum);
 }
 

@@ -3,6 +3,10 @@ import { Message } from './Components/Scenario1';
 import { Clicked } from './Components/Scenario10';
 import { RandomNumber } from './Components/Scenario11';
 import { RandomColorArr } from './Components/Scenario12';
+import { WeekDays } from './Components/Scenario13';
+import { Person } from './Components/Scenario14';
+import {WelcomeMessage}from './Components/Scenario15';
+
 import { MessageClass } from './Components/Scenario2';
 import { Welcome } from './Components/Scenario3';
 import { WelcomeClass } from './Components/Scenario4';
@@ -25,6 +29,10 @@ function App() {
     <Clicked/>
     <RandomNumber/>
     <RandomColorArr/>
+    <WeekDays/>
+    <Person/>
+   <WelcomeMessage/>
+
 
     </div>
   );

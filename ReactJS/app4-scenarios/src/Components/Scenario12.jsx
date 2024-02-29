@@ -10,8 +10,8 @@ export class RandomColorArr extends Component{
     }
 
 handleRandomColor = () =>{
-    const getRandomIndex = Math.floor(Math.random() * this.state.colors.length); // Here we get a random index..
-    const getRandomColor = this.state.colors[getRandomIndex]; // Here we get a particular color of that random Index..
+    var getRandomIndex = Math.floor(Math.random() * this.state.colors.length); // Here we get a random index..
+    var getRandomColor = this.state.colors[getRandomIndex]; // Here we get a particular color of that random Index..
     this.setState({
         randomColor : getRandomColor   // Here we update the state..
     });
@@ -26,6 +26,7 @@ handleRandomColor = () =>{
              <h3>Display Random Color</h3>
             <button onClick={this.handleRandomColor}>Click To Get a Random Color</button><br /><br />
             <div style={{width : "100px", height: "100px",margin: "0 auto", backgroundColor : this.state.randomColor}}></div>
+            <hr />
         </div>
     )
  }
