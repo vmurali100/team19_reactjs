@@ -12,10 +12,13 @@ import { DisplayImage } from './Components/Scenario18';
 import { SimpleQuote } from './Components/Scenario19';
 import { MessageClass } from './Components/Scenario2';
 import { Emoji } from './Components/Scenario20';
+import { ChangeColor } from './Components/Scenario22';
 import { Welcome } from './Components/Scenario3';
 import { WelcomeClass } from './Components/Scenario4';
 import { FruitsArr } from './Components/Scenario5';
 import { Product } from './Components/Scenario6';
+import { ToDoList } from './Components/Scenario7';
+
 import { User } from './Components/Scenario8';
 import { ToggleMessage } from './Components/Scenario9';
 
@@ -28,6 +31,7 @@ function App() {
      <WelcomeClass/>
     <FruitsArr/>
     <Product/>
+   <ToDoList/>
     <User/>
     <ToggleMessage/>
     <Clicked/>
@@ -41,6 +45,8 @@ function App() {
    <DisplayImage/>
    <SimpleQuote/>
    <Emoji/>
+
+   <ChangeColor/>
 
 
 
