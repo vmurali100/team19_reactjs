@@ -1,6 +1,8 @@
 import './App.css';
 import { Message } from './Components/Scenario1';
 import { Clicked } from './Components/Scenario10';
+import { RandomNumber } from './Components/Scenario11';
+import { RandomColorArr } from './Components/Scenario12';
 import { MessageClass } from './Components/Scenario2';
 import { Welcome } from './Components/Scenario3';
 import { WelcomeClass } from './Components/Scenario4';
@@ -21,6 +23,9 @@ function App() {
     <User/>
     <ToggleMessage/>
     <Clicked/>
+    <RandomNumber/>
+    <RandomColorArr/>
+
     </div>
   );
 }
