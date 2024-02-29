@@ -9,8 +9,9 @@ import {WelcomeMessage}from './Components/Scenario15';
 import { Counter } from './Components/Scenario16';
 import { UserReviews } from './Components/Scenario17';
 import { DisplayImage } from './Components/Scenario18';
-
+import { SimpleQuote } from './Components/Scenario19';
 import { MessageClass } from './Components/Scenario2';
+import { Emoji } from './Components/Scenario20';
 import { Welcome } from './Components/Scenario3';
 import { WelcomeClass } from './Components/Scenario4';
 import { FruitsArr } from './Components/Scenario5';
@@ -38,6 +39,9 @@ function App() {
    <Counter/>
    <UserReviews/>
    <DisplayImage/>
+   <SimpleQuote/>
+   <Emoji/>
+
 
 
     </div>
