@@ -2,6 +2,7 @@ import { useState } from "react"
 
 export const FruitsArr = () =>{
 const[myArr, setMyArr] = useState([]);
+
 const handleArr = () =>{
     setMyArr([
         "apple",
@@ -15,7 +16,7 @@ const handleArr = () =>{
           <button onClick={handleArr}>Display Array</button>
           <ul>
             {myArr.map((val)=>{
-            <li>{val}</li>
+             return  <li>{val}</li>
             })}
           </ul>
         </div>
