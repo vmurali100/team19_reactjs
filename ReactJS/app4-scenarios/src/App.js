@@ -6,6 +6,9 @@ import { RandomColorArr } from './Components/Scenario12';
 import { WeekDays } from './Components/Scenario13';
 import { Person } from './Components/Scenario14';
 import {WelcomeMessage}from './Components/Scenario15';
+import { Counter } from './Components/Scenario16';
+import { UserReviews } from './Components/Scenario17';
+import { DisplayImage } from './Components/Scenario18';
 
 import { MessageClass } from './Components/Scenario2';
 import { Welcome } from './Components/Scenario3';
@@ -32,6 +35,9 @@ function App() {
     <WeekDays/>
     <Person/>
    <WelcomeMessage/>
+   <Counter/>
+   <UserReviews/>
+   <DisplayImage/>
 
 
     </div>
