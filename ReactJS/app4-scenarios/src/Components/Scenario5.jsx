@@ -13,12 +13,15 @@ const handleArr = () =>{
 }
     return (
         <div>
-          <button onClick={handleArr}>Display Array</button>
+          <h2 style={{color: "green"}}>Scenario 5</h2>
           <ul>
             {myArr.map((val)=>{
              return  <li>{val}</li>
             })}
           </ul>
+          <button onClick={handleArr}>Display Array</button>
+
+          <hr />
         </div>
     )
 }

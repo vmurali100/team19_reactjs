@@ -19,8 +19,10 @@ export class WelcomeClass extends Component{
  render(){
     return(
         <div>
-            <h2>{this.state.message}</h2>
+             <h2 style={{color: "green"}}>Scenario 4</h2>
+            <h3>{this.state.message}</h3>
             <button onClick={this.handleChange}>Change</button>
+            <hr />
         </div>
     )
  }

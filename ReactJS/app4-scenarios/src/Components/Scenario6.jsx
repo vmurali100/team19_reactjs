@@ -20,12 +20,15 @@ export class Product extends Component{
     render(){
         return(
             <div>
-                <button onClick={this.handleObj}>Display Product</button>
-                <ul>
+                 <h2 style={{color: "green"}}>Scenario 6</h2>
+                 <ul>
                     {Object.values(this.state.product).map((obj)=>{
                         return <li>{obj}</li>
                     })}
                 </ul>
+                <button onClick={this.handleObj}>Display Product</button>
+
+                <hr />
             </div>
         )
     }

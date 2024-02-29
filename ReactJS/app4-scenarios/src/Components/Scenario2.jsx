@@ -10,7 +10,9 @@ export class MessageClass extends Component{
  render(){
     return(
         <div>
-            <h2>{this.state.message}</h2>
+             <h2 style={{color: "green"}}>Scenario 2</h2>
+            <h3>{this.state.message}</h3>
+            <hr />
         </div>
     )
     }
