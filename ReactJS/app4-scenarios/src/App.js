@@ -12,6 +12,7 @@ import { DisplayImage } from './Components/Scenario18';
 import { SimpleQuote } from './Components/Scenario19';
 import { MessageClass } from './Components/Scenario2';
 import { Emoji } from './Components/Scenario20';
+import { ProgressBar } from './Components/Scenario21';
 import { ChangeColor } from './Components/Scenario22';
 import { Welcome } from './Components/Scenario3';
 import { WelcomeClass } from './Components/Scenario4';
@@ -45,7 +46,7 @@ function App() {
    <DisplayImage/>
    <SimpleQuote/>
    <Emoji/>
-
+  <ProgressBar/>
    <ChangeColor/>
 
 
