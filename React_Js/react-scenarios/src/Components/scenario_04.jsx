@@ -33,6 +33,7 @@ export class ManagingState extends Component{
             <h1 style={{color:"red"}}>Scenario_04</h1>
             <button onClick={this.handlemessage}> clickme</button>
             <h2>{this.state.message}</h2>
+            <hr />
         </div>
     }
 }
