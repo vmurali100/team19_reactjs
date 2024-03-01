@@ -1,4 +1,7 @@
 import { Component } from "react";
+import DisplayMessage from "./DisplayMessage";
+import DisplayObjectDetails from "./DisplayObjectDetails";
+import DisplayUsers from "./DisplayUsers";
 
 export class Student2 extends Component {
   constructor() {
@@ -30,20 +33,17 @@ export class Student2 extends Component {
     return (
       <div>
         <button onClick={this.handleChangeMessage}>Change Message</button>
-        <h2>{this.state.message}</h2>
+        <DisplayMessage newMsg = {this.state.message}/>
         <hr />
         <button onClick={this.handleObjectChange}>Change Object Values</button>
         <ul>
-          {Object.values(this.state.person).map((val) => {
-            return <li>{val}</li>;
-          })}
+          <DisplayObjectDetails newObj={this.state.person}/>
+        
         </ul>
         <hr />
         <button onClick={this.handleUsersDisplay}>Display Users</button>
         <ul>
-          {this.state.users.map((usr) => {
-            return <li>{usr}</li>;
-          })}
+        <DisplayUsers newUsers={this.state.users}/>
         </ul>
       </div>
     );
