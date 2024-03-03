@@ -4,6 +4,7 @@ import UserComp from './UserComp';
 import UserCompObj from './UserCompObj';
 import { UserFormClass } from './UserFormClass';
 import UserCRUD from './UserCRUD';
+import UserCRUDClass from './UserCRUDClass';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       {/* <UserComp/> */}
       {/* <UserCompObj/> */}
       {/* <UserFormClass/> */}
-      <UserCRUD/>
+      {/* <UserCRUD/> */}
+      <UserCRUDClass/>
     </div>
   );
 }

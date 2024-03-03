@@ -7,26 +7,59 @@ const UserCRUD = () => {
     lname: "",
     email: "",
   });
-  const [users,setUsers]=useState([])
+  const [users, setUsers] = useState([
+    { fname: "John", lname: "Doe", email: "john.doe@example.com" },
+    { fname: "Jane", lname: "Doe", email: "jane.doe@example.com" },
+    { fname: "Alice", lname: "Smith", email: "alice.smith@example.com" },
+  ]);
+
+  const [index, setIndex] = useState(null);
   const handleChange = (e) => {
     const newUser = { ...user };
     newUser[e.target.name] = e.target.value;
-    setUser(newUser)
+    setUser(newUser);
   };
 
-  const handleAddUser=()=>{
-    const newUsers = [...users]
+  const handleAddUser = () => {
+    const newUsers = [...users];
     newUsers.push(user);
+    setUsers(newUsers);
+    clearForm();
+  };
+
+  const handleDelete = (usr, i) => {
+    console.log(usr);
+    // 1. Deleting User with Splice Method
+    // const newUsers = [...users]
+    // newUsers.splice(i,1);
+    // setUsers(newUsers)
+
+    setUsers(
+      users.filter((us) => {
+        return us.fname !== usr.fname;
+      })
+    );
+  };
+  const handleEdit = (usr,i) => {
+    setUser(usr);
+    setIndex(i)
+  };
+
+  const clearForm = () => {
+    setUser({
+      fname: "",
+      lname: "",
+      email: "",
+    });
+  };
+
+  const handleUpdate = () => {
+    const newUsers = [...users];
+    newUsers[index]=user;
     setUsers(newUsers)
-    console.log(newUsers)
-  }
-
-  const handleDelete=(usr)=>{
-    console.log(usr)
-  }
-  const handleEdit=()=>{
-
-  }
+    setIndex(null);
+    clearForm()
+  };
   return (
     <div>
       <form>
@@ -55,33 +88,55 @@ const UserCRUD = () => {
         />{" "}
         <br />
         <br /> <br />
-        <button type="button" onClick={handleAddUser}>Add User</button>
+        {index === null ? (
+          <button type="button" onClick={handleAddUser}>
+            Add User
+          </button>
+        ) : (
+          <button type="button" onClick={handleUpdate}>
+            Update User
+          </button>
+        )}
       </form>
       <hr />
       <table border={1}>
         <thead>
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
         </thead>
         <tbody>
-            {users.map((usr)=>{
-                return <tr>
-                    <td>{usr.fname}</td>
-                    <td>{usr.lname}</td>
-                    <td>{usr.email}</td>
-                    <td>
-                        <button onClick={()=>{handleEdit(usr)}}>Edit</button>
-                    </td>
-                    <td>
-                        <button onClick={()=>{handleDelete(usr)}}>Delete</button>
-                    </td>
-                </tr>
-            })}
+          {users.map((usr, i) => {
+            return (
+              <tr>
+                <td>{usr.fname}</td>
+                <td>{usr.lname}</td>
+                <td>{usr.email}</td>
+                <td>
+                  <button
+                    onClick={() => {
+                      handleEdit(usr,i);
+                    }}
+                  >
+                    Edit
+                  </button>
+                </td>
+                <td>
+                  <button
+                    onClick={() => {
+                      handleDelete(usr, i);
+                    }}
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
