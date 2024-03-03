@@ -14,7 +14,11 @@ import Week from './Components/scenario_13';
 import { PersonInfo } from './Components/scenario_14';
 import { DateTime } from './Components/Scenario_15';
 import { Counter } from './Components/scenario_16';
-import CatDogImageToggle from './Components/scenario17';
+import CatDogImageToggle, { UserReviews } from './Components/scenario17';
+import { ImageToggling } from './Components/scenario_18';
+import { TogglingQuotes } from './Components/scenario_19';
+import { DisplayingEmoji } from './Components/scenario_20';
+import { ProgessBar } from './Components/scenario_21';
 // import { DateTime, DisplayTime } from './Components/Scenario_15';
 
 function App() {
@@ -35,7 +39,11 @@ function App() {
       {/* <DisplayTime/> */}
       <DateTime/>
       <Counter/>
-      <CatDogImageToggle/>
+      <UserReviews/>
+      <ImageToggling/>
+      <TogglingQuotes/>
+      <DisplayingEmoji/>
+      <ProgessBar/>
 
 
     </div>
