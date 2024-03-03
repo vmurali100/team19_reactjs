@@ -12,6 +12,10 @@ import RandomNumber from './Components/scenario_11';
 import { ColorPicker } from './Components/scenario_12';
 import Week from './Components/scenario_13';
 import { PersonInfo } from './Components/scenario_14';
+import { DateTime } from './Components/Scenario_15';
+import { Counter } from './Components/scenario_16';
+import CatDogImageToggle from './Components/scenario17';
+// import { DateTime, DisplayTime } from './Components/Scenario_15';
 
 function App() {
   return (
@@ -28,6 +32,11 @@ function App() {
       <ColorPicker/>
       <Week/>
       <PersonInfo/>
+      {/* <DisplayTime/> */}
+      <DateTime/>
+      <Counter/>
+      <CatDogImageToggle/>
+
 
     </div>
   );

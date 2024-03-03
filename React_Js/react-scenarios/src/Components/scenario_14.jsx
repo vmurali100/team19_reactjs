@@ -18,5 +18,4 @@ export class PersonInfo extends Component{
             <hr />
         </div>
     }
-
 }
