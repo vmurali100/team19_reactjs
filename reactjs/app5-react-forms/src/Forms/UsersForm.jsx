@@ -19,7 +19,7 @@ const UsersForm = ({ user, handleChange, handleAddUser, handleUpdate, index }) =
             {index === null ? (
                 <button type="button" onClick={handleAddUser}>Add User</button>
             ):(
-                <button type='button'>Update User</button>
+                <button type='button' onClick={handleUpdate}>Update User</button>
             )}
         </form>
     )

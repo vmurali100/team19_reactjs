@@ -1,6 +1,6 @@
 import React from "react"
 
-const UsersTable=({users,handleDelete,handleEdit})=>{
+  const UsersTable=({users,handleDelete,handleEdit})=>{
     return (
         <table border={1}>
             <thead>
@@ -35,4 +35,6 @@ const UsersTable=({users,handleDelete,handleEdit})=>{
             </tbody>
         </table>
     );
+    
 };
+export default UsersTable
