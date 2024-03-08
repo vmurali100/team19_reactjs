@@ -5,8 +5,8 @@ import { UserCrudClass } from './Components/UserCrudClass';
 function App() {
   return (
     <div className="App">
-    {/* <UserCrud/> */}
-    <UserCrudClass/>
+    <UserCrud/>
+    {/* <UserCrudClass/> */}
     </div>
   );
 }

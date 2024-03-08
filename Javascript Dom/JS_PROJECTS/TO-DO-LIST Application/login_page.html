@@ -142,7 +142,7 @@
             getUsers.onreadystatechange = function (){
                 if(getUsers.status == 200 && getUsers.readyState == 4){
                     users = JSON.parse(getUsers.response);
-                    
+
                 }
             }
             getUsers.open("GET", "http://localhost:3000/newUsers");
@@ -155,23 +155,20 @@
          var email = document.getElementById("emailIn").value;
          var password = document.getElementById("passwordIn").value;
 
-       
 
-         var userExist = users.every((user =>
+
+         var userExist = users.some((user =>
           user.fname == name && user.email == email && user.password == password
          ));
 
          if(userExist == true){
                 document.getElementById("message").innerHTML = "User Exists Already";
                 window.location.href = "sample1.html"
-                
+
          }
          else{
              document.getElementById("message").innerHTML = "User doesn't Exist. Please Sign Up"
          }
-
-        
-
       }
 
     </script>

@@ -19,6 +19,7 @@ const handleArr = () =>{
                 })}
             </ul>
             <button onClick={handleArr}>Display Array </button>
+            <hr />
         </div>
     )
 }

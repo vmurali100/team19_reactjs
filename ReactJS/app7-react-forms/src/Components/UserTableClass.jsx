@@ -4,11 +4,13 @@ return(
     <div>
         <table border={1}>
             <thead>
-                <th>FirstName</th>
+              <tr>
+              <th>FirstName</th>
                 <th>Last Name</th>
                 <th>Email</th>
                 <th>Edit</th>
                 <th>Delete</th>
+              </tr>
             </thead>
             <tbody>
                {usersArr.map((usr , i)=>{

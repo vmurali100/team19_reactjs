@@ -135,6 +135,18 @@
       "fname": "shanti",
       "email": "shanti@gmail.com",
       "password": "asdf"
+    },
+    {
+      "id": "b8a3",
+      "fname": "chandrakala",
+      "email": "chandrakaladande1505@gmail.com",
+      "password": "kala"
+    },
+    {
+      "id": "d18f",
+      "fname": "chandrakala",
+      "email": "chandrakaladande1505@gmail.com",
+      "password": "nani"
     }
   ],
   "student": [
