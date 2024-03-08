@@ -367,5 +367,170 @@
       "postcode": "51541187980",
       "id": "5990"
     }
+  ],
+  "crud": [
+    {
+      "id": "4358",
+      "fname": "yochan",
+      "email": "chandrakaladande1505@gmail.com",
+      "gender": "Male",
+      "areasOfInterest": [
+        "HTML"
+      ],
+      "state": "TS"
+    },
+    {
+      "id": "2a51",
+      "fname": "yochan",
+      "email": "chandrakaladande1505@gmail.com",
+      "gender": "Male",
+      "areasOfInterest": [
+        "HTML"
+      ],
+      "state": "TS"
+    },
+    {
+      "id": "ada8",
+      "fname": "chandrakala",
+      "email": "cde@gmail.com",
+      "gender": "Female",
+      "areasOfInterest": [
+        "HTML"
+      ],
+      "state": "TS"
+    },
+    {
+      "id": "1f96",
+      "fname": "chandrakala",
+      "email": "cde@gmail.com",
+      "gender": "Female",
+      "areasOfInterest": [
+        "HTML"
+      ],
+      "state": "TS"
+    },
+    {
+      "id": "eeae",
+      "fname": "nani",
+      "email": "r171041@rguktrkv.ac.in",
+      "gender": "Male",
+      "areasOfInterest": [
+        "HTML"
+      ],
+      "state": "TS"
+    },
+    {
+      "id": "02f8",
+      "fname": "yochan",
+      "email": "geetha@gmail.com",
+      "gender": "Male",
+      "areasOfInterest": [
+        "HTML"
+      ],
+      "state": "TN"
+    },
+    {
+      "id": "f984",
+      "fname": "yochan",
+      "email": "cde@gmail.com",
+      "gender": "Male",
+      "areasOfInterest": [
+        "HTML"
+      ],
+      "state": "TS"
+    },
+    {
+      "id": "8383",
+      "fname": "yochan",
+      "email": "cde@gmail.com",
+      "gender": "Male",
+      "areasOfInterest": [
+        "HTML"
+      ],
+      "state": "TS"
+    },
+    {
+      "id": "2117",
+      "fname": "yochan",
+      "email": "cde@gmail.com",
+      "gender": "Male",
+      "areasOfInterest": [
+        "HTML"
+      ],
+      "state": "TS"
+    },
+    {
+      "id": "c037",
+      "fname": "yochan",
+      "email": "chandrakaladande1505@gmail.com",
+      "gender": "Male",
+      "areasOfInterest": [
+        "HTML"
+      ],
+      "state": "TN"
+    },
+    {
+      "id": "9067",
+      "fname": "geetha",
+      "email": "r171041@rguktrkv.ac.in",
+      "gender": "Male",
+      "areasOfInterest": [
+        "HTML"
+      ],
+      "state": "TN"
+    },
+    {
+      "id": "fc53",
+      "fname": "chandrakala",
+      "email": "geetha@gmail.com",
+      "gender": "Female",
+      "areasOfInterest": [
+        "CSS"
+      ],
+      "state": "TN"
+    },
+    {
+      "id": "b98c",
+      "fname": "geetha",
+      "email": "abc@gmail.com",
+      "gender": "Female",
+      "areasOfInterest": [
+        "CSS",
+        "JAVASCRIPT"
+      ],
+      "state": "TS"
+    },
+    {
+      "id": "4a92",
+      "fname": "abc",
+      "email": "",
+      "gender": "",
+      "areasOfInterest": [],
+      "state": ""
+    },
+    {
+      "id": "d95b",
+      "fname": "abc",
+      "email": "",
+      "gender": "",
+      "areasOfInterest": [],
+      "state": ""
+    },
+    {
+      "id": "50a5",
+      "fname": "cde",
+      "email": "",
+      "gender": "",
+      "areasOfInterest": [],
+      "state": ""
+    },
+    {
+      "id": "95e3",
+      "fname": "cde",
+      "email": "",
+      "gender": "",
+      "areasOfInterest": [],
+      "state": ""
+    }
   ]
 }

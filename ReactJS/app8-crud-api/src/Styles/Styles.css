@@ -1,0 +1,22 @@
+.mainContainer{
+    display: flex;
+}
+
+label{
+    display: inline-block;
+    width: 200px;
+}
+
+table , th , td{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+td , th{
+    padding: 5px;
+}
+button{
+   padding: 5px;
+   background-color: lightgreen;
+   border-radius: 5px;
+   margin-left: 90px;
+}
