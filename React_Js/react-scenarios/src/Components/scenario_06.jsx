@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import { DisplayingObject } from "../ChildComponents/scenario_06";
 
 export class Product extends Component{
     constructor(){
         super();
         this.state={
             shirt:{
-                color:"black",
+                color:"Black",
                 size:"XXL",
                 Brand:" US_POLO",
                 Price:2300,
@@ -15,10 +16,9 @@ export class Product extends Component{
     render(){
         return <div>
             <h1 style={{color:"red"}}>scenario_06</h1>
-            <ul style={{fontSize:"25px", fontWeight:"bolder", listStyleType:"none"}}>{Object.values(this.state.shirt).map((val)=>{
-                return <li>{val}</li>
+            <DisplayingObject newobj={this.state.shirt}/>
 
-            })}</ul>
+           
             <hr />
 
         </div>

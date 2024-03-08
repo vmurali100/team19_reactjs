@@ -6,8 +6,8 @@ export default function Week(){
 
     return <div> 
         <h1 style={{fontSize:"30px",fontWeight:"bolder",color:"red"}}>scenario_13</h1>
-        <ul style={{fontSize:"30px",fontWeight:"bolder", listStyleType:"none"}}>{days.map((val)=>{
-            return <li>{val}</li>
+        <ul style={{fontSize:"30px",fontWeight:"bolder", listStyleType:"none"}}>{days.map((val,i)=>{
+            return <li key={i}>{val}</li>
 
         })}</ul>
         <hr />

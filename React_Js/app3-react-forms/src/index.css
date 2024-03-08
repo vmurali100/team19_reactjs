@@ -11,14 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-#progress{
-  width: 500px;
-  height: 30px;
-  background-color: gold;
-  margin:auto;
-  margin-bottom: 50px;
-}
-#progressbar{
-  background-color: red;
-  height: 30px;
-}

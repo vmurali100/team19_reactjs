@@ -18,7 +18,9 @@ import CatDogImageToggle, { UserReviews } from './Components/scenario17';
 import { ImageToggling } from './Components/scenario_18';
 import { TogglingQuotes } from './Components/scenario_19';
 import { DisplayingEmoji } from './Components/scenario_20';
-import { ProgessBar } from './Components/scenario_21';
+import { ProgressBar } from './Components/scenario_21';
+import { Colorchanger } from './Components/scenario_22';
+import { Togglingbtn } from './Components/scenario_09';
 // import { DateTime, DisplayTime } from './Components/Scenario_15';
 
 function App() {
@@ -31,6 +33,9 @@ function App() {
       <Fruits/>
       <Product/>
       <User/>
+      <Togglingbtn/>
+
+
       <Buttons/>
       <RandomNumber/>
       <ColorPicker/>
@@ -43,7 +48,8 @@ function App() {
       <ImageToggling/>
       <TogglingQuotes/>
       <DisplayingEmoji/>
-      <ProgessBar/>
+      <Colorchanger/>
+      
 
 
     </div>

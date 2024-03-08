@@ -16,8 +16,8 @@ export class User extends Component{
     render(){
         return <div>
              <h1 style={{color:"red"}}>scenario_08</h1>
-            <ul style={{fontSize:"25px",fontWeight:"bolder",listStyleType:"none"}}>{Object.values(this.state.user).map((usr)=>{
-                return <li>{usr}</li>
+            <ul style={{fontSize:"25px",fontWeight:"bolder",listStyleType:"none"}}>{Object.values(this.state.user).map((usr,index)=>{
+                return <li key={index}>{usr}</li>
             })}</ul>
             <hr />
         </div>
