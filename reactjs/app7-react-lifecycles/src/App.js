@@ -1,17 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-import { Concat } from './Components/Concat';
-import {Copywithin} from './Components/Copywithin'
-
+import Sample from './Components/Sample';
+import SuperParent from './Components/SuperParent';
 
 
 function App() {
   return (
     <div className="App">
-      <Concat />
-      <Copywithin/>
-     
+      <Sample/>
+      <SuperParent/>
       
+
     </div>
   );
 }

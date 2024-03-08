@@ -41,7 +41,7 @@ export const Concat=()=>{
                     return <li key={i}>{arr}</li>
                 })}
             </ul>
-            <hr />
+            
         </div>
     )
 }
