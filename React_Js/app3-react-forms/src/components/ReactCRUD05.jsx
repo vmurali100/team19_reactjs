@@ -6,6 +6,7 @@ export function Usercrud05() {
     lname: "",
     email: "",
   });
+  const [index,setindex]=useState(null)
 
   const [users,setusers]=useState([
     {fname:"sandy",lname:"s",email:"sandy@gmail.com"},
@@ -37,12 +38,14 @@ export function Usercrud05() {
       return va.fname != val.fname
 
     }))
-
-
-
     console.log(val)
-
   }
+  const handleedit=(val,i)=>{
+    setuser(val)
+    setindex(i)
+  }
+
+  const UpdateUser=()=>{}
   const clearUser=()=>{
     setuser({
       fname: "",
@@ -50,6 +53,8 @@ export function Usercrud05() {
     email: "",
     })
   }
+
+
 
  
   return (
@@ -63,7 +68,8 @@ export function Usercrud05() {
         <label htmlFor="fname">email :</label>
         <input type="text" value={user.email} name="email" onChange={handlechange}/> <br /> <br />
       </form>
-      <button onClick={addUser}>adduser</button>
+     
+      {index === null ? <button onClick={addUser}>adduser</button>:<button onClick={UpdateUser}>UpdateUser</button>}
       <hr />
       <table border={1}>
         <thead>
@@ -80,7 +86,7 @@ export function Usercrud05() {
               <td>{val.lname }</td>
               <td>{val.email}</td>
               <td>
-                <button>edit</button>
+                <button onClick={()=>{handleedit(val,i)}}>edit</button>
               </td>
               <td> 
                 <button onClick={()=>{handledelete(val,i)}}>delete</button>
