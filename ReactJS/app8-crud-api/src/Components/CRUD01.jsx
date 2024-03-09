@@ -10,6 +10,7 @@ export const CRUD01 = () =>{
         state : ""
     });
 const[users , setUsers] = useState([])
+const[index, setIndex] = useState(null)
 const handleChange = (e) =>{
    const newUser = {...user}
          //check the checkbox is checked or not
@@ -28,14 +29,14 @@ const handleChange = (e) =>{
               }
         }
    }
-   else if (e.target.name === "state"){
-    console.log(e.target.childNodes);
-    e.target.childNodes.forEach((opt)=>{
-        if(opt.selected){
-            newUser[e.target.name] = opt.value
-        }
-    });
-   }
+//    else if (e.target.name === "state"){
+//     console.log(e.target.childNodes);
+//     e.target.childNodes.forEach((opt)=>{
+//         if(opt.selected){
+//             newUser[e.target.name] = opt.value
+//         }
+//     });
+//    }
    else{
     newUser[e.target.name] = e.target.value
    }
@@ -51,7 +52,8 @@ const handleAddUser = () =>{
         body : JSON.stringify(user)
     });
 
-    // getDataFromServer();
+    getDataFromServer();
+    clearForm()
 }
 
 useEffect(()=>{
@@ -62,6 +64,7 @@ useEffect(()=>{
 const getDataFromServer = () =>{
     fetch("http://localhost:3200/crud",{
         method : "GET",
+        headers : {"content-type" : "application/json"}
 
     }).then((res)=>{
       return res.json()
@@ -72,6 +75,43 @@ const getDataFromServer = () =>{
 
     })
 }
+const deleteUser = (payload) =>{
+    console.log(payload);
+    fetch("http://localhost:3200/crud/"+payload.id,{
+        method:"DELETE",
+        headers :{"content-type" : "application/json"}
+    });
+    getDataFromServer();
+}
+
+const editUser = (user) =>{
+  setUser(user);
+  setIndex(user.id)
+
+}
+const updateUser = () =>{
+    console.log(user);
+    fetch("http://localhost:3200/crud/" + user.id,{
+        method : "PUT",
+        headers : {"content-type" : "application/json"},
+        body : JSON.stringify(user)
+    })
+    clearForm();
+    getDataFromServer();
+    setIndex(null)
+}
+
+const clearForm = () =>{
+    setUser({
+        fname : "",
+        email : "",
+        gender : "",
+        areasOfInterest : [],
+        state : ""
+    })
+}
+
+
 
 return(
     <div className="mainContainer">
@@ -89,13 +129,13 @@ return(
               <input type="radio" name="gender" checked = {user.gender === "Other"} value={"Other"} onChange={handleChange}/> Others <br />
 
               <label htmlFor="">Areas Of Interest</label>
-              <input type="checkbox" name="areasOfInterest" value={"HTML"} onChange={handleChange} />HTML
-              <input type="checkbox" name="areasOfInterest" value={"CSS"} onChange={handleChange}/>CSS
-              <input type="checkbox" name="areasOfInterest" value={"JAVASCRIPT"} onChange={handleChange}/>Javascript
-              <input type="checkbox" name="areasOfInterest" value={"REACTJS"} onChange={handleChange}/> ReactJs <br />
+              <input type="checkbox" checked = {user.areasOfInterest.includes("HTML")}name="areasOfInterest" value={"HTML"} onChange={handleChange} />HTML
+              <input type="checkbox" checked = {user.areasOfInterest.includes("CSS")} name="areasOfInterest" value={"CSS"} onChange={handleChange}/>CSS
+              <input type="checkbox" checked = {user.areasOfInterest.includes("JAVASCRIPT")} name="areasOfInterest" value={"JAVASCRIPT"} onChange={handleChange}/>Javascript
+              <input type="checkbox" checked = {user.areasOfInterest.includes("REACTJS")}name="areasOfInterest" value={"REACTJS"} onChange={handleChange}/> ReactJs <br />
 
               <label htmlFor="">State : </label>
-              <select name="state" onChange={handleChange}>
+              <select name="state" value= {user.state}onChange={handleChange}>
                 <option value=""></option>
                 <option value="AP">AP</option>
                 <option value="TS">TS</option>
@@ -103,17 +143,20 @@ return(
                 <option value="KA">KA</option>
               </select><br /><br />
 
-              <button type="button" onClick={handleAddUser}>Add User</button>
+             {index == null ?  <button type="button" onClick={handleAddUser}>Add User</button> :
+              <button type="button" onClick={updateUser}>Update User </button>}
            </form>
         </div>
         <div className="tableDisplay">
              <table>
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>First Name</th>
                         <th>Email</th>
                         <th>Gender</th>
                         <th>Areas Of Interest</th>
+                        <th>State</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -123,12 +166,22 @@ return(
                         users.map((usr,i)=>{
                           return (
 
-                            <tr>
+                            <tr key={i}>
+                            <td>{usr.id}</td>
                             <td>{usr.fname}</td>
                             <td>{usr.email}</td>
                             <td>{usr.gender}</td>
                             <td>{usr.areasOfInterest}</td>
                             <td>{usr.state}</td>
+
+                            <td>
+                                <button type="button" onClick={()=>{editUser(usr)}}>Edit</button>
+                            </td>
+                            <td>
+                              <button type="button" onClick={()=>{deleteUser(usr)}}>Delete</button>
+                            </td>
+
+
                           </tr>
                           )
                         })
