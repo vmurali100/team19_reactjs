@@ -9,9 +9,9 @@ export function Usercrud05() {
   const [index,setindex]=useState(null)
 
   const [users,setusers]=useState([
-    {fname:"sandy",lname:"s",email:"sandy@gmail.com"},
-    {fname:"Amar",lname:"s",email:"Amar@gmail.com"},
-    {fname:"Siva",lname:"A",email:"Siva@gmail.com"},
+    // {fname:"sandy",lname:"s",email:"sandy@gmail.com"},
+    // {fname:"Amar",lname:"s",email:"Amar@gmail.com"},
+    // {fname:"Siva",lname:"A",email:"Siva@gmail.com"},
   ]);
   const handlechange=(e)=>{
     const newUser={...user}
@@ -45,7 +45,13 @@ export function Usercrud05() {
     setindex(i)
   }
 
-  const UpdateUser=()=>{}
+  const UpdateUser=()=>{
+    const newUsers=[...users];
+    newUsers[index]=user
+    setusers(newUsers);
+    clearUser()
+    setindex(null)
+  }
   const clearUser=()=>{
     setuser({
       fname: "",
@@ -53,10 +59,7 @@ export function Usercrud05() {
     email: "",
     })
   }
-
-
-
- 
+  
   return (
     <>
       <h1>ReactForm_05</h1>

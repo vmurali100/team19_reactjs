@@ -21,6 +21,7 @@ import { DisplayingEmoji } from './Components/scenario_20';
 import { ProgressBar } from './Components/scenario_21';
 import { Colorchanger } from './Components/scenario_22';
 import { Togglingbtn } from './Components/scenario_09';
+import TodoList from './Components/scenario_07';
 // import { DateTime, DisplayTime } from './Components/Scenario_15';
 
 function App() {
@@ -34,8 +35,6 @@ function App() {
       <Product/>
       <User/>
       <Togglingbtn/>
-
-
       <Buttons/>
       <RandomNumber/>
       <ColorPicker/>
@@ -49,6 +48,7 @@ function App() {
       <TogglingQuotes/>
       <DisplayingEmoji/>
       <Colorchanger/>
+      <TodoList/>
       
 
 

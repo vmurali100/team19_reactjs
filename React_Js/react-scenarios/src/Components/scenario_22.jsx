@@ -18,6 +18,7 @@ export class Colorchanger extends Component{
             <button onClick={()=>this.handlecolor("red")}>red</button>
             <button onClick={()=>this.handlecolor("green")}>green</button>
             <button onClick={()=>this.handlecolor("blue")}>blue</button>
+            <hr />
         </div>
     }
 }
