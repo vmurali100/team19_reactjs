@@ -15,7 +15,7 @@ export function Togglebutton(){
     return <div>
         <h1 style={{color:"red"}}>scenario_9</h1>
         <button style={{}} type="button" onClick={handlebtn}>clickme</button>
-        <h1 style={{color:"green"}}>{value}</h1>
+        <h1 style={{color:"green"}}>{value}</h1> <hr />
 
     </div>
 
