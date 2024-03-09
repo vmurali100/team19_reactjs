@@ -22,7 +22,7 @@ const TodoList = () => {
         type="text"
         value={newitem}
         onChange={handlechange}
-        placeholder="Enter your name"
+        placeholder="Enter any item"
       />
       <button style={{color:'red'}} onClick={addItem}>Click me!</button> <hr />
       <ul style={{fontSize:"25px", listStyle:"none", fontWeight:"bold"}}> 

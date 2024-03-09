@@ -10,23 +10,23 @@ export class Buttons extends Component{
     }
     Clickbtn1=()=>{
       this.setState({
-        click:"Clicked"
+        click:'"Clicked"'
       })
         
       
     }
     Clickbtn2=()=>{
        this.setState({
-        None:"Nothing"
+        None:'"Nothing"'
        })
     }
     render(){
      return <div>
         <h1 style={{color:"red"}}>Secenario 10</h1>
         <button onClick={this.Clickbtn1}>Click me!</button>
-        <h1>{this.state.click}</h1>
+        <h1 style={{color:'gold'}}>{this.state.click}</h1>
         <button onClick={this.Clickbtn2}>Click me!</button>
-        <h1>{this.state.None}</h1>
+        <h1 style={{color:'orange'}}>{this.state.None}</h1> <hr />
      </div>
     
     }
