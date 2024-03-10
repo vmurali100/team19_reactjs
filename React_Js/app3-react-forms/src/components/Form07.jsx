@@ -12,7 +12,7 @@ export function UserForm_07({user,handlechange,index,users,handleaddUser,handleU
                 <input type="text" name="email" value={user.email} onChange={handlechange} /> <br />
             </form>
            
-            {index === null ?  <button onClick={handleaddUser}>addUser</button>: <button onClick={handleUpdateuser}>handleUpdateuser</button> }
+            {index === null ?  <button onClick={handleaddUser}>addUser</button>: <button onClick={handleUpdateuser}>Updateuser</button> }
             <hr />
 
     </div>
