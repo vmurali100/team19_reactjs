@@ -1,0 +1,25 @@
+.main-comp{
+  width: 900px;
+  border: 1px solid red;
+  height: 900px;
+  margin: auto;
+}
+
+.super-parent{
+  width: 600px;
+  border: 2px solid greenyellow;
+  height: 600px;
+  margin: auto;
+}
+.super-child{
+  width: 400px;
+  border: 2px solid blue;
+  height: 400px;
+  margin: auto;
+}
+.content-comp{
+  width: 200px;
+  border: 2px solid brown;
+  height: 200px;
+  margin: auto;
+}
