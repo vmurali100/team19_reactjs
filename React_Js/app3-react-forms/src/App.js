@@ -9,7 +9,7 @@ import { Usercrud04 } from './components/ReactCRUD04';
 import { Usercrud03 } from './components/ReactCRUD03';
 import { Usercrud05 } from './components/ReactCRUD05';
 import { Usercrud06 } from './components/ReactClassCRUD06';
-import { Usercrud07 } from './components/ReactClassCRUD07';
+import { Table07, UserTable_07 } from './components/UserTable07';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
       {/* <Usercrud04/> */}
       {/* <Usercrud05/> */}
       {/* <Usercrud06/> */}
-      <Usercrud07/>
+      <UserTable_07/>
     
       
     </div>

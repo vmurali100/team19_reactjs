@@ -57,8 +57,6 @@ export class Usercrud06 extends Component{
 
         }})
     }
-    
-
     render(){
         
         const {user,index,users}=this.state;
@@ -66,7 +64,6 @@ export class Usercrud06 extends Component{
         return <div>
             <Userform user={user} handlechange={handlechange} index={index} addUser={addUser} UpdateUser={UpdateUser} handleClear={handleClear} />
             <Table users={users} handleedit={handleedit} handledelete={handledelete} UpdateUser={UpdateUser}/>
-
         </div>
  
     }

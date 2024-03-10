@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Userform07 } from "./Form07";
-import { UserTable07 } from "./UserTable07";
+import { UserForm_07 } from "./Form07";
+import { UserTable_07 } from "./UserTable07";
 
-export class Usercrud07 extends Component{
+export class Usercrud_07 extends Component{
     constructor(){
         super()
         this.state={
@@ -11,31 +11,51 @@ export class Usercrud07 extends Component{
                 lname:"",
                 email:""
             },
-            users:[],
-            index:null,
+            users:[
+                {fname:"sandy",lname:"s",email:"sandy@gmail.com"},
+                {fname:"Amar",lname:"s",email:"Amar@gmail.com"},
+                {fname:"Virat",lname:"s",email:"Virat@gmail.com"},
+                {fname:"Sekar",lname:"s",email:"Sekar@gmail.com"},
+                {fname:"Hulk",lname:"s",email:"Hulk@gmail.com"},
+            ],
+            index:null
         }
     }
 
-    handlechange=(e)=>{
-        const newuser={...this.state.user};
+    handlechange =(e)=>{
+        const newuser={...this.state.user}
         newuser[e.target.name]=e.target.value;
         this.setState({user:newuser})
     }
-    handleAddUser=()=>{
-        const newusers=[...this.state.users];
-        newusers.push(this.state.user);
+    handleaddUser=()=>{
+        console.log(this.state.user)
+        const newusers=[...this.state.users]
+        newusers.push(this.state.user)
         this.setState({users:newusers})
-        this.handleClear();
-
+        this.handleclear()
     }
+
     handleedit=(val,i)=>{
         this.setState({
             index:i,user:val
         })
     }
-  
+    handleUpdateuser=()=>{
+        const newusers=[...this.state.users]
+        newusers[this.state.index]=this.state.user
+        this.setState({users:newusers,index:null})
+        this.handleclear()
 
-    handleClear(){
+    }
+    handledelete=(val,i)=>{
+        // deleting with splice 
+        // this.setState(this.state.users.splice(i,1))
+
+        // deleting with filter
+        this.setState({users:this.state.users.filter((va)=>va.fname!== val.fname )})
+    }
+
+    handleclear=()=>{
         this.setState({
             user:{
                 fname:"",
@@ -44,21 +64,12 @@ export class Usercrud07 extends Component{
             }
         })
     }
-    handleUpdate =()=>{
-        const newusers=[...this.state.users]
-        newusers[this.state.index]=this.state.user
-        this.setState({
-            users:newusers,index:null
-        })
-        this.handleClear();
-    }
-    render(){
-        const {user,users, index }=this.state;
-        const {handlechange,handleAddUser,handleedit,handleUpdate}=this
+        render(){
+        const {user,index,users}=this.state;
+        const {handlechange,handleaddUser,handleedit,handledelete,handleUpdateuser,handleclear}=this
         return <div>
-            <Userform07 user={user} handlechange={handlechange} handleAddUser={handleAddUser} handleedit={handleedit} handleUpdate={handleUpdate}/>
-            <UserTable07 users={users}  handleedit={handleedit}  />
-
+            <UserForm_07 user={user} handlechange={handlechange} index={index} handleaddUser={handleaddUser} handleUpdateuser ={handleUpdateuser} handleclear={handleclear}/>
+            <UserTable_07 users={users} handleedit={handleedit} handledelete={handledelete} user={user}/>
         </div>
     }
 }
