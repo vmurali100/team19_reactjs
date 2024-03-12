@@ -1,10 +1,13 @@
-import HandleHoc from "./Component/HandleHoc";
+// import HandleHoc from "./Component/HandleHoc";
+
+import HandleHocClass from "./Component/HandleHocClass";
 
 
 function App() {
   return (
     <div className="App">
-      <HandleHoc/>
+      {/* <HandleHoc/> */}
+      <HandleHocClass/>
     </div>
   );
 }

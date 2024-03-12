@@ -1,0 +1,93 @@
+{
+    "users":[
+        {
+            "fname": "Salomon",
+            "lname": "Dewolfe",
+            "tel": "(331)629-4226",
+            "address": "4997 Dolor St",
+            "city": "Swanton",
+            "state": "AL",
+            "zip": 51576
+        },
+        {
+            "fname": "Penny",
+            "lname": "Malkewicz",
+            "tel": "(539)013-0646",
+            "address": "8559 Tellus Ave",
+            "city": "Adairsville",
+            "state": "KY",
+            "zip": 67941
+        },
+        {
+            "fname": "Ali",
+            "lname": "Nutter",
+            "tel": "(317)232-7052",
+            "address": "9671 Amet Ln",
+            "city": "Granite Falls",
+            "state": "IN",
+            "zip": 48416
+        },
+        {
+            "fname": "Christina",
+            "lname": "Mcintyre",
+            "tel": "(375)579-2716",
+            "address": "6712 Lacus Ln",
+            "city": "Texas City",
+            "state": "AL",
+            "zip": 52087
+        },
+        {
+            "fname": "Jaroslava",
+            "lname": "Bario",
+            "tel": "(980)547-7188",
+            "address": "1716 Mi Ln",
+            "city": "Holland",
+            "state": "VT",
+            "zip": 58908
+        },
+        {
+            "fname": "Josefina",
+            "lname": "Devine",
+            "tel": "(767)124-0637",
+            "address": "1435 Pretium Ave",
+            "city": "Stony Point",
+            "state": "LA",
+            "zip": 26882
+        },
+        {
+            "fname": "Meribeth",
+            "lname": "Krebs",
+            "tel": "(460)270-0521",
+            "address": "6494 Tortor Dr",
+            "city": "Lititz",
+            "state": "RI",
+            "zip": 80548
+        },
+        {
+            "fname": "Colleen",
+            "lname": "Klepsteen",
+            "tel": "(832)016-0935",
+            "address": "9457 Ipsum Ln",
+            "city": "Georgetown",
+            "state": "AK",
+            "zip": 30147
+        },
+        {
+            "fname": "Yiping",
+            "lname": "Dech",
+            "tel": "(900)440-2796",
+            "address": "2544 Tincidunt Ct",
+            "city": "Lindale",
+            "state": "IL",
+            "zip": 89551
+        },
+        {
+            "fname": "Marva",
+            "lname": "Guth",
+            "tel": "(649)566-8575",
+            "address": "5234 Sapien Ln",
+            "city": "San Francisco",
+            "state": "NJ",
+            "zip": 68136
+        }
+    ]}
