@@ -2,7 +2,7 @@
 import './App.css';
 import { ClickCounter } from './Components/ClickCounter';
 import { HoverCounter } from './Components/HoverCounter';
-import { ReusableCounter } from './Components/ReusableCounter';
+import ReusableCounter  from './Components/ReusableCounter';
 
 function App() {
   return (

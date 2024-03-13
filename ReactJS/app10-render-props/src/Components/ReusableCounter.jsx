@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export const ReusableCounter = ({render}) =>{
+ const ReusableCounter = ({render}) =>{
 const[count , setCount] = useState(0);
 const incrementCount = () =>{
     setCount(count + 1);
@@ -18,3 +18,4 @@ const resetCount = () =>{
         </div>
     )
 }
+export default ReusableCounter
