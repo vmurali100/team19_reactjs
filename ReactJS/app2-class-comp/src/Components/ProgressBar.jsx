@@ -7,7 +7,6 @@ const ProgressBar = () => {
   const handlePercent = () => {
     setTimeout(() => {
       setPersent(percent + 1);
-
     }, 100);
   };
   useEffect(function () {
