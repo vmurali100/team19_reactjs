@@ -25,7 +25,8 @@ export const StudentsDetails = () =>{
         <h2>Welcome to student Details</h2>
         <ul>
             <li>{student.fname}</li>
-            <li>{student.fname}</li>
+            <li>{student.state}</li>
+            <li>{student.email}</li>
 
         </ul>
     </div>
