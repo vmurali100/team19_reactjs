@@ -9,13 +9,11 @@ class Count extends Component {
         }
     }
     incrementHandler = () => {
-        debugger
         this.setState((prevState)=>({
             count: prevState.count + 1
         }))
     }
     decrementHandler = () => {
-        debugger
         this.setState((prevState)=>({
             count: prevState.count - 1
         }))
