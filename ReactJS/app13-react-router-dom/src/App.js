@@ -7,6 +7,7 @@ import {  About } from './Components/About';
 import { Contact } from './Components/Contact';
 import { Students } from './Components/Students';
 import { StudentsDetails } from './Components/StudentsDetails';
+import { PageNotFound } from './Components/PageNotFound';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path = "/students" element = {<Students/>}>
            <Route path=':id' element = {<StudentsDetails/>} />
         </Route>
+        <Route path = "*" element = {<PageNotFound/>} />
       </Routes>
      </Router>
     </div>
