@@ -3,13 +3,17 @@ const initialData = {
   products: ["Apple", "HP", "DELL"],
   books: [],
 };
-export const rootReucer = (state = initialData, action) => {
-  switch (action.type) {
-    case "ADD_USER":
-      var newState = { ...state };
-      newState.users.push(action.payload);
-      return newState;
-    default:
-      return state;
-  }
-};
+export const rootReducer = (state = initialData, action) => {
+    switch (action.type) {
+      case "ADD_USER":
+        return {
+          ...state,
+          users: [...state.users, action.payload] // Ensure immutability by creating a new array
+        };
+      default:
+        return state;
+    }
+  };
+
+
+  

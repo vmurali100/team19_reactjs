@@ -4,6 +4,7 @@ import { addUser } from "./actions";
 
 class MyUser extends Component {
   render() {
+    console.log(this.props)
     return (
       <div>
         <h2>Welcome To My User Component </h2>
@@ -25,16 +26,15 @@ class MyUser extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log(state);
   return {
     users: state.users,
   };
 }
 
-function mapDispatchToProps(dispatch){
-    return {
-        handlerAddUser:()=>dispatch(addUser())
-    }
+function mapDispatchToProps(dispatch) {
 
+  return {
+    handlerAddUser: () => dispatch(addUser()),
+  };
 }
-export default connect(mapStateToProps,mapDispatchToProps)(MyUser);
+export default connect(mapStateToProps, mapDispatchToProps)(MyUser);
