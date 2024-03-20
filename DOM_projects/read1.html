@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var user=[]
+        function getusersfromAPI(){
+
+            var getdata=new XMLHttpRequest()
+            getdata.onreadystatechange=function(){
+                if(getdata.readyState==4 && getdata.status==200){
+                    users=JSON.parse(getdata.response)
+                }
+            }
+            getdata.open("GET","http://localhost:3000/users")
+            getdata.send()
+
+}
+getusersfromAPI()
+
+
+function displayusers(){
+    
+}
+
+
+    </script>
+    
+    
+        
+</body>
+</html>
