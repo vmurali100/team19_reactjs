@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>fname</th>
+                <th>lname</th>
+                <th>email</th>
+                <th>adress</th>
+                <th>address2</th>
+                <th>state<th>
+                <th>country</th>
+                </th>post</th>
+                <th>area</th>
+                <th>phonenumber</th>
+                <th>class</th>
+                <th>edit</th>
+                <th>delete</th>
+                
+                
+            </tr>
+        </thead>
+        <tbody></tbody> 
+    </table>
+    
+    <script>
+         var users=[]
+
+         function getusersfromAPI(){
+            fetch("http://localhost:3000/users")
+            .then((response)=>{
+                return response.json()
+            })
+            .then((data)=>{
+                users=data;
+                console.log(users)
+                displayusers()
+
+            })
+         }
+
+         function displayusers(){
+        for(let index=0;index<users.length;index++){
+            var eachobj=users[index]
+
+            var mytr=document.createElement("tr")
+            for(a in eachobj){
+                var mytd=document.createElement("td")
+                mytd.innerHTML=eachobj[a]
+                mytr.appendChild(mytd)
+            }
+            var edittd=document.createElement("td")
+            var editbtn=document.createElement('button')
+            editbtn.innerHTML="edit"
+            editbtn.setAttribute('onclick',"edituser("+index+")")
+            edittd.appendChild(editbtn)
+            mytr.appendChild(edittd)
+
+            var deltd=document.createElement("td")
+            var delbtn=document.createElement('button')
+            delbtn.innerHTML="delete"
+            delbtn.setAttribute('onclick',"deleteuser("+index+")")
+            deltd.appendChild(delbtn)
+            mytr.appendChild(deltd)
+
+
+           document.querySelector("tbody").appendChild(mytr)
+        }
+    }
+    getusersfromAPI()
+
+    function edituser(i){
+        localStorage.setItem("usertoedit",JSON.stringify(users[i]));
+        window.location.href="edituser2.html"
+    }
+
+    function deleteuser(i){
+        localStorage.setItem("usertodelete",JSON.stringify(users[i]));
+        window.location.href="deleteuser2.html"
+
+    }
+         
+    </script>
+</body>
+</html>
