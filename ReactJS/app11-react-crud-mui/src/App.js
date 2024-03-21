@@ -4,23 +4,46 @@ import TextField from "@mui/material/TextField";
 import { Button, Stack } from "@mui/material";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addUserAction } from "./actions";
+import { addUserAction, updateUserAction } from "./actions";
+import UsersTable from "./Components/UsersTable";
 
 function App() {
-
   const [user, setUser] = useState({
     fname: "",
     lname: "",
   });
-
-  const {users} = useSelector((state)=>state);
-  const dispatch = useDispatch()
-  console.log(users)
-  const handleChange=(e)=>{
-    console.log(e)
-    const newUser = {...user}
+  const [index, setIndex] = useState(null);
+  const { users } = useSelector((state) => state);
+  const dispatch = useDispatch();
+  console.log(users);
+  const handleChange = (e) => {
+    console.log(e);
+    const newUser = { ...user };
     newUser[e.target.name] = e.target.value;
-    setUser(newUser)
+    setUser(newUser);
+  };
+
+  const clearUser = () => {
+    setUser({
+      fname: "",
+      lname: "",
+    });
+  };
+  const handleSubmit = () => {
+    dispatch(addUserAction(user));
+    clearUser();
+  };
+
+  const handleEdit = (usr, i) => {
+    setUser(usr);
+    setIndex(i)
+  };
+
+  const handleUpdate=()=>{
+
+    dispatch(updateUserAction({...user,index}))
+    clearUser()
+    setIndex(null)
   }
   return (
     <div className="App">
@@ -46,14 +69,18 @@ function App() {
         size="small"
         placeholder="Last Name "
         name="lname"
-
         onChange={handleChange}
-
       />
       <br />
       <br />
 
-      <Button variant="contained" onClick={()=>{dispatch(addUserAction(user))}}>Add User</Button>
+      {index === null ? <Button variant="contained" onClick={handleSubmit}>
+        Add User
+      </Button>:<Button variant="contained" onClick={handleUpdate}>
+        Update User
+      </Button>}
+
+      <UsersTable handleEdit={handleEdit} />
     </div>
   );
 }
