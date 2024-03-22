@@ -1,32 +1,30 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from 'react'
 
-const Reactform = () => {
-    const [fname, setFname] = useState("");
-    const [lname, setLname] = useState("");
-  
-  const handleChange = (e) => {
-    console.log(e.target.name)
-    
-    if(e.target.name=== "fname"){
-        setFname(e.target.value)
-    }else{
-        setLname(e.target.value)
+export const Usercomp = () => {
+    const[fname,setfname]=useState("");
+    const[lname,setlname]=useState("");
+
+    const handlechange=(e)=>{
+        console.log(e.target.name)
+
+        if(e.target.name==="fname"){
+            setfname(e.target.value)
+        }else{
+            setlname(e.target.value)
+        }
+
+
     }
-  };
   return (
     <div>
-      <h2>ReactJS_Forms...</h2>
-      <form>
-        <label htmlFor="fname">First Name : </label>
-        <input type="text" name="fname" value={fname} onChange={handleChange} /> <br />
-        <label htmlFor="fname">Last Name : </label>
-        <input type="text" name="lname" value={lname} onChange={handleChange} /> <br />
-        <br /> <br />
-        <button>Add User</button>
-      </form>
+        <h1>Welcome to ReactForm1..!</h1>
+        <form>
+            <label htmlFor="fname">First Name: </label>
+            <input type="text" name='fname' value={fname} onChange={handlechange} /> <br />
+            <label htmlFor="lname">Last Name: </label>
+            <input type="text" name='lname' value={lname} onChange={handlechange} /> <br /> <br />
+            <button>Add user</button>
+        </form>
     </div>
-  );
-};
-
-export default Reactform;
+  )
+}

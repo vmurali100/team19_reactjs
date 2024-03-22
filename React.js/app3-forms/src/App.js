@@ -1,19 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
-import Reactform from './Crudapplications/Sample1_ReactForm';
-import User1 from './Crudapplications/Sample2_ReactForm';
-import User2 from './Crudapplications/sample3_ReactFrom';
-import Usercrud1 from './Crudapplications/USERCRUD1';
+import { Usercomp } from './Crudapplications/Sample1_ReactForm';
+import { Mycomp } from './Crudapplications/Sample2_ReactForm';
+import { Myform } from './Crudapplications/sample3_ReactFrom';
+import { Myobj } from './Crudapplications/sample4_ObjectForm';
+import { MyObjForm } from './Crudapplications/sample5_ObjectForm';
+
 
 function App() {
   return (
     <div className="App">
-      {/* <Reactform/> */}
-      {/* <User1/> */}
-      {/* <User2/> */}
-      <Usercrud1/>
-      
-     
+    {/* <Usercomp/> */}
+    {/* <Mycomp/> */}
+    {/* <Myform/> */}
+    {/* /* <Myobj/> */}
+    <MyObjForm/>
     </div>
   );
 }
