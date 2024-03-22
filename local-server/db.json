@@ -1,47 +1,16 @@
 {
   "users": [
     {
-      "fname": "Murali",
-      "email": "vmurali100@gmail.com",
-      "gender": "male",
-      "state": "Andhra Pradesh",
-      "subjects": [
-        "subject2",
-        "subject3"
-      ],
-      "id": 1
+      "id": 11,
+      "email": "THeilman@elementum.io",
+      "username": "MStudenka",
+      "password": "SFB7a"
     },
     {
-      "fname": "Murali Krishna",
-      "email": "vmurali100@gmail.com",
-      "gender": "male",
-      "state": "Andhra Pradesh",
-      "subjects": [
-        "subject2",
-        "subject3"
-      ],
-      "id": 2
-    },
-    {
-      "fname": "Ram Krishna",
-      "email": "ram@gmail.com",
-      "gender": "male",
-      "state": "dd",
-      "subjects": [
-        "subject2"
-      ],
-      "id": 3
-    },
-    {
-      "fname": "vmr12",
-      "email": "vmurali100@gmail.com",
-      "gender": "male",
-      "state": "Andhra Pradesh",
-      "subjects": [
-        "subject1",
-        "subject2"
-      ],
-      "id": 4
+      "id": 12,
+      "email": "SAdams@mattis.gov",
+      "username": "DRehnke",
+      "password": "ze3lE"
     }
   ],
   "students": [
