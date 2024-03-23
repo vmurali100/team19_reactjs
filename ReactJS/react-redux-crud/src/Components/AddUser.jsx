@@ -1,8 +1,12 @@
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 import Input from '@mui/material/Input';
 import Button from '@mui/material/Button';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { actionAddUser } from '../Action';
+import { useNavigate } from 'react-router-dom';
+
+
+;
 
 const AddUser = () => {
     const [userDetails, setUserDetails] = useState({
@@ -11,21 +15,18 @@ const AddUser = () => {
         contact: '',
         address: ''
     })
+    // const [isTrue, setTsTrue] = useState(false)
+    const dispatch = useDispatch()
+    const navigateTo=useNavigate()
+
     const handleEvent = (e) => {
         const { name, value } = e.target;
         setUserDetails(prevState => ({
             ...prevState,
             [name]: value
         }));
-    };
-    
-    const dispatch = useDispatch()
-
-    const ustate = useSelector((state) =>{
-        return  state
-    });
-    
-
+    };   
+   
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -36,13 +37,12 @@ const AddUser = () => {
             contact: '',
             address: ''
         });
-    };
-
-    
+        navigateTo("/usersList")
+    };            
     return (
+        <>
         <div>
-        {    console.log("initialState",ustate)
-}
+
             <Input
                 label="Name"
                 name="name"
@@ -82,7 +82,14 @@ const AddUser = () => {
             <Button variant="contained" color="primary" onClick={submitHandler}>
                 Submit
             </Button>
+            <br />
+            <br />
+
+
+
         </div>
+       
+       </>
     )
 }
 
