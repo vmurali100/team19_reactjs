@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 import TextField from '@mui/material/TextField';
 import { useState } from "react";
 import {useSelector,useDispatch} from 'react-redux'
 import { Button } from '@mui/material';
-import { addUserAction } from './action';
+import { addUserAction, updateUserAction } from './action';
+import { UsersTable } from './Components/UsersTable';
 
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
     fname : "",
     lname : ""
  });
+ const[index,setIndex] = useState(null);
  const {users} = useSelector((state)=>state);
  console.log(users);
  const dispatch = useDispatch();
@@ -20,6 +21,26 @@ function App() {
     newUser[e.target.name] = e.target.value;
     setUser(newUser);
  }
+ const handleSubmit = () =>{
+    dispatch(addUserAction(user));
+    clearUser();
+ }
+ const handleEdit = (usr,i) =>{
+   setUser(usr);
+   setIndex(i);
+ }
+ const handleUpdate = () =>{
+  dispatch(updateUserAction({...user,index}))
+  clearUser();
+  setIndex(null)
+ }
+ const clearUser =() =>{
+  setUser({
+    fname : "",
+    lname : ""
+  })
+ }
+
   return (
     <div className="App">
   <TextField
@@ -46,9 +67,13 @@ function App() {
    />
    <br/>
    <br/>
-   <Button variant='contained' onClick={()=>{dispatch(addUserAction(user))}}>Add User</Button>
+   {index == null ?    <Button variant='contained' onClick={handleSubmit}>Add User</Button>
+   :
+   <Button variant='contained' onClick={handleUpdate}>Update User</Button>}
+
+   <UsersTable handleEdit = {handleEdit} />
     </div>
   );
-}
 
+  }
 export default App;
