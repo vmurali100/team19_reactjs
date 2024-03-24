@@ -2,51 +2,21 @@
   "users": [
     {
       "id": 11,
-      "email": "THeilman@elementum.io",
-      "username": "MStudenka",
-      "password": "SFB7a"
+      "email": "STempleman@morbi.com",
+      "username": "KJacobs",
+      "password": "N4BOI"
     },
     {
       "id": 12,
-      "email": "SAdams@mattis.gov",
-      "username": "DRehnke",
-      "password": "ze3lE"
-    }
-  ],
-  "students": [
-    {
-      "firstName": {},
-      "id": 1
+      "email": "OWinder@tellus.gov",
+      "username": "SDepreta",
+      "password": "p5E6W"
     },
     {
-      "firstName": "Murali",
-      "id": 2
-    },
-    {
-      "firstName": "Sam KM",
-      "id": 3
-    },
-    {
-      "firstName": "Murali",
-      "id": 4
-    },
-    {
-      "firstName": "mm",
-      "id": 5
-    },
-    {
-      "firstName": "sss",
-      "id": 6
-    },
-    {
-      "firstName": "Murali KMR",
-      "id": 7
-    },
-    {
-      "id": 8
-    },
-    {
-      "id": 9
+      "id": 13,
+      "email": "RDavidson@ipsum.io",
+      "username": "VReddin",
+      "password": "C78gq"
     }
   ]
 }
