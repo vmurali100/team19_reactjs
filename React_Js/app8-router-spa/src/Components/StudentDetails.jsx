@@ -4,9 +4,8 @@ import { useLocation } from 'react-router-dom'
 
 const StudentDetails = () => {
   const [student,setStudent]=useState({})
-  const location=useLocation();
-  console.log(location)
-  const userId=location.pathname.split("/")[2];
+  const location = useLocation();
+const userId = location.pathname.split("/");
   useEffect(()=>{
     getStudentDetails();
   },[userId])
