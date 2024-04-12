@@ -1,5 +1,5 @@
 import { Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material'
-import React from 'react'
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import { DeleteUseractions } from '../action'
 

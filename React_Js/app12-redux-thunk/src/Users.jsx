@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {getUserAsyncAction } from "./action";
+import {DeleteUserAsyncAction, getUserAsyncAction } from "./action";
 
 class Users extends Component {
   getUsers = () => {
     console.log(this.props)
     this.props.dispatch(getUserAsyncAction())
+  }
+  deleteuser=(usr)=>{
+    this.props.dispatch(DeleteUserAsyncAction(usr))
   }
   render() {
     return (
@@ -15,26 +18,26 @@ class Users extends Component {
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Email</th>
-                <th>Username</th>
-                <th>Password</th>
-                <th>Edit</th>
-                <th>Delete</th>
+                <th>EMAIL</th>
+                <th>USERNAME</th>
+                <th>PASSWORD</th>
+                <th>EDIT</th>
+                <th>DELETE</th>
             </tr>
         </thead>
         <tbody>
         {
-            this.props.allUsers.map((usr)=>
+            this.props.allUsers && this.props.allUsers.map((usr,i)=>
                 <tr>
-                    <td>{usr.id}</td>
-                    <td>{usr.email}</td>
-                    <td>{usr.username}</td>
-                    <td>{usr.password}</td>
+                    <td key={i}>{usr.id}</td>
+                    <td key={i}>{usr.email}</td>
+                    <td key={i}>{usr.username}</td>
+                    <td key={i}>{usr.password}</td>
                     <td>
                         <button>Edit</button>
                     </td>
                     <td>
-                        <button>Delete</button>
+                        <button onClick={()=>{this.deleteuser(usr)}}>Delete</button>
                     </td>
                 </tr>
             )

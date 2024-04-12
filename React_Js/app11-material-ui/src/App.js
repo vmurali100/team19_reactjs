@@ -18,7 +18,7 @@ function App() {
   const handlechange=(e)=>{
     const newuser={...user};
     newuser[e.target.name]=e.target.value;
-    setuser(newuser)
+    setuser(newuser);
   }
   const dispatch=useDispatch();
 

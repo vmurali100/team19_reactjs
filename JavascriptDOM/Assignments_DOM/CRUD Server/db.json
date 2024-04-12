@@ -1,34 +1,16 @@
 {
   "users": [
     {
-        "id": 1,
-        "email": "STraficante@aliquam.ly",
-        "username": "JNance",
-        "password": "BhM6e"
+      "id": "2",
+      "email": "MMalo@aliquam.org",
+      "username": "virat",
+      "password": "WQzpy"
     },
     {
-        "id": 2,
-        "email": "MMalo@aliquam.org",
-        "username": "WHerman",
-        "password": "WQzpy"
-    },
-    {
-        "id": 3,
-        "email": "ADarrah@at.ly",
-        "username": "GWhitman",
-        "password": "RlCjW"
-    },
-    {
-        "id": 4,
-        "email": "KNimick@scelerisque.com",
-        "username": "DImholtz",
-        "password": "MBPsj"
-    },
-    {
-        "id": 5,
-        "email": "MDifrancesco@placerat.net",
-        "username": "TSchuster",
-        "password": "LICOl"
+      "id": "3",
+      "email": "ADarrah@at.ly",
+      "username": "GWhitman",
+      "password": "RlCjW"
     }
-]
+  ]
 }
