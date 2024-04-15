@@ -13,6 +13,8 @@ import Userclass3 from './Crudapplications/Sample8_UserFormC3';
 import { UserCRUD1 } from './Crudapplications/UserCRUD1';
 import { UserCRUD2 } from './Crudapplications/UserCRUD2';
 import { UserCRUD3 } from './Crudapplications/UserCRUD3';
+import { UserCRUDT1 } from './Crudapplications/UserCRUDT1';
+import { UserCRUDT2 } from './Crudapplications/UserCRUDT2';
 
 
 function App() {
@@ -28,7 +30,9 @@ function App() {
     {/* <Userclass3/> */}
     {/* <UserCRUD1/> */}
     {/* <UserCRUD2/> */}
-    <UserCRUD3/>
+    {/* <UserCRUD3/> */}
+    {/* <UserCRUDT1/> */}
+    <UserCRUDT2/>
     </div>
   );
 }
